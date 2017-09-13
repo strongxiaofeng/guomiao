@@ -1,0 +1,245 @@
+{
+	"groups": [
+		{
+			"keys": "addFriend_png,bg_farm_jpg,bg_main_png,bg_start_jpg,charge_png,close_png,cloud1_png,cloud2_png,cloud3_png,contribution _png,fertilizer_have_png,fertilizer_not_have_png,gift_png,headbg_png,invite_able_png,invite_disable_png,inviteWx_png,land_png,lastActivity_png,leaf_png,logo_png,miao_png,myFarm_png,notice_bg_png,radio_png,rank_png,rule_png,seed_able_png,seed_disable_png,seedBg_png,shop_png,sign_png,smallGame_png,stole_png,store_png,tool_bg_png,tree_grow_png,tree_ripe_png,tree_young_png,water_png,water0_png,water1_png,water2_png,water3_png,water4_png,water5_png,weed_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/addFriend.png",
+			"type": "image",
+			"name": "addFriend_png"
+		},
+		{
+			"url": "assets/bg_farm.jpg",
+			"type": "image",
+			"name": "bg_farm_jpg"
+		},
+		{
+			"url": "assets/bg_main.png",
+			"type": "image",
+			"name": "bg_main_png"
+		},
+		{
+			"url": "assets/bg_start.jpg",
+			"type": "image",
+			"name": "bg_start_jpg"
+		},
+		{
+			"url": "assets/charge.png",
+			"type": "image",
+			"name": "charge_png"
+		},
+		{
+			"url": "assets/close.png",
+			"type": "image",
+			"name": "close_png"
+		},
+		{
+			"url": "assets/cloud1.png",
+			"type": "image",
+			"name": "cloud1_png"
+		},
+		{
+			"url": "assets/cloud2.png",
+			"type": "image",
+			"name": "cloud2_png"
+		},
+		{
+			"url": "assets/cloud3.png",
+			"type": "image",
+			"name": "cloud3_png"
+		},
+		{
+			"url": "assets/contribution .png",
+			"type": "image",
+			"name": "contribution _png"
+		},
+		{
+			"url": "assets/fertilizer_have.png",
+			"type": "image",
+			"name": "fertilizer_have_png"
+		},
+		{
+			"url": "assets/fertilizer_not_have.png",
+			"type": "image",
+			"name": "fertilizer_not_have_png"
+		},
+		{
+			"url": "assets/gift.png",
+			"type": "image",
+			"name": "gift_png"
+		},
+		{
+			"url": "assets/headbg.png",
+			"type": "image",
+			"name": "headbg_png"
+		},
+		{
+			"url": "assets/inviteWx.png",
+			"type": "image",
+			"name": "inviteWx_png"
+		},
+		{
+			"url": "assets/invite_able.png",
+			"type": "image",
+			"name": "invite_able_png"
+		},
+		{
+			"url": "assets/invite_disable.png",
+			"type": "image",
+			"name": "invite_disable_png"
+		},
+		{
+			"url": "assets/land.png",
+			"type": "image",
+			"name": "land_png"
+		},
+		{
+			"url": "assets/lastActivity.png",
+			"type": "image",
+			"name": "lastActivity_png"
+		},
+		{
+			"url": "assets/leaf.png",
+			"type": "image",
+			"name": "leaf_png"
+		},
+		{
+			"url": "assets/logo.png",
+			"type": "image",
+			"name": "logo_png"
+		},
+		{
+			"url": "assets/miao.png",
+			"type": "image",
+			"name": "miao_png"
+		},
+		{
+			"url": "assets/myFarm.png",
+			"type": "image",
+			"name": "myFarm_png"
+		},
+		{
+			"url": "assets/notice_bg.png",
+			"type": "image",
+			"name": "notice_bg_png"
+		},
+		{
+			"url": "assets/radio.png",
+			"type": "image",
+			"name": "radio_png"
+		},
+		{
+			"url": "assets/rank.png",
+			"type": "image",
+			"name": "rank_png"
+		},
+		{
+			"url": "assets/rule.png",
+			"type": "image",
+			"name": "rule_png"
+		},
+		{
+			"url": "assets/seedBg.png",
+			"type": "image",
+			"name": "seedBg_png"
+		},
+		{
+			"url": "assets/seed_able.png",
+			"type": "image",
+			"name": "seed_able_png"
+		},
+		{
+			"url": "assets/seed_disable.png",
+			"type": "image",
+			"name": "seed_disable_png"
+		},
+		{
+			"url": "assets/shop.png",
+			"type": "image",
+			"name": "shop_png"
+		},
+		{
+			"url": "assets/sign.png",
+			"type": "image",
+			"name": "sign_png"
+		},
+		{
+			"url": "assets/smallGame.png",
+			"type": "image",
+			"name": "smallGame_png"
+		},
+		{
+			"url": "assets/stole.png",
+			"type": "image",
+			"name": "stole_png"
+		},
+		{
+			"url": "assets/store.png",
+			"type": "image",
+			"name": "store_png"
+		},
+		{
+			"url": "assets/tool_bg.png",
+			"type": "image",
+			"name": "tool_bg_png"
+		},
+		{
+			"url": "assets/tree_grow.png",
+			"type": "image",
+			"name": "tree_grow_png"
+		},
+		{
+			"url": "assets/tree_ripe.png",
+			"type": "image",
+			"name": "tree_ripe_png"
+		},
+		{
+			"url": "assets/tree_young.png",
+			"type": "image",
+			"name": "tree_young_png"
+		},
+		{
+			"url": "assets/water.png",
+			"type": "image",
+			"name": "water_png"
+		},
+		{
+			"url": "assets/water0.png",
+			"type": "image",
+			"name": "water0_png"
+		},
+		{
+			"url": "assets/water1.png",
+			"type": "image",
+			"name": "water1_png"
+		},
+		{
+			"url": "assets/water2.png",
+			"type": "image",
+			"name": "water2_png"
+		},
+		{
+			"url": "assets/water3.png",
+			"type": "image",
+			"name": "water3_png"
+		},
+		{
+			"url": "assets/water4.png",
+			"type": "image",
+			"name": "water4_png"
+		},
+		{
+			"url": "assets/water5.png",
+			"type": "image",
+			"name": "water5_png"
+		},
+		{
+			"url": "assets/weed.png",
+			"type": "image",
+			"name": "weed_png"
+		}
+	]
+}
