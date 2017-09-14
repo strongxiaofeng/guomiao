@@ -25,6 +25,11 @@ class TopBarUI extends BaseUI{
 			UIManager.closeUI(UIConst.TopBarUI);
 			UIManager.openUI(UIConst.FirstUI);
 		}
+		else if(UIManager.isUIOpen(UIConst.LastActivityUI))
+		{
+			UIManager.closeUI(UIConst.TopBarUI);
+			UIManager.openUI(UIConst.FirstUI);
+		}
 	}
 	/**返回主界面 */
 	private clickHome()
@@ -34,6 +39,10 @@ class TopBarUI extends BaseUI{
 		{
 			UIManager.closeUI(UIConst.TopBarUI);
 			UIManager.openUI(UIConst.FirstUI);
+		}
+		else{
+			UIManager.closeUI(UIConst.TopBarUI);
+			UIManager.openUI(UIConst.HomeUI);
 		}
 	}
 	/**关闭界面 */

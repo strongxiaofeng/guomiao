@@ -32,9 +32,12 @@ var FirstUI = (function (_super) {
     };
     /**我的农场 */
     FirstUI.prototype.clickFarm = function () {
+        UIManager.openUI(UIConst.HomeUI);
     };
     /**往期活动 */
     FirstUI.prototype.clickActivity = function () {
+        UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
+        UIManager.openUI(UIConst.LastActivityUI);
     };
     /**规则 */
     FirstUI.prototype.clickRule = function () {

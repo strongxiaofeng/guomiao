@@ -7,6 +7,8 @@ var UIConst = (function () {
     UIConst.FirstUI = "FirstUI";
     UIConst.RuleUI = "RuleUI";
     UIConst.TopBarUI = "TopBarUI";
+    UIConst.HomeUI = "HomeUI";
+    UIConst.LastActivityUI = "LastActivityUI";
     return UIConst;
 }());
 __reflect(UIConst.prototype, "UIConst");

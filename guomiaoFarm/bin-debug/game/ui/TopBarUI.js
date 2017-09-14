@@ -34,6 +34,10 @@ var TopBarUI = (function (_super) {
             UIManager.closeUI(UIConst.TopBarUI);
             UIManager.openUI(UIConst.FirstUI);
         }
+        else if (UIManager.isUIOpen(UIConst.LastActivityUI)) {
+            UIManager.closeUI(UIConst.TopBarUI);
+            UIManager.openUI(UIConst.FirstUI);
+        }
     };
     /**返回主界面 */
     TopBarUI.prototype.clickHome = function () {
@@ -41,6 +45,10 @@ var TopBarUI = (function (_super) {
         if (UIManager.isUIOpen(UIConst.RuleUI)) {
             UIManager.closeUI(UIConst.TopBarUI);
             UIManager.openUI(UIConst.FirstUI);
+        }
+        else {
+            UIManager.closeUI(UIConst.TopBarUI);
+            UIManager.openUI(UIConst.HomeUI);
         }
     };
     /**关闭界面 */

@@ -24,12 +24,13 @@ class FirstUI extends BaseUI{
 	/**我的农场 */
 	private clickFarm()
 	{
-
+		UIManager.openUI(UIConst.HomeUI);
 	}
 	/**往期活动 */
 	private clickActivity()
 	{
-		
+        UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
+		UIManager.openUI(UIConst.LastActivityUI);
 	}
 	/**规则 */
 	private clickRule()
