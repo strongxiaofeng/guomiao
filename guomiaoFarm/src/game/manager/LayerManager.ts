@@ -29,7 +29,6 @@ class LayerManager {
 	/**添加UI到舞台 */
 	public addUI(ui:any, layer:number=1)
 	{
-		console.log("addui ",ui);
 		var parent;
 		switch(layer)
 		{

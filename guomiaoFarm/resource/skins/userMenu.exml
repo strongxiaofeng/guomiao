@@ -43,5 +43,14 @@
 		<e:Image source="user_honer_png" x="103" y="785" width="75" height="69"/>
 		<e:Image source="user_radio_png" x="286" y="785" width="75" height="69"/>
 		<e:Image source="user_set_png" x="471" y="785" width="75" height="69"/>
+		<e:Label text="小卖铺" x="105" y="496" textColor="0xf6fcee" fontFamily="SimHei" size="24"/>
+		<e:Label text="地址管理" x="275.5" y="496" fontFamily="SimHei" size="24" textColor="0xffffff"/>
+		<e:Label text="我的订单" x="463" y="496" textColor="0xF6FCEE" fontFamily="SimHei" size="24"/>
+		<e:Label text="我的仓库" x="89" y="686" fontFamily="SimHei" size="24" textColor="0xffffff"/>
+		<e:Label text="排行榜" x="289" y="686" textColor="0xF6FCEE" fontFamily="SimHei" size="24"/>
+		<e:Label text="果瞄币充值" x="454" y="686" fontFamily="SimHei" size="24" textColor="0xffffff"/>
+		<e:Label text="勋章墙" x="103" y="885" fontFamily="SimHei" size="24" textColor="0xf6fcee"/>
+		<e:Label text="广播消息" x="283" y="885" fontFamily="SimHei" size="24" textColor="0xffffff"/>
+		<e:Label text="游戏设置" x="471" y="885" textColor="0xF6FCEE" fontFamily="SimHei" size="24"/>
 	</e:Group>
 </e:Skin>

@@ -21,7 +21,6 @@ var LayerManager = (function () {
     /**添加UI到舞台 */
     LayerManager.prototype.addUI = function (ui, layer) {
         if (layer === void 0) { layer = 1; }
-        console.log("addui ", ui);
         var parent;
         switch (layer) {
             case LayerManager.Layer_UI:

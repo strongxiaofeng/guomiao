@@ -30,6 +30,11 @@ class TopBarUI extends BaseUI{
 			UIManager.closeUI(UIConst.TopBarUI);
 			UIManager.openUI(UIConst.FirstUI);
 		}
+		else if(UIManager.isUIOpen(UIConst.UserMenuUI))
+		{
+			UIManager.closeUI(UIConst.TopBarUI);
+			UIManager.openUI(UIConst.HomeUI);
+		}
 	}
 	/**返回主界面 */
 	private clickHome()

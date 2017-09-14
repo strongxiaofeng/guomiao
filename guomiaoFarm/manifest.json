@@ -9,17 +9,18 @@
 	],
 	"game": [
 		"bin-debug/game/base/BaseUI.js",
-		"bin-debug/game/manager/LayerManager.js",
+		"bin-debug/game/ui/UserMenuUI.js",
 		"bin-debug/Main.js",
 		"bin-debug/ThemeAdapter.js",
 		"bin-debug/AssetAdapter.js",
 		"bin-debug/game/const/UIConst.js",
-		"bin-debug/LoadingUI.js",
+		"bin-debug/game/manager/LayerManager.js",
 		"bin-debug/game/manager/UIManager.js",
 		"bin-debug/game/ui/FirstUI.js",
 		"bin-debug/game/ui/HomeUI.js",
 		"bin-debug/game/ui/LastActivityUI.js",
 		"bin-debug/game/ui/RuleUI.js",
-		"bin-debug/game/ui/TopBarUI.js"
+		"bin-debug/game/ui/TopBarUI.js",
+		"bin-debug/LoadingUI.js"
 	]
 }

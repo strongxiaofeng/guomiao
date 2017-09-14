@@ -4,4 +4,5 @@ class UIConst {
 	public static TopBarUI = "TopBarUI";
 	public static HomeUI = "HomeUI";
 	public static LastActivityUI = "LastActivityUI";
+	public static UserMenuUI = "UserMenuUI";
 }

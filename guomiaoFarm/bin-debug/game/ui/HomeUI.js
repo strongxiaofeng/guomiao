@@ -24,6 +24,67 @@ var HomeUI = (function (_super) {
     };
     /**初始监听 */
     HomeUI.prototype.initListener = function () {
+        console.log("initListener");
+        this.registerEvent(this.headBg, egret.TouchEvent.TOUCH_TAP, this.clickHead, this);
+        this.registerEvent(this.signBtn, egret.TouchEvent.TOUCH_TAP, this.clickSign, this);
+        this.registerEvent(this.storeBtn, egret.TouchEvent.TOUCH_TAP, this.clickStore, this);
+        this.registerEvent(this.btn_radio, egret.TouchEvent.TOUCH_TAP, this.clickRadio, this);
+        this.registerEvent(this.btn_shop, egret.TouchEvent.TOUCH_TAP, this.clickShop, this);
+        this.registerEvent(this.btn_charge, egret.TouchEvent.TOUCH_TAP, this.clickCharge, this);
+        this.registerEvent(this.btn_rank, egret.TouchEvent.TOUCH_TAP, this.clickRank, this);
+        this.registerEvent(this.btn_game, egret.TouchEvent.TOUCH_TAP, this.clickGame, this);
+        this.registerEvent(this.btn_gift, egret.TouchEvent.TOUCH_TAP, this.clickGift, this);
+        this.registerEvent(this.btn_weed, egret.TouchEvent.TOUCH_TAP, this.clickWeed, this);
+        this.registerEvent(this.btn_fertilizer, egret.TouchEvent.TOUCH_TAP, this.clickFertilizer, this);
+        this.registerEvent(this.btn_water, egret.TouchEvent.TOUCH_TAP, this.clickWater, this);
+        this.registerEvent(this.btn_seed, egret.TouchEvent.TOUCH_TAP, this.clickSeed, this);
+    };
+    /**个人 */
+    HomeUI.prototype.clickHead = function () {
+        console.log("clickHead");
+        UIManager.openUI(UIConst.UserMenuUI);
+        UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
+    };
+    /**签到 */
+    HomeUI.prototype.clickSign = function () {
+        console.log("clickSign");
+    };
+    /**仓库 */
+    HomeUI.prototype.clickStore = function () {
+        console.log("clickStore");
+    };
+    /**广播 */
+    HomeUI.prototype.clickRadio = function () {
+        console.log("clickRadio");
+    };
+    /**商店 */
+    HomeUI.prototype.clickShop = function () {
+        console.log("clickShop");
+    };
+    /**充值 */
+    HomeUI.prototype.clickCharge = function () {
+    };
+    /**排行 */
+    HomeUI.prototype.clickRank = function () {
+    };
+    /**小游戏 */
+    HomeUI.prototype.clickGame = function () {
+    };
+    /**礼物呀 */
+    HomeUI.prototype.clickGift = function () {
+    };
+    /**除草 */
+    HomeUI.prototype.clickWeed = function () {
+        console.log("clickWeed");
+    };
+    /**施肥 */
+    HomeUI.prototype.clickFertilizer = function () {
+    };
+    /**浇水 */
+    HomeUI.prototype.clickWater = function () {
+    };
+    /**播种 */
+    HomeUI.prototype.clickSeed = function () {
     };
     /**关闭界面 */
     HomeUI.prototype.dispose = function () {
