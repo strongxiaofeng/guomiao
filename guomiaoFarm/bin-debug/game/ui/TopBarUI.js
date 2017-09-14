@@ -29,25 +29,28 @@ var TopBarUI = (function (_super) {
     };
     /**返回上一个界面 */
     TopBarUI.prototype.clickLeft = function () {
-        console.log("clickLeft");
-        if (UIManager.isUIOpen(UIConst.RuleUI)) {
+        //返回欢迎页
+        if (UIManager.isUIOpen(UIConst.RuleUI) || UIManager.isUIOpen(UIConst.LastActivityUI)) {
             UIManager.closeUI(UIConst.TopBarUI);
-            UIManager.openUI(UIConst.FirstUI);
+            UIManager.openUI(UIConst.WelcomeUI);
         }
-        else if (UIManager.isUIOpen(UIConst.LastActivityUI)) {
+        else if (UIManager.isUIOpen(UIConst.UserMenuUI) || UIManager.isUIOpen(UIConst.RadioUI)
+            || UIManager.isUIOpen(UIConst.ShopUI) || UIManager.isUIOpen(UIConst.ChargeUI) || UIManager.isUIOpen(UIConst.RankUI)) {
             UIManager.closeUI(UIConst.TopBarUI);
-            UIManager.openUI(UIConst.FirstUI);
+            UIManager.openUI(UIConst.HomeUI);
         }
     };
     /**返回主界面 */
     TopBarUI.prototype.clickHome = function () {
-        console.log("clickHome");
+        UIManager.closeUI(UIConst.TopBarUI);
         if (UIManager.isUIOpen(UIConst.RuleUI)) {
-            UIManager.closeUI(UIConst.TopBarUI);
-            UIManager.openUI(UIConst.FirstUI);
+            UIManager.openUI(UIConst.WelcomeUI);
+        }
+        else if (UIManager.isUIOpen(UIConst.LastActivityUI)) {
+            UIManager.openUI(UIConst.HomeUI);
+            UIManager.openUI(UIConst.LastHarvestRankUI, LayerManager.Layer_Tip);
         }
         else {
-            UIManager.closeUI(UIConst.TopBarUI);
             UIManager.openUI(UIConst.HomeUI);
         }
     };

@@ -11,25 +11,25 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var RuleUI = (function (_super) {
-    __extends(RuleUI, _super);
-    function RuleUI() {
+var ShopUI = (function (_super) {
+    __extends(ShopUI, _super);
+    function ShopUI() {
         var _this = _super.call(this) || this;
-        _this.skinName = "resource/skins/rule.exml";
+        _this.skinName = "resource/skins/shop.exml";
         return _this;
     }
     /**初始界面 */
-    RuleUI.prototype.initSetting = function () {
+    ShopUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
     };
     /**初始监听 */
-    RuleUI.prototype.initListener = function () {
+    ShopUI.prototype.initListener = function () {
     };
     /**关闭界面 */
-    RuleUI.prototype.dispose = function () {
+    ShopUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
     };
-    return RuleUI;
+    return ShopUI;
 }(BaseUI));
-__reflect(RuleUI.prototype, "RuleUI");
-//# sourceMappingURL=RuleUI.js.map
+__reflect(ShopUI.prototype, "ShopUI");
+//# sourceMappingURL=ShopUI.js.map

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="store" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="bg_black_png" x="0" y="0" width="640" height="1024" alpha="0.3"/>
+	<e:Label text="仓库" x="267" y="204"/>
+	<e:Image id="btn_close" source="close_png" x="461" y="204" width="59" height="59"/>
+</e:Skin>

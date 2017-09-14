@@ -11,25 +11,30 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var RuleUI = (function (_super) {
-    __extends(RuleUI, _super);
-    function RuleUI() {
+var StoreUI = (function (_super) {
+    __extends(StoreUI, _super);
+    function StoreUI() {
         var _this = _super.call(this) || this;
-        _this.skinName = "resource/skins/rule.exml";
+        _this.skinName = "resource/skins/store.exml";
         return _this;
     }
     /**初始界面 */
-    RuleUI.prototype.initSetting = function () {
+    StoreUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
     };
     /**初始监听 */
-    RuleUI.prototype.initListener = function () {
+    StoreUI.prototype.initListener = function () {
+        this.registerEvent(this.btn_close, egret.TouchEvent.TOUCH_TAP, this.clickClose, this);
+    };
+    /**点击关闭 */
+    StoreUI.prototype.clickClose = function () {
+        UIManager.closeUI(UIConst.StoreUI);
     };
     /**关闭界面 */
-    RuleUI.prototype.dispose = function () {
+    StoreUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
     };
-    return RuleUI;
+    return StoreUI;
 }(BaseUI));
-__reflect(RuleUI.prototype, "RuleUI");
-//# sourceMappingURL=RuleUI.js.map
+__reflect(StoreUI.prototype, "StoreUI");
+//# sourceMappingURL=StoreUI.js.map

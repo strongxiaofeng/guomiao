@@ -19,18 +19,15 @@ class TopBarUI extends BaseUI{
 	/**返回上一个界面 */
 	private clickLeft()
 	{
-		console.log("clickLeft");
-		if(UIManager.isUIOpen(UIConst.RuleUI))
+		//返回欢迎页
+		if(UIManager.isUIOpen(UIConst.RuleUI) || UIManager.isUIOpen(UIConst.LastActivityUI))
 		{
 			UIManager.closeUI(UIConst.TopBarUI);
-			UIManager.openUI(UIConst.FirstUI);
+			UIManager.openUI(UIConst.WelcomeUI);
 		}
-		else if(UIManager.isUIOpen(UIConst.LastActivityUI))
-		{
-			UIManager.closeUI(UIConst.TopBarUI);
-			UIManager.openUI(UIConst.FirstUI);
-		}
-		else if(UIManager.isUIOpen(UIConst.UserMenuUI))
+		//返回农场主页
+		else if(UIManager.isUIOpen(UIConst.UserMenuUI) || UIManager.isUIOpen(UIConst.RadioUI) 
+		|| UIManager.isUIOpen(UIConst.ShopUI) || UIManager.isUIOpen(UIConst.ChargeUI) || UIManager.isUIOpen(UIConst.RankUI))
 		{
 			UIManager.closeUI(UIConst.TopBarUI);
 			UIManager.openUI(UIConst.HomeUI);
@@ -39,14 +36,19 @@ class TopBarUI extends BaseUI{
 	/**返回主界面 */
 	private clickHome()
 	{
-		console.log("clickHome");
+		UIManager.closeUI(UIConst.TopBarUI);
+
 		if(UIManager.isUIOpen(UIConst.RuleUI))
 		{
-			UIManager.closeUI(UIConst.TopBarUI);
-			UIManager.openUI(UIConst.FirstUI);
+			UIManager.openUI(UIConst.WelcomeUI);
 		}
-		else{
-			UIManager.closeUI(UIConst.TopBarUI);
+		else if(UIManager.isUIOpen(UIConst.LastActivityUI))
+		{
+			UIManager.openUI(UIConst.HomeUI);
+			UIManager.openUI(UIConst.LastHarvestRankUI, LayerManager.Layer_Tip);
+		}
+		else
+		{
 			UIManager.openUI(UIConst.HomeUI);
 		}
 	}

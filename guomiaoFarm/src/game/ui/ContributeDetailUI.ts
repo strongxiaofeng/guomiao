@@ -1,8 +1,9 @@
-class RuleUI extends BaseUI{
+class ContributeDetailUI extends BaseUI{
 	public constructor() {
 		super();
-		this.skinName = "resource/skins/rule.exml";
+		this.skinName = "resource/skins/contributeDetail.exml";
 	}
+
 	/**初始界面 */
 	public initSetting()
 	{

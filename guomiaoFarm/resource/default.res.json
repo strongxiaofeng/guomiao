@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "addFriend_png,bg_farm_jpg,bg_main_png,bg_start_jpg,charge_png,close_png,cloud1_png,cloud2_png,cloud3_png,contribution _png,fertilizer_have_png,fertilizer_not_have_png,gift_png,headbg_png,home_png,invite_able_png,invite_disable_png,inviteWx_png,land_png,lastActivity_png,leaf_png,left_png,logo_png,miao_png,myFarm_png,notice_bg_png,radio_png,rank_png,rule_png,seed_able_png,seed_disable_png,seedBg_png,shop_png,nosign1_png,nosign2_png,nosign3_png,nosign4_png,nosign5_png,nosign6_png,nosign7_png,signBg_png,signBtn_png,signed_png,signed1_png,signed2_png,signed3_png,signed4_png,signed5_png,signed6_png,signed7_png,signLogo_png,sign_png,smallGame_png,stole_png,store_png,tool_bg_png,tree_grow_png,tree_ripe_png,tree_young_png,buyCoin_png,coinImg_png,lv_png,num0_png,num1_png,num2_png,num3_png,num4_png,num5_png,num6_png,num7_png,num8_png,num9_png,progressBg_png,progressLeft_png,progressMid_png,question_png,user_adress_png,user_charge_png,user_honer_png,user_order_png,user_radio_png,user_rank_png,user_set_png,user_shop_png,user_store_png,userBg_jpg,water_png,water0_png,water1_png,water2_png,water3_png,water4_png,water5_png,weed_png,new_msg_circle_png,dark_green_png,light_green_png",
+			"keys": "addFriend_png,bg_farm_jpg,bg_main_png,bg_start_jpg,charge_png,close_png,cloud1_png,cloud2_png,cloud3_png,contribution _png,fertilizer_have_png,fertilizer_not_have_png,gift_png,headbg_png,home_png,invite_able_png,invite_disable_png,inviteWx_png,land_png,lastActivity_png,leaf_png,left_png,logo_png,miao_png,myFarm_png,notice_bg_png,radio_png,rank_png,rule_png,seed_able_png,seed_disable_png,seedBg_png,shop_png,nosign1_png,nosign2_png,nosign3_png,nosign4_png,nosign5_png,nosign6_png,nosign7_png,signBg_png,signBtn_png,signed_png,signed1_png,signed2_png,signed3_png,signed4_png,signed5_png,signed6_png,signed7_png,signLogo_png,sign_png,smallGame_png,stole_png,store_png,tool_bg_png,tree_grow_png,tree_ripe_png,tree_young_png,buyCoin_png,coinImg_png,lv_png,num0_png,num1_png,num2_png,num3_png,num4_png,num5_png,num6_png,num7_png,num8_png,num9_png,progressBg_png,progressLeft_png,progressMid_png,question_png,user_adress_png,user_charge_png,user_honer_png,user_order_png,user_radio_png,user_rank_png,user_set_png,user_shop_png,user_store_png,userBg_jpg,water_png,water0_png,water1_png,water2_png,water3_png,water4_png,water5_png,weed_png,new_msg_circle_png,dark_green_png,light_green_png,bg_black_png,sign_grid_png",
 			"name": "preload"
 		}
 	],
@@ -490,6 +490,16 @@
 			"name": "light_green_png",
 			"type": "image",
 			"url": "assets/userInfo/light_green.png"
+		},
+		{
+			"name": "bg_black_png",
+			"type": "image",
+			"url": "assets/bg_black.png"
+		},
+		{
+			"name": "sign_grid_png",
+			"type": "image",
+			"url": "assets/sign/sign_grid.png"
 		}
 	]
 }

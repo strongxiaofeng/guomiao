@@ -46,37 +46,42 @@ class HomeUI extends BaseUI{
 	/**个人 */
 	private clickHead()
 	{
-		console.log("clickHead");
 		UIManager.openUI(UIConst.UserMenuUI);
 		UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
 	}
 	/**签到 */
 	private clickSign()
 	{
-		console.log("clickSign");
+		UIManager.openUI(UIConst.SignUI, LayerManager.Layer_Tip);
 	}
 	/**仓库 */
 	private clickStore()
 	{
-		console.log("clickStore");
+		UIManager.openUI(UIConst.StoreUI, LayerManager.Layer_Tip);
 	}
 	/**广播 */
 	private clickRadio()
 	{
-		console.log("clickRadio");
+		UIManager.openUI(UIConst.RadioUI);
+		UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
 	}
 	/**商店 */
 	private clickShop()
 	{
-		console.log("clickShop");
+		UIManager.openUI(UIConst.ShopUI);
+		UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
 	}
 	/**充值 */
 	private clickCharge()
 	{
+		UIManager.openUI(UIConst.ChargeUI);
+		UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
 	}
 	/**排行 */
 	private clickRank()
 	{
+		UIManager.openUI(UIConst.RankUI);
+		UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
 	}
 	/**小游戏 */
 	private clickGame()
@@ -85,6 +90,7 @@ class HomeUI extends BaseUI{
 	/**礼物呀 */
 	private clickGift()
 	{
+		UIManager.openUI(UIConst.GiftUI, LayerManager.Layer_Tip);
 	}
 	/**除草 */
 	private clickWeed()
@@ -98,6 +104,7 @@ class HomeUI extends BaseUI{
 	/**浇水 */
 	private clickWater()
 	{
+		UIManager.openUI(UIConst.InviteWaterUI, LayerManager.Layer_Tip);
 	}
 	/**播种 */
 	private clickSeed()

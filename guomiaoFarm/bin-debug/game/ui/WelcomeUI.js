@@ -11,45 +11,46 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var FirstUI = (function (_super) {
-    __extends(FirstUI, _super);
-    function FirstUI() {
+var WelcomeUI = (function (_super) {
+    __extends(WelcomeUI, _super);
+    function WelcomeUI() {
         var _this = _super.call(this) || this;
         _this.skinName = "resource/skins/startUI.exml";
         return _this;
     }
     /**初始界面 */
-    FirstUI.prototype.initSetting = function () {
+    WelcomeUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
         console.log("initSetting");
     };
     /**初始监听 */
-    FirstUI.prototype.initListener = function () {
+    WelcomeUI.prototype.initListener = function () {
         console.log("注册事件");
         this.registerEvent(this.btn_myFarm, egret.TouchEvent.TOUCH_TAP, this.clickFarm, this);
         this.registerEvent(this.btn_lastActivity, egret.TouchEvent.TOUCH_TAP, this.clickActivity, this);
         this.registerEvent(this.btn_rule, egret.TouchEvent.TOUCH_TAP, this.clickRule, this);
     };
     /**我的农场 */
-    FirstUI.prototype.clickFarm = function () {
+    WelcomeUI.prototype.clickFarm = function () {
         UIManager.openUI(UIConst.HomeUI);
+        UIManager.openUI(UIConst.LastHarvestRankUI, LayerManager.Layer_Tip);
     };
     /**往期活动 */
-    FirstUI.prototype.clickActivity = function () {
+    WelcomeUI.prototype.clickActivity = function () {
         UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
         UIManager.openUI(UIConst.LastActivityUI);
     };
     /**规则 */
-    FirstUI.prototype.clickRule = function () {
+    WelcomeUI.prototype.clickRule = function () {
         console.log("clickRule");
         UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
         UIManager.openUI(UIConst.RuleUI);
     };
     /**关闭界面 */
-    FirstUI.prototype.dispose = function () {
+    WelcomeUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
     };
-    return FirstUI;
+    return WelcomeUI;
 }(BaseUI));
-__reflect(FirstUI.prototype, "FirstUI");
-//# sourceMappingURL=FirstUI.js.map
+__reflect(WelcomeUI.prototype, "WelcomeUI");
+//# sourceMappingURL=WelcomeUI.js.map

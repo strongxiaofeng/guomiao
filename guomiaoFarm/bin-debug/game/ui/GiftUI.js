@@ -11,25 +11,30 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var RuleUI = (function (_super) {
-    __extends(RuleUI, _super);
-    function RuleUI() {
+var GiftUI = (function (_super) {
+    __extends(GiftUI, _super);
+    function GiftUI() {
         var _this = _super.call(this) || this;
-        _this.skinName = "resource/skins/rule.exml";
+        _this.skinName = "resource/skins/gift.exml";
         return _this;
     }
     /**初始界面 */
-    RuleUI.prototype.initSetting = function () {
+    GiftUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
     };
     /**初始监听 */
-    RuleUI.prototype.initListener = function () {
+    GiftUI.prototype.initListener = function () {
+        this.registerEvent(this.btn_close, egret.TouchEvent.TOUCH_TAP, this.clickClose, this);
+    };
+    /**点击关闭按钮 */
+    GiftUI.prototype.clickClose = function () {
+        UIManager.closeUI(UIConst.GiftUI);
     };
     /**关闭界面 */
-    RuleUI.prototype.dispose = function () {
+    GiftUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
     };
-    return RuleUI;
+    return GiftUI;
 }(BaseUI));
-__reflect(RuleUI.prototype, "RuleUI");
-//# sourceMappingURL=RuleUI.js.map
+__reflect(GiftUI.prototype, "GiftUI");
+//# sourceMappingURL=GiftUI.js.map

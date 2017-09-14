@@ -10,7 +10,7 @@
 				</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Image id="storeBtn" source="store_png" y="387" width="415" height="309" right="0"/>
+		<e:Image id="storeBtn" source="store_png" y="387" width="415" height="309" right="0" pixelHitTest="true"/>
 		<e:Image source="land_png" x="190" y="586" width="145" height="81"/>
 		<e:Image source="land_png" x="118" y="640.5" width="145" height="81"/>
 		<e:Image source="land_png" x="45" y="696" width="145" height="81"/>
@@ -69,7 +69,7 @@
 		</e:Button>
 		<e:Group id="noticeGroup" width="530" height="58" y="160" horizontalCenter="0" x="55" scaleX="1" scaleY="1">
 		<e:Image source="notice_bg_png" width="570" height="54" horizontalCenter="0" x="0" scaleX="1" scaleY="1" verticalCenter="0"/>
-		<e:Label id="noticeLabel" text="公告：明天不上班" x="76" scaleX="1" scaleY="1" verticalCenter="0" textColor="0x315973" size="22" fontFamily="黑体"/>
+		<e:Label id="noticeLabel" text="公告：明天做糖葫芦，又大又甜的糖葫芦咯" x="76" scaleX="1" scaleY="1" verticalCenter="0" textColor="0x315973" size="22" fontFamily="黑体"/>
 		</e:Group>
 		<e:Button id="btn_game" label="" x="30" y="240" width="101" height="99" scaleX="1" scaleY="1">
 		<e:skinName>
@@ -122,6 +122,6 @@
 				</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Image id="waterCount" source="water0_png" x="369" y="969" width="23" height="19"/>
+		<e:Image id="waterCount" source="water0_png" x="369" y="969" width="23" height="19" touchEnabled="false"/>
 	</e:Group>
 </e:Skin>

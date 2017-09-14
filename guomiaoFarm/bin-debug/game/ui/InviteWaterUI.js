@@ -11,25 +11,30 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var RuleUI = (function (_super) {
-    __extends(RuleUI, _super);
-    function RuleUI() {
+var InviteWaterUI = (function (_super) {
+    __extends(InviteWaterUI, _super);
+    function InviteWaterUI() {
         var _this = _super.call(this) || this;
-        _this.skinName = "resource/skins/rule.exml";
+        _this.skinName = "resource/skins/inviteWater.exml";
         return _this;
     }
     /**初始界面 */
-    RuleUI.prototype.initSetting = function () {
+    InviteWaterUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
     };
     /**初始监听 */
-    RuleUI.prototype.initListener = function () {
+    InviteWaterUI.prototype.initListener = function () {
+        this.registerEvent(this.btn_close, egret.TouchEvent.TOUCH_TAP, this.clickClose, this);
+    };
+    /**点击关闭 */
+    InviteWaterUI.prototype.clickClose = function () {
+        UIManager.closeUI(UIConst.InviteWaterUI);
     };
     /**关闭界面 */
-    RuleUI.prototype.dispose = function () {
+    InviteWaterUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
     };
-    return RuleUI;
+    return InviteWaterUI;
 }(BaseUI));
-__reflect(RuleUI.prototype, "RuleUI");
-//# sourceMappingURL=RuleUI.js.map
+__reflect(InviteWaterUI.prototype, "InviteWaterUI");
+//# sourceMappingURL=InviteWaterUI.js.map

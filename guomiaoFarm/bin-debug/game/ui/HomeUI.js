@@ -41,37 +41,43 @@ var HomeUI = (function (_super) {
     };
     /**个人 */
     HomeUI.prototype.clickHead = function () {
-        console.log("clickHead");
         UIManager.openUI(UIConst.UserMenuUI);
         UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
     };
     /**签到 */
     HomeUI.prototype.clickSign = function () {
-        console.log("clickSign");
+        UIManager.openUI(UIConst.SignUI, LayerManager.Layer_Tip);
     };
     /**仓库 */
     HomeUI.prototype.clickStore = function () {
-        console.log("clickStore");
+        UIManager.openUI(UIConst.StoreUI, LayerManager.Layer_Tip);
     };
     /**广播 */
     HomeUI.prototype.clickRadio = function () {
-        console.log("clickRadio");
+        UIManager.openUI(UIConst.RadioUI);
+        UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
     };
     /**商店 */
     HomeUI.prototype.clickShop = function () {
-        console.log("clickShop");
+        UIManager.openUI(UIConst.ShopUI);
+        UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
     };
     /**充值 */
     HomeUI.prototype.clickCharge = function () {
+        UIManager.openUI(UIConst.ChargeUI);
+        UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
     };
     /**排行 */
     HomeUI.prototype.clickRank = function () {
+        UIManager.openUI(UIConst.RankUI);
+        UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
     };
     /**小游戏 */
     HomeUI.prototype.clickGame = function () {
     };
     /**礼物呀 */
     HomeUI.prototype.clickGift = function () {
+        UIManager.openUI(UIConst.GiftUI, LayerManager.Layer_Tip);
     };
     /**除草 */
     HomeUI.prototype.clickWeed = function () {
@@ -82,6 +88,7 @@ var HomeUI = (function (_super) {
     };
     /**浇水 */
     HomeUI.prototype.clickWater = function () {
+        UIManager.openUI(UIConst.InviteWaterUI, LayerManager.Layer_Tip);
     };
     /**播种 */
     HomeUI.prototype.clickSeed = function () {

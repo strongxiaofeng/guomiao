@@ -1,4 +1,4 @@
-class FirstUI extends BaseUI{
+class WelcomeUI extends BaseUI{
 	private btn_myFarm: eui.Button;
 	private btn_lastActivity: eui.Button;
 	private btn_rule: eui.Button;
@@ -25,6 +25,7 @@ class FirstUI extends BaseUI{
 	private clickFarm()
 	{
 		UIManager.openUI(UIConst.HomeUI);
+		UIManager.openUI(UIConst.LastHarvestRankUI, LayerManager.Layer_Tip);
 	}
 	/**往期活动 */
 	private clickActivity()

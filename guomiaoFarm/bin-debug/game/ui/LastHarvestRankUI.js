@@ -11,25 +11,30 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var RuleUI = (function (_super) {
-    __extends(RuleUI, _super);
-    function RuleUI() {
+var LastHarvestRankUI = (function (_super) {
+    __extends(LastHarvestRankUI, _super);
+    function LastHarvestRankUI() {
         var _this = _super.call(this) || this;
-        _this.skinName = "resource/skins/rule.exml";
+        _this.skinName = "resource/skins/lastHarvestRank.exml";
         return _this;
     }
     /**初始界面 */
-    RuleUI.prototype.initSetting = function () {
+    LastHarvestRankUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
     };
     /**初始监听 */
-    RuleUI.prototype.initListener = function () {
+    LastHarvestRankUI.prototype.initListener = function () {
+        this.registerEvent(this.btn_close, egret.TouchEvent.TOUCH_TAP, this.clickClose, this);
+    };
+    /**点击关闭按钮 */
+    LastHarvestRankUI.prototype.clickClose = function () {
+        UIManager.closeUI(UIConst.LastHarvestRankUI);
     };
     /**关闭界面 */
-    RuleUI.prototype.dispose = function () {
+    LastHarvestRankUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
     };
-    return RuleUI;
+    return LastHarvestRankUI;
 }(BaseUI));
-__reflect(RuleUI.prototype, "RuleUI");
-//# sourceMappingURL=RuleUI.js.map
+__reflect(LastHarvestRankUI.prototype, "LastHarvestRankUI");
+//# sourceMappingURL=LastHarvestRankUI.js.map

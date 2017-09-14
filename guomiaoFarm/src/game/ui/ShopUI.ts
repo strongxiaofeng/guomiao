@@ -1,7 +1,7 @@
-class RuleUI extends BaseUI{
+class ShopUI extends BaseUI{
 	public constructor() {
 		super();
-		this.skinName = "resource/skins/rule.exml";
+		this.skinName = "resource/skins/shop.exml";
 	}
 	/**初始界面 */
 	public initSetting()
