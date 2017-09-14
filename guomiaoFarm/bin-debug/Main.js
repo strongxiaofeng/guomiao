@@ -149,7 +149,7 @@ var Main = (function (_super) {
      * Create scene interface
      */
     Main.prototype.startCreateScene = function () {
-        UIManager.addUI(UIConst.FirstUI);
+        UIManager.openUI(UIConst.FirstUI);
     };
     return Main;
 }(eui.UILayer));

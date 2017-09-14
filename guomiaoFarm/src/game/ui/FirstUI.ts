@@ -8,7 +8,7 @@ class FirstUI extends BaseUI{
 		this.skinName = "resource/skins/startUI.exml";
 	}
 	/**初始界面 */
-	protected initSetting()
+	public initSetting()
 	{
 		super.initSetting();
 		console.log("initSetting")
@@ -35,7 +35,8 @@ class FirstUI extends BaseUI{
 	private clickRule()
 	{
 		console.log("clickRule")
-		UIManager.addUI(UIConst.RuleUI);
+        UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
+		UIManager.openUI(UIConst.RuleUI);
 	}
 	/**关闭界面 */
 	public dispose()

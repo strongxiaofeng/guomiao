@@ -23,10 +23,13 @@ class LayerManager {
 		this.topLayer = new eui.Group();
 		this.tipLayer = new eui.Group();
 		root.addChild(this.uiLayer);
+		root.addChild(this.topLayer);
+		root.addChild(this.tipLayer);
 	}
 	/**添加UI到舞台 */
 	public addUI(ui:any, layer:number=1)
 	{
+		console.log("addui ",ui);
 		var parent;
 		switch(layer)
 		{

@@ -4,9 +4,10 @@ class RuleUI extends BaseUI{
 		this.skinName = "resource/skins/rule.exml";
 	}
 	/**初始界面 */
-	protected initSetting()
+	public initSetting()
 	{
 		super.initSetting();
+		console.log("settinmg"+this.isShow)
 	}
 	/**初始监听 */
 	protected initListener()

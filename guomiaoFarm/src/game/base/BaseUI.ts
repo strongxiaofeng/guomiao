@@ -29,7 +29,7 @@ class BaseUI extends eui.Component{
 		}
 	}
 	/**初始界面 */
-	protected initSetting()
+	public initSetting()
 	{
 		this.isShow = true;
 		this.initListener();
@@ -43,6 +43,7 @@ class BaseUI extends eui.Component{
 	{
 		this.isShow = false;
 		this.clearEvent();
+		if(this.parent) this.parent.removeChild(this);
 	}
 
 }

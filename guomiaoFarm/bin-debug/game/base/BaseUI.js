@@ -48,6 +48,8 @@ var BaseUI = (function (_super) {
     BaseUI.prototype.dispose = function () {
         this.isShow = false;
         this.clearEvent();
+        if (this.parent)
+            this.parent.removeChild(this);
     };
     return BaseUI;
 }(eui.Component));

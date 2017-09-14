@@ -21,6 +21,7 @@ var RuleUI = (function (_super) {
     /**初始界面 */
     RuleUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
+        console.log("settinmg" + this.isShow);
     };
     /**初始监听 */
     RuleUI.prototype.initListener = function () {

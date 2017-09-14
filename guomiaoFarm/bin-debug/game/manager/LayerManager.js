@@ -15,10 +15,13 @@ var LayerManager = (function () {
         this.topLayer = new eui.Group();
         this.tipLayer = new eui.Group();
         root.addChild(this.uiLayer);
+        root.addChild(this.topLayer);
+        root.addChild(this.tipLayer);
     };
     /**添加UI到舞台 */
     LayerManager.prototype.addUI = function (ui, layer) {
         if (layer === void 0) { layer = 1; }
+        console.log("addui ", ui);
         var parent;
         switch (layer) {
             case LayerManager.Layer_UI:
