@@ -32,4 +32,3 @@ var UserMenuUI = (function (_super) {
     return UserMenuUI;
 }(BaseUI));
 __reflect(UserMenuUI.prototype, "UserMenuUI");
-//# sourceMappingURL=UserMenuUI.js.map

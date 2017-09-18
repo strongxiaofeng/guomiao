@@ -37,4 +37,3 @@ var LastHarvestRankUI = (function (_super) {
     return LastHarvestRankUI;
 }(BaseUI));
 __reflect(LastHarvestRankUI.prototype, "LastHarvestRankUI");
-//# sourceMappingURL=LastHarvestRankUI.js.map

@@ -32,4 +32,3 @@ var RankUI = (function (_super) {
     return RankUI;
 }(BaseUI));
 __reflect(RankUI.prototype, "RankUI");
-//# sourceMappingURL=RankUI.js.map

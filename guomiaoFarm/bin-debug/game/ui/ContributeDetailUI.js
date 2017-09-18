@@ -32,4 +32,3 @@ var ContributeDetailUI = (function (_super) {
     return ContributeDetailUI;
 }(BaseUI));
 __reflect(ContributeDetailUI.prototype, "ContributeDetailUI");
-//# sourceMappingURL=ContributeDetailUI.js.map

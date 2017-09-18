@@ -61,4 +61,3 @@ var TopBarUI = (function (_super) {
     return TopBarUI;
 }(BaseUI));
 __reflect(TopBarUI.prototype, "TopBarUI");
-//# sourceMappingURL=TopBarUI.js.map
