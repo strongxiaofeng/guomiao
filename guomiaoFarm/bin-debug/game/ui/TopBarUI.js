@@ -21,6 +21,8 @@ var TopBarUI = (function (_super) {
     /**初始界面 */
     TopBarUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
+        this.touchEnabled = false;
+        this.touchChildren = true;
     };
     /**初始监听 */
     TopBarUI.prototype.initListener = function () {
@@ -33,6 +35,9 @@ var TopBarUI = (function (_super) {
         if (UIManager.isUIOpen(UIConst.RuleUI) || UIManager.isUIOpen(UIConst.LastActivityUI)) {
             UIManager.closeUI(UIConst.TopBarUI);
             UIManager.openUI(UIConst.WelcomeUI);
+        }
+        else if (UIManager.isUIOpen(UIConst.ContributeDetailUI) || UIManager.isUIOpen(UIConst.CoinDetailUI)) {
+            UIManager.openUI(UIConst.UserMenuUI);
         }
         else if (UIManager.isUIOpen(UIConst.UserMenuUI) || UIManager.isUIOpen(UIConst.RadioUI)
             || UIManager.isUIOpen(UIConst.ShopUI) || UIManager.isUIOpen(UIConst.ChargeUI) || UIManager.isUIOpen(UIConst.RankUI)) {
@@ -61,3 +66,4 @@ var TopBarUI = (function (_super) {
     return TopBarUI;
 }(BaseUI));
 __reflect(TopBarUI.prototype, "TopBarUI");
+//# sourceMappingURL=TopBarUI.js.map

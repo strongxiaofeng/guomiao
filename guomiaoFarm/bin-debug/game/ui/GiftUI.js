@@ -37,3 +37,4 @@ var GiftUI = (function (_super) {
     return GiftUI;
 }(BaseUI));
 __reflect(GiftUI.prototype, "GiftUI");
+//# sourceMappingURL=GiftUI.js.map

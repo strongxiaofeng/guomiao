@@ -22,6 +22,9 @@ class LayerManager {
 		this.uiLayer = new eui.Group();
 		this.topLayer = new eui.Group();
 		this.tipLayer = new eui.Group();
+		this.uiLayer.touchThrough = true;
+		this.topLayer.touchThrough = true;
+		this.tipLayer.touchThrough = true;
 		root.addChild(this.uiLayer);
 		root.addChild(this.topLayer);
 		root.addChild(this.tipLayer);

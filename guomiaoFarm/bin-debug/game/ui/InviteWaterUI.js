@@ -37,3 +37,4 @@ var InviteWaterUI = (function (_super) {
     return InviteWaterUI;
 }(BaseUI));
 __reflect(InviteWaterUI.prototype, "InviteWaterUI");
+//# sourceMappingURL=InviteWaterUI.js.map

@@ -32,3 +32,4 @@ var LastActivityUI = (function (_super) {
     return LastActivityUI;
 }(BaseUI));
 __reflect(LastActivityUI.prototype, "LastActivityUI");
+//# sourceMappingURL=LastActivityUI.js.map

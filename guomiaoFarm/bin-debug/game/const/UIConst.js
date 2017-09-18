@@ -12,6 +12,7 @@ var UIConst = (function () {
     UIConst.UserMenuUI = "UserMenuUI";
     UIConst.LastHarvestRankUI = "LastHarvestRankUI";
     UIConst.ContributeDetailUI = "ContributeDetailUI";
+    UIConst.CoinDetailUI = "CoinDetailUI";
     UIConst.SignUI = "SignUI";
     UIConst.StoreUI = "StoreUI";
     UIConst.GiftUI = "GiftUI";
@@ -23,3 +24,4 @@ var UIConst = (function () {
     return UIConst;
 }());
 __reflect(UIConst.prototype, "UIConst");
+//# sourceMappingURL=UIConst.js.map

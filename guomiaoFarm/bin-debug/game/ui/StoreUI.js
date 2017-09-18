@@ -37,3 +37,4 @@ var StoreUI = (function (_super) {
     return StoreUI;
 }(BaseUI));
 __reflect(StoreUI.prototype, "StoreUI");
+//# sourceMappingURL=StoreUI.js.map

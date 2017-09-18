@@ -21,9 +21,22 @@ var ContributeDetailUI = (function (_super) {
     /**初始界面 */
     ContributeDetailUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
+        var ac = new eui.ArrayCollection();
+        ac.addItem({ num: 2000, date: "2017-09-30" });
+        ac.addItem({ num: 502132132, date: "2017-08-31" });
+        ac.addItem({ num: 5, date: "2017-07-02" });
+        ac.addItem({ num: 20, date: "2017-09-30" });
+        ac.addItem({ num: 800, date: "2017-09-30" });
+        ac.addItem({ num: 6595, date: "2017-09-30" });
+        this.attriDetailList.itemRenderer = ContriButeDetailItem;
+        this.attriDetailList.dataProvider = ac;
     };
     /**初始监听 */
     ContributeDetailUI.prototype.initListener = function () {
+        this.registerEvent(this.leftBtn, egret.TouchEvent.TOUCH_TAP, this.goCoinDetail, this);
+    };
+    ContributeDetailUI.prototype.goCoinDetail = function () {
+        UIManager.openUI(UIConst.CoinDetailUI);
     };
     /**关闭界面 */
     ContributeDetailUI.prototype.dispose = function () {
@@ -32,3 +45,4 @@ var ContributeDetailUI = (function (_super) {
     return ContributeDetailUI;
 }(BaseUI));
 __reflect(ContributeDetailUI.prototype, "ContributeDetailUI");
+//# sourceMappingURL=ContributeDetailUI.js.map

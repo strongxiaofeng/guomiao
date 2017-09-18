@@ -24,6 +24,18 @@ var UserMenuUI = (function (_super) {
     };
     /**初始监听 */
     UserMenuUI.prototype.initListener = function () {
+        console.log("initListener");
+        this.registerEvent(this.attributeTxt, egret.TouchEvent.TOUCH_TAP, this.goContributeDetail, this);
+        this.registerEvent(this.attributeTxtBg, egret.TouchEvent.TOUCH_TAP, this.goContributeDetail, this);
+        this.registerEvent(this.coinTxt, egret.TouchEvent.TOUCH_TAP, this.goCoinDetail, this);
+        this.registerEvent(this.coinTxtBg, egret.TouchEvent.TOUCH_TAP, this.goCoinDetail, this);
+    };
+    UserMenuUI.prototype.goContributeDetail = function () {
+        console.log("goigog");
+        UIManager.openUI(UIConst.ContributeDetailUI);
+    };
+    UserMenuUI.prototype.goCoinDetail = function () {
+        UIManager.openUI(UIConst.CoinDetailUI);
     };
     /**关闭界面 */
     UserMenuUI.prototype.dispose = function () {
@@ -32,3 +44,4 @@ var UserMenuUI = (function (_super) {
     return UserMenuUI;
 }(BaseUI));
 __reflect(UserMenuUI.prototype, "UserMenuUI");
+//# sourceMappingURL=UserMenuUI.js.map

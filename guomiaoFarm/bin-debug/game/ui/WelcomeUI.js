@@ -53,3 +53,4 @@ var WelcomeUI = (function (_super) {
     return WelcomeUI;
 }(BaseUI));
 __reflect(WelcomeUI.prototype, "WelcomeUI");
+//# sourceMappingURL=WelcomeUI.js.map

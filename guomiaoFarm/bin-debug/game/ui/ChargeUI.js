@@ -32,3 +32,4 @@ var ChargeUI = (function (_super) {
     return ChargeUI;
 }(BaseUI));
 __reflect(ChargeUI.prototype, "ChargeUI");
+//# sourceMappingURL=ChargeUI.js.map

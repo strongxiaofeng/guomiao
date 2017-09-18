@@ -32,3 +32,4 @@ var ShopUI = (function (_super) {
     return ShopUI;
 }(BaseUI));
 __reflect(ShopUI.prototype, "ShopUI");
+//# sourceMappingURL=ShopUI.js.map

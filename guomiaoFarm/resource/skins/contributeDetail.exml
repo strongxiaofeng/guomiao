@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="contributeDetail" width="640" height="1024" xmlns:e="http://ns.egret.com/eui">
-	<e:Image source="bg_start_jpg" x="0" y="0"/>
-	<e:Label text="贡献度明细" x="245" y="240"/>
+<e:Skin class="attributeDetail" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="attributeDetailBg_jpg" x="0" y="0"/>
+	<e:Image source="detail_board_png" y="261" width="561" height="835" scaleY="1" horizontalCenter="0.5"/>
+	<e:Button id="leftBtn" label="" x="29" y="287" width="48" height="48">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="arrow_left_png" source.down="arrow_left_png" source.disabled="arrow_left_detail_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="rightBtn" label="" x="564" y="287" width="48" height="48" enabled="false">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="arrow_right_png" source.down="arrow_right_png" source.disabled="arrow_right_disable_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Image source="atrributeDetailTxt_png" y="289" width="265" height="45" horizontalCenter="0"/>
+	<e:Image source="attriDetailBoard_png" x="0" width="640" height="80" bottom="0"/>
+	<e:Label id="totalContri" text="总贡献度：000" x="60" y="969" fontFamily="SimHei"/>
+	<e:Image source="question_png" x="457" y="968" width="29" height="29"/>
+	<e:Label id="detailTxt" text="明细说明" x="494" y="973" size="20" fontFamily="SimHei"/>
+	<e:Scroller width="525" height="598" x="59" y="344">
+		<e:List id="attriDetailList" useVirtualLayout="false"/>
+	</e:Scroller>
 </e:Skin>

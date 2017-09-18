@@ -52,3 +52,4 @@ var UIManager = (function () {
     return UIManager;
 }());
 __reflect(UIManager.prototype, "UIManager");
+//# sourceMappingURL=UIManager.js.map

@@ -14,6 +14,9 @@ var LayerManager = (function () {
         this.uiLayer = new eui.Group();
         this.topLayer = new eui.Group();
         this.tipLayer = new eui.Group();
+        this.uiLayer.touchThrough = true;
+        this.topLayer.touchThrough = true;
+        this.tipLayer.touchThrough = true;
         root.addChild(this.uiLayer);
         root.addChild(this.topLayer);
         root.addChild(this.tipLayer);
@@ -40,3 +43,4 @@ var LayerManager = (function () {
     return LayerManager;
 }());
 __reflect(LayerManager.prototype, "LayerManager");
+//# sourceMappingURL=LayerManager.js.map

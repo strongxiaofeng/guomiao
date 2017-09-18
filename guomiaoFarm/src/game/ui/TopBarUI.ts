@@ -9,6 +9,8 @@ class TopBarUI extends BaseUI{
 	public initSetting()
 	{
 		super.initSetting();
+		this.touchEnabled = false;
+		this.touchChildren = true;
 	}
 	/**初始监听 */
 	protected initListener()
@@ -24,6 +26,11 @@ class TopBarUI extends BaseUI{
 		{
 			UIManager.closeUI(UIConst.TopBarUI);
 			UIManager.openUI(UIConst.WelcomeUI);
+		}
+		//返回个人中心
+		else if(UIManager.isUIOpen(UIConst.ContributeDetailUI) || UIManager.isUIOpen(UIConst.CoinDetailUI))
+		{
+			UIManager.openUI(UIConst.UserMenuUI);
 		}
 		//返回农场主页
 		else if(UIManager.isUIOpen(UIConst.UserMenuUI) || UIManager.isUIOpen(UIConst.RadioUI) 

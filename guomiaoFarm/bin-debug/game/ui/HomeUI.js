@@ -100,3 +100,4 @@ var HomeUI = (function (_super) {
     return HomeUI;
 }(BaseUI));
 __reflect(HomeUI.prototype, "HomeUI");
+//# sourceMappingURL=HomeUI.js.map

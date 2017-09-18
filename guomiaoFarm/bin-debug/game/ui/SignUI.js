@@ -37,3 +37,4 @@ var SignUI = (function (_super) {
     return SignUI;
 }(BaseUI));
 __reflect(SignUI.prototype, "SignUI");
+//# sourceMappingURL=SignUI.js.map
