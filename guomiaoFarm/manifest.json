@@ -9,7 +9,7 @@
 	],
 	"game": [
 		"bin-debug/game/base/BaseUI.js",
-		"bin-debug/LoadingUI.js",
+		"bin-debug/game/ui/GiftUI.js",
 		"bin-debug/Main.js",
 		"bin-debug/ThemeAdapter.js",
 		"bin-debug/AssetAdapter.js",
@@ -21,7 +21,7 @@
 		"bin-debug/game/ui/CoinDetailUI.js",
 		"bin-debug/game/ui/ContriButeDetailItem.js",
 		"bin-debug/game/ui/ContributeDetailUI.js",
-		"bin-debug/game/ui/WelcomeUI.js",
+		"bin-debug/LoadingUI.js",
 		"bin-debug/game/ui/HomeUI.js",
 		"bin-debug/game/ui/InviteWaterUI.js",
 		"bin-debug/game/ui/LastActivityUI.js",
@@ -34,6 +34,6 @@
 		"bin-debug/game/ui/StoreUI.js",
 		"bin-debug/game/ui/TopBarUI.js",
 		"bin-debug/game/ui/UserMenuUI.js",
-		"bin-debug/game/ui/GiftUI.js"
+		"bin-debug/game/ui/WelcomeUI.js"
 	]
 }

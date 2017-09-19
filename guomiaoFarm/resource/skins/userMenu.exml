@@ -2,15 +2,16 @@
 <e:Skin class="userInfo" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Image source="userBg_jpg" width="640" height="1024" horizontalCenter="0" verticalCenter="0"/>
 	<e:Group id="headGroup" width="640" height="1" x="0" y="0">
-		<e:Image id="headBg" source="headbg_png" width="128" height="128" horizontalCenter="0" y="101" x="256" scaleX="1" scaleY="1"/>
-		<e:Image id="headImg" source="contribution _png" x="270" y="116" width="99" height="99" scaleX="1" scaleY="1"/>
-		<e:Image source="leaf_png" x="270" y="95.5" width="122" height="55" scaleX="1" scaleY="1"/>
-		<e:Image id="honorImg" source="buyCoin_png" x="256" y="183.5" width="48" height="45" scaleX="1" scaleY="1"/>
-		<e:Label id="nameTxt" text="木蚂蚁" y="237" textColor="0x834e2f" scaleX="1" scaleY="1" size="22" fontFamily="SimHei" horizontalCenter="-39"/>
-		<e:Image source="lv_png" x="329" y="234" scaleX="1" scaleY="1" width="42" height="26"/>
-		<e:Image id="LevelTxtImg" source="num0_png" x="380" y="235" scaleX="1" scaleY="1" width="20" height="26"/>
+		<e:Image id="headBg" source="headbg_png" width="128" height="128" horizontalCenter="0" y="80" x="256" scaleX="1" scaleY="1"/>
+		<e:Image id="headImg" source="contribution _png" x="270" y="95" width="99" height="99" scaleX="1" scaleY="1"/>
+		<e:Image source="leaf_png" x="270" y="74" width="122" height="55" scaleX="1" scaleY="1"/>
+		<e:Image id="honorImg" source="buyCoin_png" x="256" y="163" width="48" height="45" scaleX="1" scaleY="1"/>
+		<e:Label id="nameTxt" text="木蚂蚁" y="217" textColor="0x834e2f" scaleX="1" scaleY="1" size="22" fontFamily="SimHei" horizontalCenter="-39"/>
+		<e:Image source="lv_png" x="329" y="214" scaleX="1" scaleY="1" width="42" height="26"/>
+		<e:Image id="LevelTxtImg" source="num0_png" x="380" y="215" scaleX="1" scaleY="1" width="20" height="26"/>
+		<e:Label id="gameIdTxt" text="游戏ID： 123456" y="257" textColor="0x834E2F" scaleX="1" scaleY="1" size="18" fontFamily="SimHei" horizontalCenter="0"/>
 	</e:Group>
-	<e:Group id="contriGroup" width="1" height="1" x="0" y="0" touchChildren="true" touchEnabled="false" touchThrough="true">
+	<e:Group id="contriGroup" width="1" height="1" x="0" y="20" touchChildren="true" touchEnabled="false" touchThrough="true">
 		<e:Image source="contribution _png" x="59" y="270" scaleX="1" scaleY="1" width="34" height="25"/>
 		<e:Label id="attributeTxt" text="累级贡献度" x="96" y="272" textColor="0x934716" size="20" fontFamily="SimHei" touchEnabled="true"/>
 		<e:Image id="attributeTxtBg" source="progressBg_png" x="21" y="302" width="255" height="40" scaleX="1" scaleY="1"/>
@@ -19,7 +20,7 @@
 		<e:Image id="contri_right" source="progressLeft_png" x="40" y="305" width="26" height="33" anchorOffsetX="26" scaleX="-1" scaleY="1" touchEnabled="false"/>
 		<e:Label id="contri_number" text="70/80" x="119" y="310" size="24" scaleX="1" scaleY="1" touchEnabled="false"/>
 	</e:Group>
-	<e:Group id="coinGroup" width="1" height="1" x="0" y="0">
+	<e:Group id="coinGroup" width="1" height="1" x="0" y="20">
 		<e:Image x="392" y="270" scaleX="1" scaleY="1" width="34" height="25" source="coinImg_png"/>
 		<e:Label id="coinTxt" text="果喵币" x="428" y="272" textColor="0x934716" size="20" fontFamily="SimHei"/>
 		<e:Image id="coinTxtBg" source="progressBg_png" x="354" y="302" width="255" height="40" scaleX="1" scaleY="1"/>
