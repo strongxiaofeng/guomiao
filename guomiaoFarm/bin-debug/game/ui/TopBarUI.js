@@ -36,7 +36,8 @@ var TopBarUI = (function (_super) {
             UIManager.closeUI(UIConst.TopBarUI);
             UIManager.openUI(UIConst.WelcomeUI);
         }
-        else if (UIManager.isUIOpen(UIConst.ContributeDetailUI) || UIManager.isUIOpen(UIConst.CoinDetailUI)) {
+        else if (UIManager.isUIOpen(UIConst.ContributeDetailUI) || UIManager.isUIOpen(UIConst.CoinDetailUI)
+            || UIManager.isUIOpen(UIConst.AddressManageUI)) {
             UIManager.openUI(UIConst.UserMenuUI);
         }
         else if (UIManager.isUIOpen(UIConst.UserMenuUI) || UIManager.isUIOpen(UIConst.RadioUI)

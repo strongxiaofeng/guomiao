@@ -28,7 +28,8 @@ class TopBarUI extends BaseUI{
 			UIManager.openUI(UIConst.WelcomeUI);
 		}
 		//返回个人中心
-		else if(UIManager.isUIOpen(UIConst.ContributeDetailUI) || UIManager.isUIOpen(UIConst.CoinDetailUI))
+		else if(UIManager.isUIOpen(UIConst.ContributeDetailUI) || UIManager.isUIOpen(UIConst.CoinDetailUI) 
+		|| UIManager.isUIOpen(UIConst.AddressManageUI))
 		{
 			UIManager.openUI(UIConst.UserMenuUI);
 		}

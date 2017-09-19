@@ -15,6 +15,7 @@ var UIConst = (function () {
     UIConst.ContributeDetailDescUI = "ContributeDetailDescUI";
     UIConst.CoinDetailUI = "CoinDetailUI";
     UIConst.CoinDetailDescUI = "CoinDetailDescUI";
+    UIConst.AddressManageUI = "AddressManageUI";
     UIConst.SignUI = "SignUI";
     UIConst.StoreUI = "StoreUI";
     UIConst.GiftUI = "GiftUI";

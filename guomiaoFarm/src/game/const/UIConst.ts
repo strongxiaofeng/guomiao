@@ -10,6 +10,7 @@ class UIConst {
 	public static ContributeDetailDescUI = "ContributeDetailDescUI";
 	public static CoinDetailUI = "CoinDetailUI";
 	public static CoinDetailDescUI = "CoinDetailDescUI";
+	public static AddressManageUI = "AddressManageUI";
 	public static SignUI = "SignUI";
 	public static StoreUI = "StoreUI";
 	public static GiftUI = "GiftUI";

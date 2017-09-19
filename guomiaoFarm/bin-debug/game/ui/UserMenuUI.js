@@ -29,13 +29,20 @@ var UserMenuUI = (function (_super) {
         this.registerEvent(this.attributeTxtBg, egret.TouchEvent.TOUCH_TAP, this.goContributeDetail, this);
         this.registerEvent(this.coinTxt, egret.TouchEvent.TOUCH_TAP, this.goCoinDetail, this);
         this.registerEvent(this.coinTxtBg, egret.TouchEvent.TOUCH_TAP, this.goCoinDetail, this);
+        this.registerEvent(this.btn_address, egret.TouchEvent.TOUCH_TAP, this.goAddress, this);
     };
+    /**贡献明细 */
     UserMenuUI.prototype.goContributeDetail = function () {
         console.log("goigog");
         UIManager.openUI(UIConst.ContributeDetailUI);
     };
+    /**果喵币明细 */
     UserMenuUI.prototype.goCoinDetail = function () {
         UIManager.openUI(UIConst.CoinDetailUI);
+    };
+    /**地址管理 */
+    UserMenuUI.prototype.goAddress = function () {
+        UIManager.openUI(UIConst.AddressManageUI);
     };
     /**关闭界面 */
     UserMenuUI.prototype.dispose = function () {

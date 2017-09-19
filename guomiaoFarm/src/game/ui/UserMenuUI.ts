@@ -3,6 +3,17 @@ class UserMenuUI extends BaseUI{
 	private attributeTxtBg: eui.Image;
 	private coinTxt: eui.Label;
 	private coinTxtBg: eui.Image;
+
+	private btn_shop: eui.Image;
+	private btn_address: eui.Image;
+	private btn_order: eui.Image;
+	private btn_store: eui.Image;
+	private btn_rank: eui.Image;
+	private btn_coinCharge: eui.Image;
+	private btn_honor: eui.Image;
+	private btn_radio: eui.Image;
+	private btn_set: eui.Image;
+
 	public constructor() {
 		super();
 		this.skinName = "resource/skins/userMenu.exml";
@@ -21,15 +32,24 @@ class UserMenuUI extends BaseUI{
 		this.registerEvent(this.attributeTxtBg, egret.TouchEvent.TOUCH_TAP, this.goContributeDetail, this);
 		this.registerEvent(this.coinTxt, egret.TouchEvent.TOUCH_TAP, this.goCoinDetail, this);
 		this.registerEvent(this.coinTxtBg, egret.TouchEvent.TOUCH_TAP, this.goCoinDetail, this);
+
+		this.registerEvent(this.btn_address, egret.TouchEvent.TOUCH_TAP, this.goAddress, this);
 	}
+	/**贡献明细 */
 	private goContributeDetail()
 	{
 		console.log("goigog");
 		UIManager.openUI(UIConst.ContributeDetailUI);
 	}
+	/**果喵币明细 */
 	private goCoinDetail()
 	{
 		UIManager.openUI(UIConst.CoinDetailUI);
+	}
+	/**地址管理 */
+	private goAddress()
+	{
+		UIManager.openUI(UIConst.AddressManageUI);
 	}
 	/**关闭界面 */
 	public dispose()
