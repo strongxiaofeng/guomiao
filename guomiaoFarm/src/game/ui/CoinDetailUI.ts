@@ -1,6 +1,7 @@
 class CoinDetailUI extends BaseUI{
 	private rightBtn: eui.Button;
 	private totalContri: eui.Label;
+	private detailTxtIcon: eui.Image;
 	private detailTxt: eui.Label;
 	private coinDetailList: eui.List;
 	public constructor() {
@@ -29,10 +30,16 @@ class CoinDetailUI extends BaseUI{
 	protected initListener()
 	{
 		this.registerEvent(this.rightBtn, egret.TouchEvent.TOUCH_TAP, this.goContributeDetail, this);
+		this.registerEvent(this.detailTxtIcon, egret.TouchEvent.TOUCH_TAP, this.goCoinDetailDesc, this);
+		this.registerEvent(this.detailTxt, egret.TouchEvent.TOUCH_TAP, this.goCoinDetailDesc, this);
 	}
 	private goContributeDetail()
 	{
 		UIManager.openUI(UIConst.ContributeDetailUI);
+	}
+	private goCoinDetailDesc()
+	{
+		UIManager.openUI(UIConst.CoinDetailDescUI, LayerManager.Layer_Tip);
 	}
 	/**关闭界面 */
 	public dispose()

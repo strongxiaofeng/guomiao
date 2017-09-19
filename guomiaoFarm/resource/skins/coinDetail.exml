@@ -21,8 +21,8 @@
 	<e:Image y="289" width="265" height="45" horizontalCenter="0" source="coinDetailTxt_png"/>
 	<e:Image source="attriDetailBoard_png" x="0" width="640" height="80" bottom="0"/>
 	<e:Label text="果喵币：7777枚" x="60" y="969" fontFamily="SimHei"/>
-	<e:Image source="question_png" x="457" y="968" width="29" height="29"/>
-	<e:Label text="明细说明" x="494" y="973" size="20" fontFamily="SimHei"/>
+	<e:Image id="detailTxtIcon" source="question_png" x="457" y="968" width="29" height="29"/>
+	<e:Label id="detailTxt" text="明细说明" x="494" y="973" size="20" fontFamily="SimHei"/>
 	<e:Scroller width="525" height="598" x="59" y="344">
 		<e:List id="coinDetailList" useVirtualLayout="false"/>
 	</e:Scroller>

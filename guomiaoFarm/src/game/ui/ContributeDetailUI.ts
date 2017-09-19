@@ -1,6 +1,7 @@
 class ContributeDetailUI extends BaseUI{
 	private leftBtn: eui.Button;
 	private totalContri: eui.Label;
+	private descIcon: eui.Image;
 	private detailTxt: eui.Label;
 	private attriDetailList: eui.List;
 	public constructor() {
@@ -28,10 +29,18 @@ class ContributeDetailUI extends BaseUI{
 	protected initListener()
 	{
 		this.registerEvent(this.leftBtn, egret.TouchEvent.TOUCH_TAP, this.goCoinDetail, this);
+		this.registerEvent(this.descIcon, egret.TouchEvent.TOUCH_TAP, this.goContriDetailDesc, this);
+		this.registerEvent(this.detailTxt, egret.TouchEvent.TOUCH_TAP, this.goContriDetailDesc, this);
 	}
+	/**去果喵币明细 */
 	private goCoinDetail()
 	{
 		UIManager.openUI(UIConst.CoinDetailUI);
+	}
+	/**去贡献度明细说明 */
+	private goContriDetailDesc()
+	{
+		UIManager.openUI(UIConst.ContributeDetailDescUI, LayerManager.Layer_Tip);
 	}
 	/**关闭界面 */
 	public dispose()

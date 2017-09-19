@@ -7,7 +7,9 @@ class UIConst {
 	public static UserMenuUI = "UserMenuUI";
 	public static LastHarvestRankUI = "LastHarvestRankUI";
 	public static ContributeDetailUI = "ContributeDetailUI";
+	public static ContributeDetailDescUI = "ContributeDetailDescUI";
 	public static CoinDetailUI = "CoinDetailUI";
+	public static CoinDetailDescUI = "CoinDetailDescUI";
 	public static SignUI = "SignUI";
 	public static StoreUI = "StoreUI";
 	public static GiftUI = "GiftUI";

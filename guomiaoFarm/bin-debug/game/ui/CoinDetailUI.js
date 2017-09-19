@@ -35,9 +35,14 @@ var CoinDetailUI = (function (_super) {
     /**初始监听 */
     CoinDetailUI.prototype.initListener = function () {
         this.registerEvent(this.rightBtn, egret.TouchEvent.TOUCH_TAP, this.goContributeDetail, this);
+        this.registerEvent(this.detailTxtIcon, egret.TouchEvent.TOUCH_TAP, this.goCoinDetailDesc, this);
+        this.registerEvent(this.detailTxt, egret.TouchEvent.TOUCH_TAP, this.goCoinDetailDesc, this);
     };
     CoinDetailUI.prototype.goContributeDetail = function () {
         UIManager.openUI(UIConst.ContributeDetailUI);
+    };
+    CoinDetailUI.prototype.goCoinDetailDesc = function () {
+        UIManager.openUI(UIConst.CoinDetailDescUI, LayerManager.Layer_Tip);
     };
     /**关闭界面 */
     CoinDetailUI.prototype.dispose = function () {

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="coinDetailDesc" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="bg_black_png" x="0" y="0" width="640" height="1024" alpha="0.3"/>
+	<e:Image y="104" width="360" height="130" horizontalCenter="0" source="detail_theme_png"/>
+	<e:Image source="detail_border_up_png" y="232" width="567" horizontalCenter="0" height="38"/>
+	<e:Image source="detail_border_mid_png" y="269" width="567" horizontalCenter="0" height="614"/>
+	<e:Image source="detail_border_down_png" y="883" width="567" horizontalCenter="0" height="47"/>
+	<e:Image id="closeBtn" source="close_png" x="506" y="211" width="59" height="59"/>
+	<e:Image source="detailItemBg_png" y="333.94" width="505" horizontalCenter="0.5" anchorOffsetY="0" height="237.06"/>
+	<e:Image source="detailItemBg_png" y="653" width="505" horizontalCenter="0.5" anchorOffsetY="0" height="233"/>
+	<e:Label text="果喵币支出:" x="68" y="280" textColor="0x894e00" fontFamily="SimHei"/>
+	<e:Label text="果喵币收入:" x="68" y="596" textColor="0x894E00" fontFamily="SimHei"/>
+	<e:Label text="项目名称" y="350" textColor="0x424242" size="20" fontFamily="SimHei" horizontalCenter="-157"/>
+	<e:Label text="说明" x="390" y="350" textColor="0x424242" size="20" fontFamily="SimHei"/>
+	<e:Label text="项目名称" x="118" y="670" textColor="0x424242" size="20" fontFamily="SimHei" horizontalCenter="-157"/>
+	<e:Label text="说明" x="390" y="670" textColor="0x424242" size="20" fontFamily="SimHei"/>
+	<e:Label text="购买水果" x="128.5" y="390" size="20" fontFamily="SimHei" textColor="0x848484" horizontalCenter="-157"/>
+	<e:Label text="购买工具" x="118" y="430" textColor="0x848484" size="20" fontFamily="SimHei" horizontalCenter="-157"/>
+	<e:Label text="购买种子" x="128.5" y="470" textColor="0x848484" size="20" fontFamily="SimHei" horizontalCenter="-157"/>
+	<e:Label text="种子失效" x="138.5" y="520" textColor="0x848484" size="20" fontFamily="SimHei" horizontalCenter="-157"/>
+	<e:Label text="您使用果喵币购买了实际水果" x="270" y="390" textColor="0x848484" size="20" fontFamily="SimHei"/>
+	<e:Label text="您在小卖铺购买了工具" x="270" y="430" textColor="0x848484" size="20" fontFamily="SimHei"/>
+	<e:Label text="您在小卖铺购买了种子" x="270" y="470" textColor="0x848484" size="20" fontFamily="SimHei"/>
+	<e:Label text="果喵将自动扣除所购种子价值5%的果喵币作为手续费" x="270" y="510" textColor="0x848484" size="20" fontFamily="SimHei" width="287"/>
+	
+	<e:Label text="充值" x="128.5" y="710" size="20" fontFamily="SimHei" textColor="0x848484" horizontalCenter="-157"/>
+	<e:Label text="每日结算" x="118" y="750" textColor="0x848484" size="20" fontFamily="SimHei" horizontalCenter="-157"/>
+	<e:Label text="签到" x="128.5" y="790" textColor="0x848484" size="20" fontFamily="SimHei" horizontalCenter="-157"/>
+	<e:Label text="种子失效退回" x="138.5" y="840" textColor="0x848484" size="20" fontFamily="SimHei" horizontalCenter="-157"/>
+	<e:Label text="您通过微信支付充值了果喵币" x="270" y="710" textColor="0x848484" size="20" fontFamily="SimHei"/>
+	<e:Label text="当天收获的果实转化为果喵币" x="270" y="750" textColor="0x848484" size="20" fontFamily="SimHei"/>
+	<e:Label text="每日签到奖励相应的果喵币" x="270" y="790" textColor="0x848484" size="20" fontFamily="SimHei"/>
+	<e:Label text="过期种子将自动转化为果喵币退回至玩家账户" x="270" y="840" textColor="0x848484" size="20" fontFamily="SimHei" width="303.67" anchorOffsetX="0"/>
+</e:Skin>

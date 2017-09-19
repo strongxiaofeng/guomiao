@@ -21,7 +21,7 @@
 	<e:Image source="atrributeDetailTxt_png" y="289" width="265" height="45" horizontalCenter="0"/>
 	<e:Image source="attriDetailBoard_png" x="0" width="640" height="80" bottom="0"/>
 	<e:Label id="totalContri" text="总贡献度：000" x="60" y="969" fontFamily="SimHei"/>
-	<e:Image source="question_png" x="457" y="968" width="29" height="29"/>
+	<e:Image id="descIcon" source="question_png" x="457" y="968" width="29" height="29"/>
 	<e:Label id="detailTxt" text="明细说明" x="494" y="973" size="20" fontFamily="SimHei"/>
 	<e:Scroller width="525" height="598" x="59" y="344">
 		<e:List id="attriDetailList" useVirtualLayout="false"/>
