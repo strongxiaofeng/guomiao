@@ -69,7 +69,7 @@
 		</e:Button>
 		<e:Group id="noticeGroup" width="530" height="58" y="160" horizontalCenter="0" x="55" scaleX="1" scaleY="1">
 		<e:Image source="notice_bg_png" width="570" height="54" horizontalCenter="0" x="0" scaleX="1" scaleY="1" verticalCenter="0"/>
-		<e:Label id="noticeLabel" text="公告：明天做糖葫芦，又大又甜的糖葫芦咯" x="76" scaleX="1" scaleY="1" verticalCenter="0" textColor="0x315973" size="22" fontFamily="黑体"/>
+		<e:Label id="noticeLabel" text="公告：明天吃糖葫芦，又大又甜的糖葫芦咯" x="76" scaleX="1" scaleY="1" verticalCenter="0" textColor="0x315973" size="22" fontFamily="黑体"/>
 		</e:Group>
 		<e:Button id="btn_game" label="" x="30" y="240" width="101" height="99" scaleX="1" scaleY="1">
 		<e:skinName>

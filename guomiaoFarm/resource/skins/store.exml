@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="store" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Image source="bg_black_png" x="0" y="0" width="640" height="1024" alpha="0.3"/>
-	<e:Label text="仓库" x="267" y="204"/>
-	<e:Image id="btn_close" source="close_png" x="461" y="204" width="59" height="59"/>
+	<e:Image source="store_bg_png" anchorOffsetX="-3" width="603" height="836" horizontalCenter="0" verticalCenter="0"/>
+	<e:Image id="btn_close" source="close_png" x="563" y="119.17" width="59" height="59"/>
+	<e:Image source="store_board_png" y="357" width="462" height="45" horizontalCenter="0"/>
+	<e:Image source="store_board_png" width="462" height="45" horizontalCenter="0" y="580"/>
+	<e:Image source="store_board_png" y="807" width="462" height="45" horizontalCenter="0"/>
+	<e:Image source="store_insurance_png" x="362" y="249" width="127" height="121"/>
+	<e:Image source="store_kettle_png" x="143" y="714.5" width="146" height="110"/>
+	<e:Image source="store_receiveGoolds_png" x="341" y="664.5" width="175" height="160"/>
+	<e:Image x="135" y="257" scaleX="0.5" scaleY="0.5" source="shop_fertilizer_png"/>
+	<e:Image source="seed1_png" x="169" y="479" scaleX="0.5" scaleY="0.5"/>
+	<e:Image source="seed2_png" x="393" y="478" scaleX="0.5" scaleY="0.5"/>
+	<e:Image source="downtime_bg_png" x="100" y="592" width="215" height="54"/>
+	<e:Image source="downtime_bg_png" x="331" y="592" width="215" height="54"/>
+	<e:Label text="05:00:15后结束播种" x="119" y="612" size="20" fontFamily="SimHei" textColor="0x727374"/>
+	<e:Label text="05:00:15后结束播种" x="345" y="612" size="20" fontFamily="SimHei" textColor="0x727374"/>
+	<e:Label text="5.3斤" x="415" y="744" size="20" fontFamily="SimHei" textColor="0x723010"/>
 </e:Skin>

@@ -29,7 +29,16 @@ var UserMenuUI = (function (_super) {
         this.registerEvent(this.attributeTxtBg, egret.TouchEvent.TOUCH_TAP, this.goContributeDetail, this);
         this.registerEvent(this.coinTxt, egret.TouchEvent.TOUCH_TAP, this.goCoinDetail, this);
         this.registerEvent(this.coinTxtBg, egret.TouchEvent.TOUCH_TAP, this.goCoinDetail, this);
+        this.registerEvent(this.btn_charge, egret.TouchEvent.TOUCH_TAP, this.goCharge, this);
+        this.registerEvent(this.btn_shop, egret.TouchEvent.TOUCH_TAP, this.goShop, this);
         this.registerEvent(this.btn_address, egret.TouchEvent.TOUCH_TAP, this.goAddress, this);
+        this.registerEvent(this.btn_order, egret.TouchEvent.TOUCH_TAP, this.goOrder, this);
+        this.registerEvent(this.btn_store, egret.TouchEvent.TOUCH_TAP, this.goStore, this);
+        this.registerEvent(this.btn_rank, egret.TouchEvent.TOUCH_TAP, this.goRank, this);
+        this.registerEvent(this.btn_coinCharge, egret.TouchEvent.TOUCH_TAP, this.goCharge, this);
+        this.registerEvent(this.btn_honor, egret.TouchEvent.TOUCH_TAP, this.goHonor, this);
+        this.registerEvent(this.btn_radio, egret.TouchEvent.TOUCH_TAP, this.goRadio, this);
+        this.registerEvent(this.btn_set, egret.TouchEvent.TOUCH_TAP, this.goSet, this);
     };
     /**贡献明细 */
     UserMenuUI.prototype.goContributeDetail = function () {
@@ -40,9 +49,41 @@ var UserMenuUI = (function (_super) {
     UserMenuUI.prototype.goCoinDetail = function () {
         UIManager.openUI(UIConst.CoinDetailUI);
     };
+    /**商店 */
+    UserMenuUI.prototype.goShop = function () {
+        UIManager.openUI(UIConst.ShopUI);
+    };
     /**地址管理 */
     UserMenuUI.prototype.goAddress = function () {
         UIManager.openUI(UIConst.AddressManageUI);
+    };
+    /**订单 */
+    UserMenuUI.prototype.goOrder = function () {
+        UIManager.openUI(UIConst.MyOrderUI);
+    };
+    /**仓库 */
+    UserMenuUI.prototype.goStore = function () {
+        UIManager.openUI(UIConst.StoreUI, LayerManager.Layer_Tip);
+    };
+    /**排行 */
+    UserMenuUI.prototype.goRank = function () {
+        UIManager.openUI(UIConst.RankUI);
+    };
+    /**充值 */
+    UserMenuUI.prototype.goCharge = function () {
+        UIManager.openUI(UIConst.ChargeUI);
+    };
+    /**勋章墙 */
+    UserMenuUI.prototype.goHonor = function () {
+        UIManager.openUI(UIConst.HonorWallUI);
+    };
+    /**广播 */
+    UserMenuUI.prototype.goRadio = function () {
+        UIManager.openUI(UIConst.RadioUI);
+    };
+    /**设置 */
+    UserMenuUI.prototype.goSet = function () {
+        UIManager.openUI(UIConst.SetUI);
     };
     /**关闭界面 */
     UserMenuUI.prototype.dispose = function () {

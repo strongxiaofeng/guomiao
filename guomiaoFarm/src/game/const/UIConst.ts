@@ -11,12 +11,17 @@ class UIConst {
 	public static CoinDetailUI = "CoinDetailUI";
 	public static CoinDetailDescUI = "CoinDetailDescUI";
 	public static AddressManageUI = "AddressManageUI";
+	public static AddAddressUI = "AddAddressUI";
 	public static SignUI = "SignUI";
 	public static StoreUI = "StoreUI";
 	public static GiftUI = "GiftUI";
+	public static TipGetCoinUI = "TipGetCoinUI";
 	public static RadioUI = "RadioUI";
 	public static ShopUI = "ShopUI";
 	public static ChargeUI = "ChargeUI";
 	public static RankUI = "RankUI";
 	public static InviteWaterUI = "InviteWaterUI";
+	public static HonorWallUI = "HonorWallUI";
+	public static MyOrderUI = "MyOrderUI";
+	public static SetUI = "SetUI";
 }

@@ -29,9 +29,15 @@ class TopBarUI extends BaseUI{
 		}
 		//返回个人中心
 		else if(UIManager.isUIOpen(UIConst.ContributeDetailUI) || UIManager.isUIOpen(UIConst.CoinDetailUI) 
-		|| UIManager.isUIOpen(UIConst.AddressManageUI))
+		|| UIManager.isUIOpen(UIConst.AddressManageUI) || UIManager.isUIOpen(UIConst.HonorWallUI)
+		|| UIManager.isUIOpen(UIConst.MyOrderUI) || UIManager.isUIOpen(UIConst.SetUI))
 		{
 			UIManager.openUI(UIConst.UserMenuUI);
+		}
+		//返回地址管理
+		else if(UIManager.isUIOpen(UIConst.AddAddressUI))
+		{
+			UIManager.openUI(UIConst.AddressManageUI);
 		}
 		//返回农场主页
 		else if(UIManager.isUIOpen(UIConst.UserMenuUI) || UIManager.isUIOpen(UIConst.RadioUI) 

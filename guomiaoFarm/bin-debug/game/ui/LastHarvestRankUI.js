@@ -21,6 +21,16 @@ var LastHarvestRankUI = (function (_super) {
     /**初始界面 */
     LastHarvestRankUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
+        this.list.itemRenderer = LastHarvestRankItem;
+        var ac = new eui.ArrayCollection;
+        ac.addItem({});
+        ac.addItem({});
+        ac.addItem({});
+        ac.addItem({});
+        ac.addItem({});
+        ac.addItem({});
+        ac.addItem({});
+        this.list.dataProvider = ac;
     };
     /**初始监听 */
     LastHarvestRankUI.prototype.initListener = function () {

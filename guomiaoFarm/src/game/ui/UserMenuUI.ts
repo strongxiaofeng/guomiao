@@ -3,6 +3,7 @@ class UserMenuUI extends BaseUI{
 	private attributeTxtBg: eui.Image;
 	private coinTxt: eui.Label;
 	private coinTxtBg: eui.Image;
+	private btn_charge: eui.Image;
 
 	private btn_shop: eui.Image;
 	private btn_address: eui.Image;
@@ -32,8 +33,17 @@ class UserMenuUI extends BaseUI{
 		this.registerEvent(this.attributeTxtBg, egret.TouchEvent.TOUCH_TAP, this.goContributeDetail, this);
 		this.registerEvent(this.coinTxt, egret.TouchEvent.TOUCH_TAP, this.goCoinDetail, this);
 		this.registerEvent(this.coinTxtBg, egret.TouchEvent.TOUCH_TAP, this.goCoinDetail, this);
+		this.registerEvent(this.btn_charge, egret.TouchEvent.TOUCH_TAP, this.goCharge, this);
 
+		this.registerEvent(this.btn_shop, egret.TouchEvent.TOUCH_TAP, this.goShop, this);
 		this.registerEvent(this.btn_address, egret.TouchEvent.TOUCH_TAP, this.goAddress, this);
+		this.registerEvent(this.btn_order, egret.TouchEvent.TOUCH_TAP, this.goOrder, this);
+		this.registerEvent(this.btn_store, egret.TouchEvent.TOUCH_TAP, this.goStore, this);
+		this.registerEvent(this.btn_rank, egret.TouchEvent.TOUCH_TAP, this.goRank, this);
+		this.registerEvent(this.btn_coinCharge, egret.TouchEvent.TOUCH_TAP, this.goCharge, this);
+		this.registerEvent(this.btn_honor, egret.TouchEvent.TOUCH_TAP, this.goHonor, this);
+		this.registerEvent(this.btn_radio, egret.TouchEvent.TOUCH_TAP, this.goRadio, this);
+		this.registerEvent(this.btn_set, egret.TouchEvent.TOUCH_TAP, this.goSet, this);
 	}
 	/**贡献明细 */
 	private goContributeDetail()
@@ -46,10 +56,50 @@ class UserMenuUI extends BaseUI{
 	{
 		UIManager.openUI(UIConst.CoinDetailUI);
 	}
+	/**商店 */
+	private goShop()
+	{
+		UIManager.openUI(UIConst.ShopUI);
+	}
 	/**地址管理 */
 	private goAddress()
 	{
 		UIManager.openUI(UIConst.AddressManageUI);
+	}
+	/**订单 */
+	private goOrder()
+	{
+		UIManager.openUI(UIConst.MyOrderUI);
+	}
+	/**仓库 */
+	private goStore()
+	{
+		UIManager.openUI(UIConst.StoreUI, LayerManager.Layer_Tip);
+	}
+	/**排行 */
+	private goRank()
+	{
+		UIManager.openUI(UIConst.RankUI);
+	}
+	/**充值 */
+	private goCharge()
+	{
+		UIManager.openUI(UIConst.ChargeUI);
+	}
+	/**勋章墙 */
+	private goHonor()
+	{
+		UIManager.openUI(UIConst.HonorWallUI);
+	}
+	/**广播 */
+	private goRadio()
+	{
+		UIManager.openUI(UIConst.RadioUI);
+	}
+	/**设置 */
+	private goSet()
+	{
+		UIManager.openUI(UIConst.SetUI);
 	}
 	/**关闭界面 */
 	public dispose()
