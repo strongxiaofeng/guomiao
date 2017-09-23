@@ -18,6 +18,8 @@ class UIConst {
 	public static TipGetCoinUI = "TipGetCoinUI";
 	public static RadioUI = "RadioUI";
 	public static ShopUI = "ShopUI";
+	public static ShopCarDetailUI = "ShopCarDetailUI";
+	public static PayUI = "PayUI";
 	public static ChargeUI = "ChargeUI";
 	public static RankUI = "RankUI";
 	public static InviteWaterUI = "InviteWaterUI";

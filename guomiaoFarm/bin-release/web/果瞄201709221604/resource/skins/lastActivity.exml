@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="lastActivity" width="640" height="1024" xmlns:e="http://ns.egret.com/eui">
-	<e:Rect width="640" height="1024" fillColor="0xd8ce56" horizontalCenter="0" verticalCenter="0"/>
-	<e:Label text="往期活动" x="290" y="120" textColor="0x9e4919" size="60"/>
-</e:Skin>

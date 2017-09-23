@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="set" width="640" height="1024" xmlns:e="http://ns.egret.com/eui">
-	<e:Image source="FriendBg_jpg" x="0" y="0"/>
-	<e:Label text="游戏设置" x="246" y="144" textColor="0x5e3838" size="50"/>
-</e:Skin>

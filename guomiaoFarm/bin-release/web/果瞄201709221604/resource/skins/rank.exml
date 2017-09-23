@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="rank" width="640" height="1024" xmlns:e="http://ns.egret.com/eui">
-	<e:Image source="userBg_jpg" x="0" y="0"/>
-	<e:Label text="排行榜敬请期待" x="180" y="169" size="40"/>
-</e:Skin>
