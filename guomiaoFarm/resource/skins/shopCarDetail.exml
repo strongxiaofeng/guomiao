@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="shopCarDetail" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Group id="headGroup" width="640" height="55" x="0" bottom="969" visible="false">
-		<e:Rect width="640" height="55" x="0" y="0" fillColor="0xededed" scaleX="1" scaleY="1"/>
+	<e:Group id="headGroup" width="640" height="55" x="0" bottom="969">
+		<e:Rect width="640" height="1024" x="0" y="-1024" scaleX="1" scaleY="1" fillColor="0x000000" alpha="0.5"/>
+		<e:Rect width="640" height="55" x="0" y="0" fillColor="0xEDEDED" scaleX="1" scaleY="1"/>
 		<e:Rect width="640" height="880" x="0" y="55" scaleX="1" scaleY="1" fillColor="0xffffff"/>
         <e:Image source="choiced_goods_bg_png" x="33" y="13" height="26" width="6"/>
         <e:Label text="已选商品" x="72" y="16" textColor="0x8e470f" fontFamily="SimHei" size="22"/>

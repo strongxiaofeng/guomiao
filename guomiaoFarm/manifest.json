@@ -30,7 +30,7 @@
 		"bin-debug/game/ui/contributeDetail/ContributeDetailDescUI.js",
 		"bin-debug/game/ui/contributeDetail/ContriButeDetailItem.js",
 		"bin-debug/game/ui/contributeDetail/ContributeDetailUI.js",
-		"bin-debug/LoadingUI.js",
+		"bin-debug/game/ui/userMenu/UserMenuUI.js",
 		"bin-debug/game/ui/home/HomeUI.js",
 		"bin-debug/game/ui/honor/HonorWallUI.js",
 		"bin-debug/game/ui/lastActivity/LastActivityUI.js",
@@ -52,6 +52,6 @@
 		"bin-debug/game/ui/sign/SignUI.js",
 		"bin-debug/game/ui/store/StoreUI.js",
 		"bin-debug/game/ui/top/TopBarUI.js",
-		"bin-debug/game/ui/userMenu/UserMenuUI.js"
+		"bin-debug/LoadingUI.js"
 	]
 }

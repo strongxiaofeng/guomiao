@@ -36,6 +36,9 @@ var TopBarUI = (function (_super) {
             UIManager.closeUI(UIConst.TopBarUI);
             UIManager.openUI(UIConst.WelcomeUI);
         }
+        else if (UIManager.isUIOpen(UIConst.PayUI)) {
+            UIManager.openUI(UIConst.ShopUI);
+        }
         else if (UIManager.isUIOpen(UIConst.ContributeDetailUI) || UIManager.isUIOpen(UIConst.CoinDetailUI)
             || UIManager.isUIOpen(UIConst.AddressManageUI) || UIManager.isUIOpen(UIConst.HonorWallUI)
             || UIManager.isUIOpen(UIConst.MyOrderUI) || UIManager.isUIOpen(UIConst.SetUI)) {

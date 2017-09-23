@@ -27,6 +27,11 @@ class TopBarUI extends BaseUI{
 			UIManager.closeUI(UIConst.TopBarUI);
 			UIManager.openUI(UIConst.WelcomeUI);
 		}
+		//返回商铺
+		else if(UIManager.isUIOpen(UIConst.PayUI))
+		{
+			UIManager.openUI(UIConst.ShopUI);
+		}
 		//返回个人中心
 		else if(UIManager.isUIOpen(UIConst.ContributeDetailUI) || UIManager.isUIOpen(UIConst.CoinDetailUI) 
 		|| UIManager.isUIOpen(UIConst.AddressManageUI) || UIManager.isUIOpen(UIConst.HonorWallUI)
