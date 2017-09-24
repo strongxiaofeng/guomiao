@@ -44,6 +44,7 @@
     "resource/skins/honorWall.exml",
     "resource/skins/inviteWater.exml",
     "resource/skins/lastActivity.exml",
+    "resource/skins/lastActivityItem.exml",
     "resource/skins/lastHarvestItem.exml",
     "resource/skins/lastHarvestRank.exml",
     "resource/skins/myOrder.exml",

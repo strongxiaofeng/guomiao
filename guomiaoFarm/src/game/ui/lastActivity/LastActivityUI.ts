@@ -1,4 +1,5 @@
 class LastActivityUI extends BaseUI{
+	private list: eui.List;
 	public constructor() {
 		super();
 		this.skinName = "resource/skins/lastActivity.exml";
@@ -8,6 +9,15 @@ class LastActivityUI extends BaseUI{
 	public initSetting()
 	{
 		super.initSetting();
+		this.list.itemRenderer = LastActivityItem;
+		var ac = new eui.ArrayCollection();
+		ac.addItem({});
+		ac.addItem({});
+		ac.addItem({});
+		ac.addItem({});
+		ac.addItem({});
+		ac.addItem({});
+		this.list.dataProvider = ac;
 	}
 	/**初始监听 */
 	protected initListener()

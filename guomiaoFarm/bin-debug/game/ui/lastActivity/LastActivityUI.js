@@ -21,6 +21,15 @@ var LastActivityUI = (function (_super) {
     /**初始界面 */
     LastActivityUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
+        this.list.itemRenderer = LastActivityItem;
+        var ac = new eui.ArrayCollection();
+        ac.addItem({});
+        ac.addItem({});
+        ac.addItem({});
+        ac.addItem({});
+        ac.addItem({});
+        ac.addItem({});
+        this.list.dataProvider = ac;
     };
     /**初始监听 */
     LastActivityUI.prototype.initListener = function () {

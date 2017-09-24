@@ -78,6 +78,8 @@ declare class inviteWater extends eui.Skin{
 }
 declare class lastActivity extends eui.Skin{
 }
+declare class lastActivityItem extends eui.Skin{
+}
 declare class lastHarvestItem extends eui.Skin{
 }
 declare class lastHarvst extends eui.Skin{
