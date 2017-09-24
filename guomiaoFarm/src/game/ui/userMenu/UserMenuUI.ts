@@ -79,7 +79,7 @@ class UserMenuUI extends BaseUI{
 	/**排行 */
 	private goRank()
 	{
-		UIManager.openUI(UIConst.RankUI);
+		UIManager.openUI(UIConst.RankFriendContributeUI);
 	}
 	/**充值 */
 	private goCharge()

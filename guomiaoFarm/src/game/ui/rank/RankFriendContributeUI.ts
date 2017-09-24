@@ -1,15 +1,21 @@
-class RadioUI extends BaseUI{
+class RankFriendContributeUI extends BaseUI{
 	private list: eui.List;
 	public constructor() {
 		super();
-		this.skinName = "resource/skins/radio.exml";
+		this.skinName = "resource/skins/rank_friend_contri.exml";
 	}
 	/**初始界面 */
 	public initSetting()
 	{
 		super.initSetting();
-		this.list.itemRenderer = RadioItem;
+		this.list.itemRenderer = RankItem_Friend_contri;
 		var ac = new eui.ArrayCollection();
+		ac.addItem({});
+		ac.addItem({});
+		ac.addItem({});
+		ac.addItem({});
+		ac.addItem({});
+		ac.addItem({});
 		ac.addItem({});
 		ac.addItem({});
 		ac.addItem({});

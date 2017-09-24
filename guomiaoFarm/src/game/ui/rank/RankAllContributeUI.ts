@@ -1,7 +1,7 @@
-class RankUI extends BaseUI{
+class RankAllContributeUI extends BaseUI{
 	public constructor() {
 		super();
-		this.skinName = "resource/skins/rank.exml";
+		this.skinName = "resource/skins/rank_all_contri.exml";
 	}
 	/**初始界面 */
 	public initSetting()

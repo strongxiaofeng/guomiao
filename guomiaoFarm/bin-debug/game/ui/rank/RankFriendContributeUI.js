@@ -11,30 +11,38 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var InviteWaterUI = (function (_super) {
-    __extends(InviteWaterUI, _super);
-    function InviteWaterUI() {
+var RankFriendContributeUI = (function (_super) {
+    __extends(RankFriendContributeUI, _super);
+    function RankFriendContributeUI() {
         var _this = _super.call(this) || this;
-        _this.skinName = "resource/skins/inviteWater.exml";
+        _this.skinName = "resource/skins/rank_friend_contri.exml";
         return _this;
     }
     /**初始界面 */
-    InviteWaterUI.prototype.initSetting = function () {
+    RankFriendContributeUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
+        this.list.itemRenderer = RankItem_Friend_contri;
+        var ac = new eui.ArrayCollection();
+        ac.addItem({});
+        ac.addItem({});
+        ac.addItem({});
+        ac.addItem({});
+        ac.addItem({});
+        ac.addItem({});
+        ac.addItem({});
+        ac.addItem({});
+        ac.addItem({});
+        ac.addItem({});
+        this.list.dataProvider = ac;
     };
     /**初始监听 */
-    InviteWaterUI.prototype.initListener = function () {
-        this.registerEvent(this.btn_close, egret.TouchEvent.TOUCH_TAP, this.clickClose, this);
-    };
-    /**点击关闭 */
-    InviteWaterUI.prototype.clickClose = function () {
-        UIManager.closeUI(UIConst.InviteWaterUI);
+    RankFriendContributeUI.prototype.initListener = function () {
     };
     /**关闭界面 */
-    InviteWaterUI.prototype.dispose = function () {
+    RankFriendContributeUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
     };
-    return InviteWaterUI;
+    return RankFriendContributeUI;
 }(BaseUI));
-__reflect(InviteWaterUI.prototype, "InviteWaterUI");
-//# sourceMappingURL=InviteWaterUI.js.map
+__reflect(RankFriendContributeUI.prototype, "RankFriendContributeUI");
+//# sourceMappingURL=RankFriendContributeUI.js.map

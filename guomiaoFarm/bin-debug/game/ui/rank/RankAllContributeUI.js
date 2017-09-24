@@ -11,32 +11,25 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var RadioUI = (function (_super) {
-    __extends(RadioUI, _super);
-    function RadioUI() {
+var RankAllContributeUI = (function (_super) {
+    __extends(RankAllContributeUI, _super);
+    function RankAllContributeUI() {
         var _this = _super.call(this) || this;
-        _this.skinName = "resource/skins/radio.exml";
+        _this.skinName = "resource/skins/rank_all_contri.exml";
         return _this;
     }
     /**初始界面 */
-    RadioUI.prototype.initSetting = function () {
+    RankAllContributeUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
-        this.list.itemRenderer = RadioItem;
-        var ac = new eui.ArrayCollection();
-        ac.addItem({});
-        ac.addItem({});
-        ac.addItem({});
-        ac.addItem({});
-        this.list.dataProvider = ac;
     };
     /**初始监听 */
-    RadioUI.prototype.initListener = function () {
+    RankAllContributeUI.prototype.initListener = function () {
     };
     /**关闭界面 */
-    RadioUI.prototype.dispose = function () {
+    RankAllContributeUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
     };
-    return RadioUI;
+    return RankAllContributeUI;
 }(BaseUI));
-__reflect(RadioUI.prototype, "RadioUI");
-//# sourceMappingURL=RadioUI.js.map
+__reflect(RankAllContributeUI.prototype, "RankAllContributeUI");
+//# sourceMappingURL=RankAllContributeUI.js.map

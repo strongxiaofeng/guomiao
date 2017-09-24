@@ -11,18 +11,19 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var RadioUI = (function (_super) {
-    __extends(RadioUI, _super);
-    function RadioUI() {
+var InviteWaterUI = (function (_super) {
+    __extends(InviteWaterUI, _super);
+    function InviteWaterUI() {
         var _this = _super.call(this) || this;
-        _this.skinName = "resource/skins/radio.exml";
+        _this.skinName = "resource/skins/inviteWater.exml";
         return _this;
     }
     /**初始界面 */
-    RadioUI.prototype.initSetting = function () {
+    InviteWaterUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
-        this.list.itemRenderer = RadioItem;
+        this.list.itemRenderer = InviteWaterItem;
         var ac = new eui.ArrayCollection();
+        ac.addItem({});
         ac.addItem({});
         ac.addItem({});
         ac.addItem({});
@@ -30,13 +31,18 @@ var RadioUI = (function (_super) {
         this.list.dataProvider = ac;
     };
     /**初始监听 */
-    RadioUI.prototype.initListener = function () {
+    InviteWaterUI.prototype.initListener = function () {
+        this.registerEvent(this.btn_close, egret.TouchEvent.TOUCH_TAP, this.clickClose, this);
+    };
+    /**点击关闭 */
+    InviteWaterUI.prototype.clickClose = function () {
+        UIManager.closeUI(UIConst.InviteWaterUI);
     };
     /**关闭界面 */
-    RadioUI.prototype.dispose = function () {
+    InviteWaterUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
     };
-    return RadioUI;
+    return InviteWaterUI;
 }(BaseUI));
-__reflect(RadioUI.prototype, "RadioUI");
-//# sourceMappingURL=RadioUI.js.map
+__reflect(InviteWaterUI.prototype, "InviteWaterUI");
+//# sourceMappingURL=InviteWaterUI.js.map

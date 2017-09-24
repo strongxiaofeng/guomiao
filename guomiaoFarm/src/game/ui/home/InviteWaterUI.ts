@@ -1,5 +1,6 @@
 class InviteWaterUI extends BaseUI{
 	private btn_close: eui.Image;
+	private list: eui.List;
 	public constructor() {
 		super();
 		this.skinName = "resource/skins/inviteWater.exml";
@@ -8,6 +9,14 @@ class InviteWaterUI extends BaseUI{
 	public initSetting()
 	{
 		super.initSetting();
+		this.list.itemRenderer = InviteWaterItem;
+		var ac = new eui.ArrayCollection();
+		ac.addItem({});
+		ac.addItem({});
+		ac.addItem({});
+		ac.addItem({});
+		ac.addItem({});
+		this.list.dataProvider = ac;
 	}
 	/**初始监听 */
 	protected initListener()

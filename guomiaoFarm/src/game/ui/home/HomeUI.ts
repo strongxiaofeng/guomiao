@@ -80,7 +80,7 @@ class HomeUI extends BaseUI{
 	/**排行 */
 	private clickRank()
 	{
-		UIManager.openUI(UIConst.RankUI);
+		UIManager.openUI(UIConst.RankFriendContributeUI);
 		UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
 	}
 	/**小游戏 */

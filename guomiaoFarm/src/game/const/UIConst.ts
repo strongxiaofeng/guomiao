@@ -21,7 +21,10 @@ class UIConst {
 	public static ShopCarDetailUI = "ShopCarDetailUI";
 	public static PayUI = "PayUI";
 	public static ChargeUI = "ChargeUI";
-	public static RankUI = "RankUI";
+	public static RankFriendContributeUI = "RankFriendContributeUI";
+	public static RankFriendCoinUI = "RankFriendCoinUI";
+	public static RankAllContributeUI = "RankAllContributeUI";
+	public static RankAllCoinUI = "RankAllCoinUI";
 	public static InviteWaterUI = "InviteWaterUI";
 	public static HonorWallUI = "HonorWallUI";
 	public static MyOrderUI = "MyOrderUI";

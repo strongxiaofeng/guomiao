@@ -11,32 +11,25 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var RadioUI = (function (_super) {
-    __extends(RadioUI, _super);
-    function RadioUI() {
+var RankFriendCoinUI = (function (_super) {
+    __extends(RankFriendCoinUI, _super);
+    function RankFriendCoinUI() {
         var _this = _super.call(this) || this;
-        _this.skinName = "resource/skins/radio.exml";
+        _this.skinName = "resource/skins/rank_friend_coin.exml";
         return _this;
     }
     /**初始界面 */
-    RadioUI.prototype.initSetting = function () {
+    RankFriendCoinUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
-        this.list.itemRenderer = RadioItem;
-        var ac = new eui.ArrayCollection();
-        ac.addItem({});
-        ac.addItem({});
-        ac.addItem({});
-        ac.addItem({});
-        this.list.dataProvider = ac;
     };
     /**初始监听 */
-    RadioUI.prototype.initListener = function () {
+    RankFriendCoinUI.prototype.initListener = function () {
     };
     /**关闭界面 */
-    RadioUI.prototype.dispose = function () {
+    RankFriendCoinUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
     };
-    return RadioUI;
+    return RankFriendCoinUI;
 }(BaseUI));
-__reflect(RadioUI.prototype, "RadioUI");
-//# sourceMappingURL=RadioUI.js.map
+__reflect(RankFriendCoinUI.prototype, "RankFriendCoinUI");
+//# sourceMappingURL=RankFriendCoinUI.js.map

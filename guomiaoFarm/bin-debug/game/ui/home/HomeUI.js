@@ -69,7 +69,7 @@ var HomeUI = (function (_super) {
     };
     /**排行 */
     HomeUI.prototype.clickRank = function () {
-        UIManager.openUI(UIConst.RankUI);
+        UIManager.openUI(UIConst.RankFriendContributeUI);
         UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
     };
     /**小游戏 */

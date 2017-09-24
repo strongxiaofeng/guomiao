@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="inviteWaterItem" width="532" height="107" xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="sign_grid_png" y="0" scale9Grid="28,28,174,174" height="96" width="501" horizontalCenter="0"/>
+	<e:Image source="rankHeadBorder_png" x="29" y="12" scaleX="0.5" scaleY="0.5"/>
+	<e:Label text="小金毛" x="120" y="14" textColor="0x585f65" fontFamily="SimHei" size="22"/>
+	<e:Label text="9999" x="174" y="56" fontFamily="SimHei" size="22" textColor="0xff0000"/>
+	<e:Image source="contribution _png" x="124" y="56" scaleX="0.5" scaleY="0.5"/>
+	<e:Button label="" x="417" y="25" scaleX="0.5" scaleY="0.5">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="invite_able_png" source.down="invite_able_png" source.disabled="invite_disable_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+</e:Skin>

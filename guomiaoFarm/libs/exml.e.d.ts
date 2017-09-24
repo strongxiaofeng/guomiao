@@ -76,6 +76,8 @@ declare class honorWall extends eui.Skin{
 }
 declare class inviteWater extends eui.Skin{
 }
+declare class inviteWaterItem extends eui.Skin{
+}
 declare class lastActivity extends eui.Skin{
 }
 declare class lastActivityItem extends eui.Skin{
@@ -91,6 +93,10 @@ declare class pay extends eui.Skin{
 declare class payGoodsItem extends eui.Skin{
 }
 declare class radio extends eui.Skin{
+}
+declare class radioItem extends eui.Skin{
+}
+declare class rankItem_friend_contri extends eui.Skin{
 }
 declare class rank extends eui.Skin{
 }

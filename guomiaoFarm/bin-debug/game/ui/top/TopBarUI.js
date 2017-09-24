@@ -48,7 +48,7 @@ var TopBarUI = (function (_super) {
             UIManager.openUI(UIConst.AddressManageUI);
         }
         else if (UIManager.isUIOpen(UIConst.UserMenuUI) || UIManager.isUIOpen(UIConst.RadioUI)
-            || UIManager.isUIOpen(UIConst.ShopUI) || UIManager.isUIOpen(UIConst.ChargeUI) || UIManager.isUIOpen(UIConst.RankUI)) {
+            || UIManager.isUIOpen(UIConst.ShopUI) || UIManager.isUIOpen(UIConst.ChargeUI) || UIManager.isUIOpen(UIConst.RankFriendContributeUI)) {
             UIManager.closeUI(UIConst.TopBarUI);
             UIManager.openUI(UIConst.HomeUI);
         }

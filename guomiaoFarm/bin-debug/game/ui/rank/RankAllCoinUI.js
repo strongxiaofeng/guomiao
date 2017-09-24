@@ -11,25 +11,25 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var RankUI = (function (_super) {
-    __extends(RankUI, _super);
-    function RankUI() {
+var RankAllCoinUI = (function (_super) {
+    __extends(RankAllCoinUI, _super);
+    function RankAllCoinUI() {
         var _this = _super.call(this) || this;
-        _this.skinName = "resource/skins/rank.exml";
+        _this.skinName = "resource/skins/rank_all_coin.exml";
         return _this;
     }
     /**初始界面 */
-    RankUI.prototype.initSetting = function () {
+    RankAllCoinUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
     };
     /**初始监听 */
-    RankUI.prototype.initListener = function () {
+    RankAllCoinUI.prototype.initListener = function () {
     };
     /**关闭界面 */
-    RankUI.prototype.dispose = function () {
+    RankAllCoinUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
     };
-    return RankUI;
+    return RankAllCoinUI;
 }(BaseUI));
-__reflect(RankUI.prototype, "RankUI");
-//# sourceMappingURL=RankUI.js.map
+__reflect(RankAllCoinUI.prototype, "RankAllCoinUI");
+//# sourceMappingURL=RankAllCoinUI.js.map

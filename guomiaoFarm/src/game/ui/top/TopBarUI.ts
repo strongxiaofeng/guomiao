@@ -46,7 +46,7 @@ class TopBarUI extends BaseUI{
 		}
 		//返回农场主页
 		else if(UIManager.isUIOpen(UIConst.UserMenuUI) || UIManager.isUIOpen(UIConst.RadioUI) 
-		|| UIManager.isUIOpen(UIConst.ShopUI) || UIManager.isUIOpen(UIConst.ChargeUI) || UIManager.isUIOpen(UIConst.RankUI))
+		|| UIManager.isUIOpen(UIConst.ShopUI) || UIManager.isUIOpen(UIConst.ChargeUI) || UIManager.isUIOpen(UIConst.RankFriendContributeUI))
 		{
 			UIManager.closeUI(UIConst.TopBarUI);
 			UIManager.openUI(UIConst.HomeUI);

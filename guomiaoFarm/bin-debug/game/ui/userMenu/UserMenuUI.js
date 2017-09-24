@@ -67,7 +67,7 @@ var UserMenuUI = (function (_super) {
     };
     /**排行 */
     UserMenuUI.prototype.goRank = function () {
-        UIManager.openUI(UIConst.RankUI);
+        UIManager.openUI(UIConst.RankFriendContributeUI);
     };
     /**充值 */
     UserMenuUI.prototype.goCharge = function () {
