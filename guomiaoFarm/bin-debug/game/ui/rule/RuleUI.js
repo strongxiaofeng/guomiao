@@ -21,9 +21,24 @@ var RuleUI = (function (_super) {
     /**初始界面 */
     RuleUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
+        this.clickLeft();
     };
     /**初始监听 */
     RuleUI.prototype.initListener = function () {
+        this.registerEvent(this.leftBtn, egret.TouchEvent.TOUCH_TAP, this.clickLeft, this);
+        this.registerEvent(this.rightBtn, egret.TouchEvent.TOUCH_TAP, this.clickRight, this);
+    };
+    RuleUI.prototype.clickLeft = function () {
+        this.ruleGroup.visible = true;
+        this.descGroup.visible = false;
+        this.leftBtn.enabled = false;
+        this.rightBtn.enabled = true;
+    };
+    RuleUI.prototype.clickRight = function () {
+        this.ruleGroup.visible = false;
+        this.descGroup.visible = true;
+        this.leftBtn.enabled = true;
+        this.rightBtn.enabled = false;
     };
     /**关闭界面 */
     RuleUI.prototype.dispose = function () {
