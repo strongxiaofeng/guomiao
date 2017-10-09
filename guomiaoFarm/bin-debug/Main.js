@@ -150,6 +150,9 @@ var Main = (function (_super) {
      */
     Main.prototype.startCreateScene = function () {
         UIManager.openUI(UIConst.WelcomeUI);
+        console.log(MD5.parse("sdasdas"));
+        console.log(MD5.parse("sdasdas"));
+        console.log(MD5.parse("sdasdas"));
     };
     return Main;
 }(eui.UILayer));

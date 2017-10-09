@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="attributeDetailItem" width="525" height="100" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="detailItemBg_png" x="0" y="0" width="100%" height="90"/>
+	<e:Image source="contribution _png" x="37" width="34" height="25" verticalCenter="-5"/>
+	<e:Label id="addAttriTxt" text="+2222" x="100" textColor="0x91c21b" size="24" verticalCenter="-5"/>
+	<e:Label id="dateTxt" text="2017-05-10" x="414" textColor="0x979797" size="18" verticalCenter="-5"/>
+</e:Skin>

@@ -146,6 +146,10 @@ class Main extends eui.UILayer {
      */
     protected startCreateScene(): void {
         UIManager.openUI(UIConst.WelcomeUI);
+
+        console.log(MD5.parse("sdasdas"));
+        console.log(MD5.parse("sdasdas"));
+        console.log(MD5.parse("sdasdas"));
     }
    
 }

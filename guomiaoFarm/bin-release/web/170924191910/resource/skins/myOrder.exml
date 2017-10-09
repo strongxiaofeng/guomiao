@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="myOrder" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Rect width="640" height="1024" x="0" y="0" fillColor="0xe4f3f6"/>
-	<e:Image source="addressManageTheme_jpg" x="0" y="0" width="640" height="231"/>
-	<e:Image source="myOrder_png" y="74" width="210" height="50" horizontalCenter="0"/>
-</e:Skin>

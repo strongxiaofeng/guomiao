@@ -68,7 +68,7 @@
     xhr.open('GET', './manifest.json?v=' + Math.random(), true);
     xhr.addEventListener("load", function () {
         var manifest = JSON.parse(xhr.response);
-        var list = manifest.initial.concat(manifest.game);
+        var list = manifest.initial.concat(["./resource/js/yamd5.js"]).concat(manifest.game);
         loadScript(list, function () {
             /**
              * {
