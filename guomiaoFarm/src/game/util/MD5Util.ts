@@ -1,4 +1,4 @@
-class MD5{
+class MD5Util{
 	private static md5:any;
 	public constructor()
 	{
@@ -14,4 +14,5 @@ class MD5{
 		this.md5.appendStr(str);
 		return this.md5.end();
 	}
+
 }

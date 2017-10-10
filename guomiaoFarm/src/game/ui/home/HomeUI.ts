@@ -24,6 +24,8 @@ class HomeUI extends BaseUI{
 	public initSetting()
 	{
 		super.initSetting();
+
+		GameController.getInstance().getFarmInfo({token: GameModel.getInstance().getToken()});
 	}
 	/**初始监听 */
 	protected initListener()

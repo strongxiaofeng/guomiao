@@ -8,6 +8,8 @@ class StoreUI extends BaseUI{
 	public initSetting()
 	{
 		super.initSetting();
+
+		GameController.getInstance().getStoreInfo({token: GameModel.getInstance().getToken()});
 	}
 	/**初始监听 */
 	protected initListener()

@@ -21,14 +21,17 @@ var WelcomeUI = (function (_super) {
     /**初始界面 */
     WelcomeUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
-        console.log("initSetting");
+        GameController.getInstance().getUserInfo({ openid: 1111 });
     };
     /**初始监听 */
     WelcomeUI.prototype.initListener = function () {
-        console.log("注册事件");
         this.registerEvent(this.btn_myFarm, egret.TouchEvent.TOUCH_TAP, this.clickFarm, this);
         this.registerEvent(this.btn_lastActivity, egret.TouchEvent.TOUCH_TAP, this.clickActivity, this);
         this.registerEvent(this.btn_rule, egret.TouchEvent.TOUCH_TAP, this.clickRule, this);
+        this.addRegister(NotifyConst.Notify_UserInfo, this.onUserInfo, this);
+    };
+    WelcomeUI.prototype.onUserInfo = function (info) {
+        console.log('收到了用户信息 ', info);
     };
     /**我的农场 */
     WelcomeUI.prototype.clickFarm = function () {
@@ -49,6 +52,7 @@ var WelcomeUI = (function (_super) {
     /**关闭界面 */
     WelcomeUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
+        this.removeRegister(this);
     };
     return WelcomeUI;
 }(BaseUI));

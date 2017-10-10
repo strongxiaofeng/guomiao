@@ -1,6 +1,9 @@
 module vo {
 	/**用户信息 */
 	export class UserInfo{
+		/**是否激活 */
+		public active: number;
+		public id: string;
 		public openid: string;
 		public nickname: string;
 		public avatar: string;
@@ -12,9 +15,9 @@ module vo {
 		public total_exp: number;
 		/**点赞次数 */
 		public thumbs_up: number;
-		/**是否激活 */
-		public active: number;
 		/**标识一个用户 */
-		public token: number;
+		public token: string;
+		public created_at: number;
+		public updated_at: number;
 	}
 }

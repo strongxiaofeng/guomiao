@@ -38,6 +38,17 @@ class BaseUI extends eui.Component{
 	protected initListener()
 	{
 	}
+	/**注册通知 由子类调用*/
+	protected addRegister(type:string, callback:Function, callbackobj:any)
+	{
+		NotifyManager.getInstance().registerNotify(type, callback, callbackobj);
+	}
+	/**移除通知 由子类调用*/
+	protected removeRegister(obj: any)
+	{
+		NotifyManager.getInstance().removeRegister(obj);
+	}
+
 	/**关闭界面 */
 	public dispose()
 	{

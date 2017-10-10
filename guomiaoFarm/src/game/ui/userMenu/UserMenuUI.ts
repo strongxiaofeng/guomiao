@@ -1,6 +1,11 @@
 class UserMenuUI extends BaseUI{
+	private nameTxt: eui.Label;
+	private LevelTxtImg: eui.Image;
+	private gameIdTxt: eui.Label;
 	private attributeTxt: eui.Label;
 	private attributeTxtBg: eui.Image;
+	private contri_number: eui.Label;
+	private coin_number: eui.Label;
 	private coinTxt: eui.Label;
 	private coinTxtBg: eui.Image;
 	private btn_charge: eui.Image;
@@ -24,6 +29,8 @@ class UserMenuUI extends BaseUI{
 	public initSetting()
 	{
 		super.initSetting();
+
+		this.initUserData();
 	}
 	/**初始监听 */
 	protected initListener()
@@ -45,6 +52,16 @@ class UserMenuUI extends BaseUI{
 		this.registerEvent(this.btn_radio, egret.TouchEvent.TOUCH_TAP, this.goRadio, this);
 		this.registerEvent(this.btn_set, egret.TouchEvent.TOUCH_TAP, this.goSet, this);
 	}
+	private initUserData()
+	{
+		this.nameTxt.text = GameModel.getInstance().getNickname();
+		this.LevelTxtImg.source = "num"+GameModel.getInstance().getLevel()+"_png";
+		this.gameIdTxt.text = "游戏ID： "+GameModel.getInstance().getId();
+		this.contri_number.text = GameModel.getInstance().getContribute()+"/"+GameModel.getInstance().getTotalContribute();
+		this.coin_number.text = GameModel.getInstance().getGold()+"";
+	}
+
+
 	/**贡献明细 */
 	private goContributeDetail()
 	{

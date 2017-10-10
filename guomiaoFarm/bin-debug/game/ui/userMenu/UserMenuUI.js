@@ -21,6 +21,7 @@ var UserMenuUI = (function (_super) {
     /**初始界面 */
     UserMenuUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
+        this.initUserData();
     };
     /**初始监听 */
     UserMenuUI.prototype.initListener = function () {
@@ -39,6 +40,13 @@ var UserMenuUI = (function (_super) {
         this.registerEvent(this.btn_honor, egret.TouchEvent.TOUCH_TAP, this.goHonor, this);
         this.registerEvent(this.btn_radio, egret.TouchEvent.TOUCH_TAP, this.goRadio, this);
         this.registerEvent(this.btn_set, egret.TouchEvent.TOUCH_TAP, this.goSet, this);
+    };
+    UserMenuUI.prototype.initUserData = function () {
+        this.nameTxt.text = GameModel.getInstance().getNickname();
+        this.LevelTxtImg.source = "num" + GameModel.getInstance().getLevel() + "_png";
+        this.gameIdTxt.text = "游戏ID： " + GameModel.getInstance().getId();
+        this.contri_number.text = GameModel.getInstance().getContribute() + "/" + GameModel.getInstance().getTotalContribute();
+        this.coin_number.text = GameModel.getInstance().getGold() + "";
     };
     /**贡献明细 */
     UserMenuUI.prototype.goContributeDetail = function () {

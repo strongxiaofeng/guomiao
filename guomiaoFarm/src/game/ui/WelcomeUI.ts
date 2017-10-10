@@ -11,15 +11,20 @@ class WelcomeUI extends BaseUI{
 	public initSetting()
 	{
 		super.initSetting();
-		console.log("initSetting")
+		GameController.getInstance().getUserInfo({openid:1111}); 
 	}
 	/**初始监听 */
 	protected initListener()
 	{
-		console.log("注册事件")
 		this.registerEvent(this.btn_myFarm, egret.TouchEvent.TOUCH_TAP, this.clickFarm, this);
 		this.registerEvent(this.btn_lastActivity, egret.TouchEvent.TOUCH_TAP, this.clickActivity, this);
 		this.registerEvent(this.btn_rule, egret.TouchEvent.TOUCH_TAP, this.clickRule, this);
+
+		this.addRegister(NotifyConst.Notify_UserInfo, this.onUserInfo, this);
+	}
+	private onUserInfo(info: vo.UserInfo)
+	{
+		console.log('收到了用户信息 ',info);
 	}
 	/**我的农场 */
 	private clickFarm()
@@ -44,5 +49,6 @@ class WelcomeUI extends BaseUI{
 	public dispose()
 	{
 		super.dispose();
+		this.removeRegister(this);
 	}
 }

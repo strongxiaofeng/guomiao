@@ -44,6 +44,14 @@ var BaseUI = (function (_super) {
     /**初始监听 */
     BaseUI.prototype.initListener = function () {
     };
+    /**注册通知 由子类调用*/
+    BaseUI.prototype.addRegister = function (type, callback, callbackobj) {
+        NotifyManager.getInstance().registerNotify(type, callback, callbackobj);
+    };
+    /**移除通知 由子类调用*/
+    BaseUI.prototype.removeRegister = function (obj) {
+        NotifyManager.getInstance().removeRegister(obj);
+    };
     /**关闭界面 */
     BaseUI.prototype.dispose = function () {
         this.isShow = false;

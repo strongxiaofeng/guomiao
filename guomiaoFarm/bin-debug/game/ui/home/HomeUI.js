@@ -21,6 +21,7 @@ var HomeUI = (function (_super) {
     /**初始界面 */
     HomeUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
+        GameController.getInstance().getFarmInfo({ token: GameModel.getInstance().getToken() });
     };
     /**初始监听 */
     HomeUI.prototype.initListener = function () {
