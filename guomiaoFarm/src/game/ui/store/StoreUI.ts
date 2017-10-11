@@ -9,12 +9,19 @@ class StoreUI extends BaseUI{
 	{
 		super.initSetting();
 
-		GameController.getInstance().getStoreInfo({token: GameModel.getInstance().getToken()});
+		GameController.getInstance().getStoreInfo();
 	}
 	/**初始监听 */
 	protected initListener()
 	{
 		this.registerEvent(this.btn_close, egret.TouchEvent.TOUCH_TAP, this.clickClose, this);
+
+		this.addRegister(NotifyConst.Notify_StoreInfo, this.onStoreInfo, this);
+	}
+	/**收到仓库信息 */
+	public onStoreInfo(info: vo.StoreInfo)
+	{
+		console.log("仓库ui收到仓库信息 ",info)
 	}
 	/**点击关闭 */
 	private clickClose()
@@ -25,5 +32,6 @@ class StoreUI extends BaseUI{
 	public dispose()
 	{
 		super.dispose();
+		this.removeRegister(this);
 	}
 }

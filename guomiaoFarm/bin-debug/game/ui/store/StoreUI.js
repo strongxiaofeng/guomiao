@@ -21,11 +21,16 @@ var StoreUI = (function (_super) {
     /**初始界面 */
     StoreUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
-        GameController.getInstance().getStoreInfo({ token: GameModel.getInstance().getToken() });
+        GameController.getInstance().getStoreInfo();
     };
     /**初始监听 */
     StoreUI.prototype.initListener = function () {
         this.registerEvent(this.btn_close, egret.TouchEvent.TOUCH_TAP, this.clickClose, this);
+        this.addRegister(NotifyConst.Notify_StoreInfo, this.onStoreInfo, this);
+    };
+    /**收到仓库信息 */
+    StoreUI.prototype.onStoreInfo = function (info) {
+        console.log("仓库ui收到仓库信息 ", info);
     };
     /**点击关闭 */
     StoreUI.prototype.clickClose = function () {
@@ -34,6 +39,7 @@ var StoreUI = (function (_super) {
     /**关闭界面 */
     StoreUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
+        this.removeRegister(this);
     };
     return StoreUI;
 }(BaseUI));

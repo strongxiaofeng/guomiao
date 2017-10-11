@@ -21,7 +21,7 @@ var WelcomeUI = (function (_super) {
     /**初始界面 */
     WelcomeUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
-        GameController.getInstance().getUserInfo({ openid: 1111 });
+        GameController.getInstance().getUserInfo(1111);
     };
     /**初始监听 */
     WelcomeUI.prototype.initListener = function () {

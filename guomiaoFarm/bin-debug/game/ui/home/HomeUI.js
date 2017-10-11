@@ -21,11 +21,10 @@ var HomeUI = (function (_super) {
     /**初始界面 */
     HomeUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
-        GameController.getInstance().getFarmInfo({ token: GameModel.getInstance().getToken() });
+        GameController.getInstance().getFarmInfo();
     };
     /**初始监听 */
     HomeUI.prototype.initListener = function () {
-        console.log("initListener");
         this.registerEvent(this.headBg, egret.TouchEvent.TOUCH_TAP, this.clickHead, this);
         this.registerEvent(this.signBtn, egret.TouchEvent.TOUCH_TAP, this.clickSign, this);
         this.registerEvent(this.storeBtn, egret.TouchEvent.TOUCH_TAP, this.clickStore, this);
@@ -39,6 +38,11 @@ var HomeUI = (function (_super) {
         this.registerEvent(this.btn_fertilizer, egret.TouchEvent.TOUCH_TAP, this.clickFertilizer, this);
         this.registerEvent(this.btn_water, egret.TouchEvent.TOUCH_TAP, this.clickWater, this);
         this.registerEvent(this.btn_seed, egret.TouchEvent.TOUCH_TAP, this.clickSeed, this);
+        this.addRegister(NotifyConst.Notify_LandInfo, this.onLandInfo, this);
+    };
+    /**农田信息 */
+    HomeUI.prototype.onLandInfo = function (info) {
+        console.log('主界面收到农田信息 ', info);
     };
     /**个人 */
     HomeUI.prototype.clickHead = function () {
@@ -97,6 +101,7 @@ var HomeUI = (function (_super) {
     /**关闭界面 */
     HomeUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
+        this.removeRegister(this);
     };
     return HomeUI;
 }(BaseUI));

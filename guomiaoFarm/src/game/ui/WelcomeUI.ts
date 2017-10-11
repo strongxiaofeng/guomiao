@@ -11,7 +11,7 @@ class WelcomeUI extends BaseUI{
 	public initSetting()
 	{
 		super.initSetting();
-		GameController.getInstance().getUserInfo({openid:1111}); 
+		GameController.getInstance().getUserInfo(1111); 
 	}
 	/**初始监听 */
 	protected initListener()

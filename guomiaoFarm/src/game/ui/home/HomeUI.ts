@@ -25,12 +25,11 @@ class HomeUI extends BaseUI{
 	{
 		super.initSetting();
 
-		GameController.getInstance().getFarmInfo({token: GameModel.getInstance().getToken()});
+		GameController.getInstance().getFarmInfo();
 	}
 	/**初始监听 */
 	protected initListener()
 	{
-		console.log("initListener");
 		this.registerEvent(this.headBg, egret.TouchEvent.TOUCH_TAP, this.clickHead, this);
 		this.registerEvent(this.signBtn, egret.TouchEvent.TOUCH_TAP, this.clickSign, this);
 		this.registerEvent(this.storeBtn, egret.TouchEvent.TOUCH_TAP, this.clickStore, this);
@@ -44,6 +43,14 @@ class HomeUI extends BaseUI{
 		this.registerEvent(this.btn_fertilizer, egret.TouchEvent.TOUCH_TAP, this.clickFertilizer, this);
 		this.registerEvent(this.btn_water, egret.TouchEvent.TOUCH_TAP, this.clickWater, this);
 		this.registerEvent(this.btn_seed, egret.TouchEvent.TOUCH_TAP, this.clickSeed, this);
+
+
+		this.addRegister(NotifyConst.Notify_LandInfo, this.onLandInfo, this);
+	}
+	/**农田信息 */
+	private onLandInfo(info: vo.FarmInfo)
+	{
+		console.log('主界面收到农田信息 ',info);
 	}
 	/**个人 */
 	private clickHead()
@@ -116,5 +123,6 @@ class HomeUI extends BaseUI{
 	public dispose()
 	{
 		super.dispose();
+		this.removeRegister(this);
 	}
 }
