@@ -3,6 +3,7 @@ class LastActivityUI extends BaseUI{
 	public constructor() {
 		super();
 		this.skinName = "resource/skins/lastActivity.exml";
+
 	}
 
 	/**初始界面 */

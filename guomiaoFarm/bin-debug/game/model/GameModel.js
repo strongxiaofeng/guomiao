@@ -3,6 +3,8 @@ var __reflect = (this && this.__reflect) || function (p, c, t) {
 };
 var GameModel = (function () {
     function GameModel() {
+        /**是否收到过昨日排行  */
+        this.isYesterdayRankGot = false;
     }
     GameModel.getInstance = function () {
         if (!this._instance)
@@ -27,6 +29,20 @@ var GameModel = (function () {
     Object.defineProperty(GameModel.prototype, "landInfo", {
         set: function (info) {
             this._landInfo = info;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(GameModel.prototype, "serverConfig", {
+        set: function (info) {
+            this._serverConfig = info;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(GameModel.prototype, "addressList", {
+        set: function (info) {
+            this._addressList = info;
         },
         enumerable: true,
         configurable: true
@@ -75,6 +91,8 @@ var GameModel = (function () {
             return this._userinfo.total_exp;
         }
         return 0;
+    };
+    GameModel.prototype.getItemList = function () {
     };
     return GameModel;
 }());

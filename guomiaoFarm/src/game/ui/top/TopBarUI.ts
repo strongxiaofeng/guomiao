@@ -64,7 +64,6 @@ class TopBarUI extends BaseUI{
 		else if(UIManager.isUIOpen(UIConst.LastActivityUI))
 		{
 			UIManager.openUI(UIConst.HomeUI);
-			UIManager.openUI(UIConst.LastHarvestRankUI, LayerManager.Layer_Tip);
 		}
 		else
 		{

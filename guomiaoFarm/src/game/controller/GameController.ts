@@ -317,13 +317,15 @@ class GameController {
 					console.log("请求地址列表失败",obj);
 				}
 				else{
+					console.log('收到地址列表 ',obj);
+					GameModel.getInstance().addressList = obj;
 					NotifyManager.getInstance().sendNotify(NotifyConst.Notify_AddressList, obj.data);
 				}
 			}
 		);
 	}
 	/**添加地址 */
-	public addAddress(realname: string, phone: number, address: string)
+	public addAddress(realname: string, phone: string, address: string)
 	{
 		let sendData = {realname: realname, phone: phone, address: address, token: GameModel.getInstance().getToken()};
 		this.sendHttp(
@@ -617,6 +619,19 @@ class GameController {
 			}
 		);
 	}
-
+	/**获取配置 */
+	public getServerConfig()
+	{
+		let sendData = {token: GameModel.getInstance().getToken()};
+		this.sendHttp(
+			sendData, 
+			'POST', 
+			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=comm/game-config',
+			(obj)=>{
+				console.log('收到配置:', obj);
+				GameModel.getInstance().serverConfig = obj;
+			}
+		);
+	}
 
 }

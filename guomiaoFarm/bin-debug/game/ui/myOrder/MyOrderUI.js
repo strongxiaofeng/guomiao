@@ -21,6 +21,9 @@ var MyOrderUI = (function (_super) {
     /**初始界面 */
     MyOrderUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
+        //待支付
+        // GameController.getInstance().getOrderList(0, 0, 10);
+        GameController.getInstance().sendSureReceive(2);
     };
     /**初始监听 */
     MyOrderUI.prototype.initListener = function () {

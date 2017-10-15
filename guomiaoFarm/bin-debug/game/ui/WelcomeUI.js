@@ -22,6 +22,7 @@ var WelcomeUI = (function (_super) {
     WelcomeUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
         GameController.getInstance().getUserInfo(1111);
+        GameController.getInstance().getServerConfig();
     };
     /**初始监听 */
     WelcomeUI.prototype.initListener = function () {
@@ -36,7 +37,6 @@ var WelcomeUI = (function (_super) {
     /**我的农场 */
     WelcomeUI.prototype.clickFarm = function () {
         UIManager.openUI(UIConst.HomeUI);
-        UIManager.openUI(UIConst.LastHarvestRankUI, LayerManager.Layer_Tip);
     };
     /**往期活动 */
     WelcomeUI.prototype.clickActivity = function () {

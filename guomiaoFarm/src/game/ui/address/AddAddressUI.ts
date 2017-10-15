@@ -23,6 +23,8 @@ class AddAddressUI extends BaseUI{
 	private clickSave()
 	{
 		console.log("保存");
+		GameController.getInstance().addAddress("收货的人", "13525648516", "成都市环球中心");
+		UIManager.openUI(UIConst.AddressManageUI);
 	}
 	/**关闭界面 */
 	public dispose()

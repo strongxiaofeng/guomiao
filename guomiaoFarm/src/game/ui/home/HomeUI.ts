@@ -24,7 +24,8 @@ class HomeUI extends BaseUI{
 	public initSetting()
 	{
 		super.initSetting();
-
+		//昨日排行只请求一次
+		if(!GameModel.getInstance().isYesterdayRankGot) GameController.getInstance().getYesterdayHarvestRank();
 		GameController.getInstance().getFarmInfo();
 	}
 	/**初始监听 */
@@ -46,11 +47,19 @@ class HomeUI extends BaseUI{
 
 
 		this.addRegister(NotifyConst.Notify_LandInfo, this.onLandInfo, this);
+		this.addRegister(NotifyConst.Notify_YesterdayHarvestRank, this.onYesterdayHarvestRank, this);
 	}
 	/**农田信息 */
 	private onLandInfo(info: vo.FarmInfo)
 	{
 		console.log('主界面收到农田信息 ',info);
+	}
+	/**昨日收成排行 */
+	private onYesterdayHarvestRank(info:vo.YesterdayHarvestRankInfo)
+	{
+		console.log('主界面收到昨日排行 ',info);
+		GameModel.getInstance().isYesterdayRankGot = true;
+		UIManager.openUI(UIConst.LastHarvestRankUI, LayerManager.Layer_Tip);
 	}
 	/**个人 */
 	private clickHead()
@@ -104,20 +113,24 @@ class HomeUI extends BaseUI{
 	/**除草 */
 	private clickWeed()
 	{
-		console.log("clickWeed");
+		GameController.getInstance().sendOperLand(5);
 	}
 	/**施肥 */
 	private clickFertilizer()
 	{
+		GameController.getInstance().sendOperLand(6);
 	}
 	/**浇水 */
 	private clickWater()
 	{
-		UIManager.openUI(UIConst.InviteWaterUI, LayerManager.Layer_Tip);
+		GameController.getInstance().sendOperLand(3);
+		// UIManager.openUI(UIConst.InviteWaterUI, LayerManager.Layer_Tip);
 	}
-	/**播种 */
+	/**播种 种仓库里的id*/
 	private clickSeed()
 	{
+		GameController.getInstance().sendSeed(4);
+		GameController.getInstance().sendGather();
 	}
 	/**关闭界面 */
 	public dispose()

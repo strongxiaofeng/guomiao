@@ -22,16 +22,22 @@ var AddressManageUI = (function (_super) {
     AddressManageUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
         this.addressList.itemRenderer = AddressListItem;
-        var ac = new eui.ArrayCollection();
-        ac.addItem({});
-        ac.addItem({});
-        ac.addItem({});
-        ac.addItem({});
-        this.addressList.dataProvider = ac;
+        GameController.getInstance().getAddressList();
+        this.ac = new eui.ArrayCollection();
+        this.addressList.dataProvider = this.ac;
     };
     /**初始监听 */
     AddressManageUI.prototype.initListener = function () {
         this.registerEvent(this.addAddressBtn, egret.TouchEvent.TOUCH_TAP, this.clickAdd, this);
+        this.addRegister(NotifyConst.Notify_AddressList, this.onAddressList, this);
+    };
+    /**刷新列表 */
+    AddressManageUI.prototype.onAddressList = function () {
+        this.ac.removeAll();
+        this.ac.addItem({});
+        this.ac.addItem({});
+        this.ac.addItem({});
+        this.ac.refresh();
     };
     AddressManageUI.prototype.clickAdd = function () {
         console.log("新增地址");

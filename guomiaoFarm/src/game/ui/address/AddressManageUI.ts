@@ -1,6 +1,7 @@
 class AddressManageUI extends BaseUI{
 	private addAddressBtn: eui.Image;
 	private addressList: eui.List;
+	private ac:eui.ArrayCollection;
 
 	public constructor() {
 		super();
@@ -13,18 +14,27 @@ class AddressManageUI extends BaseUI{
 		super.initSetting();
 		this.addressList.itemRenderer = AddressListItem;
 
-		var ac = new eui.ArrayCollection();
-		ac.addItem({});
-		ac.addItem({});
-		ac.addItem({});
-		ac.addItem({});
-		this.addressList.dataProvider = ac;
+		GameController.getInstance().getAddressList();
+
+		this.ac = new eui.ArrayCollection();
+		this.addressList.dataProvider = this.ac;
 	}
 
 	/**初始监听 */
 	protected initListener()
 	{
 		this.registerEvent(this.addAddressBtn, egret.TouchEvent.TOUCH_TAP, this.clickAdd, this);
+
+		this.addRegister(NotifyConst.Notify_AddressList, this.onAddressList, this);
+	}
+	/**刷新列表 */
+	private onAddressList()
+	{
+		this.ac.removeAll();
+		this.ac.addItem({});
+		this.ac.addItem({});
+		this.ac.addItem({});
+		this.ac.refresh();
 	}
 	private clickAdd()
 	{

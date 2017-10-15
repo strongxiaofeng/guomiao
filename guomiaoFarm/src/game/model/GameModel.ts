@@ -8,10 +8,14 @@ class GameModel {
 		return this._instance;
 	}
 
+	/**是否收到过昨日排行  */
+	public isYesterdayRankGot:boolean = false;
+	private _serverConfig: any;
 	private _userinfo: vo.UserInfo;
 	private _storeInfo: vo.StoreInfo;
 	/**农田信息 */
 	private _landInfo: vo.StoreInfo;
+	private _addressList: vo.AddressInfo;
 
 	// --------------------------- 存储数据 -------------------------------------
 
@@ -26,6 +30,14 @@ class GameModel {
 	public set landInfo(info: vo.StoreInfo)
 	{
 		this._landInfo = info;
+	}
+	public set serverConfig(info: any)
+	{
+		this._serverConfig = info;
+	}
+	public set addressList(info: any)
+	{
+		this._addressList = info;
 	}
 	
 
@@ -89,5 +101,9 @@ class GameModel {
 			return this._userinfo.total_exp;
 		}
 		return 0;
+	}
+	public getItemList()
+	{
+		
 	}
 }

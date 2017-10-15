@@ -21,6 +21,9 @@ var HomeUI = (function (_super) {
     /**初始界面 */
     HomeUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
+        //昨日排行只请求一次
+        if (!GameModel.getInstance().isYesterdayRankGot)
+            GameController.getInstance().getYesterdayHarvestRank();
         GameController.getInstance().getFarmInfo();
     };
     /**初始监听 */
@@ -39,10 +42,17 @@ var HomeUI = (function (_super) {
         this.registerEvent(this.btn_water, egret.TouchEvent.TOUCH_TAP, this.clickWater, this);
         this.registerEvent(this.btn_seed, egret.TouchEvent.TOUCH_TAP, this.clickSeed, this);
         this.addRegister(NotifyConst.Notify_LandInfo, this.onLandInfo, this);
+        this.addRegister(NotifyConst.Notify_YesterdayHarvestRank, this.onYesterdayHarvestRank, this);
     };
     /**农田信息 */
     HomeUI.prototype.onLandInfo = function (info) {
         console.log('主界面收到农田信息 ', info);
+    };
+    /**昨日收成排行 */
+    HomeUI.prototype.onYesterdayHarvestRank = function (info) {
+        console.log('主界面收到昨日排行 ', info);
+        GameModel.getInstance().isYesterdayRankGot = true;
+        UIManager.openUI(UIConst.LastHarvestRankUI, LayerManager.Layer_Tip);
     };
     /**个人 */
     HomeUI.prototype.clickHead = function () {
@@ -86,17 +96,21 @@ var HomeUI = (function (_super) {
     };
     /**除草 */
     HomeUI.prototype.clickWeed = function () {
-        console.log("clickWeed");
+        GameController.getInstance().sendOperLand(5);
     };
     /**施肥 */
     HomeUI.prototype.clickFertilizer = function () {
+        GameController.getInstance().sendOperLand(6);
     };
     /**浇水 */
     HomeUI.prototype.clickWater = function () {
-        UIManager.openUI(UIConst.InviteWaterUI, LayerManager.Layer_Tip);
+        GameController.getInstance().sendOperLand(3);
+        // UIManager.openUI(UIConst.InviteWaterUI, LayerManager.Layer_Tip);
     };
-    /**播种 */
+    /**播种 种仓库里的id*/
     HomeUI.prototype.clickSeed = function () {
+        GameController.getInstance().sendSeed(4);
+        GameController.getInstance().sendGather();
     };
     /**关闭界面 */
     HomeUI.prototype.dispose = function () {

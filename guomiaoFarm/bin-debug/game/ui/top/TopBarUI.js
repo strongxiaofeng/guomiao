@@ -61,7 +61,6 @@ var TopBarUI = (function (_super) {
         }
         else if (UIManager.isUIOpen(UIConst.LastActivityUI)) {
             UIManager.openUI(UIConst.HomeUI);
-            UIManager.openUI(UIConst.LastHarvestRankUI, LayerManager.Layer_Tip);
         }
         else {
             UIManager.openUI(UIConst.HomeUI);

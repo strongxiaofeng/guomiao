@@ -12,6 +12,7 @@ class WelcomeUI extends BaseUI{
 	{
 		super.initSetting();
 		GameController.getInstance().getUserInfo(1111); 
+		GameController.getInstance().getServerConfig(); 
 	}
 	/**初始监听 */
 	protected initListener()
@@ -30,7 +31,6 @@ class WelcomeUI extends BaseUI{
 	private clickFarm()
 	{
 		UIManager.openUI(UIConst.HomeUI);
-		UIManager.openUI(UIConst.LastHarvestRankUI, LayerManager.Layer_Tip);
 	}
 	/**往期活动 */
 	private clickActivity()

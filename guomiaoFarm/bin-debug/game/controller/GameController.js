@@ -200,6 +200,8 @@ var GameController = (function () {
                 console.log("请求地址列表失败", obj);
             }
             else {
+                console.log('收到地址列表 ', obj);
+                GameModel.getInstance().addressList = obj;
                 NotifyManager.getInstance().sendNotify(NotifyConst.Notify_AddressList, obj.data);
             }
         });
@@ -375,6 +377,14 @@ var GameController = (function () {
         var sendData = { token: GameModel.getInstance().getToken() };
         this.sendHttp(sendData, 'POST', 'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/play-game', function (obj) {
             NotifyManager.getInstance().sendNotify(NotifyConst.Notify_PlayGame, obj);
+        });
+    };
+    /**获取配置 */
+    GameController.prototype.getServerConfig = function () {
+        var sendData = { token: GameModel.getInstance().getToken() };
+        this.sendHttp(sendData, 'POST', 'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=comm/game-config', function (obj) {
+            console.log('收到配置:', obj);
+            GameModel.getInstance().serverConfig = obj;
         });
     };
     return GameController;

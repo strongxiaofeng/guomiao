@@ -28,6 +28,8 @@ var AddAddressUI = (function (_super) {
     };
     AddAddressUI.prototype.clickSave = function () {
         console.log("保存");
+        GameController.getInstance().addAddress("收货的人", "13525648516", "成都市环球中心");
+        UIManager.openUI(UIConst.AddressManageUI);
     };
     /**关闭界面 */
     AddAddressUI.prototype.dispose = function () {

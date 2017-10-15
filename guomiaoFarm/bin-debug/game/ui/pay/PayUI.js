@@ -32,6 +32,7 @@ var PayUI = (function (_super) {
     };
     /**初始监听 */
     PayUI.prototype.initListener = function () {
+        this.registerEvent(this.payBtn, egret.TouchEvent.TOUCH_TAP, this.clickPay, this);
     };
     /**根据购物数量 刷新高度 */
     PayUI.prototype.updateHeight = function () {
@@ -42,6 +43,13 @@ var PayUI = (function (_super) {
             _this.leaveMsgGroup.y = _this.payTypeGroup.y + _this.payTypeGroup.height + 10;
             _this.scrollerGroup.height = _this.leaveMsgGroup.y + _this.leaveMsgGroup.height;
         }, this);
+    };
+    /**确认付款 */
+    PayUI.prototype.clickPay = function () {
+        // GameController.getInstance().sendOrder(2, [{item_id:100001,num:1}], "尽快送达");
+        setTimeout(function () {
+            GameController.getInstance().sendOrderPay(2);
+        }, 1000);
     };
     /**关闭界面 */
     PayUI.prototype.dispose = function () {
