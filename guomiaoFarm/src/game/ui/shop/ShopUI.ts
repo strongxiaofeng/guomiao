@@ -9,32 +9,49 @@ class ShopUI extends BaseUI{
 	private toolList: eui.List;
 	private fruitList: eui.List;
 
+	private ac_seed: eui.ArrayCollection;
+	private ac_tool: eui.ArrayCollection;
+	private ac_fruit: eui.ArrayCollection;
+
 	public constructor() {
 		super();
 		this.skinName = "resource/skins/shop.exml";
+
 	}
 	/**初始界面 */
 	public initSetting()
 	{
 		super.initSetting();
-
-		var ac = new eui.ArrayCollection();
-		ac.addItem({});
-		ac.addItem({});
-		ac.addItem({});
-		ac.addItem({});
-		ac.addItem({});
-		ac.addItem({});
-		this.seedList.itemRenderer = ShopSeedItem;
-		this.seedList.dataProvider = ac;
-
-		this.toolList.itemRenderer = ShopToolItem;
-		this.toolList.dataProvider = ac;
-
-		this.fruitList.itemRenderer = ShopFruitItem;
-		this.fruitList.dataProvider = ac;
-
 		UIManager.openUI(UIConst.ShopCarDetailUI, LayerManager.Layer_Tip);
+		
+		this.ac_seed = new eui.ArrayCollection;
+		this.ac_tool = new eui.ArrayCollection;
+		this.ac_fruit = new eui.ArrayCollection;
+		this.seedList.itemRenderer = ShopSeedItem;
+		this.toolList.itemRenderer = ShopToolItem;
+		this.fruitList.itemRenderer = ShopFruitItem;
+		this.seedList.dataProvider = this.ac_seed;
+		this.toolList.dataProvider = this.ac_tool;
+		this.fruitList.dataProvider = this.ac_fruit; 
+		this.seedList.useVirtualLayout = false; 
+		this.toolList.useVirtualLayout = false; 
+		this.fruitList.useVirtualLayout = false; 
+
+		var list = GameModel.getInstance().getShopItems();
+		this.ac_seed.removeAll();
+		this.ac_tool.removeAll();
+		this.ac_fruit.removeAll();
+		for(var i=0; i<list.length; i++)
+		{
+			var data = list[i];
+			if(data.type1 == 1) this.ac_seed.addItem(data);
+			else if(data.type1 == 2) this.ac_tool.addItem(data);
+			else if(data.type1 == 3) this.ac_fruit.addItem(data);
+		}
+		this.ac_tool.addItem(null);
+		this.ac_seed.refresh();
+		this.ac_tool.refresh();
+		this.ac_fruit.refresh();
 	}
 	/**初始监听 */
 	protected initListener()

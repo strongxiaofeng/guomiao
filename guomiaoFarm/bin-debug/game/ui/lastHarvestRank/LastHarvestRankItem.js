@@ -21,6 +21,28 @@ var LastHarvestRankItem = (function (_super) {
     LastHarvestRankItem.prototype.onAdd = function () {
     };
     LastHarvestRankItem.prototype.dataChanged = function () {
+        var itemData = this.data.data;
+        if (this.data.isSelf) {
+            this.addBtn.visible = false;
+            this.detailBtn.visible = true;
+            this.bg.source = "myCoinRankBg_png";
+        }
+        else {
+            this.addBtn.visible = true;
+            this.detailBtn.visible = false;
+            this.bg.source = "chargeChoiceBg_png";
+        }
+        this.nameTxt.text = itemData.nickname;
+        this.moneyTxt.text = itemData.last_gold + "";
+        this.headIcon.source = itemData.avatar + "";
+        if (itemData.index <= 3) {
+            this.rankIcon.source = "rank" + itemData.index + "_png";
+            this.otherRankNumTxt.text = "";
+        }
+        else {
+            this.rankIcon.source = 'rankbg_png';
+            this.otherRankNumTxt.text = itemData.index + "";
+        }
     };
     LastHarvestRankItem.prototype.onRemove = function () {
     };

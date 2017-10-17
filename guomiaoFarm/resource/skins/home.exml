@@ -11,7 +11,7 @@
 			</e:skinName>
 		</e:Button>
 		<e:Image id="storeBtn" source="store_png" y="387" width="415" height="309" right="0" pixelHitTest="true"/>
-		<e:Image source="land_png" x="190" y="586" width="145" height="81"/>
+		<e:Image source="land_png" width="145" height="81" x="191" y="586"/>
 		<e:Image source="land_png" x="118" y="640.5" width="145" height="81"/>
 		<e:Image source="land_png" x="45" y="696" width="145" height="81"/>
 		<e:Image source="land_png" x="282.36" y="624.98" width="145" height="81"/>
@@ -23,6 +23,20 @@
 		<e:Image source="land_png" x="329.36" y="805.34" width="145" height="81"/>
 		<e:Image source="land_png" x="397.3" y="751.36" width="145" height="81"/>
 		<e:Image source="land_png" x="472.84" y="699.9" width="145" height="81"/>
+		<e:Group id="tree" width="640" height="1024" x="0" y="0" touchThrough="true">
+			<e:Image id="tree1" source="tree_young_png" scaleX="0.5" scaleY="0.5" bottom="388" horizontalCenter="-56"/>
+			<e:Image id="tree2" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-132" bottom="332"/>
+			<e:Image id="tree3" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-203" bottom="277"/>
+			<e:Image id="tree4" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="35" bottom="347"/>
+			<e:Image id="tree5" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-38" bottom="294"/>
+			<e:Image id="tree6" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-112" bottom="239"/>
+			<e:Image id="tree7" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="131" bottom="309"/>
+			<e:Image id="tree8" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="56" bottom="256"/>
+			<e:Image id="tree9" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-17" bottom="204"/>
+			<e:Image id="tree10" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="225" bottom="270"/>
+			<e:Image id="tree11" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="147" bottom="221"/>
+			<e:Image id="tree12" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="80" bottom="165"/>
+		</e:Group>
 	</e:Group>
 	<e:Group id="headGroup" width="640" height="1" x="0" y="0" touchChildren="true">
 		<e:Group id="userHeadGroup" width="1" height="1" x="0" y="0" touchChildren="true">

@@ -19,10 +19,36 @@ var AddressListItem = (function (_super) {
         return _this;
     }
     AddressListItem.prototype.onAdd = function () {
+        this.editTxt.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onEdit, this);
+        this.editIcon.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onEdit, this);
+        this.deleteTxt.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onDelete, this);
+        this.deleteIcon.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onDelete, this);
+        this.selectIcon.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onSelect, this);
     };
     AddressListItem.prototype.dataChanged = function () {
+        var data = this.data;
+        this.nameTxt.text = data.realname;
+        this.numTxt.text = data.phone;
+        this.addressTxt.text = data.address;
+        this.selectIcon.source = data.is_default ? "selected_png" : "select_no_png";
+    };
+    AddressListItem.prototype.onEdit = function () {
+        console.log(' 编辑');
+    };
+    AddressListItem.prototype.onDelete = function () {
+        var data = this.data;
+        GameController.getInstance().deleteAddress(data.id);
+    };
+    AddressListItem.prototype.onSelect = function () {
+        var data = this.data;
+        GameController.getInstance().setDefaultAddress(data.id);
     };
     AddressListItem.prototype.onRemove = function () {
+        this.editTxt.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onEdit, this);
+        this.editIcon.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onEdit, this);
+        this.deleteTxt.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onDelete, this);
+        this.deleteIcon.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onDelete, this);
+        this.selectIcon.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onSelect, this);
     };
     return AddressListItem;
 }(AItemRenderer));

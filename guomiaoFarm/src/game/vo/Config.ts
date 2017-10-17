@@ -6,7 +6,7 @@ module vo {
 		public crop_list: any;
 		public gift_bag: any;
 		public init: any;
-		public itam_list: any;
+		public item_list: any;
 		public pay_list: any;
 		public player_level: any;
 		public sign: any;
@@ -83,6 +83,8 @@ module vo {
 		public land_num: number;
 	}
 	export class Item_listItem{
+		public desc: string;
+		public disable: number;
 		public effect_id: number;
 		public graphical_id: number;
 		public id: number;

@@ -11,8 +11,10 @@ class WelcomeUI extends BaseUI{
 	public initSetting()
 	{
 		super.initSetting();
+		UIManager.openUI(UIConst.TipErrorUI, LayerManager.Layer_Sys);
 		GameController.getInstance().getUserInfo(1111); 
 		GameController.getInstance().getServerConfig(); 
+
 	}
 	/**初始监听 */
 	protected initListener()

@@ -6,18 +6,17 @@ class AddressManageUI extends BaseUI{
 	public constructor() {
 		super();
 		this.skinName = "resource/skins/addressManage.exml";
+		this.addressList.itemRenderer = AddressListItem;
+		this.addressList.useVirtualLayout = false;
+		this.ac = new eui.ArrayCollection();
+		this.addressList.dataProvider = this.ac;
 	}
 
 	/**初始界面 */
 	public initSetting()
 	{
 		super.initSetting();
-		this.addressList.itemRenderer = AddressListItem;
-
 		GameController.getInstance().getAddressList();
-
-		this.ac = new eui.ArrayCollection();
-		this.addressList.dataProvider = this.ac;
 	}
 
 	/**初始监听 */
@@ -31,9 +30,15 @@ class AddressManageUI extends BaseUI{
 	private onAddressList()
 	{
 		this.ac.removeAll();
-		this.ac.addItem({});
-		this.ac.addItem({});
-		this.ac.addItem({});
+
+		var listInfo = GameModel.getInstance().getAddressList();
+		if(listInfo && listInfo.list && listInfo.list.length>0)
+		{
+			for(var i=0; i<listInfo.list.length; i++)
+			{
+				this.ac.addItem(listInfo.list[i]);
+			}
+		}
 		this.ac.refresh();
 	}
 	private clickAdd()
@@ -45,5 +50,6 @@ class AddressManageUI extends BaseUI{
 	public dispose()
 	{
 		super.dispose();
+		this.removeRegister(this);
 	}
 }

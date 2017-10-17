@@ -5,14 +5,20 @@ var GameModel = (function () {
     function GameModel() {
         /**是否收到过昨日排行  */
         this.isYesterdayRankGot = false;
+        /**购物车数据 以物品id为key 数量为value */
+        this.shopCarData = {};
     }
     GameModel.getInstance = function () {
         if (!this._instance)
             this._instance = new GameModel();
         return this._instance;
     };
+    // --------------------------- 存储数据 -------------------------------------
+    GameModel.prototype.setServerTime = function (n) {
+        this._serverTime = n;
+        this._serverTimeStartRecord = new Date().getTime();
+    };
     Object.defineProperty(GameModel.prototype, "userInfo", {
-        // --------------------------- 存储数据 -------------------------------------
         set: function (info) {
             this._userinfo = info;
         },
@@ -47,7 +53,98 @@ var GameModel = (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(GameModel.prototype, "yesterdayRank", {
+        set: function (info) {
+            this._yesterdayRank = info;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**添加1个商品到购物车 */
+    GameModel.prototype.addShopCarData = function (id) {
+        console.log("addShopCarData " + id);
+        if (this.shopCarData[id])
+            this.shopCarData[id]++;
+        else
+            this.shopCarData[id] = 1;
+        NotifyManager.getInstance().sendNotify(NotifyConst.Notify_ShopCar, this.shopCarData);
+    };
+    /**从购物车减少商品*/
+    GameModel.prototype.reduceShopCarData = function (id) {
+        if (this.shopCarData[id])
+            this.shopCarData[id]--;
+        if (this.shopCarData[id] == 0)
+            delete this.shopCarData[id];
+        NotifyManager.getInstance().sendNotify(NotifyConst.Notify_ShopCar, this.shopCarData);
+    };
+    /**清空购物车数据 */
+    GameModel.prototype.clearShopCar = function () {
+        this.shopCarData = [];
+        NotifyManager.getInstance().sendNotify(NotifyConst.Notify_ShopCar, this.shopCarData);
+    };
+    /**获取购物车数据 */
+    GameModel.prototype.getShopCarData = function () {
+        return this.shopCarData;
+    };
+    /**根据物品id获取物品配置 */
+    GameModel.prototype.getItemById = function (id) {
+        if (this._serverConfig && this._serverConfig.item_list && this._serverConfig.item_list[id]) {
+            return this._serverConfig.item_list[id];
+        }
+        return null;
+    };
     // --------------------------- 获取数据 -------------------------------------
+    GameModel.prototype.getShopItems = function () {
+        var list = [];
+        if (this._serverConfig && this._serverConfig.item_list) {
+            for (var key in this._serverConfig.item_list) {
+                list.push(this._serverConfig.item_list[key]);
+            }
+        }
+        console.log('获取货物 ', list);
+        return list;
+    };
+    GameModel.prototype.getAddressList = function () {
+        console.log("获取地址 ", this._addressList);
+        return this._addressList;
+    };
+    /**获取服务器时间 */
+    GameModel.prototype.getServerTime = function () {
+        return Math.floor((new Date().getTime() - this._serverTimeStartRecord) / 1000 + this._serverTime);
+    };
+    /**获取某植物的幼苗期 */
+    GameModel.prototype.getTreeYoungTime = function (id) {
+        var list = this._serverConfig.crop_list;
+        for (var key in list) {
+            if (key == id) {
+                return list[key].seedling_time;
+            }
+        }
+        return 0;
+    };
+    /**获取某植物的生长期 */
+    GameModel.prototype.getTreeGrowTime = function (id) {
+        var list = this._serverConfig.crop_list;
+        for (var key in list) {
+            if (key == id) {
+                return list[key].grow_time + list[key].seedling_time;
+            }
+        }
+        return 0;
+    };
+    /**获取某植物的成熟期 */
+    GameModel.prototype.getTreeRipeTime = function (id) {
+        var list = this._serverConfig.crop_list;
+        for (var key in list) {
+            if (key == id) {
+                return list[key].ripe_time + list[key].grow_time + list[key].seedling_time;
+            }
+        }
+        return 0;
+    };
+    GameModel.prototype.getYesterdayRank = function () {
+        return this._yesterdayRank;
+    };
     GameModel.prototype.getNickname = function () {
         if (this._userinfo) {
             return this._userinfo.nickname;
@@ -91,8 +188,6 @@ var GameModel = (function () {
             return this._userinfo.total_exp;
         }
         return 0;
-    };
-    GameModel.prototype.getItemList = function () {
     };
     return GameModel;
 }());

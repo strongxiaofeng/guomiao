@@ -15,7 +15,7 @@
 			</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Button id="reduceBtn" label="" x="431" y="290" width="46" height="46">
+	<e:Button id="reduceBtn" label="" x="431" y="290" width="46" height="46" visible="false">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="btn_shopcar_reduce_png" source.down="btn_shopcar_reduce_png" source.disabled="btn_shopcar_reduce_png"/>
@@ -23,5 +23,5 @@
 			</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Label id="numTxt" text="2" x="478" y="301" textColor="0x8C4215" size="26" fontFamily="SimHei" anchorOffsetX="0" width="60" lineSpacing="5" textAlign="center"/>
+	<e:Label id="numTxt" text="2" x="478" y="301" textColor="0x8C4215" size="26" fontFamily="SimHei" anchorOffsetX="0" width="60" lineSpacing="5" textAlign="center" visible="false"/>
 </e:Skin>

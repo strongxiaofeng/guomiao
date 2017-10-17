@@ -29,4 +29,5 @@ class UIConst {
 	public static HonorWallUI = "HonorWallUI";
 	public static MyOrderUI = "MyOrderUI";
 	public static SetUI = "SetUI";
+	public static TipErrorUI = "TipErrorUI";
 }

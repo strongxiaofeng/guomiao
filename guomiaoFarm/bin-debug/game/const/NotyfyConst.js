@@ -77,6 +77,10 @@ var NotifyConst = (function () {
     NotifyConst.Notify_ThumbsUp = "Notify_ThumbsUp";
     /**玩小游戏 */
     NotifyConst.Notify_PlayGame = "Notify_PlayGame";
+    /**错误通知 */
+    NotifyConst.Notify_Error = "Notify_Error";
+    /**购物车变化 */
+    NotifyConst.Notify_ShopCar = "Notify_ShopCar";
     return NotifyConst;
 }());
 __reflect(NotifyConst.prototype, "NotifyConst");

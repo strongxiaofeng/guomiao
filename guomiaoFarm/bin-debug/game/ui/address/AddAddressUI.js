@@ -25,11 +25,16 @@ var AddAddressUI = (function (_super) {
     /**初始监听 */
     AddAddressUI.prototype.initListener = function () {
         this.registerEvent(this.saveBtn, egret.TouchEvent.TOUCH_TAP, this.clickSave, this);
+        this.addRegister(NotifyConst.Notify_AddAddress, this.onAddCallback, this);
     };
     AddAddressUI.prototype.clickSave = function () {
-        console.log("保存");
-        GameController.getInstance().addAddress("收货的人", "13525648516", "成都市环球中心");
-        UIManager.openUI(UIConst.AddressManageUI);
+        GameController.getInstance().addAddress(this.input_name.text, this.input_num.text, this.input_zone.text + this.input_address.text);
+    };
+    AddAddressUI.prototype.onAddCallback = function (obj) {
+        //添加成功的话就返回地址列表
+        if (obj.status == 0) {
+            UIManager.openUI(UIConst.AddressManageUI);
+        }
     };
     /**关闭界面 */
     AddAddressUI.prototype.dispose = function () {

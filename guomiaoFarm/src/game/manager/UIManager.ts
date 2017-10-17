@@ -5,7 +5,6 @@ class UIManager {
 	/**打开一个UI */
 	public static openUI(name:string, layer:number = LayerManager.Layer_UI)
 	{
-		console.log("openui "+name)
 		if(layer == LayerManager.Layer_UI) this.checkLastUI();
 
 		/**根据ui名获取UI */

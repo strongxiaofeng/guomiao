@@ -34,6 +34,7 @@ var UIConst = (function () {
     UIConst.HonorWallUI = "HonorWallUI";
     UIConst.MyOrderUI = "MyOrderUI";
     UIConst.SetUI = "SetUI";
+    UIConst.TipErrorUI = "TipErrorUI";
     return UIConst;
 }());
 __reflect(UIConst.prototype, "UIConst");

@@ -19,10 +19,23 @@ var ShopCarDetailItem = (function (_super) {
         return _this;
     }
     ShopCarDetailItem.prototype.onAdd = function () {
+        this.addBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.addCount, this);
+        this.reduceBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.reduceCount, this);
     };
     ShopCarDetailItem.prototype.dataChanged = function () {
+        this.nameTxt.text = this.data.name;
+        this.numTxt.text = this.data.count;
+        this.costTxt.text = this.data.count * this.data.cost + "";
+    };
+    ShopCarDetailItem.prototype.addCount = function () {
+        GameModel.getInstance().addShopCarData(this.data.id);
+    };
+    ShopCarDetailItem.prototype.reduceCount = function () {
+        GameModel.getInstance().reduceShopCarData(this.data.id);
     };
     ShopCarDetailItem.prototype.onRemove = function () {
+        this.addBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.addCount, this);
+        this.addBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.reduceCount, this);
     };
     return ShopCarDetailItem;
 }(AItemRenderer));

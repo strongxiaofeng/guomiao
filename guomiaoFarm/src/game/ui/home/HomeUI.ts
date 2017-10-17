@@ -24,6 +24,7 @@ class HomeUI extends BaseUI{
 	public initSetting()
 	{
 		super.initSetting();
+		this.updateLand(0);
 		//昨日排行只请求一次
 		if(!GameModel.getInstance().isYesterdayRankGot) GameController.getInstance().getYesterdayHarvestRank();
 		GameController.getInstance().getFarmInfo();
@@ -49,17 +50,54 @@ class HomeUI extends BaseUI{
 		this.addRegister(NotifyConst.Notify_LandInfo, this.onLandInfo, this);
 		this.addRegister(NotifyConst.Notify_YesterdayHarvestRank, this.onYesterdayHarvestRank, this);
 	}
-	/**农田信息 */
-	private onLandInfo(info: vo.FarmInfo)
-	{
-		console.log('主界面收到农田信息 ',info);
-	}
 	/**昨日收成排行 */
 	private onYesterdayHarvestRank(info:vo.YesterdayHarvestRankInfo)
 	{
 		console.log('主界面收到昨日排行 ',info);
 		GameModel.getInstance().isYesterdayRankGot = true;
 		UIManager.openUI(UIConst.LastHarvestRankUI, LayerManager.Layer_Tip);
+	}
+	/**农田信息 */
+	private onLandInfo(info: vo.FarmInfo)
+	{
+		console.log('主界面收到农田信息 ',info);
+		var data = info.list[0];
+		if(data.crop_id == 0)
+		{
+			this.updateLand(0);
+		}
+		else
+		{
+			var pass = GameModel.getInstance().getServerTime() - data.crop_start_time;
+			if(pass < GameModel.getInstance().getTreeYoungTime(data.crop_id))
+			{
+				this.updateLand(1);
+			}
+			else if(pass < GameModel.getInstance().getTreeGrowTime(data.crop_id))
+			{
+				this.updateLand(2);
+			}
+			else if(pass < GameModel.getInstance().getTreeRipeTime(data.crop_id))
+			{
+				this.updateLand(3);
+			}
+			else
+			{
+				this.updateLand(4);
+			}
+		}
+	}
+	/**刷新种植状态 0没有种植 1种子 2幼苗 3成长 4成熟*/
+	private updateLand(n:number)
+	{
+		for(var i=1;i<=12;i++)
+		{
+			if(n==0) this["tree"+i].source = "";
+			else if(n==1) this["tree"+i].source = "seedImg_png";
+			else if(n==2) this["tree"+i].source = "tree_young_png";
+			else if(n==3) this["tree"+i].source = "tree_grow_png";
+			else if(n==4) this["tree"+i].source = "tree_ripe_png";
+		}
 	}
 	/**个人 */
 	private clickHead()

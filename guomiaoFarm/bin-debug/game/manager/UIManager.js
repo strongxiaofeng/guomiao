@@ -7,7 +7,6 @@ var UIManager = (function () {
     /**打开一个UI */
     UIManager.openUI = function (name, layer) {
         if (layer === void 0) { layer = LayerManager.Layer_UI; }
-        console.log("openui " + name);
         if (layer == LayerManager.Layer_UI)
             this.checkLastUI();
         /**根据ui名获取UI */

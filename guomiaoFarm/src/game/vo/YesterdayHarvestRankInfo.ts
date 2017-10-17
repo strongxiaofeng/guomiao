@@ -1,15 +1,15 @@
 module vo {
 	export class YesterdayHarvestRankInfo {
-		public myInfo: YesterdayHarvestRankItem;
+		public self: YesterdayHarvestRankItem;
 		public list: Array<YesterdayHarvestRankItem>;
 	}
 
 	export class YesterdayHarvestRankItem{
 		public id: number;
 		public user_id: number;
-		public nickname: number;
+		public nickname: string;
 		/**头像 */
-		public avatar: number;
+		public avatar: string;
 		/**收成 */
 		public gold: number;
 		/**上一天果币收成 */

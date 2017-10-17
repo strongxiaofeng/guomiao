@@ -11,15 +11,21 @@ class LastHarvestRankUI extends BaseUI{
 	{
 		super.initSetting();
 		this.list.itemRenderer = LastHarvestRankItem;
+		this.list.useVirtualLayout = false;
 
+		var info = GameModel.getInstance().getYesterdayRank();
 		var ac = new eui.ArrayCollection;
-		ac.addItem({});
-		ac.addItem({});
-		ac.addItem({});
-		ac.addItem({});
-		ac.addItem({});
-		ac.addItem({});
-		ac.addItem({});
+		if(info && info.self)
+		{
+			ac.addItem({data:info.self, isSelf:true});
+		}
+		if(info && info.list && info.list.length>0)
+		{
+			for(var i=0; i<info.list.length; i++)
+			{
+				ac.addItem({data:info.list[i], isSelf:false});
+			}
+		}
 		this.list.dataProvider = ac;
 	}
 	/**初始监听 */

@@ -35,6 +35,11 @@ class GameController {
 			{
 				case 200:
 					let obj: BaseResponse = JSON.parse(xhr.responseText);
+					if(obj.status > 0)
+					{
+						NotifyManager.getInstance().sendNotify(NotifyConst.Notify_Error, ErrorCode.codes[obj.status]);
+					}
+					GameModel.getInstance().setServerTime(obj.server_time);
 					callback.call(this, obj);
 					break;
 			}
@@ -318,7 +323,7 @@ class GameController {
 				}
 				else{
 					console.log('收到地址列表 ',obj);
-					GameModel.getInstance().addressList = obj;
+					GameModel.getInstance().addressList = obj.data;
 					NotifyManager.getInstance().sendNotify(NotifyConst.Notify_AddressList, obj.data);
 				}
 			}
@@ -346,6 +351,7 @@ class GameController {
 			'POST', 
 			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/edit-address',
 			(obj)=>{
+				GameController.getInstance().getAddressList();
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_EditAddress, obj);
 			}
 		);
@@ -359,7 +365,8 @@ class GameController {
 			'POST', 
 			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/del-address',
 			(obj)=>{
-				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_DeleteAddress, obj);
+				GameController.getInstance().getAddressList();
+				// NotifyManager.getInstance().sendNotify(NotifyConst.Notify_DeleteAddress, obj);
 			}
 		);
 	}
@@ -372,7 +379,8 @@ class GameController {
 			'POST', 
 			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/default-address',
 			(obj)=>{
-				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_setDefaultAddress, obj);
+				GameController.getInstance().getAddressList();
+				// NotifyManager.getInstance().sendNotify(NotifyConst.Notify_setDefaultAddress, obj);
 			}
 		);
 	}
@@ -422,6 +430,7 @@ class GameController {
 					console.log("请求昨日收成排行列表失败",obj);
 				}
 				else{
+					GameModel.getInstance().yesterdayRank = obj.data;
 					NotifyManager.getInstance().sendNotify(NotifyConst.Notify_YesterdayHarvestRank, obj.data);
 				}
 			}
@@ -629,7 +638,7 @@ class GameController {
 			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=comm/game-config',
 			(obj)=>{
 				console.log('收到配置:', obj);
-				GameModel.getInstance().serverConfig = obj;
+				GameModel.getInstance().serverConfig = obj.data;
 			}
 		);
 	}

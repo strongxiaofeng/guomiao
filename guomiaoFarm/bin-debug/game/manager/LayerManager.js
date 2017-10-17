@@ -14,12 +14,15 @@ var LayerManager = (function () {
         this.uiLayer = new eui.Group();
         this.topLayer = new eui.Group();
         this.tipLayer = new eui.Group();
+        this.sysLayer = new eui.Group();
         this.uiLayer.touchThrough = true;
         this.topLayer.touchThrough = true;
         this.tipLayer.touchThrough = true;
+        this.sysLayer.touchThrough = true;
         root.addChild(this.uiLayer);
         root.addChild(this.topLayer);
         root.addChild(this.tipLayer);
+        root.addChild(this.sysLayer);
     };
     /**添加UI到舞台 */
     LayerManager.prototype.addUI = function (ui, layer) {
@@ -35,11 +38,15 @@ var LayerManager = (function () {
             case LayerManager.Layer_Tip:
                 this.tipLayer.addChild(ui);
                 break;
+            case LayerManager.Layer_Sys:
+                this.sysLayer.addChild(ui);
+                break;
         }
     };
     LayerManager.Layer_UI = 1;
     LayerManager.Layer_Top = 2;
     LayerManager.Layer_Tip = 3;
+    LayerManager.Layer_Sys = 4;
     return LayerManager;
 }());
 __reflect(LayerManager.prototype, "LayerManager");

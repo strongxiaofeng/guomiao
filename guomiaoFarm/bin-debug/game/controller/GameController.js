@@ -33,6 +33,10 @@ var GameController = (function () {
             switch (xhr.status) {
                 case 200:
                     var obj = JSON.parse(xhr.responseText);
+                    if (obj.status > 0) {
+                        NotifyManager.getInstance().sendNotify(NotifyConst.Notify_Error, ErrorCode.codes[obj.status]);
+                    }
+                    GameModel.getInstance().setServerTime(obj.server_time);
                     callback.call(this, obj);
                     break;
             }
@@ -201,7 +205,7 @@ var GameController = (function () {
             }
             else {
                 console.log('收到地址列表 ', obj);
-                GameModel.getInstance().addressList = obj;
+                GameModel.getInstance().addressList = obj.data;
                 NotifyManager.getInstance().sendNotify(NotifyConst.Notify_AddressList, obj.data);
             }
         });
@@ -217,6 +221,7 @@ var GameController = (function () {
     GameController.prototype.editAddress = function (id, realname, phone, address) {
         var sendData = { id: id, realname: realname, phone: phone, address: address, token: GameModel.getInstance().getToken() };
         this.sendHttp(sendData, 'POST', 'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/edit-address', function (obj) {
+            GameController.getInstance().getAddressList();
             NotifyManager.getInstance().sendNotify(NotifyConst.Notify_EditAddress, obj);
         });
     };
@@ -224,14 +229,16 @@ var GameController = (function () {
     GameController.prototype.deleteAddress = function (id) {
         var sendData = { id: id, token: GameModel.getInstance().getToken() };
         this.sendHttp(sendData, 'POST', 'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/del-address', function (obj) {
-            NotifyManager.getInstance().sendNotify(NotifyConst.Notify_DeleteAddress, obj);
+            GameController.getInstance().getAddressList();
+            // NotifyManager.getInstance().sendNotify(NotifyConst.Notify_DeleteAddress, obj);
         });
     };
     /**设置默认地址 */
     GameController.prototype.setDefaultAddress = function (id) {
         var sendData = { id: id, token: GameModel.getInstance().getToken() };
         this.sendHttp(sendData, 'POST', 'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/default-address', function (obj) {
-            NotifyManager.getInstance().sendNotify(NotifyConst.Notify_setDefaultAddress, obj);
+            GameController.getInstance().getAddressList();
+            // NotifyManager.getInstance().sendNotify(NotifyConst.Notify_setDefaultAddress, obj);
         });
     };
     /**徽章成就列表 */
@@ -261,6 +268,7 @@ var GameController = (function () {
                 console.log("请求昨日收成排行列表失败", obj);
             }
             else {
+                GameModel.getInstance().yesterdayRank = obj.data;
                 NotifyManager.getInstance().sendNotify(NotifyConst.Notify_YesterdayHarvestRank, obj.data);
             }
         });
@@ -384,7 +392,7 @@ var GameController = (function () {
         var sendData = { token: GameModel.getInstance().getToken() };
         this.sendHttp(sendData, 'POST', 'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=comm/game-config', function (obj) {
             console.log('收到配置:', obj);
-            GameModel.getInstance().serverConfig = obj;
+            GameModel.getInstance().serverConfig = obj.data;
         });
     };
     return GameController;

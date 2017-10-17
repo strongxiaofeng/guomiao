@@ -24,33 +24,52 @@ var ShopCarDetailUI = (function (_super) {
         this.headGroup.visible = false;
         this.scroller.visible = false;
         this.choosedList.itemRenderer = ShopCarDetailItem;
-        var ac = new eui.ArrayCollection();
-        ac.addItem({});
-        ac.addItem({});
-        ac.addItem({});
-        ac.addItem({});
-        ac.addItem({});
-        this.choosedList.dataProvider = ac;
-        this.updateScroller();
+        this.ac = new eui.ArrayCollection();
+        this.choosedList.dataProvider = this.ac;
+        this.choosedList.useVirtualLayout = false;
     };
     /**初始监听 */
     ShopCarDetailUI.prototype.initListener = function () {
         this.registerEvent(this.shopcarImg, egret.TouchEvent.TOUCH_TAP, this.clickCar, this);
         this.registerEvent(this.payBtn, egret.TouchEvent.TOUCH_TAP, this.clickPay, this);
+        this.registerEvent(this.clearBtn, egret.TouchEvent.TOUCH_TAP, this.clickClearCar, this);
+        this.addRegister(NotifyConst.Notify_ShopCar, this.updateShopCar, this);
+    };
+    /**刷新购物车 */
+    ShopCarDetailUI.prototype.updateShopCar = function () {
+        var data = GameModel.getInstance().getShopCarData();
+        console.log("updateShopCar ", data);
+        this.ac.removeAll();
+        var count = 0;
+        var cost = 0;
+        for (var key in data) {
+            var item = GameModel.getInstance().getItemById(parseInt(key));
+            if (item) {
+                count += data[key];
+                cost += item.sell_gold;
+                this.ac.addItem({ id: key, name: item.name, cost: item.sell_gold, count: data[key] });
+            }
+        }
+        this.ac.refresh();
+        this.updateScroller();
+        this.shopCountTxt.text = count + "";
+        this.payCountTxt.text = cost + "";
     };
     /**点击购物车 显示购物列表 */
     ShopCarDetailUI.prototype.clickCar = function () {
         if (!this.headGroup.visible) {
-            var haveChoosed = true;
-            if (haveChoosed) {
-                this.headGroup.visible = true;
-                this.scroller.visible = true;
-            }
+            this.headGroup.visible = true;
+            this.scroller.visible = true;
+            this.updateShopCar();
         }
         else {
             this.headGroup.visible = false;
             this.scroller.visible = false;
         }
+    };
+    /**清空购物车 */
+    ShopCarDetailUI.prototype.clickClearCar = function () {
+        GameModel.getInstance().clearShopCar();
     };
     /**去结算 */
     ShopCarDetailUI.prototype.clickPay = function () {
@@ -59,15 +78,21 @@ var ShopCarDetailUI = (function (_super) {
     /**动态刷新位置 如果购物项item满屏 才让滑动*/
     ShopCarDetailUI.prototype.updateScroller = function () {
         var _this = this;
+        if (!this.scroller.visible)
+            return;
         egret.callLater(function () {
-            console.log('this.choosedList.height ' + _this.choosedList.height + " this.choosedList.height" + _this.choosedList.scrollRect.height);
-            _this.scroller.height = _this.choosedList.height < 874 ? _this.choosedList.height : 874;
+            var height = 874;
+            if (_this.ac.length <= 8) {
+                height = _this.ac.length * 100;
+            }
+            _this.scroller.height = height < 874 ? height : 874;
             _this.headGroup.bottom = _this.scroller.height + _this.scroller.bottom;
         }, this);
     };
     /**关闭界面 */
     ShopCarDetailUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
+        this.removeRegister(this);
     };
     return ShopCarDetailUI;
 }(BaseUI));

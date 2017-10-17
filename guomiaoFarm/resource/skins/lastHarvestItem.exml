@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="lastHarvestItem" width="496" height="100" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image source="chargeChoiceBg_png" x="0" y="0" width="496" height="95" scale9Grid="36,29,219,50"/>
-	<e:Image id="rankIcon" source="rank1_png" scaleX="0.5" scaleY="0.5" left="18" verticalCenter="0"/>
+	<e:Image id="bg" x="0" y="0" width="496" height="95" scale9Grid="36,29,219,50" source="chargeChoiceBg_png"/>
+	<e:Image id="rankIcon" scaleX="0.5" scaleY="0.5" left="18" verticalCenter="0" source="rankbg_png"/>
 	<e:Image source="rankHeadBorder_png" x="89" y="14" scaleX="0.5" scaleY="0.5"/>
 	<e:Image id="headIcon" x="91" y="16" scaleX="0.5" scaleY="0.5" source="coinBoard_png" width="137" height="137"/>
 	<e:Label id="nameTxt" text="那个啥" x="183" y="13" textColor="0x161313" size="22" fontFamily="SimHei"/>
@@ -19,4 +19,5 @@
 			</e:Skin>
 		</e:skinName>
 	</e:Button>
+	<e:Label id="otherRankNumTxt" text="88" x="28" y="41" size="18" width="30" textAlign="center"/>
 </e:Skin>

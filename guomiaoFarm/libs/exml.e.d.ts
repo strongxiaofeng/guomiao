@@ -118,6 +118,8 @@ declare class sign extends eui.Skin{
 }
 declare class startUI extends eui.Skin{
 }
+declare class tipError extends eui.Skin{
+}
 declare class tipGetCoin extends eui.Skin{
 }
 declare class topBar extends eui.Skin{

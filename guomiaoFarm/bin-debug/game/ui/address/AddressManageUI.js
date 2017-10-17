@@ -16,15 +16,16 @@ var AddressManageUI = (function (_super) {
     function AddressManageUI() {
         var _this = _super.call(this) || this;
         _this.skinName = "resource/skins/addressManage.exml";
+        _this.addressList.itemRenderer = AddressListItem;
+        _this.addressList.useVirtualLayout = false;
+        _this.ac = new eui.ArrayCollection();
+        _this.addressList.dataProvider = _this.ac;
         return _this;
     }
     /**初始界面 */
     AddressManageUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
-        this.addressList.itemRenderer = AddressListItem;
         GameController.getInstance().getAddressList();
-        this.ac = new eui.ArrayCollection();
-        this.addressList.dataProvider = this.ac;
     };
     /**初始监听 */
     AddressManageUI.prototype.initListener = function () {
@@ -34,9 +35,12 @@ var AddressManageUI = (function (_super) {
     /**刷新列表 */
     AddressManageUI.prototype.onAddressList = function () {
         this.ac.removeAll();
-        this.ac.addItem({});
-        this.ac.addItem({});
-        this.ac.addItem({});
+        var listInfo = GameModel.getInstance().getAddressList();
+        if (listInfo && listInfo.list && listInfo.list.length > 0) {
+            for (var i = 0; i < listInfo.list.length; i++) {
+                this.ac.addItem(listInfo.list[i]);
+            }
+        }
         this.ac.refresh();
     };
     AddressManageUI.prototype.clickAdd = function () {
@@ -46,6 +50,7 @@ var AddressManageUI = (function (_super) {
     /**关闭界面 */
     AddressManageUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
+        this.removeRegister(this);
     };
     return AddressManageUI;
 }(BaseUI));

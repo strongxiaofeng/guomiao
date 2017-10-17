@@ -21,6 +21,7 @@ var WelcomeUI = (function (_super) {
     /**初始界面 */
     WelcomeUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
+        UIManager.openUI(UIConst.TipErrorUI, LayerManager.Layer_Sys);
         GameController.getInstance().getUserInfo(1111);
         GameController.getInstance().getServerConfig();
     };

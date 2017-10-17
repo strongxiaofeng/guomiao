@@ -7,9 +7,9 @@ module vo {
 		public id: number;
 		public user_id: number;
 		/**真实姓名 */
-		public realname: number;
-		public phone: number;
-		public address: number;
+		public realname: string;
+		public phone: string;
+		public address: string;
 		/**默认 */
 		public is_default: number;
 		public created_at: number;

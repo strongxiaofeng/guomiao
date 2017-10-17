@@ -72,4 +72,8 @@ class NotifyConst {
 	public static Notify_ThumbsUp = "Notify_ThumbsUp";
 	/**玩小游戏 */
 	public static Notify_PlayGame = "Notify_PlayGame";
+	/**错误通知 */
+	public static Notify_Error = "Notify_Error";
+	/**购物车变化 */
+	public static Notify_ShopCar = "Notify_ShopCar";
 }

@@ -20,11 +20,11 @@ class NotifyManager {
 	/**派发通知 */
 	public sendNotify(type:string, body:any)
 	{
-		console.log("派发通知 ",type,body);
+		// console.log("派发通知 ",type,body);
 		let callbacks:Array<any> = this.notifyPool[type];
 		if(callbacks && callbacks.length>0)
 		{
-			console.log("该通知是有对象要接受的",callbacks);
+			// console.log("该通知是有对象要接受的",callbacks);
 			for(let i=0; i<callbacks.length; i++)
 			{
 				(<Function>callbacks[i].callback).apply(callbacks[i].callbackobj, [body]);
@@ -34,7 +34,7 @@ class NotifyManager {
 	/**移除某对象上的所有注册通知 */
 	public removeRegister(obj:any)
 	{
-		console.log("移除通知注册  ",obj);
+		// console.log("移除通知注册  ",obj);
 		for(let type in this.notifyPool)
 		{
 			let callbacks:Array<any> = this.notifyPool[type];

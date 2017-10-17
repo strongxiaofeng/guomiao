@@ -69,6 +69,7 @@
     "resource/skins/sign.exml",
     "resource/skins/startUI.exml",
     "resource/skins/store.exml",
+    "resource/skins/tipError.exml",
     "resource/skins/tipGetCoin.exml",
     "resource/skins/topBar.exml",
     "resource/skins/userMenu.exml"
