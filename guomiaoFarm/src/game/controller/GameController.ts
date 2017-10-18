@@ -398,7 +398,8 @@ class GameController {
 					console.log("请求徽章列表失败",obj);
 				}
 				else{
-					NotifyManager.getInstance().sendNotify(NotifyConst.Notify_HonorList, obj.data);
+					GameModel.getInstance().honorInfo = obj.data;
+					NotifyManager.getInstance().sendNotify(NotifyConst.Notify_HonorList);
 				}
 			}
 		);

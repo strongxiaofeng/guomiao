@@ -19,11 +19,17 @@ class GameModel {
 	private _landInfo: vo.FarmInfo;
 	private _addressList: vo.AddressInfo;
 	private _yesterdayRank:vo.YesterdayHarvestRankInfo;
+	private _honorInfo: vo.HonorInfo;
 	/**购物车数据 以物品id为key 数量为value */
 	private shopCarData = {};
 
 	// --------------------------- 存储数据 -------------------------------------
 
+
+	public set honorInfo(info: vo.HonorInfo)
+	{
+		this._honorInfo = info;
+	}
 	public setServerTime(n: number)
 	{
 		this._serverTime = n;
@@ -93,6 +99,20 @@ class GameModel {
 
 	// --------------------------- 获取数据 -------------------------------------
 
+
+
+	public getHonorInfo(): vo.HonorInfo
+	{
+		return this._honorInfo;
+	}
+	public getHonorConfig(): vo.HonorInfo
+	{
+		return this._serverConfig.achievement_list;
+	}
+	public getGift(): any
+	{
+		return this._serverConfig.gift_bag;
+	}
 	public getLandInfo(): vo.FarmInfo
 	{
 		return this._landInfo;

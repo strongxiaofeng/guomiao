@@ -13,7 +13,14 @@ var GameModel = (function () {
             this._instance = new GameModel();
         return this._instance;
     };
-    // --------------------------- 存储数据 -------------------------------------
+    Object.defineProperty(GameModel.prototype, "honorInfo", {
+        // --------------------------- 存储数据 -------------------------------------
+        set: function (info) {
+            this._honorInfo = info;
+        },
+        enumerable: true,
+        configurable: true
+    });
     GameModel.prototype.setServerTime = function (n) {
         this._serverTime = n;
         this._serverTimeStartRecord = new Date().getTime();
@@ -94,6 +101,15 @@ var GameModel = (function () {
         return null;
     };
     // --------------------------- 获取数据 -------------------------------------
+    GameModel.prototype.getHonorInfo = function () {
+        return this._honorInfo;
+    };
+    GameModel.prototype.getHonorConfig = function () {
+        return this._serverConfig.achievement_list;
+    };
+    GameModel.prototype.getGift = function () {
+        return this._serverConfig.gift_bag;
+    };
     GameModel.prototype.getLandInfo = function () {
         return this._landInfo;
     };

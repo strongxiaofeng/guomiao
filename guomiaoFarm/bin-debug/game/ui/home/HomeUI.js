@@ -29,6 +29,7 @@ var HomeUI = (function (_super) {
         GameController.getInstance().getFarmInfo();
         GameController.getInstance().getAddressList();
         GameController.getInstance().getStoreInfo();
+        GameController.getInstance().getHonorList();
         this.intervalId = setInterval(function () { _this.computeTime(); }, 100);
     };
     /**初始监听 */
@@ -62,6 +63,7 @@ var HomeUI = (function (_super) {
         this.addRegister(NotifyConst.Notify_YesterdayHarvestRank, this.onYesterdayHarvestRank, this);
         this.addRegister(NotifyConst.Notify_SeedResult, this.onSeed, this);
         this.addRegister(NotifyConst.Notify_GatherResult, this.onGather, this);
+        this.addRegister(NotifyConst.Notify_OperLandResult, this.onOper, this);
     };
     /**昨日收成排行 */
     HomeUI.prototype.onYesterdayHarvestRank = function (info) {
@@ -160,6 +162,12 @@ var HomeUI = (function (_super) {
     HomeUI.prototype.clickWater = function () {
         GameController.getInstance().sendOperLand(3);
         // UIManager.openUI(UIConst.InviteWaterUI, LayerManager.Layer_Tip);
+    };
+    /**除草 施肥 浇水 返回 */
+    HomeUI.prototype.onOper = function (obj) {
+        console.log("播种 浇水 施肥 返回 ", obj);
+        if (obj.status == 0) {
+        }
     };
     /**播种 种仓库里的id*/
     HomeUI.prototype.clickSeed = function () {

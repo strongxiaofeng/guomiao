@@ -18,7 +18,7 @@ class NotifyManager {
 		this.notifyPool[type].push({callback: callback, callbackobj: callbackobj});
 	}
 	/**派发通知 */
-	public sendNotify(type:string, body:any)
+	public sendNotify(type:string, body:any=null)
 	{
 		// console.log("派发通知 ",type,body);
 		let callbacks:Array<any> = this.notifyPool[type];

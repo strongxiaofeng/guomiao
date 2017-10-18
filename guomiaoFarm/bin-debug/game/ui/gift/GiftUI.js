@@ -21,17 +21,21 @@ var GiftUI = (function (_super) {
     /**初始界面 */
     GiftUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
+        this.list.itemRenderer = GiftItem;
+        this.list.useVirtualLayout = false;
+        var data = GameModel.getInstance().getGift();
+        var ac = new eui.ArrayCollection();
+        for (var key in data) {
+            var item = data[key];
+            ac.addItem(item);
+        }
+        this.list.dataProvider = ac;
     };
     /**初始监听 */
     GiftUI.prototype.initListener = function () {
         this.registerEvent(this.btn_close, egret.TouchEvent.TOUCH_TAP, this.clickClose, this);
-        this.registerEvent(this.gift1, egret.TouchEvent.TOUCH_TAP, this.getGift1, this);
-        this.registerEvent(this.gift2, egret.TouchEvent.TOUCH_TAP, this.getGift2, this);
     };
-    GiftUI.prototype.getGift1 = function () {
-        UIManager.openUI(UIConst.TipGetCoinUI, LayerManager.Layer_Tip);
-    };
-    GiftUI.prototype.getGift2 = function () {
+    GiftUI.prototype.getGift = function () {
         UIManager.openUI(UIConst.TipGetCoinUI, LayerManager.Layer_Tip);
     };
     /**点击关闭按钮 */

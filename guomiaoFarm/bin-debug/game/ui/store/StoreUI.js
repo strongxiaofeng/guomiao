@@ -49,13 +49,13 @@ var StoreUI = (function (_super) {
                     img.source = "seed1_png";
                     img.width = 70;
                     img.height = 117;
-                    this.addChild(img);
+                    this.itemGroup.addChild(img);
                     var whiteBg = new eui.Image("downtime_bg_png");
                     whiteBg.width = 215;
                     whiteBg.height = 54;
                     whiteBg.horizontalCenter = hor;
                     whiteBg.bottom = bottom - 50;
-                    this.addChild(whiteBg);
+                    this.itemGroup.addChild(whiteBg);
                     var serverTime = GameModel.getInstance().getServerTime();
                     var passTime = item.expire_time - serverTime;
                     var date = new Date();
@@ -66,7 +66,7 @@ var StoreUI = (function (_super) {
                     timeTxt.size = 20;
                     timeTxt.horizontalCenter = hor;
                     timeTxt.bottom = bottom - 35;
-                    this.addChild(timeTxt);
+                    this.itemGroup.addChild(timeTxt);
                     this.computearr.push({ expire_time: item.expire_time, txt: timeTxt });
                 }
                 else {
@@ -78,7 +78,7 @@ var StoreUI = (function (_super) {
                     }
                     img.width = 117;
                     img.height = 117;
-                    this.addChild(img);
+                    this.itemGroup.addChild(img);
                 }
             }
         }
@@ -104,6 +104,7 @@ var StoreUI = (function (_super) {
         this.removeRegister(this);
         clearInterval(this.intervalId);
         this.computearr = [];
+        this.itemGroup.removeChildren();
     };
     return StoreUI;
 }(BaseUI));

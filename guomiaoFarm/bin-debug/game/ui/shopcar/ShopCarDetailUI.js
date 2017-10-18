@@ -45,7 +45,7 @@ var ShopCarDetailUI = (function (_super) {
             var item = GameModel.getInstance().getItemById(parseInt(key));
             if (item) {
                 count += data[key];
-                cost += item.sell_gold;
+                cost += item.sell_gold * data[key];
                 this.ac.addItem({ id: key, name: item.name, cost: item.sell_gold, count: data[key] });
             }
         }

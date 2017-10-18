@@ -72,6 +72,8 @@ declare class store extends eui.Skin{
 }
 declare class home extends eui.Skin{
 }
+declare class honorItem extends eui.Skin{
+}
 declare class honorWall extends eui.Skin{
 }
 declare class inviteWater extends eui.Skin{

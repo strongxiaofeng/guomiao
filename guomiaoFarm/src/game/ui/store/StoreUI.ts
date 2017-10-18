@@ -1,5 +1,6 @@
 class StoreUI extends BaseUI{
 	private btn_close: eui.Image;
+	private itemGroup: eui.Group;
 	private intervalId: any;
 	private computearr:Array<any> = [];
 	public constructor() {
@@ -42,14 +43,14 @@ class StoreUI extends BaseUI{
 					img.source = "seed1_png";
 					img.width = 70;
 					img.height = 117;
-					this.addChild(img);
+					this.itemGroup.addChild(img);
 					
 					var whiteBg = new eui.Image("downtime_bg_png");
 					whiteBg.width = 215;
 					whiteBg.height = 54;
 					whiteBg.horizontalCenter = hor;
 					whiteBg.bottom = bottom-50;
-					this.addChild(whiteBg);
+					this.itemGroup.addChild(whiteBg);
 
 					var serverTime = GameModel.getInstance().getServerTime();
 					var passTime = item.expire_time-serverTime;
@@ -61,7 +62,7 @@ class StoreUI extends BaseUI{
 					timeTxt.size = 20;
 					timeTxt.horizontalCenter = hor;
 					timeTxt.bottom = bottom-35;
-					this.addChild(timeTxt);
+					this.itemGroup.addChild(timeTxt);
 
 					this.computearr.push({expire_time:item.expire_time, txt:timeTxt})
 				}
@@ -74,7 +75,7 @@ class StoreUI extends BaseUI{
 					}
 					img.width = 117;
 					img.height = 117;
-					this.addChild(img);
+					this.itemGroup.addChild(img);
 				}
 
 			}
@@ -104,5 +105,6 @@ class StoreUI extends BaseUI{
 		this.removeRegister(this);
 		clearInterval(this.intervalId);
 		this.computearr = [];
+		this.itemGroup.removeChildren();
 	}
 }

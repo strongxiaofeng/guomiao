@@ -7,22 +7,29 @@
 	<e:Image source="honorCount_png" x="173" y="284" scaleX="0.5" scaleY="0.5"/>
 	<e:Label text="勋章数 3/20" y="299" size="22" fontFamily="SimHei" horizontalCenter="0"/>
 	<e:Image source="honor_board_png" scaleX="0.5" scaleY="0.5" horizontalCenter="0" y="376"/>
-	<e:Image source="honor1_png" x="135" y="418" scaleX="0.5" scaleY="0.5"/>
-	<e:Image source="honor1_png" y="418" scaleX="0.5" scaleY="0.5" horizontalCenter="0"/>
-	<e:Image source="honor1_png" x="435" y="418" scaleX="0.5" scaleY="0.5"/>
-	<e:Image source="honor1_png" x="135" y="560.75" scaleX="0.5" scaleY="0.5"/>
-	<e:Image source="honor1_png" scaleX="0.5" scaleY="0.5" horizontalCenter="0" y="558"/>
-	<e:Image source="honor1_png" x="435" y="558" scaleX="0.5" scaleY="0.5"/>
-	<e:Image source="honor1_png" x="135" y="700" scaleX="0.5" scaleY="0.5"/>
-	<e:Image source="honor1_png" y="700" scaleX="0.5" scaleY="0.5" horizontalCenter="0"/>
-	<e:Image source="honor1_png" x="435" y="700" scaleX="0.5" scaleY="0.5"/>
-	<e:Label text="苹果王" x="137" y="511" size="22" fontFamily="SimHei"/>
-	<e:Label text="苹果王" x="290" y="511" size="22" fontFamily="SimHei"/>
-	<e:Label text="苹果王" x="437" y="506.5" size="22" fontFamily="SimHei"/>
-	<e:Label text="苹果王" x="137.5" y="646.5" size="22" fontFamily="SimHei"/>
-	<e:Label text="苹果王" x="290" y="649.25" size="22" fontFamily="SimHei"/>
-	<e:Label text="苹果王" x="435" y="649.25" size="22" fontFamily="SimHei"/>
-	<e:Label text="苹果王" x="137" y="790" size="22" fontFamily="SimHei"/>
-	<e:Label text="苹果王" y="790" size="22" fontFamily="SimHei" x="287"/>
-	<e:Label text="苹果王" x="437" y="790" size="22" fontFamily="SimHei"/>
+	<e:Image source="honor1_png" x="135" y="418" scaleX="0.5" scaleY="0.5" visible="false"/>
+	<e:Image source="honor1_png" y="418" scaleX="0.5" scaleY="0.5" horizontalCenter="0" visible="false"/>
+	<e:Image source="honor1_png" x="435" y="418" scaleX="0.5" scaleY="0.5" visible="false"/>
+	<e:Image source="honor1_png" x="135" y="560.75" scaleX="0.5" scaleY="0.5" visible="false"/>
+	<e:Image source="honor1_png" scaleX="0.5" scaleY="0.5" horizontalCenter="0" y="558" visible="false"/>
+	<e:Image source="honor1_png" x="435" y="558" scaleX="0.5" scaleY="0.5" visible="false"/>
+	<e:Image source="honor1_png" x="135" y="700" scaleX="0.5" scaleY="0.5" visible="false"/>
+	<e:Image source="honor1_png" y="700" scaleX="0.5" scaleY="0.5" horizontalCenter="0" visible="false"/>
+	<e:Image source="honor1_png" x="435" y="700" scaleX="0.5" scaleY="0.5" visible="false"/>
+	<e:Label text="苹果王" x="137" y="511" size="22" fontFamily="SimHei" visible="false"/>
+	<e:Label text="苹果王" x="292" y="511" size="22" fontFamily="SimHei" visible="false"/>
+	<e:Label text="苹果王" x="437" y="506.5" size="22" fontFamily="SimHei" visible="false"/>
+	<e:Label text="苹果王" x="137.5" y="646.5" size="22" fontFamily="SimHei" visible="false"/>
+	<e:Label text="苹果王" x="290" y="649.25" size="22" fontFamily="SimHei" visible="false"/>
+	<e:Label text="苹果王" x="435" y="649.25" size="22" fontFamily="SimHei" visible="false"/>
+	<e:Label text="苹果王" x="137" y="790" size="22" fontFamily="SimHei" visible="false"/>
+	<e:Label text="苹果王" y="790" size="22" fontFamily="SimHei" x="287" visible="false"/>
+	<e:Label text="苹果王" x="437" y="790" size="22" fontFamily="SimHei" visible="false"/>
+	<e:Scroller width="450" height="420" y="405" horizontalCenter="0">
+		<e:List id="list">
+			<e:layout>
+				<e:TileLayout orientation="rows" requestedColumnCount="3" horizontalGap="6" verticalGap="6"/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
 </e:Skin>

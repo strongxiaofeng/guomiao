@@ -19,6 +19,7 @@ var NotifyManager = (function () {
     };
     /**派发通知 */
     NotifyManager.prototype.sendNotify = function (type, body) {
+        if (body === void 0) { body = null; }
         // console.log("派发通知 ",type,body);
         var callbacks = this.notifyPool[type];
         if (callbacks && callbacks.length > 0) {

@@ -8,7 +8,7 @@ module vo {
 		public id: number;
 		public user_id: number;
 		/**配置id */
-		public config_id: number;
+		public config_id: string;
 		public name: number;
 		public content: number;
 		/**达成几次了 */

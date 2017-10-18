@@ -21,6 +21,23 @@ var HonorWallUI = (function (_super) {
     /**初始界面 */
     HonorWallUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
+        this.list.itemRenderer = HonorItem;
+        this.list.useVirtualLayout = false;
+        var info = GameModel.getInstance().getHonorInfo();
+        var config = GameModel.getInstance().getHonorConfig();
+        var ac = new eui.ArrayCollection();
+        console.log("徽章达成信息：", info);
+        for (var key in config) {
+            var isAchieved = false;
+            if (info && info.list) {
+                for (var i = 0; i < info.list.length; i++) {
+                    if (info.list[i].config_id == key)
+                        isAchieved = true;
+                }
+            }
+            ac.addItem({ itemdata: config[key], isAchieved: isAchieved });
+        }
+        this.list.dataProvider = ac;
     };
     /**初始监听 */
     HonorWallUI.prototype.initListener = function () {

@@ -46,6 +46,7 @@ class HomeUI extends BaseUI{
 		GameController.getInstance().getFarmInfo();
 		GameController.getInstance().getAddressList();
 		GameController.getInstance().getStoreInfo();
+		GameController.getInstance().getHonorList();
 
 		this.intervalId = setInterval(()=>{this.computeTime()}, 100);
 	}
@@ -84,6 +85,8 @@ class HomeUI extends BaseUI{
 		this.addRegister(NotifyConst.Notify_YesterdayHarvestRank, this.onYesterdayHarvestRank, this);
 		this.addRegister(NotifyConst.Notify_SeedResult, this.onSeed, this);
 		this.addRegister(NotifyConst.Notify_GatherResult, this.onGather, this);
+		this.addRegister(NotifyConst.Notify_OperLandResult, this.onOper, this);
+		
 	}
 	/**昨日收成排行 */
 	private onYesterdayHarvestRank(info:vo.YesterdayHarvestRankInfo)
@@ -198,6 +201,15 @@ class HomeUI extends BaseUI{
 	{
 		GameController.getInstance().sendOperLand(3);
 		// UIManager.openUI(UIConst.InviteWaterUI, LayerManager.Layer_Tip);
+	}
+	/**除草 施肥 浇水 返回 */
+	private onOper(obj: BaseResponse)
+	{
+		console.log("播种 浇水 施肥 返回 ",obj);
+		if(obj.status == 0)
+		{
+
+		}
 	}
 	/**播种 种仓库里的id*/
 	private clickSeed()
