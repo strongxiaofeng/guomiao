@@ -79,6 +79,8 @@ var NotifyConst = (function () {
     NotifyConst.Notify_PlayGame = "Notify_PlayGame";
     /**错误通知 */
     NotifyConst.Notify_Error = "Notify_Error";
+    /**绿色提示通知 */
+    NotifyConst.Notify_Green = "Notify_Green";
     /**购物车变化 */
     NotifyConst.Notify_ShopCar = "Notify_ShopCar";
     return NotifyConst;

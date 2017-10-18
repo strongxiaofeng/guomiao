@@ -20,12 +20,16 @@ var HomeUI = (function (_super) {
     }
     /**初始界面 */
     HomeUI.prototype.initSetting = function () {
+        var _this = this;
         _super.prototype.initSetting.call(this);
         this.updateLand(0);
         //昨日排行只请求一次
         if (!GameModel.getInstance().isYesterdayRankGot)
             GameController.getInstance().getYesterdayHarvestRank();
         GameController.getInstance().getFarmInfo();
+        GameController.getInstance().getAddressList();
+        GameController.getInstance().getStoreInfo();
+        this.intervalId = setInterval(function () { _this.computeTime(); }, 100);
     };
     /**初始监听 */
     HomeUI.prototype.initListener = function () {
@@ -42,8 +46,22 @@ var HomeUI = (function (_super) {
         this.registerEvent(this.btn_fertilizer, egret.TouchEvent.TOUCH_TAP, this.clickFertilizer, this);
         this.registerEvent(this.btn_water, egret.TouchEvent.TOUCH_TAP, this.clickWater, this);
         this.registerEvent(this.btn_seed, egret.TouchEvent.TOUCH_TAP, this.clickSeed, this);
+        this.registerEvent(this.tree1, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
+        this.registerEvent(this.tree2, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
+        this.registerEvent(this.tree3, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
+        this.registerEvent(this.tree4, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
+        this.registerEvent(this.tree5, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
+        this.registerEvent(this.tree6, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
+        this.registerEvent(this.tree7, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
+        this.registerEvent(this.tree8, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
+        this.registerEvent(this.tree9, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
+        this.registerEvent(this.tree10, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
+        this.registerEvent(this.tree11, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
+        this.registerEvent(this.tree12, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
         this.addRegister(NotifyConst.Notify_LandInfo, this.onLandInfo, this);
         this.addRegister(NotifyConst.Notify_YesterdayHarvestRank, this.onYesterdayHarvestRank, this);
+        this.addRegister(NotifyConst.Notify_SeedResult, this.onSeed, this);
+        this.addRegister(NotifyConst.Notify_GatherResult, this.onGather, this);
     };
     /**昨日收成排行 */
     HomeUI.prototype.onYesterdayHarvestRank = function (info) {
@@ -53,7 +71,8 @@ var HomeUI = (function (_super) {
     };
     /**农田信息 */
     HomeUI.prototype.onLandInfo = function (info) {
-        console.log('主界面收到农田信息 ', info);
+        if (!info)
+            return;
         var data = info.list[0];
         if (data.crop_id == 0) {
             this.updateLand(0);
@@ -144,13 +163,47 @@ var HomeUI = (function (_super) {
     };
     /**播种 种仓库里的id*/
     HomeUI.prototype.clickSeed = function () {
-        GameController.getInstance().sendSeed(4);
-        GameController.getInstance().sendGather();
+        var seedid = GameModel.getInstance().getSeedId();
+        GameController.getInstance().sendSeed(seedid);
+    };
+    /**播种返回*/
+    HomeUI.prototype.onSeed = function () {
+        GameController.getInstance().getFarmInfo();
+    };
+    /**鼠标点植物 */
+    HomeUI.prototype.clickTree = function () {
+        var landinfo = GameModel.getInstance().getLandInfo();
+        var data = landinfo.list[0];
+        var pass = GameModel.getInstance().getServerTime() - data.crop_start_time;
+        if (data.is_ripe || pass >= GameModel.getInstance().getTreeRipeTime(data.crop_id)) {
+            //已经成熟 可以收割
+            GameController.getInstance().sendGather();
+        }
+        else {
+            console.log('还不能收割');
+        }
+    };
+    /**收割返回 */
+    HomeUI.prototype.onGather = function (obj) {
+        console.log("收割返回 ", obj);
+        if (obj.status == 0) {
+            var count = obj.data.count;
+            var id = obj.data.item_id;
+            var item = GameModel.getInstance().getItemById(parseInt(id));
+            NotifyManager.getInstance().sendNotify(NotifyConst.Notify_Green, count + " " + item.name);
+            GameController.getInstance().getFarmInfo();
+        }
+    };
+    /**一直计算生长期 */
+    HomeUI.prototype.computeTime = function () {
+        var landinfo = GameModel.getInstance().getLandInfo();
+        this.onLandInfo(landinfo);
     };
     /**关闭界面 */
     HomeUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
         this.removeRegister(this);
+        clearInterval(this.intervalId);
     };
     return HomeUI;
 }(BaseUI));

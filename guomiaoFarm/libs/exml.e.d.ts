@@ -88,6 +88,8 @@ declare class lastHarvst extends eui.Skin{
 }
 declare class myOrder extends eui.Skin{
 }
+declare class myOrderItem extends eui.Skin{
+}
 declare class pay extends eui.Skin{
 }
 declare class payGoodsItem extends eui.Skin{
@@ -121,6 +123,8 @@ declare class startUI extends eui.Skin{
 declare class tipError extends eui.Skin{
 }
 declare class tipGetCoin extends eui.Skin{
+}
+declare class tipGreen extends eui.Skin{
 }
 declare class topBar extends eui.Skin{
 }

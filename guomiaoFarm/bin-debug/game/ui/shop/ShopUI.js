@@ -57,6 +57,20 @@ var ShopUI = (function (_super) {
         this.registerEvent(this.chooseSeed, egret.TouchEvent.TOUCH_TAP, this.clickChooseSeed, this);
         this.registerEvent(this.chooseTool, egret.TouchEvent.TOUCH_TAP, this.clickChooseTool, this);
         this.registerEvent(this.chooseFruit, egret.TouchEvent.TOUCH_TAP, this.clickChooseFruit, this);
+        this.addRegister(NotifyConst.Notify_ShopCar, this.onShopCarChange, this);
+    };
+    /**购物车数据变化 */
+    ShopUI.prototype.onShopCarChange = function () {
+        var data = GameModel.getInstance().getShopCarData();
+        for (var i = 0; i < this.ac_seed.length; i++) {
+            this.seedList.getChildAt(i).updateShopCarData(data);
+        }
+        for (i = 0; i < this.ac_fruit.length; i++) {
+            this.fruitList.getChildAt(i).updateShopCarData(data);
+        }
+        for (i = 0; i < this.ac_tool.length; i++) {
+            this.toolList.getChildAt(i).updateShopCarData(data);
+        }
     };
     /**选择种子页 */
     ShopUI.prototype.clickChooseSeed = function () {
@@ -89,6 +103,7 @@ var ShopUI = (function (_super) {
     ShopUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
         UIManager.closeUI(UIConst.ShopCarDetailUI);
+        this.removeRegister(this);
     };
     return ShopUI;
 }(BaseUI));

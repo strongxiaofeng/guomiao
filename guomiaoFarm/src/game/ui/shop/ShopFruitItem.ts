@@ -17,37 +17,53 @@ class ShopFruitItem extends AItemRenderer{
 	{
 		this.addBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.addToShopCar, this);
 		this.reduceBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.removeFromShopCar, this);
+
+		var data = <vo.Item_listItem>this.data; 
+		var shopCarData = GameModel.getInstance().getShopCarData();
+		if(data)
+		{
+			this.updateShopCarData(shopCarData);
+		}
 	}
 	protected dataChanged()
 	{
 		var data = <vo.Item_listItem>this.data;
 		this.titleTxt.text = data.name;
 		this.costTxt.text = data.sell_gold+"";
-		this.coseMoneyTxt.text = '(价值'+ data.sell_gold/100 +'元)'
+		var gold = (data.sell_gold ? data.sell_gold : 0);
+		this.coseMoneyTxt.text = '(价值'+ gold/100 +'元)';
 		// this.icon.source = data.id+"通过id去配置中寻找对应图片";
+		var shopCarData = GameModel.getInstance().getShopCarData();
+		this.updateShopCarData(shopCarData);
 	}
 
 	private addToShopCar()
 	{
 		var data = <vo.Item_listItem>this.data;
 		GameModel.getInstance().addShopCarData(data.id);
-		this.reduceBtn.visible = true;
-		this.numTxt.visible = true;
-		var shopcardata = GameModel.getInstance().getShopCarData();
-		this.numTxt.text = shopcardata[data.id];
 	}
 	private removeFromShopCar()
 	{
 		var data = <vo.Item_listItem>this.data; 
 		GameModel.getInstance().reduceShopCarData(data.id);
-		var shopcardata = GameModel.getInstance().getShopCarData();
-		if(!shopcardata[data.id])
+	}
+	/**当购物车数据发生变化 */
+	public updateShopCarData(shopcarData:any)
+	{
+		var data = <vo.Item_listItem>this.data;
+		var count = 0;
+		if(shopcarData[data.id]) count = shopcarData[data.id];
+
+		if(count)
 		{
-			this.reduceBtn.visible = false;  
-			this.numTxt.visible = false;
+			this.numTxt.text = count+"";
+			this.numTxt.visible = true;
+			this.reduceBtn.visible = true;  
 		}
 		else{
-			this.numTxt.text = shopcardata[data.id];
+			this.numTxt.text = "0";
+			this.numTxt.visible = false;
+			this.reduceBtn.visible = false;  
 		}
 	}
 	protected onRemove()

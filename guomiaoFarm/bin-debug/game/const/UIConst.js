@@ -35,6 +35,7 @@ var UIConst = (function () {
     UIConst.MyOrderUI = "MyOrderUI";
     UIConst.SetUI = "SetUI";
     UIConst.TipErrorUI = "TipErrorUI";
+    UIConst.TipGreenUI = "TipGreenUI";
     return UIConst;
 }());
 __reflect(UIConst.prototype, "UIConst");

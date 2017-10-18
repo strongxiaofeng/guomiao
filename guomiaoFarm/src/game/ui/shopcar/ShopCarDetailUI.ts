@@ -41,7 +41,6 @@ class ShopCarDetailUI extends BaseUI{
 	private updateShopCar()
 	{
 		let data =  GameModel.getInstance().getShopCarData();
-		console.log("updateShopCar ",data);
 		this.ac.removeAll();
 		var count = 0;
 		var cost = 0;

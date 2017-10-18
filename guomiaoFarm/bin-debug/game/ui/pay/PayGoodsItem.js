@@ -21,6 +21,15 @@ var PayGoodsItem = (function (_super) {
     PayGoodsItem.prototype.onAdd = function () {
     };
     PayGoodsItem.prototype.dataChanged = function () {
+        var itemdata = this.data.itemdata;
+        if (itemdata) {
+            var count = this.data.count;
+            // this.icon.source = itemdata.id;
+            this.titleTxt.text = itemdata.name;
+            this.descTxt.text = itemdata.desc;
+            this.costTxt.text = itemdata.sell_gold + "";
+            this.countTxt.text = "X" + count;
+        }
     };
     PayGoodsItem.prototype.onRemove = function () {
     };

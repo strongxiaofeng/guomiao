@@ -16,7 +16,7 @@ class GameModel {
 	private _userinfo: vo.UserInfo;
 	private _storeInfo: vo.StoreInfo;
 	/**农田信息 */
-	private _landInfo: vo.StoreInfo;
+	private _landInfo: vo.FarmInfo;
 	private _addressList: vo.AddressInfo;
 	private _yesterdayRank:vo.YesterdayHarvestRankInfo;
 	/**购物车数据 以物品id为key 数量为value */
@@ -37,7 +37,7 @@ class GameModel {
 	{
 		this._storeInfo = info;
 	}
-	public set landInfo(info: vo.StoreInfo)
+	public set landInfo(info: vo.FarmInfo)
 	{
 		this._landInfo = info;
 	}
@@ -93,6 +93,26 @@ class GameModel {
 
 	// --------------------------- 获取数据 -------------------------------------
 
+	public getLandInfo(): vo.FarmInfo
+	{
+		return this._landInfo;
+	}
+	/**仓库里有什么种子 这个种子在仓库里的id*/
+	public getSeedId(): number
+	{
+		if(this._storeInfo && this._storeInfo.list && this._storeInfo.list.length>0)
+		{
+			var list = this._storeInfo.list;
+			for(var i=0; i<list.length; i++)
+			{
+				if(list[i].type == 1)
+				{
+					return list[i].id;
+				}
+			}
+		}
+		return 0;
+	}
 	public getShopItems(): Array<vo.Item_listItem>
 	{
 		var list:Array<vo.Item_listItem> = [];
@@ -109,6 +129,25 @@ class GameModel {
 	{
 		console.log("获取地址 ",this._addressList);
 		return this._addressList;
+	}
+	public getDefaultAddress(): vo.AddressItem
+	{
+		console.log("获取默认地址 ",this._addressList);
+		var defaultAddress:vo.AddressItem = null;
+		if(this._addressList && this._addressList.list && this._addressList.list.length>0)
+		{
+			var list = this._addressList.list;
+			for(var i=0; i<list.length; i++)
+			{
+				if(list[i].is_default)
+				{
+					defaultAddress = list[i];
+					break;
+				}
+			}
+			if(!defaultAddress) defaultAddress=list[0];
+		}
+		return defaultAddress;
 	}
 	/**获取服务器时间 */
 	public getServerTime(): number

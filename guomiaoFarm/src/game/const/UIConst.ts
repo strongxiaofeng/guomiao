@@ -30,4 +30,5 @@ class UIConst {
 	public static MyOrderUI = "MyOrderUI";
 	public static SetUI = "SetUI";
 	public static TipErrorUI = "TipErrorUI";
+	public static TipGreenUI = "TipGreenUI";
 }

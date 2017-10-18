@@ -74,6 +74,8 @@ class NotifyConst {
 	public static Notify_PlayGame = "Notify_PlayGame";
 	/**错误通知 */
 	public static Notify_Error = "Notify_Error";
+	/**绿色提示通知 */
+	public static Notify_Green = "Notify_Green";
 	/**购物车变化 */
 	public static Notify_ShopCar = "Notify_ShopCar";
 }

@@ -94,6 +94,21 @@ var GameModel = (function () {
         return null;
     };
     // --------------------------- 获取数据 -------------------------------------
+    GameModel.prototype.getLandInfo = function () {
+        return this._landInfo;
+    };
+    /**仓库里有什么种子 这个种子在仓库里的id*/
+    GameModel.prototype.getSeedId = function () {
+        if (this._storeInfo && this._storeInfo.list && this._storeInfo.list.length > 0) {
+            var list = this._storeInfo.list;
+            for (var i = 0; i < list.length; i++) {
+                if (list[i].type == 1) {
+                    return list[i].id;
+                }
+            }
+        }
+        return 0;
+    };
     GameModel.prototype.getShopItems = function () {
         var list = [];
         if (this._serverConfig && this._serverConfig.item_list) {
@@ -107,6 +122,22 @@ var GameModel = (function () {
     GameModel.prototype.getAddressList = function () {
         console.log("获取地址 ", this._addressList);
         return this._addressList;
+    };
+    GameModel.prototype.getDefaultAddress = function () {
+        console.log("获取默认地址 ", this._addressList);
+        var defaultAddress = null;
+        if (this._addressList && this._addressList.list && this._addressList.list.length > 0) {
+            var list = this._addressList.list;
+            for (var i = 0; i < list.length; i++) {
+                if (list[i].is_default) {
+                    defaultAddress = list[i];
+                    break;
+                }
+            }
+            if (!defaultAddress)
+                defaultAddress = list[0];
+        }
+        return defaultAddress;
     };
     /**获取服务器时间 */
     GameModel.prototype.getServerTime = function () {

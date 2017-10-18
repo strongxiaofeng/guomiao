@@ -38,7 +38,6 @@ var ShopCarDetailUI = (function (_super) {
     /**刷新购物车 */
     ShopCarDetailUI.prototype.updateShopCar = function () {
         var data = GameModel.getInstance().getShopCarData();
-        console.log("updateShopCar ", data);
         this.ac.removeAll();
         var count = 0;
         var cost = 0;

@@ -15,17 +15,34 @@ var PayUI = (function (_super) {
     __extends(PayUI, _super);
     function PayUI() {
         var _this = _super.call(this) || this;
+        _this.sendPayData = [];
         _this.skinName = "resource/skins/pay.exml";
         return _this;
     }
     /**初始界面 */
     PayUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
+        //默认地址
+        var defaultAddress = GameModel.getInstance().getDefaultAddress();
+        if (defaultAddress) {
+            this.addressNameTxt.text = defaultAddress.realname;
+            this.addressNumTxt.text = defaultAddress.phone;
+            this.addressDetailTxt.text = defaultAddress.address;
+        }
+        else {
+            this.addressNameTxt.text = "";
+            this.addressNumTxt.text = "";
+            this.addressDetailTxt.text = "";
+        }
+        //选中的物品
+        var items = GameModel.getInstance().getShopCarData();
         var ac = new eui.ArrayCollection();
-        ac.addItem({});
-        ac.addItem({});
-        ac.addItem({});
-        ac.addItem({});
+        this.sendPayData = [];
+        for (var id in items) {
+            var itemdata = GameModel.getInstance().getItemById(parseInt(id));
+            ac.addItem({ itemdata: itemdata, count: items[id] });
+            this.sendPayData.push({ item_id: id, num: items[id] });
+        }
         this.buyList.itemRenderer = PayGoodsItem;
         this.buyList.dataProvider = ac;
         this.updateHeight();
@@ -33,6 +50,8 @@ var PayUI = (function (_super) {
     /**初始监听 */
     PayUI.prototype.initListener = function () {
         this.registerEvent(this.payBtn, egret.TouchEvent.TOUCH_TAP, this.clickPay, this);
+        this.registerEvent(this.moreAddressBtn, egret.TouchEvent.TOUCH_TAP, this.clickMoreAddress, this);
+        this.addRegister(NotifyConst.Notify_OrderResult, this.onPay, this);
     };
     /**根据购物数量 刷新高度 */
     PayUI.prototype.updateHeight = function () {
@@ -44,16 +63,34 @@ var PayUI = (function (_super) {
             _this.scrollerGroup.height = _this.leaveMsgGroup.y + _this.leaveMsgGroup.height;
         }, this);
     };
-    /**确认付款 */
+    /**选择默认 地址 */
+    PayUI.prototype.clickMoreAddress = function () {
+        UIManager.openUI(UIConst.AddressManageUI, LayerManager.Layer_UI);
+    };
+    /**提交订单 */
     PayUI.prototype.clickPay = function () {
-        // GameController.getInstance().sendOrder(2, [{item_id:100001,num:1}], "尽快送达");
-        setTimeout(function () {
-            GameController.getInstance().sendOrderPay(2);
-        }, 1000);
+        var defaultAddress = GameModel.getInstance().getDefaultAddress();
+        var addressid = defaultAddress ? defaultAddress.id : 0;
+        GameController.getInstance().sendOrder(addressid, this.sendPayData, this.leaveMsgInput.text);
+        // setTimeout(function() {
+        // 	GameController.getInstance().sendOrderPay(2);
+        // }, 1000);
+    };
+    /**提交订单返回 */
+    PayUI.prototype.onPay = function (obj) {
+        if (obj.status > 0) {
+            //提交订单失败
+        }
+        else {
+            //提交订单成功 到我的订单
+            GameModel.getInstance().clearShopCar();
+            UIManager.openUI(UIConst.MyOrderUI);
+        }
     };
     /**关闭界面 */
     PayUI.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
+        this.removeRegister(this);
     };
     return PayUI;
 }(BaseUI));
