@@ -35,7 +35,7 @@ class PayUI extends BaseUI{
 			this.addressDetailTxt.text = defaultAddress.address;
 		}
 		else{
-			this.addressNameTxt.text = "";
+			this.addressNameTxt.text = "您还没有添加地址";
 			this.addressNumTxt.text = "";
 			this.addressDetailTxt.text = "";
 		}

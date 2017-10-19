@@ -1,4 +1,12 @@
+declare class OtherUserDetail extends eui.Skin{
+}
+declare class OtherUserHonorItemSkin extends eui.Skin{
+}
 declare class addAddress extends eui.Skin{
+}
+declare class addFriend extends eui.Skin{
+}
+declare class addFriendItem extends eui.Skin{
 }
 declare class addressItem extends eui.Skin{
 }
@@ -68,9 +76,15 @@ declare module skins{
 	class VSliderSkin extends eui.Skin{
 	}
 }
+declare class friendRequests extends eui.Skin{
+}
+declare class friendRequestsItem extends eui.Skin{
+}
 declare class store extends eui.Skin{
 }
 declare class home extends eui.Skin{
+}
+declare class honorDetail extends eui.Skin{
 }
 declare class honorItem extends eui.Skin{
 }
@@ -100,6 +114,10 @@ declare class radio extends eui.Skin{
 }
 declare class radioItem extends eui.Skin{
 }
+declare class rankItem_friend_coin extends eui.Skin{
+}
+declare class rankItem_all_contri extends eui.Skin{
+}
 declare class rankItem_friend_contri extends eui.Skin{
 }
 declare class rank extends eui.Skin{
@@ -122,9 +140,9 @@ declare class sign extends eui.Skin{
 }
 declare class startUI extends eui.Skin{
 }
-declare class tipError extends eui.Skin{
-}
 declare class tipGetCoin extends eui.Skin{
+}
+declare class tipError extends eui.Skin{
 }
 declare class tipGreen extends eui.Skin{
 }

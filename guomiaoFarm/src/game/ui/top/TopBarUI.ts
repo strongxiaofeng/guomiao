@@ -27,6 +27,11 @@ class TopBarUI extends BaseUI{
 			UIManager.closeUI(UIConst.TopBarUI);
 			UIManager.openUI(UIConst.WelcomeUI);
 		}
+		//返回排行榜
+		if(UIManager.isUIOpen(UIConst.OtherUserDetailUI) || UIManager.isUIOpen(UIConst.OtherLandUI))
+		{
+			UIManager.openUI(UIConst.RankFriendContributeUI);
+		}
 		//返回商铺
 		else if(UIManager.isUIOpen(UIConst.PayUI))
 		{
@@ -35,7 +40,8 @@ class TopBarUI extends BaseUI{
 		//返回个人中心
 		else if(UIManager.isUIOpen(UIConst.ContributeDetailUI) || UIManager.isUIOpen(UIConst.CoinDetailUI) 
 		|| UIManager.isUIOpen(UIConst.AddressManageUI) || UIManager.isUIOpen(UIConst.HonorWallUI)
-		|| UIManager.isUIOpen(UIConst.MyOrderUI) || UIManager.isUIOpen(UIConst.SetUI))
+		|| UIManager.isUIOpen(UIConst.MyOrderUI) || UIManager.isUIOpen(UIConst.SetUI)
+		|| UIManager.isUIOpen(UIConst.HonorDetailUI))
 		{
 			UIManager.openUI(UIConst.UserMenuUI);
 		}
@@ -46,7 +52,9 @@ class TopBarUI extends BaseUI{
 		}
 		//返回农场主页
 		else if(UIManager.isUIOpen(UIConst.UserMenuUI) || UIManager.isUIOpen(UIConst.RadioUI) 
-		|| UIManager.isUIOpen(UIConst.ShopUI) || UIManager.isUIOpen(UIConst.ChargeUI) || UIManager.isUIOpen(UIConst.RankFriendContributeUI))
+		|| UIManager.isUIOpen(UIConst.ShopUI) || UIManager.isUIOpen(UIConst.ChargeUI) || UIManager.isUIOpen(UIConst.RankFriendContributeUI)
+		|| UIManager.isUIOpen(UIConst.RankAllCoinUI) || UIManager.isUIOpen(UIConst.RankAllContributeUI)
+		|| UIManager.isUIOpen(UIConst.RankFriendCoinUI) || UIManager.isUIOpen(UIConst.RankFriendContributeUI)) 
 		{
 			UIManager.closeUI(UIConst.TopBarUI);
 			UIManager.openUI(UIConst.HomeUI);

@@ -11,5 +11,12 @@ var vo;
     }());
     vo.FriendListInfo = FriendListInfo;
     __reflect(FriendListInfo.prototype, "vo.FriendListInfo");
+    var FriendListItem = (function () {
+        function FriendListItem() {
+        }
+        return FriendListItem;
+    }());
+    vo.FriendListItem = FriendListItem;
+    __reflect(FriendListItem.prototype, "vo.FriendListItem");
 })(vo || (vo = {}));
 //# sourceMappingURL=FriendListInfo.js.map

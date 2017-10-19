@@ -310,6 +310,13 @@ var GameController = (function () {
             }
         });
     };
+    /**全部人中自己的排行榜 by_gold 是否按照果币排行 1:按照果币排行；0：按照贡献排行*/
+    GameController.prototype.getMyRankInAll = function (by_gold) {
+        var sendData = { by_gold: by_gold, token: GameModel.getInstance().getToken() };
+        this.sendHttp(sendData, 'POST', 'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=friend/get-my-ranking', function (obj) {
+            NotifyManager.getInstance().sendNotify(NotifyConst.Notify_MyRankInAll, obj);
+        });
+    };
     /**好友中自己的排行榜 by_gold 是否按照果币排行 1:按照果币排行；0：按照贡献排行*/
     GameController.prototype.getMyRankInFriends = function (by_gold) {
         var sendData = { by_gold: by_gold, token: GameModel.getInstance().getToken() };

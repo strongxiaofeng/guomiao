@@ -13,8 +13,22 @@ var GameModel = (function () {
             this._instance = new GameModel();
         return this._instance;
     };
-    Object.defineProperty(GameModel.prototype, "honorInfo", {
+    Object.defineProperty(GameModel.prototype, "curOtherUser", {
         // --------------------------- 存储数据 -------------------------------------
+        set: function (info) {
+            this._otherUser = info;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(GameModel.prototype, "currentHonorItem", {
+        set: function (data) {
+            this._currentHonorItem = data;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(GameModel.prototype, "honorInfo", {
         set: function (info) {
             this._honorInfo = info;
         },
@@ -69,7 +83,6 @@ var GameModel = (function () {
     });
     /**添加1个商品到购物车 */
     GameModel.prototype.addShopCarData = function (id) {
-        console.log("addShopCarData " + id);
         if (this.shopCarData[id])
             this.shopCarData[id]++;
         else
@@ -101,6 +114,16 @@ var GameModel = (function () {
         return null;
     };
     // --------------------------- 获取数据 -------------------------------------
+    GameModel.prototype.getCurOtherUser = function () {
+        return this._otherUser;
+    };
+    GameModel.prototype.getUserInfo = function () {
+        return this._userinfo;
+    };
+    /**勋章墙item详情数据 */
+    GameModel.prototype.getHonorItemDetail = function () {
+        return this._currentHonorItem;
+    };
     GameModel.prototype.getHonorInfo = function () {
         return this._honorInfo;
     };

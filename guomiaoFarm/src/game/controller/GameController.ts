@@ -494,6 +494,19 @@ class GameController {
 			}
 		);
 	}
+	/**全部人中自己的排行榜 by_gold 是否按照果币排行 1:按照果币排行；0：按照贡献排行*/
+	public getMyRankInAll(by_gold:number)
+	{
+		let sendData = {by_gold:by_gold, token: GameModel.getInstance().getToken()};
+		this.sendHttp(
+			sendData, 
+			'POST', 
+			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=friend/get-my-ranking',
+			(obj)=>{
+				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_MyRankInAll, obj);
+			}
+		);
+	}
 	/**好友中自己的排行榜 by_gold 是否按照果币排行 1:按照果币排行；0：按照贡献排行*/
 	public getMyRankInFriends(by_gold:number)
 	{
@@ -578,7 +591,7 @@ class GameController {
 		);
 	}
 	/**同意或拒绝添加好友 is_agree 1：同意；0：拒绝；*/
-	public agreeOrRefuseAddFriend(be_user_id:number, is_agree:number)
+	public agreeOrRefuseAddFriend(be_user_id:string, is_agree:number)
 	{
 		let sendData = {be_user_id:be_user_id, is_agree:is_agree, token: GameModel.getInstance().getToken()};
 		this.sendHttp(
@@ -591,7 +604,7 @@ class GameController {
 		);
 	}
 	/**批量回复好友添加 be_user_id_list 要操作的用户ID [1,2]; is_agree 1：同意；0：拒绝；*/
-	public respondAddFriendList(be_user_id_list:number, is_agree:number)
+	public respondAddFriendList(be_user_id_list:Array<number>, is_agree:number)
 	{
 		let sendData = {be_user_id_list:be_user_id_list, is_agree:is_agree, token: GameModel.getInstance().getToken()};
 		this.sendHttp(

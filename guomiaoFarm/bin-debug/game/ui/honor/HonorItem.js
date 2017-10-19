@@ -28,6 +28,8 @@ var HonorItem = (function (_super) {
         this.txt.text = itemdata.name;
     };
     HonorItem.prototype.click = function () {
+        GameModel.getInstance().currentHonorItem = this.data.itemdata;
+        UIManager.openUI(UIConst.HonorDetailUI);
     };
     HonorItem.prototype.onRemove = function () {
         this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.click, this);

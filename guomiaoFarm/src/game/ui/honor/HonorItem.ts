@@ -19,7 +19,8 @@ class HonorItem extends AItemRenderer{
 	}
 	private click()
 	{
-
+		GameModel.getInstance().currentHonorItem = this.data.itemdata;
+		UIManager.openUI(UIConst.HonorDetailUI);
 	}
 
 	protected onRemove()

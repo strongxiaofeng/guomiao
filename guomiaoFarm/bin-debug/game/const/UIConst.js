@@ -36,6 +36,12 @@ var UIConst = (function () {
     UIConst.SetUI = "SetUI";
     UIConst.TipErrorUI = "TipErrorUI";
     UIConst.TipGreenUI = "TipGreenUI";
+    UIConst.HonorDetailUI = "HonorDetailUI";
+    UIConst.OtherUserDetailUI = "OtherUserDetailUI";
+    UIConst.TipAddFriendUI = "TipAddFriendUI";
+    UIConst.AddFriendUI = "AddFriendUI";
+    UIConst.FriendRequestsUI = "FriendRequestsUI";
+    UIConst.OtherLandUI = "OtherLandUI";
     return UIConst;
 }());
 __reflect(UIConst.prototype, "UIConst");

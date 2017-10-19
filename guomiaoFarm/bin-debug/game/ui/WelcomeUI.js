@@ -38,16 +38,27 @@ var WelcomeUI = (function (_super) {
     };
     /**我的农场 */
     WelcomeUI.prototype.clickFarm = function () {
+        // if(GameModel.getInstance().getToken())
+        // {
         UIManager.openUI(UIConst.HomeUI);
+        // }
+        // else{
+        // 	NotifyManager.getInstance().sendNotify(NotifyConst.Notify_Error, "获取用户信息失败");
+        // }
     };
     /**往期活动 */
     WelcomeUI.prototype.clickActivity = function () {
+        // if(GameModel.getInstance().getToken())
+        // {
         UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
         UIManager.openUI(UIConst.LastActivityUI);
+        // }
+        // else{
+        // 	NotifyManager.getInstance().sendNotify(NotifyConst.Notify_Error, "获取用户信息失败");
+        // }
     };
     /**规则 */
     WelcomeUI.prototype.clickRule = function () {
-        console.log("clickRule");
         UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
         UIManager.openUI(UIConst.RuleUI);
     };

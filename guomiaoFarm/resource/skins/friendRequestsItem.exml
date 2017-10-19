@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="friendRequestsItem" width="500" height="90" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="detailItemBg_png" x="0" y="0" scale9Grid="126,26,759,156" height="168" width="1000" scaleX="0.5" scaleY="0.5"/>
+	<e:Image id="honorIcon" source="honor1_png" x="21" y="19" scaleX="0.5" scaleY="0.5" width="82" height="100"/>
+	<e:Image source="rankHeadBorder_png" x="76" y="8" scaleX="0.5" scaleY="0.5"/>
+	<e:Image id="icon" source="rankbg_png" x="78" y="10" width="68" height="68"/>
+	<e:Label id="nameTxt" text="张三" x="161" y="9" textColor="0x5a666b" size="26"/>
+	<e:Group id="lvGroup" width="200" height="89" x="222" y="-22">
+		<e:Image id="lvbg" source="rankLvBg_png" x="1" y="29" scaleX="0.5" scaleY="0.5"/>
+		<e:Image id="lv" source="lv_png" x="10" y="38" scaleX="0.3" scaleY="0.3"/>
+		<e:Image id="lvNumImg" source="num2_png" x="39" y="38" scaleX="0.3" scaleY="0.3"/>
+	</e:Group>
+	<e:Image id="refuseBtn" source="refuseBtn_png" x="179" y="39" scaleX="0.4" scaleY="0.4"/>
+	<e:Image id="agreeBtn" source="agreeBtn_png" x="273" y="39" scaleX="0.4" scaleY="0.4"/>
+</e:Skin>

@@ -31,4 +31,13 @@ class UIConst {
 	public static SetUI = "SetUI";
 	public static TipErrorUI = "TipErrorUI";
 	public static TipGreenUI = "TipGreenUI";
+	public static HonorDetailUI = "HonorDetailUI";
+	public static OtherUserDetailUI = "OtherUserDetailUI";
+	public static TipAddFriendUI = "TipAddFriendUI";
+	public static AddFriendUI = "AddFriendUI";
+	public static FriendRequestsUI = "FriendRequestsUI";
+	public static OtherLandUI = "OtherLandUI";
+
+
+	
 }

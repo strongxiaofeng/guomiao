@@ -19,10 +19,30 @@ var RankItem_Friend_contri = (function (_super) {
         return _this;
     }
     RankItem_Friend_contri.prototype.onAdd = function () {
+        this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.click, this);
     };
     RankItem_Friend_contri.prototype.dataChanged = function () {
+        var data = this.data;
+        this.myRankNum.text = data.index;
+        this.nameTxt.text = data.nickname;
+        this.myChangeTxt.text = data.total_exp;
+        // this.supportCount.text = data.thumbs_up;
+        // this.myHeadIcon.source = data.avatar;
+    };
+    RankItem_Friend_contri.prototype.click = function (e) {
+        if (e.target == this.handBtn) {
+            console.log("去偷菜");
+            UIManager.openUI(UIConst.OtherLandUI);
+        }
+        else {
+            //查看他人资料
+            console.log("查看资料");
+            GameModel.getInstance().curOtherUser = this.data;
+            UIManager.openUI(UIConst.OtherUserDetailUI);
+        }
     };
     RankItem_Friend_contri.prototype.onRemove = function () {
+        this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.click, this);
     };
     return RankItem_Friend_contri;
 }(AItemRenderer));

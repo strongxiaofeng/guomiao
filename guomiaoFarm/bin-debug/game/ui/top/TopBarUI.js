@@ -36,19 +36,26 @@ var TopBarUI = (function (_super) {
             UIManager.closeUI(UIConst.TopBarUI);
             UIManager.openUI(UIConst.WelcomeUI);
         }
+        //返回排行榜
+        if (UIManager.isUIOpen(UIConst.OtherUserDetailUI) || UIManager.isUIOpen(UIConst.OtherLandUI)) {
+            UIManager.openUI(UIConst.RankFriendContributeUI);
+        }
         else if (UIManager.isUIOpen(UIConst.PayUI)) {
             UIManager.openUI(UIConst.ShopUI);
         }
         else if (UIManager.isUIOpen(UIConst.ContributeDetailUI) || UIManager.isUIOpen(UIConst.CoinDetailUI)
             || UIManager.isUIOpen(UIConst.AddressManageUI) || UIManager.isUIOpen(UIConst.HonorWallUI)
-            || UIManager.isUIOpen(UIConst.MyOrderUI) || UIManager.isUIOpen(UIConst.SetUI)) {
+            || UIManager.isUIOpen(UIConst.MyOrderUI) || UIManager.isUIOpen(UIConst.SetUI)
+            || UIManager.isUIOpen(UIConst.HonorDetailUI)) {
             UIManager.openUI(UIConst.UserMenuUI);
         }
         else if (UIManager.isUIOpen(UIConst.AddAddressUI)) {
             UIManager.openUI(UIConst.AddressManageUI);
         }
         else if (UIManager.isUIOpen(UIConst.UserMenuUI) || UIManager.isUIOpen(UIConst.RadioUI)
-            || UIManager.isUIOpen(UIConst.ShopUI) || UIManager.isUIOpen(UIConst.ChargeUI) || UIManager.isUIOpen(UIConst.RankFriendContributeUI)) {
+            || UIManager.isUIOpen(UIConst.ShopUI) || UIManager.isUIOpen(UIConst.ChargeUI) || UIManager.isUIOpen(UIConst.RankFriendContributeUI)
+            || UIManager.isUIOpen(UIConst.RankAllCoinUI) || UIManager.isUIOpen(UIConst.RankAllContributeUI)
+            || UIManager.isUIOpen(UIConst.RankFriendCoinUI) || UIManager.isUIOpen(UIConst.RankFriendContributeUI)) {
             UIManager.closeUI(UIConst.TopBarUI);
             UIManager.openUI(UIConst.HomeUI);
         }

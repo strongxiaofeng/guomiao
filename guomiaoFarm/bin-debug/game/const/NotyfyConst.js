@@ -83,6 +83,8 @@ var NotifyConst = (function () {
     NotifyConst.Notify_Green = "Notify_Green";
     /**购物车变化 */
     NotifyConst.Notify_ShopCar = "Notify_ShopCar";
+    /**我在全部人中的排行 */
+    NotifyConst.Notify_MyRankInAll = "Notify_MyRankInAll";
     return NotifyConst;
 }());
 __reflect(NotifyConst.prototype, "NotifyConst");

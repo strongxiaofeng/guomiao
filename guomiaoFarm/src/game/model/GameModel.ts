@@ -20,12 +20,24 @@ class GameModel {
 	private _addressList: vo.AddressInfo;
 	private _yesterdayRank:vo.YesterdayHarvestRankInfo;
 	private _honorInfo: vo.HonorInfo;
+	/**当前打开的荣誉墙的item详情数据 */
+	private _currentHonorItem: vo.Achievement_listItem;
 	/**购物车数据 以物品id为key 数量为value */
 	private shopCarData = {};
+	/**正在查看的他人数据 */
+	private _otherUser: vo.RankAllItem;
 
 	// --------------------------- 存储数据 -------------------------------------
 
 
+	public set curOtherUser(info: vo.RankAllItem)
+	{
+		this._otherUser = info;
+	}
+	public set currentHonorItem(data:vo.Achievement_listItem)
+	{
+		this._currentHonorItem = data;
+	}
 	public set honorInfo(info: vo.HonorInfo)
 	{
 		this._honorInfo = info;
@@ -62,7 +74,6 @@ class GameModel {
 	/**添加1个商品到购物车 */
 	public addShopCarData(id:number)
 	{
-		console.log("addShopCarData "+id);
 		if(this.shopCarData[id]) this.shopCarData[id] ++;
 		else this.shopCarData[id] = 1;
 		NotifyManager.getInstance().sendNotify(NotifyConst.Notify_ShopCar, this.shopCarData);
@@ -101,6 +112,19 @@ class GameModel {
 
 
 
+	public getCurOtherUser():vo.RankAllItem
+	{
+		return this._otherUser;
+	}
+	public getUserInfo(): vo.UserInfo
+	{
+		return this._userinfo;
+	}
+	/**勋章墙item详情数据 */
+	public getHonorItemDetail():vo.Achievement_listItem
+	{
+		return this._currentHonorItem;
+	}
 	public getHonorInfo(): vo.HonorInfo
 	{
 		return this._honorInfo;

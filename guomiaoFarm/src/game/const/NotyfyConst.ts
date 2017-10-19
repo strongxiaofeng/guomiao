@@ -78,4 +78,6 @@ class NotifyConst {
 	public static Notify_Green = "Notify_Green";
 	/**购物车变化 */
 	public static Notify_ShopCar = "Notify_ShopCar";
+	/**我在全部人中的排行 */
+	public static Notify_MyRankInAll = "Notify_MyRankInAll";
 }
