@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="myOrderItem" width="640" height="100" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image id="icon" source="orderItemImg_png" x="30" width="90" height="90" verticalCenter="0"/>
-	<e:Label id="nameTxt" text="墨西哥进口牛油果" x="160" y="22" textColor="0x5e3f23" fontFamily="SimHei" size="18"/>
-	<e:Label id="costTxt" text="$ 990" x="160" y="56" fontFamily="SimHei" size="18" textColor="0xff3c2b"/>
-	<e:Label id="countTxt" text="1" x="570" fontFamily="SimHei" size="20" verticalCenter="0" textColor="0x979797"/>
-</e:Skin>

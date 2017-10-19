@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="lastActivity" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-
-	<e:Image source="honorDetailBg_jpg" x="0" y="0"/>
-	<e:Image source="lastActivityTitle_png" y="81" horizontalCenter="0"/>
-	<e:Scroller id="scroller" width="640" height="668" x="0" y="230">
-		<e:List id="list"/>
-	</e:Scroller>
-</e:Skin>

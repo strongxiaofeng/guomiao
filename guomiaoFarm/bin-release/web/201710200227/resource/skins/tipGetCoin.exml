@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="tipGetCoin" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image source="bg_black_png" x="0" y="0" width="640" height="1024" alpha="0.5"/>
-	<e:Image source="biftBoard_png" width="500" horizontalCenter="0" height="308" verticalCenter="-50"/>
-	<e:Image source="gitTipBg_png" y="206" width="251" height="211" horizontalCenter="0"/>
-	<e:Label id="tipTxt" text="您获得10个金币啦" y="455" textColor="0x8c4211" fontFamily="SimHei" horizontalCenter="0" size="35"/>
-	<e:Label id="tipTxt2" text="再接再厉" y="525" textColor="0x8C4211" fontFamily="SimHei" horizontalCenter="0" size="35"/>
-</e:Skin>
