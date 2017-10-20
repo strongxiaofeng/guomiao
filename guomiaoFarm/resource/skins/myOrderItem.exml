@@ -6,7 +6,7 @@
 		<e:Label id="timeTxt" text="2017-07-25" x="30" y="12" size="22" textColor="0x5f4021" scaleX="1" scaleY="1"/>
 		<e:Label id="totalCountTxt" text="共0件商品" y="12" size="22" textColor="0x5F4021" horizontalCenter="0" fontFamily="SimHei" x="280" scaleX="1" scaleY="1"/>
 		<e:Label id="totalCostTipTxt" text="共计:" y="12" size="22" textColor="0x5F4021" fontFamily="SimHei" scaleX="1" scaleY="1" right="109"/>
-		<e:Label id="totalCostTxt" text="￥999" y="11" size="24" fontFamily="SimHei" x="545" scaleX="1" scaleY="1" textColor="0xff3c2b"/>
+		<e:Label id="totalCostTxt" text="￥999" y="11" size="24" fontFamily="Arial" x="545" scaleX="1" scaleY="1" textColor="0xff3c2b"/>
 		<e:Button id="payBtn" label="去支付" x="490" y="42" width="125" height="40" visible="false">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
