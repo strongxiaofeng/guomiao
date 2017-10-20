@@ -47,6 +47,10 @@ var Main = (function (_super) {
         _this.isResourceLoadEnd = false;
         return _this;
     }
+    /**
+     * 加载进度界面
+     * loading process interface
+     */
     Main.prototype.createChildren = function () {
         _super.prototype.createChildren.call(this);
         egret.lifecycle.addLifecycleListener(function (context) {
@@ -64,10 +68,6 @@ var Main = (function (_super) {
         egret.registerImplementation("eui.IAssetAdapter", assetAdapter);
         egret.registerImplementation("eui.IThemeAdapter", new ThemeAdapter());
         LayerManager.getInstance().initLayer(this);
-        //Config loading process interface
-        //设置加载进度界面
-        this.loadingView = new LoadingUI();
-        this.stage.addChild(this.loadingView);
         // initialize the Resource loading library
         //初始化Resource资源加载库
         RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
@@ -87,7 +87,7 @@ var Main = (function (_super) {
         RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
         RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
         RES.addEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
-        RES.loadGroup("preload");
+        RES.loadGroup("loading");
     };
     /**
      * 主题文件加载完成,开始预加载
@@ -102,8 +102,7 @@ var Main = (function (_super) {
      * preload resource group is loaded
      */
     Main.prototype.onResourceLoadComplete = function (event) {
-        if (event.groupName == "preload") {
-            this.stage.removeChild(this.loadingView);
+        if (event.groupName == "loading") {
             RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
             RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
             RES.removeEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
@@ -141,7 +140,6 @@ var Main = (function (_super) {
      */
     Main.prototype.onResourceProgress = function (event) {
         if (event.groupName == "preload") {
-            this.loadingView.setProgress(event.itemsLoaded, event.itemsTotal);
         }
     };
     /**

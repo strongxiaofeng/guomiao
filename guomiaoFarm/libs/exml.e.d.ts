@@ -146,7 +146,7 @@ declare class tipError extends eui.Skin{
 }
 declare class tipGreen extends eui.Skin{
 }
-declare class topBar extends eui.Skin{
+declare class topBarSkin extends eui.Skin{
 }
 declare class userInfo extends eui.Skin{
 }

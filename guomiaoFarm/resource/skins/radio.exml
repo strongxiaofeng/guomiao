@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="radio" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image source="userBg_jpg" x="0" y="0"/>
+	<e:Image x="0" y="0" source="radioBg_jpg"/>
 	<e:Image source="rank_tab_noselect_png" y="170" scaleX="0.5" scaleY="0.5" horizontalCenter="-110"/>
 	<e:Image source="rank_tab_noselect_png" y="170" scaleX="0.5" scaleY="0.5" horizontalCenter="110"/>
 	<e:Label text="广播消息" x="159" y="184" textColor="0xfce07d" size="26"/>

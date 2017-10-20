@@ -32,7 +32,6 @@ class Main extends eui.UILayer {
      * 加载进度界面
      * loading process interface
      */
-    private loadingView: LoadingUI;
     protected createChildren(): void {
         super.createChildren();
 
@@ -57,10 +56,6 @@ class Main extends eui.UILayer {
 
         LayerManager.getInstance().initLayer(this);
 
-        //Config loading process interface
-        //设置加载进度界面
-        this.loadingView = new LoadingUI();
-        this.stage.addChild(this.loadingView);
         // initialize the Resource loading library
         //初始化Resource资源加载库
         RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
@@ -81,7 +76,7 @@ class Main extends eui.UILayer {
         RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
         RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
         RES.addEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
-        RES.loadGroup("preload");
+        RES.loadGroup("loading");
     }
     private isThemeLoadEnd: boolean = false;
     /**
@@ -98,8 +93,7 @@ class Main extends eui.UILayer {
      * preload resource group is loaded
      */
     private onResourceLoadComplete(event: RES.ResourceEvent): void {
-        if (event.groupName == "preload") {
-            this.stage.removeChild(this.loadingView);
+        if (event.groupName == "loading") {
             RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
             RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
             RES.removeEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
@@ -137,7 +131,6 @@ class Main extends eui.UILayer {
      */
     private onResourceProgress(event: RES.ResourceEvent): void {
         if (event.groupName == "preload") {
-            this.loadingView.setProgress(event.itemsLoaded, event.itemsTotal);
         }
     }
     /**

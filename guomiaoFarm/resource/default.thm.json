@@ -88,7 +88,7 @@
     "resource/skins/tipError.exml",
     "resource/skins/tipGetCoin.exml",
     "resource/skins/tipGreen.exml",
-    "resource/skins/topBar.exml",
+    "resource/skins/topBarSkin.exml",
     "resource/skins/userMenu.exml"
   ]
 }

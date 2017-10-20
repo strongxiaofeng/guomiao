@@ -3,7 +3,7 @@ class TopBarUI extends BaseUI{
 	private homeBtn: eui.Button;
 	public constructor() {
 		super();
-		this.skinName = "resource/skins/topbar.exml";
+		this.skinName = "resource/skins/topBarSkin.exml";
 	}
 	/**初始界面 */
 	public initSetting()

@@ -15,7 +15,7 @@ var TopBarUI = (function (_super) {
     __extends(TopBarUI, _super);
     function TopBarUI() {
         var _this = _super.call(this) || this;
-        _this.skinName = "resource/skins/topbar.exml";
+        _this.skinName = "resource/skins/topBarSkin.exml";
         return _this;
     }
     /**初始界面 */
