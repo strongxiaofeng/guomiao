@@ -65,9 +65,6 @@ var ShopUI = (function (_super) {
         for (var i = 0; i < this.ac_seed.length; i++) {
             this.seedList.getChildAt(i).updateShopCarData(data);
         }
-        for (i = 0; i < this.ac_fruit.length; i++) {
-            this.fruitList.getChildAt(i).updateShopCarData(data);
-        }
         for (i = 0; i < this.ac_tool.length; i++) {
             this.toolList.getChildAt(i).updateShopCarData(data);
         }

@@ -14,7 +14,20 @@ class LastHarvestRankItem extends AItemRenderer{
 
 	protected onAdd()
 	{
-		
+		this.detailBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.goDetail, this);
+		this.addBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.addFriend, this);
+	}
+	private goDetail()
+	{
+		UIManager.openUI(UIConst.ContributeDetailUI);
+		UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
+		UIManager.closeUI(UIConst.LastHarvestRankUI);
+	}
+	private addFriend()
+	{
+		var itemData = <vo.YesterdayHarvestRankItem>this.data.data;
+		GameController.getInstance().addFriend(itemData.user_id);
+		UIManager.openUI(UIConst.TipAddFriendUI, LayerManager.Layer_Tip);
 	}
 	protected dataChanged()
 	{
@@ -34,7 +47,7 @@ class LastHarvestRankItem extends AItemRenderer{
 		}
 		this.nameTxt.text = itemData.nickname;
 		this.moneyTxt.text = itemData.last_gold+"";
-		this.headIcon.source = itemData.avatar+"";
+		// this.headIcon.source = itemData.avatar+"";
 
 		if(itemData.index<=3) {
 			this.rankIcon.source = "rank"+itemData.index+"_png";
@@ -47,6 +60,7 @@ class LastHarvestRankItem extends AItemRenderer{
 	}
 	protected onRemove()
 	{
-		
+		this.detailBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.goDetail, this);
+		this.addBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.addFriend, this);
 	}
 }

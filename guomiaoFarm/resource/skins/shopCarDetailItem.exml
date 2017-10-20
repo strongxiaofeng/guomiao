@@ -3,7 +3,7 @@
 	<e:Rect width="100%" height="100%" x="0" y="0" fillColor="0xffffff"/>
 	<e:Image source="line_png" width="570" horizontalCenter="0" bottom="0"/>
 	<e:Label id="nameTxt" text="奇异果种子" x="47" textColor="0xa4a4a4" size="22" verticalCenter="0" fontFamily="SimHei"/>
-	<e:Label id="costTxt" text="$ 88" size="22" verticalCenter="0" textColor="0xff0000" right="198"/>
+	<e:Label id="costTxt" text="￥88" size="22" verticalCenter="0" textColor="0xff0000" right="198"/>
     <e:Button id="addBtn" label="" width="46" height="46" verticalCenter="0" right="22">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">

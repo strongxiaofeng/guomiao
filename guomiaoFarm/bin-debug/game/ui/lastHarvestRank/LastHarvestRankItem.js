@@ -19,6 +19,18 @@ var LastHarvestRankItem = (function (_super) {
         return _this;
     }
     LastHarvestRankItem.prototype.onAdd = function () {
+        this.detailBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.goDetail, this);
+        this.addBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.addFriend, this);
+    };
+    LastHarvestRankItem.prototype.goDetail = function () {
+        UIManager.openUI(UIConst.ContributeDetailUI);
+        UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
+        UIManager.closeUI(UIConst.LastHarvestRankUI);
+    };
+    LastHarvestRankItem.prototype.addFriend = function () {
+        var itemData = this.data.data;
+        GameController.getInstance().addFriend(itemData.user_id);
+        UIManager.openUI(UIConst.TipAddFriendUI, LayerManager.Layer_Tip);
     };
     LastHarvestRankItem.prototype.dataChanged = function () {
         var itemData = this.data.data;
@@ -34,7 +46,7 @@ var LastHarvestRankItem = (function (_super) {
         }
         this.nameTxt.text = itemData.nickname;
         this.moneyTxt.text = itemData.last_gold + "";
-        this.headIcon.source = itemData.avatar + "";
+        // this.headIcon.source = itemData.avatar+"";
         if (itemData.index <= 3) {
             this.rankIcon.source = "rank" + itemData.index + "_png";
             this.otherRankNumTxt.text = "";
@@ -45,6 +57,8 @@ var LastHarvestRankItem = (function (_super) {
         }
     };
     LastHarvestRankItem.prototype.onRemove = function () {
+        this.detailBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.goDetail, this);
+        this.addBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.addFriend, this);
     };
     return LastHarvestRankItem;
 }(AItemRenderer));

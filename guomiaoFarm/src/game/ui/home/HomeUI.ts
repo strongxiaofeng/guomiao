@@ -1,4 +1,5 @@
 class HomeUI extends BaseUI{
+	private levelTxt: eui.Label;
 	private headBg: eui.Image;
 	private signBtn: eui.Button;
 	private storeBtn: eui.Button;
@@ -40,6 +41,7 @@ class HomeUI extends BaseUI{
 	public initSetting()
 	{
 		super.initSetting();
+		this.levelTxt.text = "Lv"+GameModel.getInstance().getLevel();
 		this.updateLand(0);
 		//昨日排行只请求一次
 		if(!GameModel.getInstance().isYesterdayRankGot) GameController.getInstance().getYesterdayHarvestRank();

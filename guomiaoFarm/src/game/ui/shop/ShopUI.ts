@@ -70,10 +70,6 @@ class ShopUI extends BaseUI{
 		{
 			(<ShopSeedItem>this.seedList.getChildAt(i)).updateShopCarData(data);
 		}
-		for(i=0; i<this.ac_fruit.length; i++)
-		{
-			(<ShopFruitItem>this.fruitList.getChildAt(i)).updateShopCarData(data);
-		}
 		for(i=0; i<this.ac_tool.length; i++)
 		{
 			(<ShopToolItem>this.toolList.getChildAt(i)).updateShopCarData(data);

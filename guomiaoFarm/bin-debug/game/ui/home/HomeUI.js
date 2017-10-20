@@ -22,6 +22,7 @@ var HomeUI = (function (_super) {
     HomeUI.prototype.initSetting = function () {
         var _this = this;
         _super.prototype.initSetting.call(this);
+        this.levelTxt.text = "Lv" + GameModel.getInstance().getLevel();
         this.updateLand(0);
         //昨日排行只请求一次
         if (!GameModel.getInstance().isYesterdayRankGot)

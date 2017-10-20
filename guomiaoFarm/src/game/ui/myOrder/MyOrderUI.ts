@@ -34,8 +34,8 @@ class MyOrderUI extends BaseUI{
 	{
 		this.curChoose = 0;
 		this.tabImg0.source = "rank_tab_select_png";
-		this.tabImg0.source = "rank_tab_noselect_png";
-		this.tabImg0.source = "rank_tab_noselect_png";
+		this.tabImg1.source = "rank_tab_noselect_png";
+		this.tabImg2.source = "rank_tab_noselect_png";
 		GameController.getInstance().getOrderList(this.curChoose, 0, 10);
 	}
 	/**选择 待收货 */
@@ -43,8 +43,8 @@ class MyOrderUI extends BaseUI{
 	{
 		this.curChoose = 1;
 		this.tabImg0.source = "rank_tab_noselect_png";
-		this.tabImg0.source = "rank_tab_select_png";
-		this.tabImg0.source = "rank_tab_noselect_png";
+		this.tabImg1.source = "rank_tab_select_png";
+		this.tabImg2.source = "rank_tab_noselect_png";
 		GameController.getInstance().getOrderList(this.curChoose, 0, 10);
 	}
 	/**选择 已收货 */
@@ -52,8 +52,8 @@ class MyOrderUI extends BaseUI{
 	{
 		this.curChoose = 2;
 		this.tabImg0.source = "rank_tab_noselect_png";
-		this.tabImg0.source = "rank_tab_noselect_png";
-		this.tabImg0.source = "rank_tab_select_png";
+		this.tabImg1.source = "rank_tab_noselect_png";
+		this.tabImg2.source = "rank_tab_select_png";
 		GameController.getInstance().getOrderList(this.curChoose, 0, 10);
 	}
 	/**收到订单列表返回 */

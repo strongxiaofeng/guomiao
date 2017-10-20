@@ -3,7 +3,7 @@
 	<e:Image id="bg" x="0" y="0" width="496" height="95" scale9Grid="36,29,219,50" source="chargeChoiceBg_png"/>
 	<e:Image id="rankIcon" scaleX="0.5" scaleY="0.5" left="18" verticalCenter="0" source="rankbg_png"/>
 	<e:Image source="rankHeadBorder_png" x="89" y="14" scaleX="0.5" scaleY="0.5"/>
-	<e:Image id="headIcon" x="91" y="16" scaleX="0.5" scaleY="0.5" source="coinBoard_png" width="137" height="137"/>
+	<e:Image id="headIcon" x="91" y="16" scaleX="0.5" scaleY="0.5" width="137" height="137" source="defaultUserHead_png"/>
 	<e:Label id="nameTxt" text="那个啥" x="183" y="13" textColor="0x161313" size="22" fontFamily="SimHei"/>
 	<e:Image source="coinRankBg_png" x="179" y="38" width="215" height="38"/>
 	<e:Image source="coinSign_png" x="190" y="46" width="22" height="22"/>

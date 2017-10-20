@@ -23,7 +23,7 @@ var MyOrderListOneItem = (function (_super) {
     MyOrderListOneItem.prototype.dataChanged = function () {
         var data = this.data;
         this.nameTxt.text = data.name;
-        this.costTxt.text = data.gold + "";
+        this.costTxt.text = "￥" + data.gold;
         this.countTxt.text = data.num + "";
     };
     MyOrderListOneItem.prototype.onRemove = function () {

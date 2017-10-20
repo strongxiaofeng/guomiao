@@ -32,7 +32,7 @@ var MyOrderListItem = (function (_super) {
         time.setMilliseconds(data.created_at);
         this.timeTxt.text = time.getFullYear() + "-" + time.getMonth() + "-" + time.getDate();
         this.totalCountTxt.text = "共" + data.list.length + "件商品";
-        this.totalCostTxt.text = data.price + "";
+        this.totalCostTxt.text = "￥" + data.price;
         //待付款
         if (status == 0) {
             this.timeTxt.visible = false;

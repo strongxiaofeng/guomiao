@@ -4,12 +4,12 @@
 	<e:Image source="addressManageTheme_jpg" x="0" y="0" width="640" height="231"/>
 	<e:Image source="myOrder_png" y="74" width="210" height="50" horizontalCenter="0"/>
 	<e:Rect width="640" height="76" x="0" y="235" fillColor="0xffffff"/>
-	<e:Image id="tabImg0" x="100" y="256" scaleX="0.5" scaleY="0.5" width="200" height="80" source="rank_tab_select_png"/>
-	<e:Image id="tabImg1" source="rank_tab_noselect_png" y="256" scaleX="0.5" scaleY="0.5" width="200" height="80" horizontalCenter="0"/>
-	<e:Image id="tabImg2" source="rank_tab_noselect_png" y="256" scaleX="0.5" scaleY="0.5" width="200" height="80" right="100"/>
-	<e:Label text="待付款" x="123" y="265" textColor="0xebd26b" size="18" fontFamily="SimHei" touchEnabled="false"/>
-	<e:Label text="待收货" y="265" textColor="0xebd26b" size="18" fontFamily="SimHei" horizontalCenter="0" touchEnabled="false"/>
-	<e:Label text="已收货" y="265" textColor="0xebd26b" size="18" fontFamily="SimHei" right="123" touchEnabled="false"/>
+	<e:Image id="tabImg0" x="120" y="256" scaleX="0.6" scaleY="0.6" width="200" height="80" source="rank_tab_select_png"/>
+	<e:Image id="tabImg1" source="rank_tab_noselect_png" y="256" scaleX="0.6" scaleY="0.6" width="200" height="80" horizontalCenter="0"/>
+	<e:Image id="tabImg2" source="rank_tab_noselect_png" y="256" scaleX="0.6" scaleY="0.6" width="200" height="80" x="400"/>
+	<e:Label text="待付款" y="267" textColor="0xebd26b" size="18" fontFamily="SimHei" touchEnabled="false" horizontalCenter="-140"/>
+	<e:Label text="待收货" y="267" textColor="0xebd26b" size="18" fontFamily="SimHei" horizontalCenter="0" touchEnabled="false"/>
+	<e:Label text="已收货" y="267" textColor="0xebd26b" size="18" fontFamily="SimHei" touchEnabled="false" horizontalCenter="140"/>
 	<e:Scroller width="640" x="0" bottom="0" top="314">
 		<e:List id="list"/>
 	</e:Scroller>

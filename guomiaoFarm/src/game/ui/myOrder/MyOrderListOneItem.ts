@@ -14,7 +14,7 @@ class MyOrderListOneItem extends AItemRenderer{
 	{
 		var data = <vo.OrderOneItem>this.data;
 		this.nameTxt.text = data.name;
-		this.costTxt.text = data.gold+"";
+		this.costTxt.text = "￥"+data.gold;
 		this.countTxt.text = data.num+"";
 	}
 	protected onRemove()
