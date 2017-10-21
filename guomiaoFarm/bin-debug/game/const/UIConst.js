@@ -42,6 +42,9 @@ var UIConst = (function () {
     UIConst.AddFriendUI = "AddFriendUI";
     UIConst.FriendRequestsUI = "FriendRequestsUI";
     UIConst.OtherLandUI = "OtherLandUI";
+    UIConst.InviteDetailUI = "InviteDetailUI";
+    UIConst.ShopSeedAlertUI = "ShopSeedAlertUI";
+    UIConst.LeaveMsgUI = "LeaveMsgUI";
     return UIConst;
 }());
 __reflect(UIConst.prototype, "UIConst");

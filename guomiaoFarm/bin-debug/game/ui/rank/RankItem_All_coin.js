@@ -27,6 +27,14 @@ var RankItem_All_coin = (function (_super) {
         this.nameTxt.text = data.nickname;
         this.myChangeTxt.text = data.exp;
         this.myHeadIcon.source = data.avatar;
+        if (Math.random() < 0.5) {
+            this.handAbleImg.visible = true;
+            this.waterAbleImg.visible = false;
+        }
+        else {
+            this.handAbleImg.visible = false;
+            this.waterAbleImg.visible = true;
+        }
     };
     RankItem_All_coin.prototype.click = function (e) {
         var data = this.data;
@@ -34,6 +42,14 @@ var RankItem_All_coin = (function (_super) {
             console.log("加他");
             GameController.getInstance().addFriend(parseInt(data.id));
             UIManager.openUI(UIConst.TipAddFriendUI, LayerManager.Layer_Tip);
+        }
+        else if (e.target == this.handAbleImg) {
+            console.log("去偷菜");
+            UIManager.openUI(UIConst.OtherLandUI);
+        }
+        else if (e.target == this.waterAbleImg) {
+            console.log("去浇水");
+            UIManager.openUI(UIConst.OtherLandUI);
         }
         else {
             //查看他人资料

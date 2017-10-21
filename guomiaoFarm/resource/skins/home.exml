@@ -138,4 +138,10 @@
 		</e:Button>
 		<e:Image id="waterCount" source="water0_png" x="369" y="969" width="23" height="19" touchEnabled="false"/>
 	</e:Group>
+	<e:Group id="seedGroup" width="278" height="107" x="309" y="806">
+		<e:Image source="seedBg_png" x="0" y="0" scaleX="0.5" scaleY="0.5" width="100%" height="100%"/>
+		<e:Image id="seed1" x="35" y="19" width="55" height="52" source="chooseSeed1_png"/>
+		<e:Image id="seed2" y="19" width="55" height="52" x="112" source="chooseSeed2_png"/>
+		<e:Image id="seed3" x="189" y="19" width="55" height="52" source="chooseSeed3_png"/>
+	</e:Group>
 </e:Skin>

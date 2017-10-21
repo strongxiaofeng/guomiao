@@ -29,10 +29,27 @@ var RankItem_Friend_coin = (function (_super) {
         // this.arrow.source = "coinReduce_png" "coinGrow_png"
         // this.supportCount.text = data.thumbs_up;
         // this.myHeadIcon.source = data.avatar;
+        if (Math.random() < 0.5) {
+            this.handAbleImg.visible = true;
+            this.waterAbleImg.visible = false;
+        }
+        else {
+            this.handAbleImg.visible = false;
+            this.waterAbleImg.visible = true;
+        }
     };
     RankItem_Friend_coin.prototype.click = function (e) {
-        if (e.target == this.handBtn) {
+        if (e.target == this.supportImg) {
+            console.log("去赞他");
+            var data = this.data;
+            GameController.getInstance().thumbsUp(parseInt(data.user_id));
+        }
+        else if (e.target == this.handAbleImg) {
             console.log("去偷菜");
+            UIManager.openUI(UIConst.OtherLandUI);
+        }
+        else if (e.target == this.waterAbleImg) {
+            console.log("去浇水");
             UIManager.openUI(UIConst.OtherLandUI);
         }
         else {

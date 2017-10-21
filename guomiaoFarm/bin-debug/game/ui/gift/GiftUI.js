@@ -34,9 +34,26 @@ var GiftUI = (function (_super) {
     /**初始监听 */
     GiftUI.prototype.initListener = function () {
         this.registerEvent(this.btn_close, egret.TouchEvent.TOUCH_TAP, this.clickClose, this);
+        this.registerEvent(this.leftBtn, egret.TouchEvent.TOUCH_TAP, this.clickleft, this);
+        this.registerEvent(this.rightBtn, egret.TouchEvent.TOUCH_TAP, this.clickRight, this);
+        this.registerEvent(this.inviteBtn, egret.TouchEvent.TOUCH_TAP, this.invite, this);
+    };
+    GiftUI.prototype.invite = function () {
+        UIManager.openUI(UIConst.RankFriendContributeUI);
+        UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
+        this.dispose();
     };
     GiftUI.prototype.getGift = function () {
         UIManager.openUI(UIConst.TipGetCoinUI, LayerManager.Layer_Tip);
+    };
+    GiftUI.prototype.clickleft = function () {
+        if (this.scroller.viewport.scrollH - 100 >= 0)
+            this.scroller.viewport.scrollH -= 100;
+    };
+    GiftUI.prototype.clickRight = function () {
+        if (this.scroller.viewport.scrollH + 100 < this.scroller.viewport.contentWidth - 502) {
+            this.scroller.viewport.scrollH += 100;
+        }
     };
     /**点击关闭按钮 */
     GiftUI.prototype.clickClose = function () {

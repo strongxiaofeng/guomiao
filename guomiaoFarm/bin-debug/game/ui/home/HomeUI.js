@@ -15,6 +15,7 @@ var HomeUI = (function (_super) {
     __extends(HomeUI, _super);
     function HomeUI() {
         var _this = _super.call(this) || this;
+        _this.clickWaterCount = 0;
         _this.skinName = "resource/skins/home.exml";
         return _this;
     }
@@ -22,6 +23,7 @@ var HomeUI = (function (_super) {
     HomeUI.prototype.initSetting = function () {
         var _this = this;
         _super.prototype.initSetting.call(this);
+        this.clickWaterCount = 0;
         this.levelTxt.text = "Lv" + GameModel.getInstance().getLevel();
         this.updateLand(0);
         //昨日排行只请求一次
@@ -60,6 +62,9 @@ var HomeUI = (function (_super) {
         this.registerEvent(this.tree10, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
         this.registerEvent(this.tree11, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
         this.registerEvent(this.tree12, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
+        this.registerEvent(this.seed1, egret.TouchEvent.TOUCH_TAP, this.clickSeedItem, this);
+        this.registerEvent(this.seed2, egret.TouchEvent.TOUCH_TAP, this.clickSeedItem, this);
+        this.registerEvent(this.seed3, egret.TouchEvent.TOUCH_TAP, this.clickSeedItem, this);
         this.addRegister(NotifyConst.Notify_LandInfo, this.onLandInfo, this);
         this.addRegister(NotifyConst.Notify_YesterdayHarvestRank, this.onYesterdayHarvestRank, this);
         this.addRegister(NotifyConst.Notify_SeedResult, this.onSeed, this);
@@ -102,7 +107,7 @@ var HomeUI = (function (_super) {
             if (n == 0)
                 this["tree" + i].source = "";
             else if (n == 1)
-                this["tree" + i].source = "seedImg_png";
+                this["tree" + i].source = "";
             else if (n == 2)
                 this["tree" + i].source = "tree_young_png";
             else if (n == 3)
@@ -161,8 +166,13 @@ var HomeUI = (function (_super) {
     };
     /**浇水 */
     HomeUI.prototype.clickWater = function () {
-        GameController.getInstance().sendOperLand(3);
-        // UIManager.openUI(UIConst.InviteWaterUI, LayerManager.Layer_Tip);
+        if (this.clickWaterCount == 0) {
+            GameController.getInstance().sendOperLand(3);
+        }
+        else {
+            UIManager.openUI(UIConst.InviteWaterUI, LayerManager.Layer_Tip);
+        }
+        this.clickWaterCount++;
     };
     /**除草 施肥 浇水 返回 */
     HomeUI.prototype.onOper = function (obj) {
@@ -170,8 +180,13 @@ var HomeUI = (function (_super) {
         if (obj.status == 0) {
         }
     };
-    /**播种 种仓库里的id*/
+    /**播种 打开种子选择面板*/
     HomeUI.prototype.clickSeed = function () {
+        this.seedGroup.visible = true;
+    };
+    /**播种一个种子 种仓库里的id*/
+    HomeUI.prototype.clickSeedItem = function () {
+        this.seedGroup.visible = false;
         var seedid = GameModel.getInstance().getSeedId();
         GameController.getInstance().sendSeed(seedid);
     };

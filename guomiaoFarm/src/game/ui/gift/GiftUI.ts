@@ -6,6 +6,9 @@ class GiftUI extends BaseUI{
 	private getAble2: eui.Image;
 	private inviteBtn: eui.Image;
 	private list: eui.List;
+	private scroller: eui.Scroller;
+	private leftBtn: eui.Button;
+	private rightBtn: eui.Button;
 	public constructor() {
 		super();
 		this.skinName = "resource/skins/gift.exml";
@@ -31,10 +34,29 @@ class GiftUI extends BaseUI{
 	protected initListener()
 	{
 		this.registerEvent(this.btn_close, egret.TouchEvent.TOUCH_TAP, this.clickClose, this);
+		this.registerEvent(this.leftBtn, egret.TouchEvent.TOUCH_TAP, this.clickleft, this);
+		this.registerEvent(this.rightBtn, egret.TouchEvent.TOUCH_TAP, this.clickRight, this);
+		this.registerEvent(this.inviteBtn, egret.TouchEvent.TOUCH_TAP, this.invite, this);
+	}
+	private invite()
+	{
+		UIManager.openUI(UIConst.RankFriendContributeUI);
+		UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
+		this.dispose();
 	}
 	private getGift()
 	{
 		UIManager.openUI(UIConst.TipGetCoinUI, LayerManager.Layer_Tip);
+	}
+	private clickleft()
+	{
+		if(this.scroller.viewport.scrollH-100>=0) this.scroller.viewport.scrollH -=100;
+	}
+	private clickRight()
+	{
+		if(this.scroller.viewport.scrollH+100 < this.scroller.viewport.contentWidth-502) {
+			this.scroller.viewport.scrollH +=100;
+		}
 	}
 	/**点击关闭按钮 */
 	private clickClose()

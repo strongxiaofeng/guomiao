@@ -26,6 +26,8 @@ class GameModel {
 	private shopCarData = {};
 	/**正在查看的他人数据 */
 	private _otherUser: vo.RankAllItem;
+	/**正在查看的种子详情的id */
+	public curSeedDetailId: number;
 
 	// --------------------------- 存储数据 -------------------------------------
 

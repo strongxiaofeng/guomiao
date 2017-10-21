@@ -29,6 +29,14 @@ var RankItem_All_contri = (function (_super) {
         this.myLevelNum.source = "num" + data.level + "_png";
         this.myChangeTxt.text = data.exp;
         this.myHeadIcon.source = data.avatar;
+        if (Math.random() < 0.5) {
+            this.handAbleImg.visible = true;
+            this.waterAbleImg.visible = false;
+        }
+        else {
+            this.handAbleImg.visible = false;
+            this.waterAbleImg.visible = true;
+        }
         egret.callLater(function () {
             _this.lvGroup.x = _this.nameTxt.x + _this.nameTxt.width + 10;
         }, this);
@@ -39,6 +47,14 @@ var RankItem_All_contri = (function (_super) {
             console.log("加他");
             GameController.getInstance().addFriend(parseInt(data.id));
             UIManager.openUI(UIConst.TipAddFriendUI, LayerManager.Layer_Tip);
+        }
+        else if (e.target == this.handAbleImg) {
+            console.log("去偷菜");
+            UIManager.openUI(UIConst.OtherLandUI);
+        }
+        else if (e.target == this.waterAbleImg) {
+            console.log("去浇水");
+            UIManager.openUI(UIConst.OtherLandUI);
         }
         else {
             //查看他人资料

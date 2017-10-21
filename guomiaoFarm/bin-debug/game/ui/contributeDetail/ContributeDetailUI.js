@@ -28,7 +28,11 @@ var ContributeDetailUI = (function (_super) {
         ac.addItem({ num: 20, date: "2017-09-30" });
         ac.addItem({ num: 800, date: "2017-09-30" });
         ac.addItem({ num: 6595, date: "2017-09-30" });
+        ac.addItem({ num: 20, date: "2017-09-30" });
+        ac.addItem({ num: 800, date: "2017-09-30" });
+        ac.addItem({ num: 6595, date: "2017-09-30" });
         this.attriDetailList.itemRenderer = ContriButeDetailItem;
+        this.attriDetailList.useVirtualLayout = false;
         this.attriDetailList.dataProvider = ac;
     };
     /**初始监听 */

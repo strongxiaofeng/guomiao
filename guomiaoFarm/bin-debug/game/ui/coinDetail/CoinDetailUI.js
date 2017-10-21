@@ -28,7 +28,11 @@ var CoinDetailUI = (function (_super) {
         ac.addItem({ type: "充值", num: 20, date: "2017-09-30" });
         ac.addItem({ type: "充值", num: 800, date: "2017-09-30" });
         ac.addItem({ type: "充值", num: 6595, date: "2017-09-30" });
+        ac.addItem({ type: "充值", num: 6595, date: "2017-09-30" });
+        ac.addItem({ type: "充值", num: 6595, date: "2017-09-30" });
+        ac.addItem({ type: "充值", num: 6595, date: "2017-09-30" });
         this.coinDetailList.itemRenderer = CoinDetailItem;
+        this.coinDetailList.useVirtualLayout = false;
         this.coinDetailList.dataProvider = ac;
         ac.refresh();
     };

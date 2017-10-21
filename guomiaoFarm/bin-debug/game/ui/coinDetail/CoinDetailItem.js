@@ -21,6 +21,10 @@ var CoinDetailItem = (function (_super) {
     CoinDetailItem.prototype.onAdd = function () {
     };
     CoinDetailItem.prototype.dataChanged = function () {
+        /**{type:"充值",num:2000, date:"2017-09-30"} */
+        this.payType.text = this.data.type;
+        this.payNumTxt.text = this.data.num;
+        this.dateTxt.text = this.data.date;
     };
     CoinDetailItem.prototype.onRemove = function () {
     };

@@ -19,10 +19,16 @@ var InviteWaterItem = (function (_super) {
         return _this;
     }
     InviteWaterItem.prototype.onAdd = function () {
+        this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.clickInvite, this);
     };
     InviteWaterItem.prototype.dataChanged = function () {
     };
+    InviteWaterItem.prototype.clickInvite = function () {
+        UIManager.closeUI(UIConst.InviteWaterUI);
+        UIManager.openUI(UIConst.InviteDetailUI);
+    };
     InviteWaterItem.prototype.onRemove = function () {
+        this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.clickInvite, this);
     };
     return InviteWaterItem;
 }(AItemRenderer));

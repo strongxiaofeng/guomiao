@@ -1,11 +1,9 @@
 class ShopSeedItem extends AItemRenderer{
 	private icon: eui.Image;
-	private reduceBtn: eui.Image;
-	private addBtn: eui.Image;
+	private addBtn: eui.Button;
 	private titleTxt: eui.Label;
 	private descTxt: eui.Label;
 	private costTxt: eui.Label;
-	private numTxt: eui.Label;
 	public constructor() {
 		super();
 		this.skinName = "resource/skins/shop_seedItem.exml";
@@ -13,8 +11,8 @@ class ShopSeedItem extends AItemRenderer{
 
 	protected onAdd()
 	{
-		this.addBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.addToShopCar, this);
-		this.reduceBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.removeFromShopCar, this);
+		this.addBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+		this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 	}
 	protected dataChanged()
 	{
@@ -25,6 +23,22 @@ class ShopSeedItem extends AItemRenderer{
 		// this.icon.source = data.id+"通过id去配置中寻找对应图片";
 		var shopCarData = GameModel.getInstance().getShopCarData();
 		this.updateShopCarData(shopCarData);
+	}
+	private onClick(e: egret.TouchEvent)
+	{
+		if(e.target == this.addBtn)
+		{
+			this.addToShopCar();
+		}
+		else{
+			this.showSeedDetail();
+		}
+	}
+	private showSeedDetail()
+	{
+		var data = <vo.Item_listItem>this.data;
+		GameModel.getInstance().curSeedDetailId = data.id;
+		UIManager.openUI(UIConst.ShopSeedAlertUI, LayerManager.Layer_Tip);
 	}
 	private addToShopCar()
 	{
@@ -40,24 +54,17 @@ class ShopSeedItem extends AItemRenderer{
 	public updateShopCarData(shopcarData:any)
 	{
 		var data = <vo.Item_listItem>this.data;
-		var count = 0;
-		if(shopcarData[data.id]) count = shopcarData[data.id];
-
-		if(count)
+		if(shopcarData[data.id] > 0)
 		{
-			this.numTxt.text = count+"";
-			this.numTxt.visible = true;
-			this.reduceBtn.visible = true;  
+			this.addBtn.enabled = false;
 		}
-		else{
-			this.numTxt.text = "0";
-			this.numTxt.visible = false;
-			this.reduceBtn.visible = false;  
+		else
+		{
+			this.addBtn.enabled = true;
 		}
 	}
 	protected onRemove()
 	{
 		this.addBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.addToShopCar, this);
-		this.reduceBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.removeFromShopCar, this);
 	}
 }

@@ -33,6 +33,15 @@ var InviteWaterUI = (function (_super) {
     /**初始监听 */
     InviteWaterUI.prototype.initListener = function () {
         this.registerEvent(this.btn_close, egret.TouchEvent.TOUCH_TAP, this.clickClose, this);
+        this.registerEvent(this.inviteFriends, egret.TouchEvent.TOUCH_TAP, this.clickInviteFriends, this);
+        this.registerEvent(this.inviteWxFriends, egret.TouchEvent.TOUCH_TAP, this.clickInviteWxFriends, this);
+    };
+    InviteWaterUI.prototype.clickInviteFriends = function () {
+        UIManager.closeUI(UIConst.InviteWaterUI);
+        UIManager.openUI(UIConst.RankFriendContributeUI);
+        UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
+    };
+    InviteWaterUI.prototype.clickInviteWxFriends = function () {
     };
     /**点击关闭 */
     InviteWaterUI.prototype.clickClose = function () {

@@ -12827,7 +12827,7 @@ declare namespace eui {
          * @param value
          */
         $setText(value: string): boolean;
-        private $font;
+        protected $font;
         $setFont(value: any): boolean;
         private $createChildrenCalled;
         private $fontChanged;

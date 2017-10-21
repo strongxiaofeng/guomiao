@@ -19,8 +19,8 @@ var ShopSeedItem = (function (_super) {
         return _this;
     }
     ShopSeedItem.prototype.onAdd = function () {
-        this.addBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.addToShopCar, this);
-        this.reduceBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.removeFromShopCar, this);
+        this.addBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
     };
     ShopSeedItem.prototype.dataChanged = function () {
         var data = this.data;
@@ -30,6 +30,19 @@ var ShopSeedItem = (function (_super) {
         // this.icon.source = data.id+"通过id去配置中寻找对应图片";
         var shopCarData = GameModel.getInstance().getShopCarData();
         this.updateShopCarData(shopCarData);
+    };
+    ShopSeedItem.prototype.onClick = function (e) {
+        if (e.target == this.addBtn) {
+            this.addToShopCar();
+        }
+        else {
+            this.showSeedDetail();
+        }
+    };
+    ShopSeedItem.prototype.showSeedDetail = function () {
+        var data = this.data;
+        GameModel.getInstance().curSeedDetailId = data.id;
+        UIManager.openUI(UIConst.ShopSeedAlertUI, LayerManager.Layer_Tip);
     };
     ShopSeedItem.prototype.addToShopCar = function () {
         var data = this.data;
@@ -42,23 +55,15 @@ var ShopSeedItem = (function (_super) {
     /**当购物车数据发生变化 */
     ShopSeedItem.prototype.updateShopCarData = function (shopcarData) {
         var data = this.data;
-        var count = 0;
-        if (shopcarData[data.id])
-            count = shopcarData[data.id];
-        if (count) {
-            this.numTxt.text = count + "";
-            this.numTxt.visible = true;
-            this.reduceBtn.visible = true;
+        if (shopcarData[data.id] > 0) {
+            this.addBtn.enabled = false;
         }
         else {
-            this.numTxt.text = "0";
-            this.numTxt.visible = false;
-            this.reduceBtn.visible = false;
+            this.addBtn.enabled = true;
         }
     };
     ShopSeedItem.prototype.onRemove = function () {
         this.addBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.addToShopCar, this);
-        this.reduceBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.removeFromShopCar, this);
     };
     return ShopSeedItem;
 }(AItemRenderer));

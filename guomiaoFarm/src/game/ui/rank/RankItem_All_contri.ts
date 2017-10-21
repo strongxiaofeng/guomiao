@@ -6,6 +6,8 @@ class RankItem_All_contri  extends AItemRenderer{
 	private myLevelNum: eui.Image;
 	private myChangeTxt: eui.Label;
 	private addBtn: eui.Button;
+	private handAbleImg: eui.Image;
+	private waterAbleImg: eui.Image;
 	public constructor() {
 		super();
 		this.skinName = "resource/skins/rankItem_all_contri.exml";
@@ -22,6 +24,16 @@ class RankItem_All_contri  extends AItemRenderer{
 		this.myLevelNum.source = "num"+ data.level +"_png";
 		this.myChangeTxt.text = data.exp;
 		this.myHeadIcon.source = data.avatar;
+		
+		if(Math.random()<0.5){
+			this.handAbleImg.visible = true;
+			this.waterAbleImg.visible = false;
+		}
+		else{
+			this.handAbleImg.visible = false;
+			this.waterAbleImg.visible = true;
+		}
+		
 		egret.callLater(()=>{
 			this.lvGroup.x = this.nameTxt.x + this.nameTxt.width + 10;
 		}, this);
@@ -34,6 +46,16 @@ class RankItem_All_contri  extends AItemRenderer{
 			console.log("加他");
 			GameController.getInstance().addFriend(parseInt(data.id));
 			UIManager.openUI(UIConst.TipAddFriendUI, LayerManager.Layer_Tip);
+		}
+		else if(e.target == this.handAbleImg)
+		{
+			console.log("去偷菜");
+			UIManager.openUI(UIConst.OtherLandUI);
+		}
+		else if(e.target == this.waterAbleImg)
+		{
+			console.log("去浇水");
+			UIManager.openUI(UIConst.OtherLandUI);
 		}
 		else
 		{

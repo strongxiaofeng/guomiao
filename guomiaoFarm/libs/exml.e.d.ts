@@ -102,6 +102,8 @@ declare class lastHarvestItem extends eui.Skin{
 }
 declare class lastHarvst extends eui.Skin{
 }
+declare class radio extends eui.Skin{
+}
 declare class myOrder extends eui.Skin{
 }
 declare class myOrderItem extends eui.Skin{
@@ -109,8 +111,6 @@ declare class myOrderItem extends eui.Skin{
 declare class pay extends eui.Skin{
 }
 declare class payGoodsItem extends eui.Skin{
-}
-declare class radio extends eui.Skin{
 }
 declare class radioItem extends eui.Skin{
 }
@@ -133,6 +133,8 @@ declare class shopCarDetail extends eui.Skin{
 declare class shopCarDetailItem extends eui.Skin{
 }
 declare class shop_fruitItem extends eui.Skin{
+}
+declare class shop_seedAlert extends eui.Skin{
 }
 declare class shop_seedItem extends eui.Skin{
 }

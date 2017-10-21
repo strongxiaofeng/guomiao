@@ -29,8 +29,14 @@ class HomeUI extends BaseUI{
 	private tree10: eui.Image;
 	private tree11: eui.Image;
 	private tree12: eui.Image;
+
+	private seedGroup: eui.Group;
+	private seed1: eui.Image;
+	private seed2: eui.Image;
+	private seed3: eui.Image;
 	
 	private intervalId: any;
+	private clickWaterCount = 0;
 
 	public constructor() {
 		super();
@@ -41,6 +47,7 @@ class HomeUI extends BaseUI{
 	public initSetting()
 	{
 		super.initSetting();
+		this.clickWaterCount = 0;
 		this.levelTxt.text = "Lv"+GameModel.getInstance().getLevel();
 		this.updateLand(0);
 		//昨日排行只请求一次
@@ -81,6 +88,10 @@ class HomeUI extends BaseUI{
 		this.registerEvent(this.tree10, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
 		this.registerEvent(this.tree11, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
 		this.registerEvent(this.tree12, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
+		
+		this.registerEvent(this.seed1, egret.TouchEvent.TOUCH_TAP, this.clickSeedItem, this);
+		this.registerEvent(this.seed2, egret.TouchEvent.TOUCH_TAP, this.clickSeedItem, this);
+		this.registerEvent(this.seed3, egret.TouchEvent.TOUCH_TAP, this.clickSeedItem, this);
 
 
 		this.addRegister(NotifyConst.Notify_LandInfo, this.onLandInfo, this);
@@ -133,7 +144,7 @@ class HomeUI extends BaseUI{
 		for(var i=1;i<=12;i++)
 		{
 			if(n==0) this["tree"+i].source = "";
-			else if(n==1) this["tree"+i].source = "seedImg_png";
+			else if(n==1) this["tree"+i].source = "";
 			else if(n==2) this["tree"+i].source = "tree_young_png";
 			else if(n==3) this["tree"+i].source = "tree_grow_png";
 			else if(n==4) this["tree"+i].source = "tree_ripe_png";
@@ -198,11 +209,18 @@ class HomeUI extends BaseUI{
 	{
 		GameController.getInstance().sendOperLand(6);
 	}
+
 	/**浇水 */
 	private clickWater()
 	{
-		GameController.getInstance().sendOperLand(3);
-		// UIManager.openUI(UIConst.InviteWaterUI, LayerManager.Layer_Tip);
+		if(this.clickWaterCount == 0)
+		{
+			GameController.getInstance().sendOperLand(3);
+		}
+		else{
+			UIManager.openUI(UIConst.InviteWaterUI, LayerManager.Layer_Tip);
+		}
+		this.clickWaterCount ++;
 	}
 	/**除草 施肥 浇水 返回 */
 	private onOper(obj: BaseResponse)
@@ -213,9 +231,15 @@ class HomeUI extends BaseUI{
 
 		}
 	}
-	/**播种 种仓库里的id*/
+	/**播种 打开种子选择面板*/
 	private clickSeed()
 	{
+		this.seedGroup.visible = true;
+	}
+	/**播种一个种子 种仓库里的id*/
+	private clickSeedItem()
+	{
+		this.seedGroup.visible = false;
 		var seedid = GameModel.getInstance().getSeedId();
 		GameController.getInstance().sendSeed(seedid);
 	}

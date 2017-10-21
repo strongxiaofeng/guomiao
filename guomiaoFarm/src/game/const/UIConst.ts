@@ -37,7 +37,8 @@ class UIConst {
 	public static AddFriendUI = "AddFriendUI";
 	public static FriendRequestsUI = "FriendRequestsUI";
 	public static OtherLandUI = "OtherLandUI";
-
-
+	public static InviteDetailUI = "InviteDetailUI";
+	public static ShopSeedAlertUI = "ShopSeedAlertUI";
+	public static LeaveMsgUI = "LeaveMsgUI";
 	
 }

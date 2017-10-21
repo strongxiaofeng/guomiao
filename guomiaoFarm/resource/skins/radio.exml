@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="radio" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Image x="0" y="0" source="radioBg_jpg"/>
-	<e:Image source="rank_tab_noselect_png" y="170" scaleX="0.5" scaleY="0.5" horizontalCenter="-110"/>
-	<e:Image source="rank_tab_noselect_png" y="170" scaleX="0.5" scaleY="0.5" horizontalCenter="110"/>
-	<e:Label text="广播消息" x="159" y="184" textColor="0xfce07d" size="26"/>
-	<e:Label text="操作日志" x="380" y="184" textColor="0xFCE07D" size="26"/>
-	<e:Scroller width="640" height="645" x="0" y="244">
-		<e:List id="list"/>
-	</e:Scroller>
+	<e:Image id="radioBtn" source="rank_tab_noselect_png" y="170" scaleX="0.5" scaleY="0.5" horizontalCenter="-110"/>
+	<e:Image id="recordBtn" source="rank_tab_noselect_png" y="170" scaleX="0.5" scaleY="0.5" horizontalCenter="110"/>
+	<e:Label text="广播消息" x="159" y="184" textColor="0xfce07d" size="26" touchEnabled="false"/>
+	<e:Label text="操作日志" x="380" y="184" textColor="0xFCE07D" size="26" touchEnabled="false"/>
+	<e:Group id="radioGroup" width="640" height="1024" x="0" y="0" touchThrough="true">
+		<e:Scroller width="640" height="645" x="0" y="244" scaleX="1" scaleY="1">
+			<e:List id="list"/>
+		</e:Scroller>
+	</e:Group>
+	<e:Group id="recordGroup" width="640" height="1024" x="0" y="0" touchThrough="true">
+		<e:Image source="recordBg_png" y="276" width="566" height="610" horizontalCenter="0"/>
+		<e:Scroller width="490" height="535" y="313" scaleX="1" scaleY="1" horizontalCenter="0">
+				<e:List id="recordList" width="200" height="200" x="108" y="83"/>
+		</e:Scroller>
+	</e:Group>
 
 	<e:Image id="leftPage" source="leftPage_png" x="252" y="901" scaleX="0.5" scaleY="0.5"/>
 	<e:Image id="rightPage" source="rightPage_png" x="354.5" y="901" scaleX="0.5" scaleY="0.5"/>
-	<e:Label text="1/10" y="907" textColor="0x5f6468" size="22" horizontalCenter="0"/>
+	<e:Label text="1/10" y="907" size="22" horizontalCenter="0" textColor="0xf9f9f9"/>
 	<e:Image id="clearBtn" source="btn_clearShopcar_sure_png" x="492" y="898" scaleX="0.3" scaleY="0.3"/>
 </e:Skin>

@@ -18,4 +18,6 @@
 			</e:Skin>
 		</e:skinName>
 	</e:Button>
+	<e:Image id="handAbleImg" source="stole_png" x="423" y="18" width="80" height="66"/>
+	<e:Image id="waterAbleImg" x="423" y="18" width="80" height="66" source="water_png"/>
 </e:Skin>

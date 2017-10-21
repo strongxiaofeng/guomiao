@@ -21,6 +21,9 @@ var ContriButeDetailItem = (function (_super) {
     ContriButeDetailItem.prototype.onAdd = function () {
     };
     ContriButeDetailItem.prototype.dataChanged = function () {
+        /**{num:2000, date:"2017-09-30"} */
+        this.addAttriTxt.text = this.data.num + "";
+        this.dateTxt.text = this.data.date + "";
     };
     ContriButeDetailItem.prototype.onRemove = function () {
     };
