@@ -2,6 +2,8 @@ class GameController {
 	private static _instance: GameController;
 	private sequence:number = 0;
 	private key = "jgo0AUOng7nbPbMf";
+	// private serverAddress:string = "http://fruit-meow-farm.cteee.cn";
+	private serverAddress:string = "http://60.205.229.120";
 
 	public constructor() {
 	}
@@ -55,7 +57,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/get-user-info',
+			this.serverAddress + '/frontend/web/index.php?r=user/get-user-info',
 			(obj)=>{
 				if(obj.status>0)
 				{
@@ -75,7 +77,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/item-list',
+			this.serverAddress + '/frontend/web/index.php?r=user/item-list',
 			(obj)=>{
 				if(obj.status>0)
 				{
@@ -95,7 +97,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=farm/land-list',
+			this.serverAddress + '/frontend/web/index.php?r=farm/land-list',
 			(obj)=>{
 				if(obj.status>0)
 				{
@@ -115,7 +117,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=farm/sow-seeds',
+			this.serverAddress + '/frontend/web/index.php?r=farm/sow-seeds',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_SeedResult, obj);
 			}
@@ -128,7 +130,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=farm/gather-crop',
+			this.serverAddress + '/frontend/web/index.php?r=farm/gather-crop',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_GatherResult, obj);
 			}
@@ -141,7 +143,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=farm/steal',
+			this.serverAddress + '/frontend/web/index.php?r=farm/steal',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_StealResult, obj);
 			}
@@ -154,7 +156,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=farm/oper-land',
+			this.serverAddress + '/frontend/web/index.php?r=farm/oper-land',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_OperLandResult, obj);
 			}
@@ -167,7 +169,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=farm/oper-other-land',
+			this.serverAddress + '/frontend/web/index.php?r=farm/oper-other-land',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_WaterOtherLandResult, obj);
 			}
@@ -180,7 +182,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=store/get-order-list',
+			this.serverAddress + '/frontend/web/index.php?r=store/get-order-list',
 			(obj)=>{
 				if(obj.status>0)
 				{
@@ -199,7 +201,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=store/order',
+			this.serverAddress + '/frontend/web/index.php?r=store/order',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_OrderResult, obj);
 			}
@@ -212,7 +214,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=store/pay',
+			this.serverAddress + '/frontend/web/index.php?r=store/pay',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_OrderPayResult, obj);
 			}
@@ -225,7 +227,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=store/receive',
+			this.serverAddress + '/frontend/web/index.php?r=store/receive',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_SureReceiveResult, obj);
 			}
@@ -238,7 +240,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=store/del',
+			this.serverAddress + '/frontend/web/index.php?r=store/del',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_DeleteReceivedOrderResult, obj);
 			}
@@ -251,7 +253,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/sign',
+			this.serverAddress + '/frontend/web/index.php?r=user/sign',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_SignResult, obj);
 			}
@@ -264,7 +266,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/sign-list',
+			this.serverAddress + '/frontend/web/index.php?r=user/sign-list',
 			(obj)=>{
 				if(obj.status>0)
 				{
@@ -283,7 +285,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/get-continue-sign-gift',
+			this.serverAddress + '/frontend/web/index.php?r=user/get-continue-sign-gift',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_GetContinueSignRewardResult, obj);
 			}
@@ -296,7 +298,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=comm/get-notice-list',
+			this.serverAddress + '/frontend/web/index.php?r=comm/get-notice-list',
 			(obj)=>{
 				if(obj.status>0)
 				{
@@ -315,7 +317,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/get-address-list',
+			this.serverAddress + '/frontend/web/index.php?r=user/get-address-list',
 			(obj)=>{
 				if(obj.status>0)
 				{
@@ -336,7 +338,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/add-address',
+			this.serverAddress + '/frontend/web/index.php?r=user/add-address',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_AddAddress, obj);
 			}
@@ -349,7 +351,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/edit-address',
+			this.serverAddress + '/frontend/web/index.php?r=user/edit-address',
 			(obj)=>{
 				GameController.getInstance().getAddressList();
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_EditAddress, obj);
@@ -363,7 +365,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/del-address',
+			this.serverAddress + '/frontend/web/index.php?r=user/del-address',
 			(obj)=>{
 				GameController.getInstance().getAddressList();
 				// NotifyManager.getInstance().sendNotify(NotifyConst.Notify_DeleteAddress, obj);
@@ -377,7 +379,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/default-address',
+			this.serverAddress + '/frontend/web/index.php?r=user/default-address',
 			(obj)=>{
 				GameController.getInstance().getAddressList();
 				// NotifyManager.getInstance().sendNotify(NotifyConst.Notify_setDefaultAddress, obj);
@@ -391,7 +393,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/get-ach-list',
+			this.serverAddress + '/frontend/web/index.php?r=user/get-ach-list',
 			(obj)=>{
 				if(obj.status>0)
 				{
@@ -411,7 +413,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/get-ach-gift',
+			this.serverAddress + '/frontend/web/index.php?r=user/get-ach-gift',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_GetHonorReward, obj);
 			}
@@ -424,7 +426,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/ranking-day-gold-list',
+			this.serverAddress + '/frontend/web/index.php?r=user/ranking-day-gold-list',
 			(obj)=>{
 				if(obj.status>0)
 				{
@@ -444,7 +446,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/get-my-ranking-day-gold-detail',
+			this.serverAddress + '/frontend/web/index.php?r=user/get-my-ranking-day-gold-detail',
 			(obj)=>{
 				if(obj.status>0)
 				{
@@ -463,7 +465,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/get-contribute-list',
+			this.serverAddress + '/frontend/web/index.php?r=user/get-contribute-list',
 			(obj)=>{
 				if(obj.status>0)
 				{
@@ -482,7 +484,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/get-ranking-list',
+			this.serverAddress + '/frontend/web/index.php?r=user/get-ranking-list',
 			(obj)=>{
 				if(obj.status>0)
 				{
@@ -501,7 +503,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=friend/get-my-ranking',
+			this.serverAddress + '/frontend/web/index.php?r=friend/get-my-ranking',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_MyRankInAll, obj);
 			}
@@ -514,7 +516,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=friend/my-ranking',
+			this.serverAddress + '/frontend/web/index.php?r=friend/my-ranking',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_MyRankInFriends, obj);
 			}
@@ -527,7 +529,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=friend/get-friend-list',
+			this.serverAddress + '/frontend/web/index.php?r=friend/get-friend-list',
 			(obj)=>{
 				if(obj.status>0)
 				{
@@ -546,7 +548,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=friend/find',
+			this.serverAddress + '/frontend/web/index.php?r=friend/find',
 			(obj)=>{
 				if(obj.status>0)
 				{
@@ -565,7 +567,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=friend/add',
+			this.serverAddress + '/frontend/web/index.php?r=friend/add',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_AddUser, obj);
 			}
@@ -578,7 +580,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=friend/get-respond-list',
+			this.serverAddress + '/frontend/web/index.php?r=friend/get-respond-list',
 			(obj)=>{
 				if(obj.status>0)
 				{
@@ -597,7 +599,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=friend/respond',
+			this.serverAddress + '/frontend/web/index.php?r=friend/respond',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_AgreeOrRefuseAddFriend, obj);
 			}
@@ -610,7 +612,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=friend/respond-list',
+			this.serverAddress + '/frontend/web/index.php?r=friend/respond-list',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_AgreeOrRefuseAddFriendList, obj);
 			}
@@ -623,7 +625,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=friend/thumbs-up',
+			this.serverAddress + '/frontend/web/index.php?r=friend/thumbs-up',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_ThumbsUp, obj);
 			}
@@ -636,7 +638,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=user/play-game',
+			this.serverAddress + '/frontend/web/index.php?r=user/play-game',
 			(obj)=>{
 				NotifyManager.getInstance().sendNotify(NotifyConst.Notify_PlayGame, obj);
 			}
@@ -649,7 +651,7 @@ class GameController {
 		this.sendHttp(
 			sendData, 
 			'POST', 
-			'http://fruit-meow-farm.cteee.cn/frontend/web/index.php?r=comm/game-config',
+			this.serverAddress + '/frontend/web/index.php?r=comm/game-config',
 			(obj)=>{
 				console.log('收到配置:', obj);
 				GameModel.getInstance().serverConfig = obj.data;

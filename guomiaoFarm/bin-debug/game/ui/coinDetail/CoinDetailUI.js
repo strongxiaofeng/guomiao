@@ -23,8 +23,8 @@ var CoinDetailUI = (function (_super) {
         _super.prototype.initSetting.call(this);
         var ac = new eui.ArrayCollection();
         ac.addItem({ type: "充值", num: 2000, date: "2017-09-30" });
-        ac.addItem({ type: "充值", um: 502132132, date: "2017-08-31" });
-        ac.addItem({ type: "充值", num: 5, date: "2017-07-02" });
+        ac.addItem({ type: "充值", num: 502132132, date: "2017-08-31" });
+        ac.addItem({ type: "充值", num: 50, date: "2017-07-02" });
         ac.addItem({ type: "充值", num: 20, date: "2017-09-30" });
         ac.addItem({ type: "充值", num: 800, date: "2017-09-30" });
         ac.addItem({ type: "充值", num: 6595, date: "2017-09-30" });
