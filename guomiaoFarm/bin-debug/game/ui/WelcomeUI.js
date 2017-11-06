@@ -23,7 +23,7 @@ var WelcomeUI = (function (_super) {
         _super.prototype.initSetting.call(this);
         UIManager.openUI(UIConst.TipErrorUI, LayerManager.Layer_Sys);
         UIManager.openUI(UIConst.TipGreenUI, LayerManager.Layer_Sys);
-        GameController.getInstance().getUserInfo(1111);
+        GameController.getInstance().getUserInfo(window["params"]);
         GameController.getInstance().getServerConfig();
         this.load();
     };

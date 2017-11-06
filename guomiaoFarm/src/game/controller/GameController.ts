@@ -53,6 +53,7 @@ class GameController {
 	/**用户信息 */
 	public getUserInfo(openid: number)
 	{
+		console.log("发送openid "+openid);
 		let sendData = {openid:openid};
 		this.sendHttp(
 			sendData, 

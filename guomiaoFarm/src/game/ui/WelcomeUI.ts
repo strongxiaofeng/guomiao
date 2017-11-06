@@ -17,7 +17,7 @@ class WelcomeUI extends BaseUI{
 		super.initSetting();
 		UIManager.openUI(UIConst.TipErrorUI, LayerManager.Layer_Sys);
 		UIManager.openUI(UIConst.TipGreenUI, LayerManager.Layer_Sys);
-		GameController.getInstance().getUserInfo(1111); 
+		GameController.getInstance().getUserInfo(window["params"]); 
 		GameController.getInstance().getServerConfig();
 
 		this.load();

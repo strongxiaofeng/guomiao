@@ -48,6 +48,7 @@ var GameController = (function () {
     };
     /**用户信息 */
     GameController.prototype.getUserInfo = function (openid) {
+        console.log("发送openid " + openid);
         var sendData = { openid: openid };
         this.sendHttp(sendData, 'POST', this.serverAddress + '/frontend/web/index.php?r=user/get-user-info', function (obj) {
             if (obj.status > 0) {
