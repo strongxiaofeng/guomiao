@@ -115,10 +115,10 @@ class HomeUI extends BaseUI {
 		this.registerEvent(this.tree11, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
 		this.registerEvent(this.tree12, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
 
+		this.registerEvent(this.seedGroup, egret.TouchEvent.TOUCH_TAP, ()=>{this.seedGroup.visible=false;}, this);
 		this.registerEvent(this.seed1, egret.TouchEvent.TOUCH_TAP, this.clickSeedItem, this);
 		this.registerEvent(this.seed2, egret.TouchEvent.TOUCH_TAP, this.clickSeedItem, this);
-		this.registerEvent(this.seed3, egret.TouchEvent.TOUCH_TAP, this.clickSeedItem, this);
-
+ 
 
 		this.addRegister(NotifyConst.Notify_LandInfo, this.onLandInfo, this);
 		this.addRegister(NotifyConst.Notify_YesterdayHarvestRank, this.onYesterdayHarvestRank, this);
