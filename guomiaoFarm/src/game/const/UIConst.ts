@@ -1,4 +1,5 @@
 class UIConst {
+	public static LoadingUI = "LoadingUI";
 	public static WelcomeUI = "WelcomeUI";
 	public static RuleUI = "RuleUI";
 	public static TopBarUI = "TopBarUI";

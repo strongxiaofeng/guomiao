@@ -60,6 +60,7 @@
     "resource/skins/lastHarvestRank.exml",
     "resource/skins/leaveMsgs.exml",
     "resource/skins/leaveMsgsItem.exml",
+    "resource/skins/loadingSkin.exml",
     "resource/skins/myOrder.exml",
     "resource/skins/myOrderItem.exml",
     "resource/skins/myOrderOneItem.exml",

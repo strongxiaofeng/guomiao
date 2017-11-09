@@ -25,6 +25,14 @@ var HomeUI = (function (_super) {
         _super.prototype.initSetting.call(this);
         this.clickWaterCount = 0;
         this.levelTxt.text = "Lv" + GameModel.getInstance().getLevel();
+        this.noticeLabel.text = "";
+        this.noticeLabel.mask = this.noticeMask;
+        this.noticeGroup.visible = false;
+        //循环播放假公告
+        this.showNotice("这是一条测试公告这是一条测试公告一条测试公告");
+        setInterval(function () {
+            _this.showNotice("这是一条测试公告");
+        }, 20000);
         this.updateLand(0);
         //昨日排行只请求一次
         if (!GameModel.getInstance().isYesterdayRankGot)
@@ -34,6 +42,23 @@ var HomeUI = (function (_super) {
         GameController.getInstance().getStoreInfo();
         GameController.getInstance().getHonorList();
         this.intervalId = setInterval(function () { _this.computeTime(); }, 100);
+    };
+    HomeUI.prototype.showNotice = function (str) {
+        var _this = this;
+        this.noticeGroup.visible = true;
+        this.noticeLabel.text = str;
+        this.noticeLabel.x = 537;
+        egret.callLater(function () {
+            var textWidth = _this.noticeLabel.textWidth;
+            var time = (537 - 64 + textWidth) * 10;
+            egret.Tween.get(_this.noticeLabel)
+                .to({ x: 64 - textWidth }, time)
+                .wait(1000)
+                .call(function () {
+                egret.Tween.removeTweens(_this.noticeLabel);
+                _this.noticeGroup.visible = false;
+            }, _this);
+        }, this);
     };
     /**初始监听 */
     HomeUI.prototype.initListener = function () {

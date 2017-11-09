@@ -3,6 +3,7 @@
 		"libs/modules/egret/egret.js",
 		"libs/modules/egret/egret.web.js",
 		"libs/modules/res/res.js",
+		"libs/modules/game/game.js",
 		"libs/modules/eui/eui.js",
 		"libs/modules/tween/tween.js",
 		"promise/bin/promise.js"
@@ -49,6 +50,7 @@
 		"bin-debug/game/ui/lastActivity/LastActivityUI.js",
 		"bin-debug/game/ui/lastHarvestRank/LastHarvestRankItem.js",
 		"bin-debug/game/ui/lastHarvestRank/LastHarvestRankUI.js",
+		"bin-debug/game/ui/loading/LoadingUI.js",
 		"bin-debug/game/ui/myOrder/MyOrderListItem.js",
 		"bin-debug/game/ui/myOrder/MyOrderListOneItem.js",
 		"bin-debug/game/ui/myOrder/MyOrderUI.js",

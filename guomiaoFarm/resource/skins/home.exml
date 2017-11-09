@@ -2,7 +2,7 @@
 <e:Skin class="home" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Image source="bg_farm_jpg" width="640" height="1024" horizontalCenter="0" verticalCenter="0"/>
 	<e:Group id="farmGroup" width="640" height="1024" x="0" y="0">
-		<e:Button id="signBtn" label="" x="185" y="420" width="108" height="165">
+		<e:Button id="signBtn" label="" x="205" y="420" width="108" height="165">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="sign_png" source.down="sign_png" source.disabled="禁用状态资源名sign_png"/>
@@ -11,81 +11,85 @@
 			</e:skinName>
 		</e:Button>
 		<e:Image id="storeBtn" source="store_png" y="387" width="415" height="309" right="0" pixelHitTest="true"/>
-		<e:Image source="land_png" width="145" height="81" x="191" y="586"/>
-		<e:Image source="land_png" x="118" y="640.5" width="145" height="81"/>
-		<e:Image source="land_png" x="45" y="696" width="145" height="81"/>
-		<e:Image source="land_png" x="282.36" y="624.98" width="145" height="81"/>
-		<e:Image source="land_png" x="209.46" y="676.44" width="145" height="81"/>
-		<e:Image source="land_png" x="138.48" y="731.94" width="145" height="81"/>
-		<e:Image source="land_png" x="378.34" y="662.44" width="145" height="81"/>
-		<e:Image source="land_png" x="303.38" y="713.9" width="145" height="81"/>
-		<e:Image source="land_png" x="232.92" y="767.88" width="145" height="81"/>
-		<e:Image source="land_png" x="329.36" y="805.34" width="145" height="81"/>
-		<e:Image source="land_png" x="397.3" y="751.36" width="145" height="81"/>
-		<e:Image source="land_png" x="472.84" y="699.9" width="145" height="81"/>
+		<e:Image source="land_png" width="145" height="81" x="207" y="597"/>
+		<e:Image source="land_png" x="134" y="649.5" width="145" height="81"/>
+		<e:Image source="land_png" x="60" y="704" width="145" height="81"/>
+		<e:Image source="land_png" x="304.36" y="636.98" width="145" height="81"/>
+		<e:Image source="land_png" x="234.46" y="689.44" width="145" height="81"/>
+		<e:Image source="land_png" x="162.48" y="743.94" width="145" height="81"/>
+		<e:Image source="land_png" x="400.34" y="675.44" width="145" height="81"/>
+		<e:Image source="land_png" x="328.38" y="729.9" width="145" height="81"/>
+		<e:Image source="land_png" x="256.92" y="782.88" width="145" height="81"/>
+		<e:Image source="land_png" x="354.36" y="820.34" width="145" height="81"/>
+		<e:Image source="land_png" x="428.3" y="766.36" width="145" height="81"/>
+		<e:Image source="land_png" x="499.84" y="709.9" width="145" height="81"/>
 		<e:Group id="tree" width="640" height="1024" x="0" y="0" touchThrough="true">
-			<e:Image id="tree1" source="tree_young_png" scaleX="0.5" scaleY="0.5" bottom="388" horizontalCenter="-56"/>
-			<e:Image id="tree2" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-132" bottom="332"/>
-			<e:Image id="tree3" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-203" bottom="277"/>
-			<e:Image id="tree4" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="35" bottom="347"/>
-			<e:Image id="tree5" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-38" bottom="294"/>
-			<e:Image id="tree6" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-112" bottom="239"/>
-			<e:Image id="tree7" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="131" bottom="309"/>
-			<e:Image id="tree8" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="56" bottom="256"/>
-			<e:Image id="tree9" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-17" bottom="204"/>
-			<e:Image id="tree10" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="225" bottom="270"/>
-			<e:Image id="tree11" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="147" bottom="221"/>
-			<e:Image id="tree12" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="80" bottom="165"/>
+			<e:Image id="tree1" source="tree_young_png" scaleX="0.5" scaleY="0.5" bottom="378" horizontalCenter="-41"/>
+			<e:Image id="tree2" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-112" bottom="320"/>
+			<e:Image id="tree3" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-186" bottom="270"/>
+			<e:Image id="tree4" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="58" bottom="335"/>
+			<e:Image id="tree5" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-13" bottom="282"/>
+			<e:Image id="tree6" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-86" bottom="228"/>
+			<e:Image id="tree7" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="156" bottom="296"/>
+			<e:Image id="tree8" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="82" bottom="242"/>
+			<e:Image id="tree9" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="9" bottom="192"/>
+			<e:Image id="tree10" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="251" bottom="259"/>
+			<e:Image id="tree11" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="181" bottom="203"/>
+			<e:Image id="tree12" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="108" bottom="152"/>
 		</e:Group>
+		<e:Image source="bg_farm2_png" x="28" y="754" width="409" height="208"/>
 	</e:Group>
-	<e:Group id="headGroup" width="640" height="1" x="0" y="0" touchChildren="true">
+	<e:Group id="headGroup" width="640" height="1" x="0" y="-12" touchChildren="true">
 		<e:Group id="userHeadGroup" width="1" height="1" x="0" y="0" touchChildren="true">
 			<e:Image id="headBg" source="headbg_png" x="29" y="21" width="128" height="128" scaleX="1" scaleY="1" touchEnabled="true"/>
-			<e:Image id="headImg" source="miao_png" x="44" y="36" width="99" height="99" scaleX="1" scaleY="1" touchEnabled="false"/>
+			<e:Image id="headImg" x="44" y="36" width="99" height="99" scaleX="1" scaleY="1" touchEnabled="false" source="defaultHead_png"/>
 			<e:Rect width="99" height="25" x="44" y="110" anchorOffsetX="0" anchorOffsetY="0" alpha="0.5" scaleX="1" scaleY="1" touchEnabled="false" touchChildren="false"/>
 			<e:Label id="levelTxt" text="Lv5" x="76" y="112" textColor="0xf5df6f" fontFamily="DFKai-SB" size="22" touchEnabled="false"/>
+			<e:Image id="leaf" source="leaf_png" x="35" y="16" scaleX="0.5" scaleY="0.5"/>
 		</e:Group>
-		<e:Button id="btn_radio" label="广播" x="185" y="30" scaleX="1" scaleY="1" width="78" height="78">
+		<e:Button id="btn_radio" label="广播" x="185" y="25" scaleX="1" scaleY="1" width="78" height="78">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="radio_png" source.down="radio_png" source.disabled="radio_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="-10" verticalCenter="60" stroke="5" strokeColor="0x292536" fontFamily="黑体" size="24"/>
+			<e:Label id="labelDisplay" horizontalCenter="-10" verticalCenter="60" stroke="3" strokeColor="0x411213" fontFamily="黑体" size="24"/>
 			</e:Skin>
 		</e:skinName>
 		</e:Button>
 		<e:Group id="newMsgGroup" width="1" height="1" x="0" y="0">
-			<e:Image source="new_msg_circle_png" x="247" y="118" scaleX="1" scaleY="1" width="21" height="21"/>
-			<e:Label id="newMsgCountTxt" text="2" x="253" y="121" size="15" scaleX="1" scaleY="1"/>
+			<e:Image source="new_msg_circle_png" x="245" y="111" scaleX="1" scaleY="1" width="25" height="25"/>
+			<e:Label id="newMsgCountTxt" text="2" x="253" y="115" size="17" scaleX="1" scaleY="1"/>
 		</e:Group>
-		<e:Button id="btn_shop" label="小卖部" x="295" y="30" scaleX="1" scaleY="1" width="78" height="78">
+		<e:Button id="btn_shop" label="小卖部" x="295" y="25" scaleX="1" scaleY="1" width="78" height="78">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="shop_png" source.down="shop_png" source.disabled="shop_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="60" stroke="5" strokeColor="0x292536" fontFamily="黑体" size="22"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="60" stroke="3" strokeColor="0x411213" fontFamily="黑体" size="22"/>
 			</e:Skin>
 		</e:skinName>
 		</e:Button>
-		<e:Button id="btn_charge" label="充值" x="400" y="30" scaleX="1" scaleY="1" width="78" height="78">
+		<e:Button id="btn_charge" label="充值" x="400" y="25" scaleX="1" scaleY="1" width="78" height="78">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="charge_png" source.down="charge_png" source.disabled="charge_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="60" stroke="5" strokeColor="0x292536" fontFamily="黑体" size="22"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="60" stroke="3" strokeColor="0x411213" fontFamily="黑体" size="22"/>
 			</e:Skin>
 		</e:skinName>
 		</e:Button>
-		<e:Button id="btn_rank" label="排行榜" x="515" y="30" scaleX="1" scaleY="1" width="78" height="78">
+		<e:Button id="btn_rank" label="排行榜" x="515" y="25" scaleX="1" scaleY="1" width="78" height="78">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="rank_png" source.down="rank_png" source.disabled="rank_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="60" stroke="5" strokeColor="0x292536" fontFamily="黑体" size="22"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="60" stroke="3" strokeColor="0x411213" fontFamily="黑体" size="22"/>
 			</e:Skin>
 		</e:skinName>
 		</e:Button>
-		<e:Group id="noticeGroup" width="530" height="58" y="160" horizontalCenter="0" x="55" scaleX="1" scaleY="1">
+		<e:Group id="noticeGroup" width="530" height="58" y="152" horizontalCenter="0" x="55" scaleX="1" scaleY="1">
 		<e:Image source="notice_bg_png" width="570" height="54" horizontalCenter="0" x="0" scaleX="1" scaleY="1" verticalCenter="0"/>
-		<e:Label id="noticeLabel" text="公告：明天吃糖葫芦，又大又甜的糖葫芦咯" x="76" scaleX="1" scaleY="1" verticalCenter="0" textColor="0x315973" size="22" fontFamily="黑体"/>
+			<e:Label text="公告:" x="5" scaleX="1" scaleY="1" verticalCenter="0" textColor="0x315973" size="22" fontFamily="黑体"/>
+			<e:Rect id="noticeMask" width="466" height="24" x="64" scaleX="1" scaleY="1" verticalCenter="0"/>
+		<e:Label id="noticeLabel" text="明天吃糖葫芦，又大又甜的糖葫芦咯" x="537" scaleX="1" scaleY="1" textColor="0x315973" size="22" fontFamily="黑体" verticalCenter="0"/>
 		</e:Group>
-		<e:Button id="btn_game" label="" x="30" y="240" width="101" height="99" scaleX="1" scaleY="1">
+		<e:Button id="btn_game" label="" x="30" y="225" width="101" height="99" scaleX="1" scaleY="1">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="smallGame_png" source.down="smallGame_png" source.disabled="smallGame_png"/>
@@ -93,7 +97,7 @@
 			</e:Skin>
 		</e:skinName>
 		</e:Button>
-		<e:Button id="btn_gift" label="" x="30" y="350" width="101" height="104" scaleX="1" scaleY="1">
+		<e:Button id="btn_gift" label="" x="30" y="335" width="101" height="104" scaleX="1" scaleY="1">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="gift_png" source.down="gift_png" source.disabled="gift_png"/>
@@ -138,10 +142,12 @@
 		</e:Button>
 		<e:Image id="waterCount" source="water0_png" x="369" y="969" width="23" height="19" touchEnabled="false"/>
 	</e:Group>
-	<e:Group id="seedGroup" width="278" height="107" x="309" y="806">
-		<e:Image source="seedBg_png" x="0" y="0" scaleX="0.5" scaleY="0.5" width="100%" height="100%"/>
-		<e:Image id="seed1" x="35" y="19" width="55" height="52" source="chooseSeed1_png"/>
-		<e:Image id="seed2" y="19" width="55" height="52" x="112" source="chooseSeed2_png"/>
-		<e:Image id="seed3" x="189" y="19" width="55" height="52" source="chooseSeed3_png"/>
+	<e:Group id="seedGroup" width="640" height="1024" x="0" y="0">
+		<e:Group id="seedGroupSmall" width="196" height="107" x="381" y="807" scaleX="1" scaleY="1">
+			<e:Image source="seedBg_png" x="0" y="0" scaleX="0.5" scaleY="0.5" width="100%" height="100%" scale9Grid="30,24,55,132"/>
+			<e:Image id="seed1" y="19" width="55" height="55" x="33" source="chooseSeed4_png"/>
+			<e:Image id="seed2" x="113" y="19" width="55" height="55" source="chooseSeed4_png"/>
+		</e:Group>
 	</e:Group>
+
 </e:Skin>

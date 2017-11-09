@@ -4,6 +4,7 @@ var __reflect = (this && this.__reflect) || function (p, c, t) {
 var UIConst = (function () {
     function UIConst() {
     }
+    UIConst.LoadingUI = "LoadingUI";
     UIConst.WelcomeUI = "WelcomeUI";
     UIConst.RuleUI = "RuleUI";
     UIConst.TopBarUI = "TopBarUI";

@@ -1,4 +1,4 @@
-class HomeUI extends BaseUI{
+class HomeUI extends BaseUI {
 	private levelTxt: eui.Label;
 	private headBg: eui.Image;
 	private signBtn: eui.Button;
@@ -9,6 +9,7 @@ class HomeUI extends BaseUI{
 	private btn_rank: eui.Button;
 	private noticeGroup: eui.Group;
 	private noticeLabel: eui.Label;
+	private noticeMask: eui.Rect;
 	private btn_game: eui.Button;
 	private btn_gift: eui.Button;
 	private btn_weed: eui.Button;
@@ -34,7 +35,7 @@ class HomeUI extends BaseUI{
 	private seed1: eui.Image;
 	private seed2: eui.Image;
 	private seed3: eui.Image;
-	
+
 	private intervalId: any;
 	private clickWaterCount = 0;
 
@@ -42,26 +43,51 @@ class HomeUI extends BaseUI{
 		super();
 		this.skinName = "resource/skins/home.exml";
 	}
-	
+
 	/**初始界面 */
-	public initSetting()
-	{
+	public initSetting() {
 		super.initSetting();
 		this.clickWaterCount = 0;
-		this.levelTxt.text = "Lv"+GameModel.getInstance().getLevel();
+		this.levelTxt.text = "Lv" + GameModel.getInstance().getLevel();
+		this.noticeLabel.text = "";
+		this.noticeLabel.mask = this.noticeMask;
+		this.noticeGroup.visible = false;
+
+		//循环播放假公告
+		this.showNotice("这是一条测试公告这是一条测试公告一条测试公告");
+		setInterval(() => {
+			this.showNotice("这是一条测试公告");
+		}, 20000);
+
 		this.updateLand(0);
 		//昨日排行只请求一次
-		if(!GameModel.getInstance().isYesterdayRankGot) GameController.getInstance().getYesterdayHarvestRank();
+		if (!GameModel.getInstance().isYesterdayRankGot) GameController.getInstance().getYesterdayHarvestRank();
 		GameController.getInstance().getFarmInfo();
 		GameController.getInstance().getAddressList();
 		GameController.getInstance().getStoreInfo();
 		GameController.getInstance().getHonorList();
 
-		this.intervalId = setInterval(()=>{this.computeTime()}, 100);
+		this.intervalId = setInterval(() => { this.computeTime() }, 100);
+	}
+	public showNotice(str: string) {
+		this.noticeGroup.visible = true;
+		this.noticeLabel.text = str;
+		this.noticeLabel.x = 537;
+		egret.callLater(() => {
+			var textWidth = this.noticeLabel.textWidth;
+			var time = (537 - 64 + textWidth) * 10;
+			egret.Tween.get(this.noticeLabel)
+				.to({ x: 64 - textWidth }, time)
+				.wait(1000)
+				.call(() => {
+					egret.Tween.removeTweens(this.noticeLabel);
+					this.noticeGroup.visible = false;
+				}, this)
+		}, this)
+
 	}
 	/**初始监听 */
-	protected initListener()
-	{
+	protected initListener() {
 		this.registerEvent(this.headBg, egret.TouchEvent.TOUCH_TAP, this.clickHead, this);
 		this.registerEvent(this.signBtn, egret.TouchEvent.TOUCH_TAP, this.clickSign, this);
 		this.registerEvent(this.storeBtn, egret.TouchEvent.TOUCH_TAP, this.clickStore, this);
@@ -88,7 +114,7 @@ class HomeUI extends BaseUI{
 		this.registerEvent(this.tree10, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
 		this.registerEvent(this.tree11, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
 		this.registerEvent(this.tree12, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
-		
+
 		this.registerEvent(this.seed1, egret.TouchEvent.TOUCH_TAP, this.clickSeedItem, this);
 		this.registerEvent(this.seed2, egret.TouchEvent.TOUCH_TAP, this.clickSeedItem, this);
 		this.registerEvent(this.seed3, egret.TouchEvent.TOUCH_TAP, this.clickSeedItem, this);
@@ -99,195 +125,160 @@ class HomeUI extends BaseUI{
 		this.addRegister(NotifyConst.Notify_SeedResult, this.onSeed, this);
 		this.addRegister(NotifyConst.Notify_GatherResult, this.onGather, this);
 		this.addRegister(NotifyConst.Notify_OperLandResult, this.onOper, this);
-		
+
 	}
 	/**昨日收成排行 */
-	private onYesterdayHarvestRank(info:vo.YesterdayHarvestRankInfo)
-	{
-		console.log('主界面收到昨日排行 ',info);
+	private onYesterdayHarvestRank(info: vo.YesterdayHarvestRankInfo) {
+		console.log('主界面收到昨日排行 ', info);
 		GameModel.getInstance().isYesterdayRankGot = true;
 		UIManager.openUI(UIConst.LastHarvestRankUI, LayerManager.Layer_Tip);
 	}
 	/**农田信息 */
-	private onLandInfo(info: vo.FarmInfo)
-	{
-		if(!info) return;
+	private onLandInfo(info: vo.FarmInfo) {
+		if (!info) return;
 		var data = info.list[0];
-		if(data.crop_id == 0)
-		{
+		if (data.crop_id == 0) {
 			this.updateLand(0);
 		}
-		else
-		{
+		else {
 			var pass = GameModel.getInstance().getServerTime() - data.crop_start_time;
-			if(pass < GameModel.getInstance().getTreeYoungTime(data.crop_id))
-			{
+			if (pass < GameModel.getInstance().getTreeYoungTime(data.crop_id)) {
 				this.updateLand(1);
 			}
-			else if(pass < GameModel.getInstance().getTreeGrowTime(data.crop_id))
-			{
+			else if (pass < GameModel.getInstance().getTreeGrowTime(data.crop_id)) {
 				this.updateLand(2);
 			}
-			else if(pass < GameModel.getInstance().getTreeRipeTime(data.crop_id))
-			{
+			else if (pass < GameModel.getInstance().getTreeRipeTime(data.crop_id)) {
 				this.updateLand(3);
 			}
-			else
-			{
+			else {
 				this.updateLand(4);
 			}
 		}
 	}
 	/**刷新种植状态 0没有种植 1种子 2幼苗 3成长 4成熟*/
-	private updateLand(n:number)
-	{
-		for(var i=1;i<=12;i++)
-		{
-			if(n==0) this["tree"+i].source = "";
-			else if(n==1) this["tree"+i].source = "";
-			else if(n==2) this["tree"+i].source = "tree_young_png";
-			else if(n==3) this["tree"+i].source = "tree_grow_png";
-			else if(n==4) this["tree"+i].source = "tree_ripe_png";
+	private updateLand(n: number) {
+		for (var i = 1; i <= 12; i++) {
+			if (n == 0) this["tree" + i].source = "";
+			else if (n == 1) this["tree" + i].source = "";
+			else if (n == 2) this["tree" + i].source = "tree_young_png";
+			else if (n == 3) this["tree" + i].source = "tree_grow_png";
+			else if (n == 4) this["tree" + i].source = "tree_ripe_png";
 		}
 	}
 	/**个人 */
-	private clickHead()
-	{
+	private clickHead() {
 		UIManager.openUI(UIConst.UserMenuUI);
 		UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
 	}
 	/**签到 */
-	private clickSign()
-	{
+	private clickSign() {
 		UIManager.openUI(UIConst.SignUI, LayerManager.Layer_Tip);
 	}
 	/**仓库 */
-	private clickStore()
-	{
+	private clickStore() {
 		UIManager.openUI(UIConst.StoreUI, LayerManager.Layer_Tip);
 	}
 	/**广播 */
-	private clickRadio()
-	{
+	private clickRadio() {
 		UIManager.openUI(UIConst.RadioUI);
 		UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
 	}
 	/**商店 */
-	private clickShop()
-	{
+	private clickShop() {
 		UIManager.openUI(UIConst.ShopUI);
 		UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
 	}
 	/**充值 */
-	private clickCharge()
-	{
+	private clickCharge() {
 		UIManager.openUI(UIConst.ChargeUI);
 		UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
 	}
 	/**排行 */
-	private clickRank()
-	{
+	private clickRank() {
 		UIManager.openUI(UIConst.RankFriendContributeUI);
 		UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
 	}
 	/**小游戏 */
-	private clickGame()
-	{
+	private clickGame() {
 	}
 	/**礼物呀 */
-	private clickGift()
-	{
+	private clickGift() {
 		UIManager.openUI(UIConst.GiftUI, LayerManager.Layer_Tip);
 	}
 	/**除草 */
-	private clickWeed()
-	{
+	private clickWeed() {
 		GameController.getInstance().sendOperLand(5);
 	}
 	/**施肥 */
-	private clickFertilizer()
-	{
+	private clickFertilizer() {
 		GameController.getInstance().sendOperLand(6);
 	}
 
 	/**浇水 */
-	private clickWater()
-	{
-		if(this.clickWaterCount == 0)
-		{
+	private clickWater() {
+		if (this.clickWaterCount == 0) {
 			GameController.getInstance().sendOperLand(3);
 		}
-		else{
+		else {
 			UIManager.openUI(UIConst.InviteWaterUI, LayerManager.Layer_Tip);
 		}
-		this.clickWaterCount ++;
+		this.clickWaterCount++;
 	}
 	/**除草 施肥 浇水 返回 */
-	private onOper(obj: BaseResponse)
-	{
-		console.log("播种 浇水 施肥 返回 ",obj);
-		if(obj.status == 0)
-		{
+	private onOper(obj: BaseResponse) {
+		console.log("播种 浇水 施肥 返回 ", obj);
+		if (obj.status == 0) {
 
 		}
 	}
 	/**播种 打开种子选择面板*/
-	private clickSeed()
-	{
+	private clickSeed() {
 		this.seedGroup.visible = true;
 	}
 	/**播种一个种子 种仓库里的id*/
-	private clickSeedItem()
-	{
+	private clickSeedItem() {
 		this.seedGroup.visible = false;
 		var seedid = GameModel.getInstance().getSeedId();
 		GameController.getInstance().sendSeed(seedid);
 	}
 	/**播种返回*/
-	private onSeed()
-	{
+	private onSeed() {
 		GameController.getInstance().getFarmInfo();
 	}
 	/**鼠标点植物 */
-	private clickTree()
-	{
+	private clickTree() {
 		var landinfo = GameModel.getInstance().getLandInfo();
 		var data = landinfo.list[0];
 		var pass = GameModel.getInstance().getServerTime() - data.crop_start_time;
-		if(data.is_ripe ||  pass >= GameModel.getInstance().getTreeRipeTime(data.crop_id))
-		{
+		if (data.is_ripe || pass >= GameModel.getInstance().getTreeRipeTime(data.crop_id)) {
 			//已经成熟 可以收割
 			GameController.getInstance().sendGather();
 		}
-		else
-		{
+		else {
 			console.log('还不能收割');
 		}
 
 	}
 	/**收割返回 */
-	private onGather(obj: BaseResponse)
-	{
-		console.log("收割返回 ",obj);
-		if(obj.status == 0)
-		{
+	private onGather(obj: BaseResponse) {
+		console.log("收割返回 ", obj);
+		if (obj.status == 0) {
 			var count = (<vo.HarvestInfo>obj.data).count;
 			var id = (<vo.HarvestInfo>obj.data).item_id;
 			var item = GameModel.getInstance().getItemById(parseInt(id));
-			NotifyManager.getInstance().sendNotify(NotifyConst.Notify_Green, count+" "+item.name);
+			NotifyManager.getInstance().sendNotify(NotifyConst.Notify_Green, count + " " + item.name);
 			GameController.getInstance().getFarmInfo();
 		}
 	}
 
 	/**一直计算生长期 */
-	private computeTime()
-	{
+	private computeTime() {
 		var landinfo = GameModel.getInstance().getLandInfo();
 		this.onLandInfo(landinfo);
 	}
 	/**关闭界面 */
-	public dispose()
-	{
+	public dispose() {
 		super.dispose();
 		this.removeRegister(this);
 		clearInterval(this.intervalId);

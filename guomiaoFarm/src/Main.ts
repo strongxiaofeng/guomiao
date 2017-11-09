@@ -138,7 +138,8 @@ class Main extends eui.UILayer {
      * Create scene interface
      */
     protected startCreateScene(): void {
-        UIManager.openUI(UIConst.WelcomeUI);
+        // UIManager.openUI(UIConst.WelcomeUI);
+        UIManager.openUI(UIConst.LoadingUI);
     }
    
 }

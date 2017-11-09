@@ -17,10 +17,6 @@ class WelcomeUI extends BaseUI{
 		super.initSetting();
 		UIManager.openUI(UIConst.TipErrorUI, LayerManager.Layer_Sys);
 		UIManager.openUI(UIConst.TipGreenUI, LayerManager.Layer_Sys);
-		GameController.getInstance().getUserInfo(window["params"]); 
-		GameController.getInstance().getServerConfig();
-
-		this.load();
 	}
 	/**初始监听 */
 	protected initListener()
@@ -28,33 +24,6 @@ class WelcomeUI extends BaseUI{
 		this.registerEvent(this.btn_myFarm, egret.TouchEvent.TOUCH_TAP, this.clickFarm, this);
 		this.registerEvent(this.btn_lastActivity, egret.TouchEvent.TOUCH_TAP, this.clickActivity, this);
 		this.registerEvent(this.btn_rule, egret.TouchEvent.TOUCH_TAP, this.clickRule, this);
-
-		this.addRegister(NotifyConst.Notify_UserInfo, this.onUserInfo, this);
-	}
-
-	private load()
-	{
-		RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
-        RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
-        RES.loadGroup("preload");
-	}
-	private onResourceLoadComplete(event: RES.ResourceEvent): void {
-		if (event.groupName == "preload") {
-			RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
-			RES.removeEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
-			this.btns.visible = true;
-			this.loadGroup.visible = false;
-		}
-	}
-	private onResourceProgress(event: RES.ResourceEvent): void {
-        if (event.groupName == "preload") {
-			this.rect.width = Math.ceil(240*event.itemsLoaded/event.itemsTotal);
-			this.progressTxt.text = "果喵正在加载中。。"+Math.ceil((event.itemsLoaded/event.itemsTotal)*100)+"%";
-        }
-    }
-	private onUserInfo(info: vo.UserInfo)
-	{
-		console.log('收到了用户信息 ',info);
 	}
 	/**我的农场 */
 	private clickFarm()

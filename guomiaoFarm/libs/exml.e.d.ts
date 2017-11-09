@@ -104,6 +104,8 @@ declare class lastHarvst extends eui.Skin{
 }
 declare class radio extends eui.Skin{
 }
+declare class loadingSkin extends eui.Skin{
+}
 declare class myOrder extends eui.Skin{
 }
 declare class myOrderItem extends eui.Skin{
