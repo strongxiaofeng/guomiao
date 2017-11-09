@@ -43,6 +43,7 @@ var HomeUI = (function (_super) {
         GameController.getInstance().getHonorList();
         this.intervalId = setInterval(function () { _this.computeTime(); }, 100);
     };
+    /**展示一条公告 */
     HomeUI.prototype.showNotice = function (str) {
         var _this = this;
         this.noticeGroup.visible = true;
@@ -50,7 +51,7 @@ var HomeUI = (function (_super) {
         this.noticeLabel.x = 537;
         egret.callLater(function () {
             var textWidth = _this.noticeLabel.textWidth;
-            var time = (537 - 64 + textWidth) * 10;
+            var time = (537 - 64 + textWidth) * 15;
             egret.Tween.get(_this.noticeLabel)
                 .to({ x: 64 - textWidth }, time)
                 .wait(1000)

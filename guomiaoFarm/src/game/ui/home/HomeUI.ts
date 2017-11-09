@@ -69,13 +69,14 @@ class HomeUI extends BaseUI {
 
 		this.intervalId = setInterval(() => { this.computeTime() }, 100);
 	}
+	/**展示一条公告 */
 	public showNotice(str: string) {
 		this.noticeGroup.visible = true;
 		this.noticeLabel.text = str;
 		this.noticeLabel.x = 537;
 		egret.callLater(() => {
 			var textWidth = this.noticeLabel.textWidth;
-			var time = (537 - 64 + textWidth) * 10;
+			var time = (537 - 64 + textWidth) * 15;
 			egret.Tween.get(this.noticeLabel)
 				.to({ x: 64 - textWidth }, time)
 				.wait(1000)

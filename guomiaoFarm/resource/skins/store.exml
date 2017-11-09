@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="store" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image source="bg_black_png" x="0" y="0" width="640" height="1024" alpha="0.3"/>
+	<e:Image id="black" source="bg_black_png" x="0" y="0" width="640" height="1024" alpha="0.65"/>
 	<e:Image source="store_bg_png" anchorOffsetX="-3" width="603" height="836" horizontalCenter="0" verticalCenter="0"/>
-	<e:Image id="btn_close" source="close_png" x="563" y="119.17" width="59" height="59"/>
+	<e:Image id="btn_close" x="563" y="119.17" width="59" height="59" source="store_close_png"/>
 	<e:Image source="store_board_png" y="357" width="462" height="45" horizontalCenter="0"/>
 	<e:Image source="store_board_png" width="462" height="45" horizontalCenter="0" y="580"/>
 	<e:Image source="store_board_png" y="807" width="462" height="45" horizontalCenter="0"/>
