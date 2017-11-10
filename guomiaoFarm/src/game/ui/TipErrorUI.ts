@@ -22,7 +22,7 @@ class TipErrorUI extends BaseUI{
 		this.errorTxt.text = data;
 		this.errorTxt.alpha = 1;
 		egret.Tween.get(this.errorTxt)
-			.to({alpha:0},2000)
+			.to({alpha:0},1000)
 			.call(()=>{
 				this.errorTxt.alpha = 1;
 				this.errorTxt.text = "";

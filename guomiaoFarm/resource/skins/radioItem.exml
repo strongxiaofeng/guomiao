@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="radioItem" width="640" height="300" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Image id="bg" horizontalCenter="0" y="0" source="weatherBg_png" width="551" height="291"/>
-	<e:Image source="radioTimeBg_png" x="225" y="58" scale9Grid="22,12,65,1" scaleY="0.7" scaleX="0.7" width="141"/>
+	<e:Image source="radioTimeBg_png" x="215" y="53" scale9Grid="22,12,65,1" width="141"/>
 	<e:Label id="title" text="系统广播" y="51" textColor="0xffffff" size="30" x="83" fontFamily="SimHei"/>
-	<e:Label id="time" text="2017-09-05" y="60" size="17" x="231" fontFamily="SimHei" textColor="0x603d29"/>
-	<e:Label id="content" text="content" y="130" textColor="0x603D29" size="20" width="450" horizontalCenter="0" lineSpacing="10"/>
+	<e:Label id="time" text="2017-09-05" y="56" size="22" fontFamily="SimHei" textColor="0x603d29" horizontalCenter="-34"/>
+	<e:Label id="content" text="content" y="130" textColor="0x603D29" size="21" width="450" horizontalCenter="0" lineSpacing="10"/>
 	<e:Button id="okBtn" label="OK" y="227" horizontalCenter="0" width="123" height="48">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
@@ -21,4 +21,5 @@
 		</e:Skin>
 		</e:skinName>
 	</e:Button>
+	<e:Image id="newMsgIcon" source="new_msg_circle_png" x="344" y="231" width="10" height="10"/>
 </e:Skin>

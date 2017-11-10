@@ -5,6 +5,7 @@ class RadioItem extends AItemRenderer{
 	private content: eui.Label;
 	private okBtn: eui.Image;
 	private detailBtn: eui.Image;
+	private newMsgIcon: eui.Image;
 	public constructor() {
 		super();
 		this.skinName = "resource/skins/radioItem.exml";
@@ -28,6 +29,7 @@ class RadioItem extends AItemRenderer{
 				this.title.text = "系统广播";
 				this.okBtn.visible = true;
 				this.detailBtn.visible = false;
+				this.newMsgIcon.visible = true;
 			}
 			else if(this.data.type == "weather")
 			{
@@ -35,6 +37,7 @@ class RadioItem extends AItemRenderer{
 				this.title.text = "气象预警";
 				this.okBtn.visible = true;
 				this.detailBtn.visible = false;
+				this.newMsgIcon.visible = false;
 			}
 			else if(this.data.type == "report")
 			{
@@ -42,6 +45,7 @@ class RadioItem extends AItemRenderer{
 				this.title.text = "盈亏报告";
 				this.okBtn.visible = false;
 				this.detailBtn.visible = true;
+				this.newMsgIcon.visible = false;
 			}
 			else if(this.data.type == "leaveMsg")
 			{
@@ -49,6 +53,7 @@ class RadioItem extends AItemRenderer{
 				this.title.text = "好友留言";
 				this.okBtn.visible = false;
 				this.detailBtn.visible = true;
+				this.newMsgIcon.visible = false;
 			}
 		}
 

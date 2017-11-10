@@ -5,6 +5,10 @@ class RadioUI extends BaseUI{
 	private recordGroup: eui.Group;
 	private list: eui.List;
 	private recordList: eui.List;
+	private newMsgGroup: eui.Group;
+	private newMsgCountTxt: eui.Label;
+	private noRadioGroup: eui.Group; //没有消息时默认样式
+	private radioScroller: eui.Scroller;
 
 	public constructor() {
 		super();
@@ -19,10 +23,22 @@ class RadioUI extends BaseUI{
 		this.list.itemRenderer = RadioItem;
 		this.list.useVirtualLayout = false;
 		var ac = new eui.ArrayCollection();
-		ac.addItem({type:"system", content:"由于果农急速增长，我们将对服务器进行升级，以容纳更多果农，11月12日凌晨3点到5点将暂时关闭农场，请广大果农体谅。", time:"2017-09-15"});
-		ac.addItem({type:"weather", content:"果瞄气象台预告，新一轮的雨水天气将对水果的产量产生影响，请各位果农使用保险卡以免除灾害带来的损失", time:"2017-09-15"});
-		ac.addItem({type:"report", content:"勤劳的果农，由于您的辛勤看护，您盈利12果瞄币，再接再厉哦！", time:"2017-09-15"});
-		ac.addItem({type:"leaveMsg", content:"留言人：木蚂蚁 \n看好你的水果，明天我又来偷，哈哈哈哈哈", time:"2017-09-15"});
+		//假数据
+		if(Math.random() > 0.5)
+		{
+			this.noRadioGroup.visible = false;
+			this.radioScroller.visible = true;
+			
+			ac.addItem({type:"system", content:"由于果农急速增长，我们将对服务器进行升级，以容纳更多果农，11月12日凌晨3点到5点将暂时关闭农场，请广大果农体谅。", time:"2017-09-15"});
+			ac.addItem({type:"weather", content:"果瞄气象台预告，新一轮的雨水天气将对水果的产量产生影响，请各位果农使用保险卡以免除灾害带来的损失", time:"2017-09-15"});
+			ac.addItem({type:"report", content:"勤劳的果农，由于您的辛勤看护，您盈利12果瞄币，再接再厉哦！", time:"2017-09-15"});
+			ac.addItem({type:"leaveMsg", content:"留言人：木蚂蚁 \n看好你的水果，明天我又来偷，哈哈哈哈哈", time:"2017-09-15"});
+		}
+		else{
+			this.noRadioGroup.visible = true;
+			this.radioScroller.visible = false;
+		}
+		
 		this.list.dataProvider = ac;
 
 
@@ -58,12 +74,16 @@ class RadioUI extends BaseUI{
 		console.log("radio");
 		this.radioGroup.visible = true;
 		this.recordGroup.visible = false;
+		this.radioBtn.source = "rank_tab_select_png";
+		this.recordBtn.source = "rank_tab_noselect_png";
 	}
 	private clickRecord()
 	{
 		console.log("record");
 		this.radioGroup.visible = false;
 		this.recordGroup.visible = true;
+		this.radioBtn.source = "rank_tab_noselect_png";
+		this.recordBtn.source = "rank_tab_select_png";
 	}
 	/**关闭界面 */
 	public dispose()

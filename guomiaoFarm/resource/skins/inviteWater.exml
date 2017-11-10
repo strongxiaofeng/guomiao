@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="inviteWater" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image source="bg_black_png" x="0" y="0" width="640" height="1024" alpha="0.5"/>
-	<e:Image source="bg_main_png" scaleX="0.5" scaleY="0.5" horizontalCenter="0" y="182"/>
-	<e:Image id="btn_close" source="close_png" x="512" y="240" width="59" height="59"/>
-	<e:Label text="您还可邀请" x="166" y="350" textColor="0x8a4208" size="22" fontFamily="SimHei"/>
-	<e:Label id="inviteNum" text="4" x="290" y="339" textColor="0x8A4208" size="40" fontFamily="SimHei"/>
-	<e:Label text="位好友为您浇水" x="321" y="350" textColor="0x8A4208" size="22" fontFamily="SimHei"/>
-	<e:Label text="游戏好友列表" x="95" y="406" size="30" fontFamily="SimHei" textColor="0x65460f"/>
-	<e:Label id="invitePeoplesTxt" text="3人/10人" y="413" size="22" fontFamily="SimHei" textColor="0x65460F" right="70"/>
-	<e:Image id="inviteFriends" source="addGameFriend_png" y="819.79" scaleX="0.5" scaleY="0.5" horizontalCenter="-100"/>
-	<e:Image id="inviteWxFriends" source="inviteWx_png" y="819.79" scaleX="0.5" scaleY="0.5" horizontalCenter="100"/>
-	<e:Scroller width="532" height="350" x="55" y="454">
-		<e:List id="list"/>
-	</e:Scroller>
+	<e:Image source="bg_black_png" x="0" y="0" width="640" height="1024" alpha="0.5" scaleX="1" scaleY="1"/>
+	<e:Group width="640" height="1024" x="0" y="-35" touchThrough="true">
+
+		<e:Image source="bg_main_png" scaleX="0.5" scaleY="0.5" horizontalCenter="0" y="182"/>
+		<e:Image id="btn_close" source="close_png" x="512" y="240" width="59" height="59"/>
+		<e:Label text="您还可邀请" x="166" y="338" textColor="0x8a4208" size="22" fontFamily="SimHei"/>
+		<e:Label id="inviteNum" text="4" x="290" y="328" textColor="0x8A4208" size="40" fontFamily="SimHei"/>
+		<e:Label text="位好友为您浇水" x="321" y="338" textColor="0x8A4208" size="22" fontFamily="SimHei"/>
+		<e:Label text="游戏好友列表" x="72" y="406" size="30" fontFamily="SimHei" textColor="0x65460f"/>
+		<e:Label id="invitePeoplesTxt" text="3人/10人" y="413" size="22" fontFamily="SimHei" textColor="0x65460F" right="70"/>
+		<e:Image id="inviteFriends" source="addGameFriend_png" y="819.79" scaleX="0.5" scaleY="0.5" horizontalCenter="-100"/>
+		<e:Image id="inviteWxFriends" source="inviteWx_png" y="819.79" scaleX="0.5" scaleY="0.5" horizontalCenter="100"/>
+		<e:Scroller width="532" height="350" x="55" y="454">
+			<e:List id="list"/>
+		</e:Scroller>
+	</e:Group>
+
 </e:Skin>

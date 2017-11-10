@@ -32,24 +32,28 @@ var RadioItem = (function (_super) {
                 this.title.text = "系统广播";
                 this.okBtn.visible = true;
                 this.detailBtn.visible = false;
+                this.newMsgIcon.visible = true;
             }
             else if (this.data.type == "weather") {
                 this.bg.source = "weatherBg_png";
                 this.title.text = "气象预警";
                 this.okBtn.visible = true;
                 this.detailBtn.visible = false;
+                this.newMsgIcon.visible = false;
             }
             else if (this.data.type == "report") {
                 this.bg.source = "reportBg_png";
                 this.title.text = "盈亏报告";
                 this.okBtn.visible = false;
                 this.detailBtn.visible = true;
+                this.newMsgIcon.visible = false;
             }
             else if (this.data.type == "leaveMsg") {
                 this.bg.source = "chatMsgBg_png";
                 this.title.text = "好友留言";
                 this.okBtn.visible = false;
                 this.detailBtn.visible = true;
+                this.newMsgIcon.visible = false;
             }
         }
     };
