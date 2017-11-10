@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="shop_seedItem" width="640" height="200" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image source="bg_seed_png" y="0" width="575" height="186" horizontalCenter="0"/>
+	<e:Image y="0" width="575" height="186" horizontalCenter="0" source="seedItemBg_png"/>
 	<e:Image id="icon" source="seed1_png" x="90" y="36" width="70" height="117"/>
 	<e:Label id="titleTxt" text="火龙果种子" x="180" y="32" fontFamily="SimHei" textColor="0x5f3c1c" size="26"/>
 	<e:Label id="descTxt" text="火龙果种子火龙果种子火龙果种子火龙" x="180" y="68" textColor="0x8c4215" size="20" fontFamily="SimHei" anchorOffsetX="0" width="263" lineSpacing="5"/>

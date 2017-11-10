@@ -1,5 +1,6 @@
 class MusicManager {
-
+	/**声音开关 */
+	public static isSoundOn: boolean = true;
 	private static channel: egret.SoundChannel;
 	private static haveRegistered:boolean = false;
 	public constructor() {
@@ -7,6 +8,8 @@ class MusicManager {
 
 	public static playMusic()
 	{
+		if(! this.isSoundOn) return;
+
 		if(this.channel)
 		{
 			this.channel.volume = 1;

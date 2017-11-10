@@ -5,6 +5,8 @@ var MusicManager = (function () {
     function MusicManager() {
     }
     MusicManager.playMusic = function () {
+        if (!this.isSoundOn)
+            return;
         if (this.channel) {
             this.channel.volume = 1;
         }
@@ -37,6 +39,8 @@ var MusicManager = (function () {
         };
         document.addEventListener(visibilityChangeEvent, onVisibilityChange);
     };
+    /**声音开关 */
+    MusicManager.isSoundOn = true;
     MusicManager.haveRegistered = false;
     return MusicManager;
 }());
