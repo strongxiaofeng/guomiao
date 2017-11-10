@@ -35,6 +35,8 @@ class HomeUI extends BaseUI {
 	private seed1: eui.Image;
 	private seed2: eui.Image;
 	private seed3: eui.Image;
+	/**正在播种的图 */
+	private seedingImg: eui.Image;
 
 	private intervalId: any;
 	private clickWaterCount = 0;
@@ -52,6 +54,8 @@ class HomeUI extends BaseUI {
 		this.noticeLabel.text = "";
 		this.noticeLabel.mask = this.noticeMask;
 		this.noticeGroup.visible = false;
+		this.seedingImg.visible = false;
+		this.seedGroup.visible = false;
 
 		//循环播放假公告
 		this.showNotice("这是一条测试公告这是一条测试公告一条测试公告");
@@ -59,7 +63,7 @@ class HomeUI extends BaseUI {
 			this.showNotice("这是一条测试公告");
 		}, 20000);
 
-		this.updateLand(0);
+		this.updateLand(1);
 		//昨日排行只请求一次
 		if (!GameModel.getInstance().isYesterdayRankGot) GameController.getInstance().getYesterdayHarvestRank();
 		GameController.getInstance().getFarmInfo();
@@ -160,12 +164,44 @@ class HomeUI extends BaseUI {
 	/**刷新种植状态 0没有种植 1种子 2幼苗 3成长 4成熟*/
 	private updateLand(n: number) {
 		for (var i = 1; i <= 12; i++) {
-			if (n == 0) this["tree" + i].source = "";
-			else if (n == 1) this["tree" + i].source = "";
-			else if (n == 2) this["tree" + i].source = "tree_young_png";
-			else if (n == 3) this["tree" + i].source = "tree_grow_png";
-			else if (n == 4) this["tree" + i].source = "tree_ripe_png";
+			if (n == 0) 
+			{
+				this["tree" + i].source = "";
+			}
+			else if (n == 1) 
+			{
+				this["tree" + i].source = "tree_seed_png";
+			}
+			else if (n == 2) 
+			{
+				this["tree" + i].source = "tree_young_png";
+			}
+			else if (n == 3) 
+			{
+				this["tree" + i].source = "tree_grow_png";
+			}
+			else if (n == 4) 
+			{
+				this["tree" + i].source = "tree_ripe_png";
+			}
 		}
+	}
+	/**播种动画 */
+	private showSeeding()
+	{
+		this.seedingImg.visible = true;
+		this.seedingImg.alpha = 1;
+		this.seedingImg.scaleX = 1;
+		this.seedingImg.scaleY = 1;
+		egret.Tween.get(this.seedingImg)
+			.to({scaleX: 1.2, scaleY: 1.2, alpha:0.5}, 500)
+			.to({alpha:0.01},500)
+			.call(()=>{
+				this.seedingImg.visible = false;
+				this.seedingImg.alpha = 1;
+				this.seedingImg.scaleX = 1;
+				this.seedingImg.scaleY = 1;
+			}, this)
 	}
 	/**个人 */
 	private clickHead() {
@@ -242,6 +278,7 @@ class HomeUI extends BaseUI {
 		this.seedGroup.visible = false;
 		var seedid = GameModel.getInstance().getSeedId();
 		GameController.getInstance().sendSeed(seedid);
+		this.showSeeding();
 	}
 	/**播种返回*/
 	private onSeed() {
@@ -250,6 +287,8 @@ class HomeUI extends BaseUI {
 	/**鼠标点植物 */
 	private clickTree() {
 		var landinfo = GameModel.getInstance().getLandInfo();
+		if(!landinfo || !landinfo.list) return;
+
 		var data = landinfo.list[0];
 		var pass = GameModel.getInstance().getServerTime() - data.crop_start_time;
 		if (data.is_ripe || pass >= GameModel.getInstance().getTreeRipeTime(data.crop_id)) {

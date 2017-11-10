@@ -37,7 +37,8 @@
 			<e:Image id="tree11" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="181" bottom="203"/>
 			<e:Image id="tree12" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="108" bottom="152"/>
 		</e:Group>
-		<e:Image source="bg_farm2_png" x="28" y="754" width="409" height="208"/>
+		<e:Image id="wood" source="bg_farm2_png" x="28" y="754" width="409" height="208"/>
+		<e:Image id="seedingImg" source="seed_able_png" y="703" x="363" width="200" height="174" anchorOffsetX="100" anchorOffsetY="87"/>
 	</e:Group>
 	<e:Group id="headGroup" width="640" height="1" x="0" y="-12" touchChildren="true">
 		<e:Group id="userHeadGroup" width="1" height="1" x="0" y="0" touchChildren="true">

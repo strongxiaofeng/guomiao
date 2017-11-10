@@ -1,6 +1,13 @@
 class StoreUI extends BaseUI{
 	private btn_close: eui.Image;
 	private itemGroup: eui.Group;
+	private defaultTool1: eui.Image;
+	private defaultTool0: eui.Image;
+	private defaultSeed1: eui.Image;
+	private defaultSeed0: eui.Image;
+	private seedTime1: eui.Label;
+	private seedTime0: eui.Label;
+	private fruitWeightTxt: eui.Label;
 	private intervalId: any;
 	private computearr:Array<any> = [];
 	public constructor() {
@@ -16,88 +23,101 @@ class StoreUI extends BaseUI{
 		this.intervalId = setInterval(()=>{
 			this.computeTime();
 		}, 100);
+
+		this.onStoreInfo(null);
 	}
 	/**初始监听 */
 	protected initListener()
 	{
 		this.registerEvent(this.btn_close, egret.TouchEvent.TOUCH_TAP, this.clickClose, this);
-
 		this.addRegister(NotifyConst.Notify_StoreInfo, this.onStoreInfo, this);
 	}
 	/**收到仓库信息 */
 	public onStoreInfo(info: vo.StoreInfo)
 	{
 		console.log("仓库ui收到仓库信息 ",info);
+		var toolArr = [];
+		var seedArr = [];
+		var weight = 0;
 		if(info && info.list && info.list.length > 0)
 		{
-			for(var i=0; i<info.list.length; i++)
+			for(let i=0; i<info.list.length; i++)
 			{
-				var storeIitem: vo.StoreItem = info.list[i];
-				var itemData = GameModel.getInstance().getItemById(storeIitem.item_id);
-				
-				var hor = i%2==0 ? -130: 130;
-				var bottom = 200 + Math.floor((5-i)/2)*228;
-				var img = new eui.Image();
-				img.horizontalCenter = hor;
-				img.bottom = bottom;
-				//种子
+				let storeIitem: vo.StoreItem = info.list[i];
+				let itemData = GameModel.getInstance().getItemById(storeIitem.item_id);
 				if(itemData.type1 == 1) {
-					img.source = "seed1_png";
-					img.width = 70;
-					img.height = 117;
-					this.itemGroup.addChild(img);
-					
-					var whiteBg = new eui.Image("downtime_bg_png");
-					whiteBg.width = 215;
-					whiteBg.height = 54;
-					whiteBg.horizontalCenter = hor;
-					whiteBg.bottom = bottom-50;
-					this.itemGroup.addChild(whiteBg);
-
-					var serverTime = GameModel.getInstance().getServerTime();
-					var passTime = storeIitem.expire_time-serverTime;
-					var date = new Date();
-					date.setSeconds(passTime);
-					var str = passTime>0 ? date.getUTCHours()+":"+date.getUTCMinutes()+":"+date.getUTCSeconds()+ "后结束播种" : "结束播种";
-					var timeTxt = new eui.Label(str);
-					timeTxt.textColor = 0x727374;
-					timeTxt.size = 20;
-					timeTxt.horizontalCenter = hor;
-					timeTxt.bottom = bottom-35;
-					this.itemGroup.addChild(timeTxt);
-
-					this.computearr.push({expire_time:storeIitem.expire_time, txt:timeTxt})
+					seedArr.push(storeIitem);
 				}
-				//工具
 				else if(itemData.type1 == 2) {
-					if(storeIitem.name == "化肥"){
-						img.source = "shop_fertilizer_png";
-					}
-					else{
-						img.source = "store_insurance_png";
-					}
-					img.width = 117;
-					img.height = 117;
-					this.itemGroup.addChild(img);
+					toolArr.push(storeIitem);
 				}
-				//收获的果实
 				else if(itemData.type1 == 3) {
-					img.source = "store_receiveGoolds_png";
-					img.width = 175;
-					img.height = 160;
-					this.itemGroup.addChild(img);
-
-					var numTxt = new eui.Label(storeIitem.num+"斤");
-					numTxt.textColor = 0x723010;
-					numTxt.size = 20;
-					numTxt.horizontalCenter = hor;
-					numTxt.bottom = bottom+60;
-					this.itemGroup.addChild(numTxt);
+					weight = storeIitem.num;
 				}
-
 			}
 		}
+
+		//工具0
+		if(toolArr[0])
+		{
+			this.defaultTool0.source = "shop_fertilizer_png";
+			this.defaultTool0.width = 117;
+			this.defaultTool0.height = 117;
+		}
+		else
+		{
+			this.defaultTool0.source = "btn_add_png";
+			this.defaultTool0.width = 92;
+			this.defaultTool0.height = 92;
+		}
+		//工具1
+		if(toolArr[1])
+		{
+			this.defaultTool1.source = "store_insurance";
+			this.defaultTool1.width = 117;
+			this.defaultTool1.height = 117;
+		}
+		else
+		{
+			this.defaultTool1.source = "btn_add_png";
+			this.defaultTool1.width = 92;
+			this.defaultTool1.height = 92;
+		}
+		//第二排显示种子
+		if(seedArr[0])
+		{
+			this.defaultSeed0.source = "seed1_png";
+			let serverTime = GameModel.getInstance().getServerTime();
+			let passTime = seedArr[0].expire_time-serverTime;
+			let date = new Date();
+			date.setSeconds(passTime);
+			this.seedTime0.text = passTime>0 ? date.getUTCHours()+":"+date.getUTCMinutes()+":"+date.getUTCSeconds()+ "后结束播种" : "结束播种";
+			this.computearr.push({expire_time:seedArr[0].expire_time, txt:this.seedTime0})
+		}
+		else
+		{
+			this.defaultSeed0.source = "seedEmpty_png";
+			this.seedTime0.text = "没有种子，无法播种";
+		}
+		if(seedArr[1])
+		{
+			this.defaultSeed1.source = "seed1_png";
+			let serverTime = GameModel.getInstance().getServerTime();
+			let passTime = seedArr[1].expire_time-serverTime;
+			let date = new Date();
+			date.setSeconds(passTime);
+			this.seedTime1.text = passTime>0 ? date.getUTCHours()+":"+date.getUTCMinutes()+":"+date.getUTCSeconds()+ "后结束播种" : "结束播种";
+			this.computearr.push({expire_time:seedArr[1].expire_time, txt:this.seedTime1})
+		}
+		else
+		{
+			this.defaultSeed1.source = "seedEmpty_png";
+			this.seedTime1.text = "没有种子，无法播种";
+		}
+		//果实有多少斤
+		this.fruitWeightTxt.text = weight+"斤";
 	}
+
 	/**循环计算种子过期时间 */
 	private computeTime(){
 		for(var i=0 ; i<this.computearr.length; i++)
