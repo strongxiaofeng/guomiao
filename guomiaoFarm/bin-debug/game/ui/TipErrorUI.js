@@ -32,7 +32,7 @@ var TipErrorUI = (function (_super) {
         this.errorTxt.text = data;
         this.errorTxt.alpha = 1;
         egret.Tween.get(this.errorTxt)
-            .to({ alpha: 0 }, 2000)
+            .to({ alpha: 0 }, 1000)
             .call(function () {
             _this.errorTxt.alpha = 1;
             _this.errorTxt.text = "";

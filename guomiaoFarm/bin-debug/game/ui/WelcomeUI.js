@@ -23,6 +23,7 @@ var WelcomeUI = (function (_super) {
         _super.prototype.initSetting.call(this);
         UIManager.openUI(UIConst.TipErrorUI, LayerManager.Layer_Sys);
         UIManager.openUI(UIConst.TipGreenUI, LayerManager.Layer_Sys);
+        MusicManager.playMusic();
     };
     /**初始监听 */
     WelcomeUI.prototype.initListener = function () {

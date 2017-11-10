@@ -17,6 +17,7 @@ class WelcomeUI extends BaseUI{
 		super.initSetting();
 		UIManager.openUI(UIConst.TipErrorUI, LayerManager.Layer_Sys);
 		UIManager.openUI(UIConst.TipGreenUI, LayerManager.Layer_Sys);
+		MusicManager.playMusic();
 	}
 	/**初始监听 */
 	protected initListener()

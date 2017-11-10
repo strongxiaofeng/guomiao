@@ -141,5 +141,6 @@ class Main extends eui.UILayer {
         // UIManager.openUI(UIConst.WelcomeUI);
         UIManager.openUI(UIConst.LoadingUI);
     }
+    
    
 }
