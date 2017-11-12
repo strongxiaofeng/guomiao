@@ -22,8 +22,8 @@ class ShopFruitItem extends AItemRenderer{
 	{
 		var data = <vo.Item_listItem>this.data;
 		this.titleTxt.text = data.name;
-		this.costTxt.text = data.sell_gold+"";
-		var gold = (data.sell_gold ? data.buy_gold : 0);
+		this.costTxt.text = data.buy_gold+"";
+		var gold = (data.buy_gold ? data.buy_gold : 0);
 		this.coseMoneyTxt.text = '(价值'+ gold/100 +'元)';
 		// this.icon.source = data.id+"通过id去配置中寻找对应图片";
 		var shopCarData = GameModel.getInstance().getShopCarData();

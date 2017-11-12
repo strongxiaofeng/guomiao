@@ -27,7 +27,7 @@ var PayGoodsItem = (function (_super) {
             // this.icon.source = itemdata.id;
             this.titleTxt.text = itemdata.name;
             this.descTxt.text = itemdata.desc;
-            this.costTxt.text = itemdata.sell_gold + "";
+            this.costTxt.text = itemdata.buy_gold + "";
             this.countTxt.text = "X" + count;
         }
     };

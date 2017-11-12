@@ -17,9 +17,9 @@
 		<e:skinName>
 		<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="greyBtn_png" source.down="greyBtn_png" source.disabled="greyBtn_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" size="28"/>
 		</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Image id="newMsgIcon" source="new_msg_circle_png" x="344" y="231" width="10" height="10"/>
+	<e:Image id="newMsgIcon" x="352" y="233" width="10" height="10" source="radioRed_png"/>
 </e:Skin>

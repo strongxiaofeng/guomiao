@@ -25,7 +25,7 @@ var LoadingUI = (function (_super) {
         UIManager.openUI(UIConst.TipErrorUI, LayerManager.Layer_Sys);
         UIManager.openUI(UIConst.TipGreenUI, LayerManager.Layer_Sys);
         // GameController.getInstance().getUserInfo(window["params"]); 
-        GameController.getInstance().getUserInfo("token=d12951537f443efe9f5515cfe965321a");
+        GameController.getInstance().getUserInfo("token=0c057f67d5827b6571e2764fe6e3bcf3");
         GameController.getInstance().getServerConfig();
         this.load();
         // var data = RES.getRes("loadingMovie_json");
@@ -67,7 +67,7 @@ var LoadingUI = (function (_super) {
     };
     /**传入百分比 小数 */
     LoadingUI.prototype.setProgress = function (n) {
-        this.bar.width = 898 * n;
+        this.bar.width = 898 * n + 64;
         this.txt.text = Math.ceil(n * 100) + "%";
     };
     LoadingUI.prototype.onframe = function () {

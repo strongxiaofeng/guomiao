@@ -14,7 +14,7 @@ class LoadingUI extends BaseUI{
 		UIManager.openUI(UIConst.TipErrorUI, LayerManager.Layer_Sys);
 		UIManager.openUI(UIConst.TipGreenUI, LayerManager.Layer_Sys);
 		// GameController.getInstance().getUserInfo(window["params"]); 
-		GameController.getInstance().getUserInfo("token=d12951537f443efe9f5515cfe965321a"); 
+		GameController.getInstance().getUserInfo("token=0c057f67d5827b6571e2764fe6e3bcf3"); 
 		GameController.getInstance().getServerConfig();
 
 		this.load();
@@ -65,7 +65,7 @@ class LoadingUI extends BaseUI{
 	/**传入百分比 小数 */
 	private setProgress(n:number)
 	{
-		this.bar.width = 898*n;
+		this.bar.width = 898*n+64;
 		this.txt.text = Math.ceil(n*100)+ "%";
 	}
 

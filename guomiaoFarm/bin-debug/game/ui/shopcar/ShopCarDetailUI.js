@@ -37,6 +37,7 @@ var ShopCarDetailUI = (function (_super) {
     };
     /**刷新购物车 */
     ShopCarDetailUI.prototype.updateShopCar = function () {
+        var _this = this;
         var data = GameModel.getInstance().getShopCarData();
         this.ac.removeAll();
         var count = 0;
@@ -45,14 +46,18 @@ var ShopCarDetailUI = (function (_super) {
             var item = GameModel.getInstance().getItemById(parseInt(key));
             if (item) {
                 count += data[key];
-                cost += item.sell_gold * data[key];
-                this.ac.addItem({ id: key, name: item.name, cost: item.sell_gold, count: data[key] });
+                cost += item.buy_gold * data[key];
+                this.ac.addItem({ id: key, name: item.name, cost: item.buy_gold, count: data[key] });
             }
         }
         this.ac.refresh();
         this.updateScroller();
         this.shopCountTxt.text = count + "";
         this.payCountTxt.text = cost + "";
+        setTimeout(function () {
+            //果苗币三个字要跟随在后面
+            _this["payCountTxt0"].x = _this.payCountTxt.x + _this.payCountTxt.textWidth + "20";
+        }, 100);
     };
     /**点击购物车 显示购物列表 */
     ShopCarDetailUI.prototype.clickCar = function () {

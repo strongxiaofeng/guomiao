@@ -2,12 +2,12 @@
 <e:Skin class="inviteWaterItem" width="532" height="107" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Image y="0" scale9Grid="28,28,174,174" height="96" width="501" horizontalCenter="0" source="detailItemBg_png"/>
 	<e:Image source="rankHeadBorder_png" x="29" y="12" scaleX="0.5" scaleY="0.5"/>
-	<e:Image id="icon" x="31" y="14" scaleX="0.5" scaleY="0.5" source="defaultUserHead_png" width="135" height="135"/>
-	<e:Label text="小金毛" x="120" y="14" textColor="0x585f65" fontFamily="SimHei" size="22"/>
-	<e:Group id="lvGroup" width="200" height="59" x="120" y="29">
+	<e:Image id="icon" x="31" y="14" scaleX="0.5" scaleY="0.5" source="defaultUserHead_png" width="136" height="137"/>
+	<e:Label text="小金毛" x="120" y="19.2" textColor="0x585f65" fontFamily="SimHei" size="22"/>
+	<e:Group id="lvGroup" width="200" height="59" x="120" y="35">
 		<e:Image id="lvBg" source="rankLvBg_png" x="2" y="14" width="60" height="31" scaleX="1" scaleY="1"/>
-		<e:Image id="lv" source="lv_png" x="12" y="24" scaleX="0.25" scaleY="0.25"/>
-		<e:Image id="myLevelNum" source="num2_png" x="37" y="24" scaleX="0.25" scaleY="0.25"/>
+		<e:Image id="lv" source="lv_png" x="16" y="24" scaleX="0.25" scaleY="0.25"/>
+		<e:Image id="myLevelNum" source="num2_png" x="39" y="24" scaleX="0.25" scaleY="0.25"/>
 	</e:Group>
 	<e:Button id="inviteBtn" label="" x="417" y="25" scaleX="0.5" scaleY="0.5">
 		<e:skinName>

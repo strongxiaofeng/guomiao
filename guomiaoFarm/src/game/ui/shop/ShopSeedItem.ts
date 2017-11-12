@@ -11,7 +11,7 @@ class ShopSeedItem extends AItemRenderer{
 
 	protected onAdd()
 	{
-		this.addBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+		// this.addBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 		this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 	}
 	protected dataChanged()
@@ -19,7 +19,7 @@ class ShopSeedItem extends AItemRenderer{
 		var data = <vo.Item_listItem>this.data;
 		this.titleTxt.text = data.name;
 		this.descTxt.text = data.desc;
-		this.costTxt.text = (data.sell_gold ? data.buy_gold : 0)+"果喵币";
+		this.costTxt.text = (data.buy_gold ? data.buy_gold : 0)+"果喵币";
 		// this.icon.source = data.id+"通过id去配置中寻找对应图片";
 		var shopCarData = GameModel.getInstance().getShopCarData();
 		this.updateShopCarData(shopCarData);

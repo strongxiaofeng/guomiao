@@ -93,7 +93,6 @@ var HomeUI = (function (_super) {
         this.registerEvent(this.tree12, egret.TouchEvent.TOUCH_TAP, this.clickTree, this);
         this.registerEvent(this.seedGroup, egret.TouchEvent.TOUCH_TAP, function () { _this.seedGroup.visible = false; }, this);
         this.registerEvent(this.seed1, egret.TouchEvent.TOUCH_TAP, this.clickSeedItem, this);
-        this.registerEvent(this.seed2, egret.TouchEvent.TOUCH_TAP, this.clickSeedItem, this);
         this.addRegister(NotifyConst.Notify_LandInfo, this.onLandInfo, this);
         this.addRegister(NotifyConst.Notify_YesterdayHarvestRank, this.onYesterdayHarvestRank, this);
         this.addRegister(NotifyConst.Notify_SeedResult, this.onSeed, this);

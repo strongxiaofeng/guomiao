@@ -11,8 +11,8 @@
 		<e:Group id="noRadioGroup" width="640" height="1024" x="0" y="0" touchThrough="true">
 			<e:Image source="noMsg_png" y="440" width="492" height="427" scaleX="0.5" scaleY="0.5" horizontalCenter="0"/>
 		</e:Group>
-		<e:Scroller id="radioScroller" width="640" height="719" x="0" y="244" scaleX="1" scaleY="1">
-			<e:List id="list"/>
+		<e:Scroller id="radioScroller" width="640" height="682" x="0" y="244" scaleX="1" scaleY="1">
+			<e:List id="list" anchorOffsetY="0" height="685"/>
 		</e:Scroller>
 	</e:Group>
 	<e:Group id="recordGroup" width="640" height="1024" x="0" y="0" touchThrough="true" visible="false">
@@ -35,5 +35,5 @@
 	<e:Image id="leftPage" source="leftPage_png" x="252" y="901" scaleX="0.5" scaleY="0.5" visible="false"/>
 	<e:Image id="rightPage" source="rightPage_png" x="354.5" y="901" scaleX="0.5" scaleY="0.5" visible="false"/>
 	<e:Label text="1/10" y="907" size="22" horizontalCenter="0" textColor="0xf9f9f9" visible="false"/>
-	<e:Image id="clearBtn" x="452" y="960" scaleX="0.5" scaleY="0.5" source="clearRadio_png" width="210" height="96"/>
+	<e:Image id="clearBtn" x="452" y="958" scaleX="0.5" scaleY="0.5" source="clearRadio_png" width="210" height="96"/>
 </e:Skin>
