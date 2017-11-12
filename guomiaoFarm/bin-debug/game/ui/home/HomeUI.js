@@ -108,6 +108,7 @@ var HomeUI = (function (_super) {
     };
     /**农田信息 */
     HomeUI.prototype.onLandInfo = function (info) {
+        // console.log("农田信息",info);
         if (!info)
             return;
         var data = info.list[0];

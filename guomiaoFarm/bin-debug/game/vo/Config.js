@@ -10,6 +10,14 @@ var vo;
     }());
     vo.Config = Config;
     __reflect(Config.prototype, "vo.Config");
+    /** URL是game_image/store_100001.png， 加在com后面 */
+    var image_listItem = (function () {
+        function image_listItem() {
+        }
+        return image_listItem;
+    }());
+    vo.image_listItem = image_listItem;
+    __reflect(image_listItem.prototype, "vo.image_listItem");
     /**成就 {id: 1, achievement_icon: 801000, name: "菜鸟喵", content: "参与1次游戏", complete: "1", gold_id: "11"} */
     var Achievement_listItem = (function () {
         function Achievement_listItem() {

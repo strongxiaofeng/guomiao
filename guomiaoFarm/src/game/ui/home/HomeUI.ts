@@ -140,6 +140,7 @@ class HomeUI extends BaseUI {
 	}
 	/**农田信息 */
 	private onLandInfo(info: vo.FarmInfo) {
+		// console.log("农田信息",info);
 		if (!info) return;
 		var data = info.list[0];
 		if (data.crop_id == 0) {

@@ -159,13 +159,13 @@ class GameModel {
 		}
 		return 0;
 	}
-	public getShopItems(): Array<vo.Item_listItem>
+	public getShopItems(): Array<vo.Store_listItem>
 	{
-		var list:Array<vo.Item_listItem> = [];
-		if(this._serverConfig && this._serverConfig.item_list){
-			for(var key in this._serverConfig.item_list)
+		var list:Array<vo.Store_listItem> = [];
+		if(this._serverConfig && this._serverConfig.store_list){
+			for(var key in this._serverConfig.store_list)
 			{
-				list.push(<vo.Item_listItem>this._serverConfig.item_list[key]);
+				list.push(<vo.Store_listItem>this._serverConfig.store_list[key]);
 			}
 		}
 		console.log('获取货物 ',list);

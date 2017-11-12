@@ -5,6 +5,7 @@ module vo {
 		public contribution_list: any;
 		public crop_list: any;
 		public gift_bag: any;
+		public image_list: any;
 		public init: any;
 		public item_list: any;
 		public pay_list: any;
@@ -12,7 +13,20 @@ module vo {
 		public sign: any;
 		public store_list: any;
 	}
-
+	/** URL是game_image/store_100001.png， 加在com后面 */
+	export class image_listItem{
+		public crop_grow_url: string;
+		public crop_ripe_url: string;
+		public crop_seedling_url: string;
+		public id: string;
+		/**仓库 */
+		public item_url: string;
+		public name: string;
+		/**订单 */
+		public order_url: string;
+		/**商店 */
+		public store_url: string;
+	}
 	/**成就 {id: 1, achievement_icon: 801000, name: "菜鸟喵", content: "参与1次游戏", complete: "1", gold_id: "11"} */
 	export class Achievement_listItem{
 		public id: number;
@@ -91,6 +105,7 @@ module vo {
 		public name: string;
 		public player_level: number;
 		public sell_gold: number;
+		public buy_gold: number;
 		public type1: number;
 		public type2: number;
 	}

@@ -150,9 +150,9 @@ var GameModel = (function () {
     };
     GameModel.prototype.getShopItems = function () {
         var list = [];
-        if (this._serverConfig && this._serverConfig.item_list) {
-            for (var key in this._serverConfig.item_list) {
-                list.push(this._serverConfig.item_list[key]);
+        if (this._serverConfig && this._serverConfig.store_list) {
+            for (var key in this._serverConfig.store_list) {
+                list.push(this._serverConfig.store_list[key]);
             }
         }
         console.log('获取货物 ', list);

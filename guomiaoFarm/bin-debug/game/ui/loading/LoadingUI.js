@@ -24,7 +24,8 @@ var LoadingUI = (function (_super) {
         _super.prototype.initSetting.call(this);
         UIManager.openUI(UIConst.TipErrorUI, LayerManager.Layer_Sys);
         UIManager.openUI(UIConst.TipGreenUI, LayerManager.Layer_Sys);
-        GameController.getInstance().getUserInfo(window["params"]);
+        // GameController.getInstance().getUserInfo(window["params"]); 
+        GameController.getInstance().getUserInfo("token=d12951537f443efe9f5515cfe965321a");
         GameController.getInstance().getServerConfig();
         this.load();
         // var data = RES.getRes("loadingMovie_json");

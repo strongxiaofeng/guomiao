@@ -46,7 +46,7 @@
 			<e:Image id="headImg" x="44" y="36" width="99" height="99" scaleX="1" scaleY="1" touchEnabled="false" source="defaultHead_png"/>
 			<e:Rect width="99" height="25" x="44" y="110" anchorOffsetX="0" anchorOffsetY="0" alpha="0.5" scaleX="1" scaleY="1" touchEnabled="false" touchChildren="false"/>
 			<e:Label id="levelTxt" text="Lv5" x="76" y="112" textColor="0xf5df6f" fontFamily="DFKai-SB" size="22" touchEnabled="false"/>
-			<e:Image id="leaf" source="leaf_png" x="35" y="16" scaleX="0.5" scaleY="0.5"/>
+			<e:Image id="leaf" source="leaf_png" x="35" y="16" scaleX="0.5" scaleY="0.5" touchEnabled="false"/>
 		</e:Group>
 		<e:Button id="btn_radio" label="广播" x="185" y="25" scaleX="1" scaleY="1" width="78" height="78">
 		<e:skinName>

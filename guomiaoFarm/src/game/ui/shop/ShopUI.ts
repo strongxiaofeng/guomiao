@@ -43,7 +43,8 @@ class ShopUI extends BaseUI{
 		this.ac_fruit.removeAll();
 		for(var i=0; i<list.length; i++)
 		{
-			var data = list[i];
+			var data = GameModel.getInstance().getItemById(list[i].id);
+			data.buy_gold = list[i].gold;
 			if(data.type1 == 1) this.ac_seed.addItem(data);
 			else if(data.type1 == 2) this.ac_tool.addItem(data);
 			else if(data.type1 == 3) this.ac_fruit.addItem(data);
