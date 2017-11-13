@@ -25,7 +25,8 @@ var GiftItem = (function (_super) {
         var data = this.data;
         this.txt1.text = "邀请" + data.invitation + "个好友";
         this.txt2.text = "可获得" + data.gold + "个果喵币";
-        this.getAbleImg.visible = data.share ? false : true;
+        // this.getAbleImg.visible = data.share ? false : true;
+        this.getAbleImg.visible = true;
     };
     GiftItem.prototype.clickItem = function () {
         UIManager.openUI(UIConst.TipGetCoinUI, LayerManager.Layer_Tip);

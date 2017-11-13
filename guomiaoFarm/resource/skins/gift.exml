@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="store" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image source="bg_black_png" x="0" y="0" width="640" height="1024" alpha="0.3"/>
+	<e:Image source="bg_black_png" x="0" y="0" width="640" height="1024" alpha="0.5"/>
 	<e:Label text="礼物" x="267" y="204"/>
 	<e:Image source="giftTheme_png" y="136" width="402" height="191" x="50"/>
 	<e:Image source="biftBoard_png" y="326" width="561" height="515" horizontalCenter="0"/>
 	<e:Image id="btn_close" source="close_png" x="503" y="289" width="59" height="59"/>
-	<e:Label id="invitedTxt" text="您已经邀请一个好友加入果喵园" y="379" fontFamily="SimHei" horizontalCenter="0" textColor="0x8c4211"/>
+	<e:Label id="invitedTxt" text="您已经邀请1个好友加入果喵园" y="379" fontFamily="SimHei" horizontalCenter="0" textColor="0x8c4211"/>
 	<e:Image id="inviteBtn" source="gift_inviteFriend_png" y="745" width="176" height="63" horizontalCenter="0"/>
 	<e:Scroller id="scroller" width="502" height="287" x="70" y="443" anchorOffsetX="0" anchorOffsetY="0">
 		<e:List id="list">
