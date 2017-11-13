@@ -21,6 +21,7 @@ var ChargeUI = (function (_super) {
     /**初始界面 */
     ChargeUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
+        this.inputMoney.inputType = egret.TextFieldInputType.TEL;
     };
     /**初始监听 */
     ChargeUI.prototype.initListener = function () {
@@ -36,24 +37,36 @@ var ChargeUI = (function (_super) {
         this.choice1.source = "chargeChoiceBg_png";
         this.choice2.source = "chargeChoiceBg_png";
         this.choice3.source = "chargeChoiceBg_png";
+        this.choiceTxt1.textColor = 0x888888;
+        this.choiceTxt2.textColor = 0x888888;
+        this.choiceTxt3.textColor = 0x888888;
     };
     ChargeUI.prototype.clickChoice1 = function () {
         this.chargeNum = 100;
         this.choice1.source = "chargeChoiceBg_s_png";
         this.choice2.source = "chargeChoiceBg_png";
         this.choice3.source = "chargeChoiceBg_png";
+        this.choiceTxt1.textColor = 0xffffff;
+        this.choiceTxt2.textColor = 0x888888;
+        this.choiceTxt3.textColor = 0x888888;
     };
     ChargeUI.prototype.clickChoice2 = function () {
         this.chargeNum = 300;
         this.choice1.source = "chargeChoiceBg_png";
         this.choice2.source = "chargeChoiceBg_s_png";
         this.choice3.source = "chargeChoiceBg_png";
+        this.choiceTxt1.textColor = 0x888888;
+        this.choiceTxt2.textColor = 0xffffff;
+        this.choiceTxt3.textColor = 0x888888;
     };
     ChargeUI.prototype.clickChoice3 = function () {
         this.chargeNum = 500;
         this.choice1.source = "chargeChoiceBg_png";
         this.choice2.source = "chargeChoiceBg_png";
         this.choice3.source = "chargeChoiceBg_s_png";
+        this.choiceTxt1.textColor = 0x888888;
+        this.choiceTxt2.textColor = 0x888888;
+        this.choiceTxt3.textColor = 0xffffff;
     };
     ChargeUI.prototype.sure = function () {
         console.log("确定充值 " + this.chargeNum);

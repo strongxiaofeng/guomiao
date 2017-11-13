@@ -59,7 +59,7 @@
 		"bin-debug/game/ui/otherUser/OtherUserDetailUI.js",
 		"bin-debug/game/ui/otherUser/OtherUserHonorItem.js",
 		"bin-debug/game/ui/otherUser/TipAddFriendUI.js",
-		"bin-debug/Main.js",
+		"bin-debug/game/vo/YesterdayHarvestRankInfo.js",
 		"bin-debug/game/ui/pay/PayUI.js",
 		"bin-debug/game/ui/radio/LeaveMsgItem.js",
 		"bin-debug/game/ui/radio/LeaveMsgUI.js",
@@ -109,6 +109,6 @@
 		"bin-debug/game/vo/StealFoodInfo.js",
 		"bin-debug/game/vo/StoreInfo.js",
 		"bin-debug/game/vo/UserInfo.js",
-		"bin-debug/game/vo/YesterdayHarvestRankInfo.js"
+		"bin-debug/Main.js"
 	]
 }

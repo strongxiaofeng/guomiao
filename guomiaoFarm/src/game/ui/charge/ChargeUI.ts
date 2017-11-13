@@ -7,6 +7,9 @@ class ChargeUI extends BaseUI{
 	private payTxt: eui.Label;
 	private sureBtn: eui.Button;
 	private chargeNum: number;
+	private choiceTxt1: eui.Label;
+	private choiceTxt2: eui.Label;
+	private choiceTxt3: eui.Label;
 	public constructor() {
 		super();
 		this.skinName = "resource/skins/charge.exml";
@@ -32,6 +35,9 @@ class ChargeUI extends BaseUI{
 		this.choice1.source = "chargeChoiceBg_png";
 		this.choice2.source = "chargeChoiceBg_png";
 		this.choice3.source = "chargeChoiceBg_png";
+		this.choiceTxt1.textColor = 0x888888;
+		this.choiceTxt2.textColor = 0x888888;
+		this.choiceTxt3.textColor = 0x888888;
 	}
 	private clickChoice1()
 	{
@@ -39,6 +45,9 @@ class ChargeUI extends BaseUI{
 		this.choice1.source = "chargeChoiceBg_s_png";
 		this.choice2.source = "chargeChoiceBg_png";
 		this.choice3.source = "chargeChoiceBg_png";
+		this.choiceTxt1.textColor = 0xffffff;
+		this.choiceTxt2.textColor = 0x888888;
+		this.choiceTxt3.textColor = 0x888888;
 	}
 	private clickChoice2()
 	{
@@ -46,6 +55,9 @@ class ChargeUI extends BaseUI{
 		this.choice1.source = "chargeChoiceBg_png";
 		this.choice2.source = "chargeChoiceBg_s_png";
 		this.choice3.source = "chargeChoiceBg_png";
+		this.choiceTxt1.textColor = 0x888888;
+		this.choiceTxt2.textColor = 0xffffff;
+		this.choiceTxt3.textColor = 0x888888;
 	}
 	private clickChoice3()
 	{
@@ -53,6 +65,9 @@ class ChargeUI extends BaseUI{
 		this.choice1.source = "chargeChoiceBg_png";
 		this.choice2.source = "chargeChoiceBg_png";
 		this.choice3.source = "chargeChoiceBg_s_png";
+		this.choiceTxt1.textColor = 0x888888;
+		this.choiceTxt2.textColor = 0x888888;
+		this.choiceTxt3.textColor = 0xffffff;
 	}
 	private sure()
 	{
