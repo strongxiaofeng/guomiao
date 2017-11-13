@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="tipGreen" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Label id="txt" text="+20" width="640" horizontalCenter="0" verticalCenter="0" size="50" textAlign="center" fontFamily="SimHei" textColor="0x80c922"/>
-</e:Skin>

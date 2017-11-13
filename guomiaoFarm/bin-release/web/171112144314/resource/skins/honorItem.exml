@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="honorItem" width="150" height="140" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image id="icon" source="honor1_png" width="71" height="89" horizontalCenter="0" y="11"/>
-	<e:Label id="txt" text="Label" y="108" textAlign="center" horizontalCenter="0" size="22"/>
-</e:Skin>
