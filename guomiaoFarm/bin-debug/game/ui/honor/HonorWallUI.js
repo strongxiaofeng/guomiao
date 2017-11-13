@@ -15,6 +15,8 @@ var HonorWallUI = (function (_super) {
     __extends(HonorWallUI, _super);
     function HonorWallUI() {
         var _this = _super.call(this) || this;
+        /**当前是第几页勋章 从0开始 每页9个 */
+        _this.curPage = 0;
         _this.skinName = "resource/skins/honorWall.exml";
         return _this;
     }
@@ -25,7 +27,9 @@ var HonorWallUI = (function (_super) {
         this.list.useVirtualLayout = false;
         var info = GameModel.getInstance().getHonorInfo();
         var config = GameModel.getInstance().getHonorConfig();
-        var ac = new eui.ArrayCollection();
+        this.ac = new eui.ArrayCollection();
+        this.list.dataProvider = this.ac;
+        this.array = [];
         console.log("徽章达成信息：", info);
         for (var key in config) {
             var isAchieved = false;
@@ -35,12 +39,48 @@ var HonorWallUI = (function (_super) {
                         isAchieved = true;
                 }
             }
-            ac.addItem({ itemdata: config[key], isAchieved: isAchieved });
+            this.array.push({ itemdata: config[key], isAchieved: isAchieved });
         }
-        this.list.dataProvider = ac;
+        this.maxPage = Math.ceil(this.array.length / 9);
+        this.curPage = 0;
+        this.showPage();
     };
     /**初始监听 */
     HonorWallUI.prototype.initListener = function () {
+        this.registerEvent(this.leftBtn, egret.TouchEvent.TOUCH_TAP, this.onLeft, this);
+        this.registerEvent(this.leftBtn, egret.TouchEvent.TOUCH_TAP, this.onRight, this);
+    };
+    HonorWallUI.prototype.onLeft = function (e) {
+        if (this.curPage > 0)
+            this.curPage--;
+        this.showPage();
+    };
+    HonorWallUI.prototype.onRight = function (e) {
+        if (this.curPage < this.maxPage - 1)
+            this.curPage++;
+        this.showPage();
+    };
+    /**展示当前页数据 */
+    HonorWallUI.prototype.showPage = function () {
+        this.ac.source = this.getItemsByPage(this.curPage);
+        this.ac.refresh();
+        if (this.curPage == 0)
+            this.leftBtn.enabled = false;
+        else
+            this.leftBtn.enabled = true;
+        if (this.curPage >= this.maxPage - 1)
+            this.rightBtn.enabled = false;
+        else
+            this.rightBtn.enabled = true;
+    };
+    /**获取当前页数据 */
+    HonorWallUI.prototype.getItemsByPage = function (n) {
+        var arr = [];
+        for (var i = 0; i < 9; i++) {
+            if (this.array[n * 9 + i])
+                arr.push(this.array[n * 9 + 0]);
+        }
+        return arr;
     };
     /**关闭界面 */
     HonorWallUI.prototype.dispose = function () {

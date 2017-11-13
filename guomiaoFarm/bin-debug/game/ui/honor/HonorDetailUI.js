@@ -33,6 +33,12 @@ var HonorDetailUI = (function (_super) {
     HonorDetailUI.prototype.initListener = function () {
         this.registerEvent(this.setSDefaultBtn, egret.TouchEvent.TOUCH_TAP, this.setDefault, this);
         this.registerEvent(this.shareBtn, egret.TouchEvent.TOUCH_TAP, this.share, this);
+        this.registerEvent(this, egret.Event.ENTER_FRAME, this.onframe, this);
+    };
+    HonorDetailUI.prototype.onframe = function () {
+        this.light.rotation += 1;
+        if (this.light.rotation > 360)
+            this.light.rotation -= 360;
     };
     HonorDetailUI.prototype.setDefault = function () {
         var data = GameModel.getInstance().getHonorItemDetail();

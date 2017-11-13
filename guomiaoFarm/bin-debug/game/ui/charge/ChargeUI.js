@@ -21,7 +21,6 @@ var ChargeUI = (function (_super) {
     /**初始界面 */
     ChargeUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
-        this.inputMoney.inputType = egret.TextFieldInputType.TEL;
     };
     /**初始监听 */
     ChargeUI.prototype.initListener = function () {

@@ -27,10 +27,15 @@ class TopBarUI extends BaseUI{
 			UIManager.closeUI(UIConst.TopBarUI);
 			UIManager.openUI(UIConst.WelcomeUI);
 		}
+
 		//返回排行榜
 		if(UIManager.isUIOpen(UIConst.OtherUserDetailUI) || UIManager.isUIOpen(UIConst.OtherLandUI))
 		{
 			UIManager.openUI(UIConst.RankFriendContributeUI);
+		}
+		else if(UIManager.isUIOpen(UIConst.HonorDetailUI))
+		{
+			UIManager.openUI(UIConst.HonorWallUI);
 		}
 		//返回商铺
 		else if(UIManager.isUIOpen(UIConst.PayUI))

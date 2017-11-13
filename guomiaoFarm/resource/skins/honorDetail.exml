@@ -2,21 +2,21 @@
 <e:Skin class="honorDetail" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Image source="honorDetailBg_jpg" x="0" y="0"/>
 	<e:Label id="nameTxt" text="苹果王勋章" y="118" textColor="0x643c23" fontFamily="SimHei" textAlign="center" horizontalCenter="0" size="40"/>
-	<e:Image source="honorLight_png" y="112" width="500" height="500" horizontalCenter="0"/>
+	<e:Image id="light" source="honorLight_png" y="374" width="500" height="500" horizontalCenter="0" anchorOffsetX="250" anchorOffsetY="250"/>
 	<e:Image id="icon" source="honor_big_png" y="222" width="275" height="340" horizontalCenter="0"/>
 	<e:Image source="nohor_board_png" y="588" width="561" height="254" horizontalCenter="0"/>
 	<e:Image source="honor_roundRect_png" x="75" y="618" width="126" height="40"/>
 	<e:Image source="honor_roundRect_png" x="75" y="667" width="126" height="40"/>
 	<e:Image source="honor_roundRect_png" x="75" y="718" width="126" height="40"/>
 	<e:Image source="honor_roundRect_png" x="75" y="771" width="126" height="40"/>
-	<e:Label text="获得时间" x="91" y="627" textColor="0x643c23" size="22" fontFamily="SimHei"/>
-	<e:Label text="勋章总数" x="91" y="676" textColor="0x643c23" size="22" fontFamily="SimHei"/>
-	<e:Label text="获得条件" x="91" y="727" textColor="0x643c23" size="22" fontFamily="SimHei"/>
-	<e:Label text="勋章效果" x="91" y="779" textColor="0x643c23" size="22" fontFamily="SimHei"/>
-	<e:Label id="timeTxt" text="2017-02-28" x="213" y="627" textColor="0x643c23" size="22" fontFamily="SimHei"/>
-	<e:Label id="countTxt" text="1枚" x="213" y="676" textColor="0x643c23" size="22" fontFamily="SimHei"/>
-	<e:Label id="descTxt" text="连续50期参加活动" x="213" y="727" textColor="0x643c23" size="22" fontFamily="SimHei"/>
-	<e:Label id="powerTxt" text="购买下一次的种子价格减半" x="213" y="779" textColor="0x643c23" size="22" fontFamily="SimHei"/>
+	<e:Label text="获得时间" x="91" y="629" textColor="0x643c23" size="22" fontFamily="SimHei"/>
+	<e:Label text="勋章总数" x="91" y="678" textColor="0x643c23" size="22" fontFamily="SimHei"/>
+	<e:Label text="获得条件" x="91" y="729" textColor="0x643c23" size="22" fontFamily="SimHei"/>
+	<e:Label text="勋章效果" x="91" y="781" textColor="0x643c23" size="22" fontFamily="SimHei"/>
+	<e:Label id="timeTxt" text="2017-02-28" x="213" y="629" textColor="0x643c23" size="22" fontFamily="SimHei"/>
+	<e:Label id="countTxt" text="1枚" x="213" y="678" textColor="0x643c23" size="22" fontFamily="SimHei"/>
+	<e:Label id="descTxt" text="连续50期参加活动" x="213" y="729" textColor="0x643c23" size="22" fontFamily="SimHei"/>
+	<e:Label id="powerTxt" text="购买下一次的种子价格减半" x="213" y="781" textColor="0x643c23" size="22" fontFamily="SimHei"/>
 	<e:Image id="setSDefaultBtn" source="setDefault_png" y="858" width="225" height="75" horizontalCenter="-130"/>
 	<e:Image id="shareBtn" source="shareFriend_png" y="858" width="225" height="75" horizontalCenter="130"/>
 </e:Skin>

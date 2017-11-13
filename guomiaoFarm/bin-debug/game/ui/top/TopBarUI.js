@@ -40,6 +40,9 @@ var TopBarUI = (function (_super) {
         if (UIManager.isUIOpen(UIConst.OtherUserDetailUI) || UIManager.isUIOpen(UIConst.OtherLandUI)) {
             UIManager.openUI(UIConst.RankFriendContributeUI);
         }
+        else if (UIManager.isUIOpen(UIConst.HonorDetailUI)) {
+            UIManager.openUI(UIConst.HonorWallUI);
+        }
         else if (UIManager.isUIOpen(UIConst.PayUI)) {
             UIManager.openUI(UIConst.ShopUI);
         }

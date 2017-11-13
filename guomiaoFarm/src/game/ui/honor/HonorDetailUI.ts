@@ -7,6 +7,7 @@ class HonorDetailUI extends BaseUI{
 	private powerTxt: eui.Label;
 	private setSDefaultBtn: eui.Image;
 	private shareBtn: eui.Image;
+	private light:eui.Image;
 	public constructor() {
 		super();
 		this.skinName = "resource/skins/honorDetail.exml";
@@ -31,6 +32,12 @@ class HonorDetailUI extends BaseUI{
 	{
 		this.registerEvent(this.setSDefaultBtn, egret.TouchEvent.TOUCH_TAP, this.setDefault, this);
 		this.registerEvent(this.shareBtn, egret.TouchEvent.TOUCH_TAP, this.share, this);
+		this.registerEvent(this,egret.Event.ENTER_FRAME, this.onframe, this);
+	}
+	private onframe()
+	{
+		this.light.rotation+=1;
+		if(this.light.rotation>360) this.light.rotation-=360;
 	}
 	private setDefault()
 	{
