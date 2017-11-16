@@ -29,6 +29,15 @@ class GameModel {
 	/**正在查看的种子详情的id */
 	public curSeedDetailId: number;
 
+	//设置项
+	public check_leaveMsg: boolean = true;
+	public check_radio: boolean = true;
+	public check_weather: boolean = true;
+	public check_report: boolean = true;
+	public check_steal: boolean = true;
+	public check_bgm: boolean = true;
+	public check_effectSound: boolean = true;
+
 	// --------------------------- 存储数据 -------------------------------------
 
 

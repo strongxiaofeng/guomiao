@@ -1,52 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="set" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Image x="0" y="0" source="setBg_jpg" width="640" height="1024"/>
-	<e:Image source="settingThm1_png" y="62" scaleX="0.5" scaleY="0.5" horizontalCenter="0"/>
-	<e:Group id="msgSetBtn" width="575" height="126" x="33" y="188"/>
-	<e:Group id="msgSetGroup" width="576" y="318" horizontalCenter="0" visible="false">
-			<e:Group width="100%" height="92" x="0" y="0">
-				<e:Label text="好友留言" x="23" y="11" textColor="0x543f2c" fontFamily="SimHei" size="30" scaleX="1" scaleY="1"/>
-				<e:Label text="有好友给您留言，果喵将以微信消息通知您" x="23" y="46" textColor="0x924819" size="19" fontFamily="SimHei" scaleX="1" scaleY="1" width="420"/>
-				<e:Image source="opend_png" x="470" y="11" scaleX="0.5" scaleY="0.5"/>
+	<e:Image y="62" scaleX="0.5" scaleY="0.5" horizontalCenter="0" source="settingThm0_png"/>
+	<e:Scroller width="640" height="798" x="0" y="184">
+		<e:Group width="640" x="0" y="-500">
+			<e:Image y="0" scaleX="0.5" scaleY="0.5" horizontalCenter="0" source="settingThm1_png" x="32"/>
+			<e:Group id="msgSetGroup" width="576" y="134" horizontalCenter="0" x="32" scaleX="1" scaleY="1">
+				<e:Group width="100%" height="92" x="0" y="0">
+				<e:Label text="好友留言" x="23" y="15" textColor="0x543f2c" fontFamily="SimHei" size="30" scaleX="1" scaleY="1"/>
+				<e:Label text="有好友给您留言，果喵将以微信消息通知您" x="23" y="53" textColor="0x924819" size="19" fontFamily="SimHei" scaleX="1" scaleY="1" width="420"/>
+				<e:Image id="check_leaveMsg" source="opend_png" x="470" scaleX="0.5" scaleY="0.5" verticalCenter="0"/>
 				<e:Rect width="515" height="1" x="33" y="89" fillColor="0xffffff"/>
-			</e:Group>
-			<e:Group width="100%" height="92" x="0" y="93">
-				<e:Label text="系统广播" x="23" y="11" textColor="0x543f2c" fontFamily="SimHei" size="30" scaleX="1" scaleY="1"/>
-				<e:Label text="系统公告，产品上新等，果喵将以微信消息通知您" x="23" y="46" textColor="0x924819" size="19" fontFamily="SimHei" scaleX="1" scaleY="1" width="420"/>
-				<e:Image source="opend_png" x="470" y="11" scaleX="0.5" scaleY="0.5"/>
+				</e:Group>
+				<e:Group width="100%" height="92" x="0" y="93">
+				<e:Label text="系统广播" x="23" y="15" textColor="0x543f2c" fontFamily="SimHei" size="30" scaleX="1" scaleY="1"/>
+				<e:Label text="系统公告，产品上新等，果喵将以微信消息通知您" x="23" y="53" textColor="0x924819" size="19" fontFamily="SimHei" scaleX="1" scaleY="1" width="420"/>
+				<e:Image id="check_radio" source="opend_png" x="470" scaleX="0.5" scaleY="0.5" verticalCenter="0"/>
 				<e:Rect width="515" height="1" x="30" y="89" fillColor="0xffffff"/>
-			</e:Group>
-			<e:Group width="100%" height="92" x="0" y="185">
+				</e:Group>
+				<e:Group width="100%" height="92" x="0" y="185">
 				<e:Label text="天气灾害" x="23" y="11" textColor="0x543f2c" fontFamily="SimHei" size="30" scaleX="1" scaleY="1"/>
 				<e:Label text="果喵园气象部将为您预警突发的t天气灾害，以微信消息通知您，及时使用保险卡将有效避免损失" x="23" y="46" textColor="0x924819" size="19" fontFamily="SimHei" scaleX="1" scaleY="1" width="420"/>
-				<e:Image source="opend_png" x="470" y="11" scaleX="0.5" scaleY="0.5"/>
+				<e:Image id="check_weather" source="opend_png" x="470" scaleX="0.5" scaleY="0.5" verticalCenter="0"/>
 				<e:Rect width="515" height="1" x="30" y="89" fillColor="0xffffff"/>
-			</e:Group>
-			<e:Group width="100%" height="92" x="0" y="277">
+				</e:Group>
+				<e:Group width="100%" height="92" x="0" y="277">
 				<e:Label text="盈亏报告" x="23" y="11" textColor="0x543f2c" fontFamily="SimHei" size="30" scaleX="1" scaleY="1"/>
 				<e:Label text="果喵将在XX点为您推送每天的金币盈利情况,让您轻松了解自己的盈亏" x="23" y="46" textColor="0x924819" size="19" fontFamily="SimHei" scaleX="1" scaleY="1" width="420"/>
-				<e:Image source="opend_png" x="470" y="11" scaleX="0.5" scaleY="0.5"/>
+				<e:Image id="check_report" source="opend_png" x="470" scaleX="0.5" scaleY="0.5" verticalCenter="0"/>
 				<e:Rect width="515" height="1" x="30" y="89" fillColor="0xffffff"/>
-			</e:Group>
-			<e:Group width="100%" height="92" x="0" y="369">
+				</e:Group>
+				<e:Group width="100%" height="92" x="0" y="369">
 				<e:Label text="被偷提醒" x="23" y="11" textColor="0x543f2c" fontFamily="SimHei" size="30" scaleX="1" scaleY="1" textAlign="left"/>
 				<e:Label text="开启本提醒，您的水果被偷，果喵将会第一时间通知您" x="23" y="46" textColor="0x924819" size="19" fontFamily="SimHei" scaleX="1" scaleY="1" width="420"/>
-				<e:Image source="opend_png" x="470" y="11" scaleX="0.5" scaleY="0.5"/>
+				<e:Image id="check_steal" source="opend_png" x="470" scaleX="0.5" scaleY="0.5" verticalCenter="0"/>
 				<e:Rect width="515" height="1" x="30" y="89" fillColor="0xffffff"/>
-			</e:Group>
-
-		<e:layout>
-			<e:BasicLayout/>
-		</e:layout>
-		</e:Group>
-	<e:Image id="landSetBtn" source="settingThm2_png" y="324" scaleX="1" horizontalCenter="0" height="133" width="575"/>
-	<e:Group id="landSetGroup" width="568" height="170" x="36" y="460">
-		<e:Scroller width="568" height="170" x="0" y="0">
-			<e:List id="skinList">
+				</e:Group>
 				<e:layout>
-					<e:HorizontalLayout/>
+				<e:BasicLayout/>
 				</e:layout>
-			</e:List>
-		</e:Scroller>
-	</e:Group>
+			</e:Group>
+			<e:Image id="landSetBtn" source="settingThm2_png" y="602" scaleX="1" horizontalCenter="0" height="133" width="575" x="33" scaleY="1"/>
+			<e:Group id="landSetGroup" width="568" height="170" x="36" y="736" scaleX="1" scaleY="1">
+				<e:Scroller width="568" height="170" x="0" y="0" scrollPolicyV="off">
+				<e:List id="skinList">
+					<e:layout>
+					<e:HorizontalLayout/>
+					</e:layout>
+				</e:List>
+				</e:Scroller>
+			</e:Group>
+			<e:Image source="settingThm3_png" y="917" scaleX="0.5" scaleY="0.5" horizontalCenter="0"/>
+			<e:Group id="soundSetGroup" width="576" y="1055" horizontalCenter="0" x="32" scaleX="1" scaleY="1">
+				<e:Group width="100%" height="92" x="0" y="0">
+				<e:Label text="背景音乐" x="23" y="15" textColor="0x543f2c" fontFamily="SimHei" size="30" scaleX="1" scaleY="1"/>
+				<e:Label text="开启、关闭游戏的背景音乐" x="23" y="53" textColor="0x924819" size="19" fontFamily="SimHei" scaleX="1" scaleY="1" width="420"/>
+				<e:Image id="check_bgm" source="opend_png" x="470" scaleX="0.5" scaleY="0.5" verticalCenter="0"/>
+				<e:Rect width="515" height="1" x="33" y="89" fillColor="0xffffff"/>
+				</e:Group>
+				<e:Group width="100%" height="92" x="0" y="93">
+				<e:Label text="音效音乐" x="23" y="15" textColor="0x543f2c" fontFamily="SimHei" size="30" scaleX="1" scaleY="1"/>
+				<e:Label text="开启、关闭游戏中操作产生的音效" x="23" y="53" textColor="0x924819" size="19" fontFamily="SimHei" scaleX="1" scaleY="1" width="420"/>
+				<e:Image id="check_effectSound" source="opend_png" x="470" scaleX="0.5" scaleY="0.5" verticalCenter="0"/>
+				<e:Rect width="515" height="1" x="30" y="89" fillColor="0xffffff"/>
+				</e:Group>
+			</e:Group>
+		</e:Group>
+	</e:Scroller>
+
+
 </e:Skin>

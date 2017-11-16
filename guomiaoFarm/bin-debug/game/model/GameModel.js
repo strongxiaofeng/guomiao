@@ -7,6 +7,14 @@ var GameModel = (function () {
         this.isYesterdayRankGot = false;
         /**购物车数据 以物品id为key 数量为value */
         this.shopCarData = {};
+        //设置项
+        this.check_leaveMsg = true;
+        this.check_radio = true;
+        this.check_weather = true;
+        this.check_report = true;
+        this.check_steal = true;
+        this.check_bgm = true;
+        this.check_effectSound = true;
     }
     GameModel.getInstance = function () {
         if (!this._instance)
