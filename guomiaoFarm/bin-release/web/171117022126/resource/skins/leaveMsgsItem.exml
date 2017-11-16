@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="radio" width="500" height="160" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="chargeChoiceBg_png" x="0" y="0" width="1000" height="300" scaleX="0.5" scaleY="0.5"/>
+	<e:Label id="nameTxt" text="木蚂蚁:" x="25" y="21" textColor="0x613e22" size="22" scaleX="1" scaleY="1" fontFamily="SimHei"/>
+	<e:Label id="content" text="看好你的水果，明天又来偷，哈哈哈哈哈哈哈哈哈哈" x="25" y="55" textColor="0x613E22" size="22" scaleX="1" scaleY="1" fontFamily="SimHei" width="443" lineSpacing="5"/>
+	<e:Label id="time" text="2017-09-17 19:13" y="115" textColor="0x626262" size="18" right="35"/>
+</e:Skin>
