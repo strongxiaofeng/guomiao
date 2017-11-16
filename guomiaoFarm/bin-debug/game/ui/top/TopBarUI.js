@@ -43,6 +43,9 @@ var TopBarUI = (function (_super) {
         else if (UIManager.isUIOpen(UIConst.HonorDetailUI)) {
             UIManager.openUI(UIConst.HonorWallUI);
         }
+        else if (UIManager.isUIOpen(UIConst.WeekFruitKingUI)) {
+            UIManager.openUI(UIConst.LastActivityUI);
+        }
         else if (UIManager.isUIOpen(UIConst.PayUI)) {
             UIManager.openUI(UIConst.ShopUI);
         }

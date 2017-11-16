@@ -37,6 +37,10 @@ class TopBarUI extends BaseUI{
 		{
 			UIManager.openUI(UIConst.HonorWallUI);
 		}
+		else if(UIManager.isUIOpen(UIConst.WeekFruitKingUI))
+		{
+			UIManager.openUI(UIConst.LastActivityUI);
+		}
 		//返回商铺
 		else if(UIManager.isUIOpen(UIConst.PayUI))
 		{

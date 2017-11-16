@@ -11,25 +11,20 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var LastActivityItem = (function (_super) {
-    __extends(LastActivityItem, _super);
-    function LastActivityItem() {
+var WeekFruitKingItem = (function (_super) {
+    __extends(WeekFruitKingItem, _super);
+    function WeekFruitKingItem() {
         var _this = _super.call(this) || this;
-        _this.skinName = "resource/skins/lastActivityItem.exml";
+        _this.skinName = "resource/skins/lastActivityKingItem.exml";
         return _this;
     }
-    LastActivityItem.prototype.onAdd = function () {
-        this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTap, this);
+    WeekFruitKingItem.prototype.onAdd = function () {
     };
-    LastActivityItem.prototype.dataChanged = function () {
+    WeekFruitKingItem.prototype.dataChanged = function () {
     };
-    LastActivityItem.prototype.onTap = function () {
-        UIManager.openUI(UIConst.WeekFruitKingUI);
+    WeekFruitKingItem.prototype.onRemove = function () {
     };
-    LastActivityItem.prototype.onRemove = function () {
-        this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onTap, this);
-    };
-    return LastActivityItem;
+    return WeekFruitKingItem;
 }(AItemRenderer));
-__reflect(LastActivityItem.prototype, "LastActivityItem");
-//# sourceMappingURL=LastActivityItem.js.map
+__reflect(WeekFruitKingItem.prototype, "WeekFruitKingItem");
+//# sourceMappingURL=WeekFruitKingItem.js.map

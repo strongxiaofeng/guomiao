@@ -10,6 +10,7 @@ var UIConst = (function () {
     UIConst.TopBarUI = "TopBarUI";
     UIConst.HomeUI = "HomeUI";
     UIConst.LastActivityUI = "LastActivityUI";
+    UIConst.WeekFruitKingUI = "WeekFruitKingUI";
     UIConst.UserMenuUI = "UserMenuUI";
     UIConst.LastHarvestRankUI = "LastHarvestRankUI";
     UIConst.ContributeDetailUI = "ContributeDetailUI";

@@ -98,6 +98,8 @@ declare class lastActivity extends eui.Skin{
 }
 declare class lastActivityItem extends eui.Skin{
 }
+declare class rankItem_all_contri extends eui.Skin{
+}
 declare class lastHarvestItem extends eui.Skin{
 }
 declare class lastHarvst extends eui.Skin{
@@ -117,8 +119,6 @@ declare class payGoodsItem extends eui.Skin{
 declare class radioItem extends eui.Skin{
 }
 declare class rankItem_friend_coin extends eui.Skin{
-}
-declare class rankItem_all_contri extends eui.Skin{
 }
 declare class rankItem_friend_contri extends eui.Skin{
 }

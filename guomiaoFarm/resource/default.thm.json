@@ -56,6 +56,8 @@
     "resource/skins/inviteWaterItem.exml",
     "resource/skins/lastActivity.exml",
     "resource/skins/lastActivityItem.exml",
+    "resource/skins/lastActivityKing.exml",
+    "resource/skins/lastActivityKingItem.exml",
     "resource/skins/lastHarvestItem.exml",
     "resource/skins/lastHarvestRank.exml",
     "resource/skins/leaveMsgs.exml",
