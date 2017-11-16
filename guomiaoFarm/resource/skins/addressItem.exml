@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="addressItem" width="640" height="210" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Rect width="640" height="200" x="0" y="0" fillColor="0xffffff"/>
-	<e:Label id="nameTxt" text="林先生" x="40" y="20" textColor="0x5c442c" fontFamily="SimHei" size="24"/>
-	<e:Label id="numTxt" text="1234564554655" x="189" y="20" textColor="0x5C442C" fontFamily="SimHei" size="24"/>
-	<e:Label id="addressTxt" text="四川省XXXXXXXXXXXXXXXXXXXXXXX" x="40" y="67" textColor="0x5C442C" fontFamily="SimHei" size="18"/>
-	<e:Label text="默认地址" x="83" y="145" textColor="0x5C442C" fontFamily="SimHei" size="18"/>
-	<e:Label id="editTxt" text="编辑" x="439" y="146" textColor="0x5C442C" fontFamily="SimHei" size="18"/>
-	<e:Label id="deleteTxt" text="删除" x="556" y="146" textColor="0x5C442C" fontFamily="SimHei" size="18"/>
+	<e:Label id="nameTxt" text="林先生" x="40" y="20" textColor="0x5c442c" fontFamily="SimHei" size="25"/>
+	<e:Label id="numTxt" text="1234564554655" x="189" y="20" textColor="0x5C442C" fontFamily="SimHei" size="25"/>
+	<e:Label id="addressTxt" text="四川省XXXXXXXXXXXXXXXXXXXXXXX" x="40" y="67" textColor="0x5C442C" fontFamily="SimHei" size="21"/>
+	<e:Label text="默认地址" x="83" y="144" textColor="0x5C442C" fontFamily="SimHei" size="21"/>
+	<e:Label id="editTxt" text="编辑" x="439" y="144" textColor="0x5C442C" fontFamily="SimHei" size="21"/>
+	<e:Label id="deleteTxt" text="删除" x="556" y="144" textColor="0x5C442C" fontFamily="SimHei" size="21"/>
 	<e:Image id="selectIcon" source="select_no_png" x="40" y="139" width="28" height="28"/>
 	<e:Image id="editIcon" source="editAddress_png" x="412" y="142" width="23" height="24"/>
 	<e:Image id="deleteIcon" x="528" y="142" width="23" height="23" source="deleteRecord_png"/>
+	<e:Rect width="556" height="1" y="110" fillColor="0xededed" horizontalCenter="0"/>
 </e:Skin>
