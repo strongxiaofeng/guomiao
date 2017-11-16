@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="startUI" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="bg_start_jpg" verticalCenter="0" horizontalCenter="0"/>
+	<e:Image source="logo_png" y="146" horizontalCenter="0" scaleX="0.5" scaleY="0.5"/>
+	<e:Group id="btns" width="640" height="1" x="0" y="0">
+		<e:Button id="btn_myFarm" label="" y="585" scaleX="0.5" scaleY="0.5" horizontalCenter="0" x="86">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="myFarm_png" source.down="myFarm_png" source.disabled="myFarm_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="btn_lastActivity" label="" y="695" scaleX="0.5" scaleY="0.5" horizontalCenter="0" x="85">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="lastActivity_png" source.down="lastActivity_png" source.disabled="lastActivity_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="btn_rule" label="" y="805" scaleX="0.5" scaleY="0.5" horizontalCenter="0" x="86">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="rule_png" source.down="rule_png" source.disabled="rule_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+	<e:Group id="loadGroup" width="640" height="1" x="0" y="0" visible="false">
+		<e:Rect id="rect" width="240" height="5" y="762" fillColor="0xffffff" x="200" scaleX="1" scaleY="1"/>
+		<e:Image y="593" horizontalCenter="0" source="loadmiao_png" width="240" x="200" scaleX="1" scaleY="1"/>
+		<e:Label id="progressTxt" text="果喵正在加载中。。 40%" y="775" fontFamily="SimHei" horizontalCenter="0" size="24" x="188" scaleX="1" scaleY="1"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="radio" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="bg_black_png" x="0" y="0" width="640" height="1024" alpha="0.3"/>
+	<e:Image source="leaveMsgBg_png" y="229" width="566" height="742" horizontalCenter="0"/>
+
+	<e:Image id="leftPage" source="leftPage_png" x="252" y="901" scaleX="0.5" scaleY="0.5"/>
+	<e:Image id="rightPage" source="rightPage_png" x="354.5" y="901" scaleX="0.5" scaleY="0.5"/>
+	<e:Label text="1/10" y="907" size="22" horizontalCenter="0" textColor="0xf9f9f9"/>
+	<e:Image id="clearBtn" source="btn_clearShopcar_sure_png" x="460" y="897" scaleX="0.3" scaleY="0.3"/>
+	<e:Image id="closeBtn" source="close_png" x="500" y="198" width="58" height="58"/>
+	<e:Scroller width="500" height="600" x="71" y="270">
+		<e:List id="list"/>
+	</e:Scroller>
+</e:Skin>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="home" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="bg_farm_jpg" width="640" height="1024" horizontalCenter="0" verticalCenter="0"/>
+	
+	<e:Group id="headGroup" width="640" height="1" x="0" y="0">
+		<e:Image id="headBg" source="headbg_png" width="128" height="128" horizontalCenter="0" y="80" x="256" scaleX="1" scaleY="1"/>
+		<e:Image id="headImg" source="contribution _png" x="270" y="95" width="99" height="99" scaleX="1" scaleY="1"/>
+		<e:Image source="leaf_png" x="270" y="74" width="122" height="55" scaleX="1" scaleY="1"/>
+		<e:Image id="honorImg" source="buyCoin_png" x="256" y="163" width="48" height="45" scaleX="1" scaleY="1"/>
+		<e:Label id="nameTxt" text="木蚂蚁" y="217" textColor="0x834e2f" scaleX="1" scaleY="1" size="22" fontFamily="SimHei" horizontalCenter="-39"/>
+		<e:Image source="lv_png" x="329" y="214" scaleX="1" scaleY="1" width="42" height="26"/>
+		<e:Image id="LevelTxtImg" source="num0_png" x="380" y="215" scaleX="1" scaleY="1" width="20" height="26"/>
+
+	</e:Group>
+	
+	<e:Group id="farmGroup" width="640" height="1024" x="0" y="0">
+		<e:Image source="store_png" y="387" width="415" height="309" right="0" pixelHitTest="true"/>
+		<e:Image source="land_png" width="145" height="81" x="191" y="586"/>
+		<e:Image source="land_png" x="118" y="640.5" width="145" height="81"/>
+		<e:Image source="land_png" x="45" y="696" width="145" height="81"/>
+		<e:Image source="land_png" x="282.36" y="624.98" width="145" height="81"/>
+		<e:Image source="land_png" x="209.46" y="676.44" width="145" height="81"/>
+		<e:Image source="land_png" x="138.48" y="731.94" width="145" height="81"/>
+		<e:Image source="land_png" x="378.34" y="662.44" width="145" height="81"/>
+		<e:Image source="land_png" x="303.38" y="713.9" width="145" height="81"/>
+		<e:Image source="land_png" x="232.92" y="767.88" width="145" height="81"/>
+		<e:Image source="land_png" x="329.36" y="805.34" width="145" height="81"/>
+		<e:Image source="land_png" x="397.3" y="751.36" width="145" height="81"/>
+		<e:Image source="land_png" x="472.84" y="699.9" width="145" height="81"/>
+		<e:Group id="tree" width="640" height="1024" x="0" y="0" touchThrough="true">
+			<e:Image id="tree1" source="tree_young_png" scaleX="0.5" scaleY="0.5" bottom="388" horizontalCenter="-56"/>
+			<e:Image id="tree2" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-132" bottom="332"/>
+			<e:Image id="tree3" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-203" bottom="277"/>
+			<e:Image id="tree4" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="35" bottom="347"/>
+			<e:Image id="tree5" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-38" bottom="294"/>
+			<e:Image id="tree6" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-112" bottom="239"/>
+			<e:Image id="tree7" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="131" bottom="309"/>
+			<e:Image id="tree8" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="56" bottom="256"/>
+			<e:Image id="tree9" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="-17" bottom="204"/>
+			<e:Image id="tree10" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="225" bottom="270"/>
+			<e:Image id="tree11" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="147" bottom="221"/>
+			<e:Image id="tree12" source="tree_young_png" scaleX="0.5" scaleY="0.5" horizontalCenter="80" bottom="165"/>
+		</e:Group>
+	</e:Group>
+
+	<e:Group id="toolGroup" width="640" height="1024" x="0" y="0" touchThrough="true">
+		<e:Image source="tool_bg_png" scaleX="1" scaleY="1" width="591" height="63" bottom="0" horizontalCenter="0"/>
+		<e:Image id="btn_water" source="water_png" x="111" y="929" scaleX="0.5" scaleY="0.5"/>
+		<e:Image id="leaveMsg" source="leaveMsg_png" x="433" y="928" scaleX="0.5" scaleY="0.5"/>
+		<e:Image id="btn_stole" source="stole_png" x="269" y="925" scaleX="0.5" scaleY="0.5"/>
+
+
+
+
+
+	</e:Group>
+</e:Skin>

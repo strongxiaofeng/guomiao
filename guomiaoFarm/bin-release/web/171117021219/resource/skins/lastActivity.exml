@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="lastActivity" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+
+	<e:Image x="0" y="0" source="weekFruitKingBg_jpg"/>
+	<e:Image source="lastActivityTitle_png" y="91" horizontalCenter="0" width="561" height="137"/>
+	<e:Scroller id="scroller" width="640" height="729" x="0" y="229">
+		<e:List id="list"/>
+	</e:Scroller>
+	<e:Image x="0" width="640" bottom="0" height="126" source="paopao2_png" touchEnabled="false"/>
+</e:Skin>

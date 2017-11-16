@@ -1,0 +1,1759 @@
+{
+	"groups": [
+		{
+			"keys": "addGameFriend_png,addAddress_png,addReceiver_png,addressManage_png,addressManageTheme_jpg,deleteOrder_png,deleteRecord_png,editAddress_png,goPay_png,logisticsInfoBg_jpg,lookAddress_png,myOrder_png,saveAddress_png,select_no_png,selected_png,sureReceive_png,arrow_left_detail_png,arrow_left_png,arrow_right_disable_png,arrow_right_png,atrributeDetailTxt_png,attributeDetailBg_jpg,coinDetailBg_jpg,coinDetailTxt_png,detail_board_png,detail_border_down_png,detail_border_mid_png,detail_border_up_png,detail_theme_png,lv_attribute_theme_png,bg_black_png,bg_farm_jpg,bg_main_png,chargeBg_jpg,chargeBoard_png,chargeTheme_png,charge_png,close_png,cloud1_png,cloud2_png,cloud3_png,contribution _png,fertilizer_have_png,fertilizer_not_have_png,addFriend_png,commit_png,FriendBg_jpg,friendBoard_png,friendDetailBoard_png,friendHonorBoard_png,HisDetailTxt_png,HisHonorTxt_png,icon_friendCount_png,icon_joinActivityCount_png,icon_rankCount_png,icon_supportCount_png,leaveMsg_png,leaveMsgTheme_png,msgBoard_png,biftBoard_png,gift_inviteFriend_png,gift1_png,gift2_png,giftBg_png,giftGetAble_png,giftTheme_png,gitTipBg_png,gift_png,headbg_png,home_png,honor_big_png,honor_board_png,honor_roundRect_png,honor1_png,honor2_png,honor3_png,honor4_cannotGet_png,honorBg_jpg,honorCount_png,honorDetailBg_jpg,honorLight_png,honorTheme_png,nohor_board_png,setDefault_png,shareFriend_png,invite_able_png,invite_disable_png,inviteWx_png,land_png,lastActivity_png,leaf_png,left_png,miao_png,myFarm_png,new_msg_circle_png,notice_bg_png,radio_png,addBtn_able_png,addBtn_disable_png,addFriendBtn_png,addFriendTheme_png,agreeBtn_png,allrankTheme_jpg,coinGrow_png,coinReduce_png,coinSignRank_png,friendRankTheme_jpg,horBar_png,lastStolerHat_png,leftPage_png,noticeIcon_png,onekeyAgree_png,onekeyRefuse_png,rank_tab_noselect_png,rank_tab_select_png,rank1_png,rank2_png,rank3_png,rankbg_png,rankByAttribute_png,rankByCoin_png,rankHeadBorder_png,refuseBtn_png,requestFriend_png,requestFriendTheme_png,rightPage_png,searchBtn_png,splitBar_gif,supportAfter_png,supportBegin_png,rank_png,clock_png,rule_bg_jpg,rule_planent_png,rule1_png,rule2_png,rule3_png,rule4_png,rule5_png,rule6_png,rule7_png,ruleContentBg_png,ruleDesc_png,ruleTitleBg_png,ruleTxt_png,time1_png,time2_png,time3_png,time4_png,timeWhite_gif,rule_png,seed_able_png,seed_disable_png,seedBg_png,add_to_shopcar_png,bg_seed_png,bg_seedDetail_png,bg_shop_jpg,btn_add_dis_png,btn_add_png,btn_buyFruit_png,btn_clearShopcar_cancel_png,btn_clearShopcar_sure_png,btn_shopcar_add_dis_png,btn_shopcar_add_png,btn_shopcar_reduce_png,choice_not_png,choice_png,choiced_goods_bg_png,clear_shopcar_msg_bg_png,clearShopcar_png,fruit1_jpg,fruit2_jpg,fruitDetailboard_png,insurance_png,more_tool_png,reduce_png,seed1_png,seed2_png,seed3_png,shop_board_jpg,shopcar_have_png,shopcar_null_png,shop_png,nosign1_png,nosign2_png,nosign3_png,nosign4_png,nosign5_png,nosign6_png,nosign7_png,sign_grid_png,signBg_png,signBtn_png,signed_png,signed1_png,signed2_png,signed3_png,signed4_png,signed5_png,signed6_png,signed7_png,signLogo_png,sign_png,smallGame_png,stole_png,downtime_bg_png,store_bg_png,store_board_png,store_insurance_png,store_kettle_png,store_receiveGoolds_png,store_png,tool_bg_png,tree_grow_png,tree_ripe_png,tree_young_png,buyCoin_png,coinImg_png,dark_green_png,light_green_png,lv_png,num0_png,num1_png,num2_png,num3_png,num4_png,num5_png,num6_png,num7_png,num8_png,num9_png,progressBg_png,progressLeft_png,progressMid_png,question_png,user_adress_png,user_charge_png,user_honer_png,user_order_png,user_radio_png,user_rank_png,user_set_png,user_shop_png,user_store_png,userBg_jpg,water_png,water0_png,water1_png,water2_png,water3_png,water4_png,water5_png,weed_png,attriDetailBoard_png,detailItemBg_png,coinSignInAttribute_png,progress_png,line_png,chargeChoiceBg_s_png,btnbg_png,arrowDown_png,arrowUp_png,coinBoard_png,coinDetailBg_png,coinRankBg_png,coinRankTheme_png,coinSign_png,myCoinRankBg_png,shop_fertilizer_png,myOrder2_png,roundthumb_png,track_sb_png,button_down_png,button_up_png,selectCircleNo_png,selectCircle_png,ruleImg_png,lastActivityTitle_png,rankLvBg_png,hand_png,orderItemImg_png,searchBg_png,radioBg_jpg,defaultUserHead_png,inviteWaterDetailBg_png,weatherBg_png,chatMsgBg_png,reportBg_png,sysMsgBg_png,greyBtn_png,radioTimeBg_png,recordBg_png,decorate_png,leaveMsgThm_png,leaveMsgBg_png,loadingMovie_json,loadingMovie_png,bg_start_jpg,logo_png,loadmiao_png,bg_farm2_png,defaultHead_png,chooseSeed4_png,store_close_png,tree_seed_png,seedEmpty_png,radioBg_png,radioBottom_png,clearRadio_png,noMsg_png,bgm_mp3,bg_shopH ead_png,seedItemBg_png,toolItemBg_png,radioRed_png,chargeBtn_png,chargeChoiceBg2_png,userinfo_tree_png,honorProgress_png,weekFruitRankBg_png,paopao1_png,paopao2_png,weekFruitKingBg2_png,weekFruitKingBg_jpg,fruitKingTxt_png,weekkingNameBg_png,settingThm0_png,settingThm3_png,addressTipBg_png,addreddArrow_png",
+			"name": "preload"
+		},
+		{
+			"keys": "loadingBottom_png,loadingBar_png,loading1_png,loading2_png,loading3_png,loading4_png,loading5_png",
+			"name": "loading"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/address/addAddress.png",
+			"type": "image",
+			"name": "addAddress_png"
+		},
+		{
+			"url": "assets/address/addReceiver.png",
+			"type": "image",
+			"name": "addReceiver_png"
+		},
+		{
+			"url": "assets/address/addressManage.png",
+			"type": "image",
+			"name": "addressManage_png"
+		},
+		{
+			"url": "assets/address/addressManageTheme.jpg",
+			"type": "image",
+			"name": "addressManageTheme_jpg"
+		},
+		{
+			"url": "assets/address/deleteOrder.png",
+			"type": "image",
+			"name": "deleteOrder_png"
+		},
+		{
+			"url": "assets/address/deleteRecord.png",
+			"type": "image",
+			"name": "deleteRecord_png"
+		},
+		{
+			"url": "assets/address/editAddress.png",
+			"type": "image",
+			"name": "editAddress_png"
+		},
+		{
+			"url": "assets/address/goPay.png",
+			"type": "image",
+			"name": "goPay_png"
+		},
+		{
+			"url": "assets/address/logisticsInfoBg.jpg",
+			"type": "image",
+			"name": "logisticsInfoBg_jpg"
+		},
+		{
+			"url": "assets/address/lookAddress.png",
+			"type": "image",
+			"name": "lookAddress_png"
+		},
+		{
+			"url": "assets/address/myOrder.png",
+			"type": "image",
+			"name": "myOrder_png"
+		},
+		{
+			"url": "assets/address/saveAddress.png",
+			"type": "image",
+			"name": "saveAddress_png"
+		},
+		{
+			"url": "assets/address/select_no.png",
+			"type": "image",
+			"name": "select_no_png"
+		},
+		{
+			"url": "assets/address/selected.png",
+			"type": "image",
+			"name": "selected_png"
+		},
+		{
+			"url": "assets/address/sureReceive.png",
+			"type": "image",
+			"name": "sureReceive_png"
+		},
+		{
+			"url": "assets/attributeDetail/arrow_left.png",
+			"type": "image",
+			"name": "arrow_left_png"
+		},
+		{
+			"url": "assets/attributeDetail/arrow_left_detail.png",
+			"type": "image",
+			"name": "arrow_left_detail_png"
+		},
+		{
+			"url": "assets/attributeDetail/arrow_right.png",
+			"type": "image",
+			"name": "arrow_right_png"
+		},
+		{
+			"url": "assets/attributeDetail/arrow_right_disable.png",
+			"type": "image",
+			"name": "arrow_right_disable_png"
+		},
+		{
+			"url": "assets/attributeDetail/atrributeDetailTxt.png",
+			"type": "image",
+			"name": "atrributeDetailTxt_png"
+		},
+		{
+			"url": "assets/attributeDetail/attributeDetailBg.jpg",
+			"type": "image",
+			"name": "attributeDetailBg_jpg"
+		},
+		{
+			"url": "assets/attributeDetail/coinDetailBg.jpg",
+			"type": "image",
+			"name": "coinDetailBg_jpg"
+		},
+		{
+			"url": "assets/attributeDetail/coinDetailTxt.png",
+			"type": "image",
+			"name": "coinDetailTxt_png"
+		},
+		{
+			"url": "assets/attributeDetail/detail_board.png",
+			"type": "image",
+			"name": "detail_board_png"
+		},
+		{
+			"url": "assets/attributeDetail/detail_border_down.png",
+			"type": "image",
+			"name": "detail_border_down_png"
+		},
+		{
+			"url": "assets/attributeDetail/detail_border_mid.png",
+			"type": "image",
+			"name": "detail_border_mid_png"
+		},
+		{
+			"url": "assets/attributeDetail/detail_border_up.png",
+			"type": "image",
+			"name": "detail_border_up_png"
+		},
+		{
+			"url": "assets/attributeDetail/detail_theme.png",
+			"type": "image",
+			"name": "detail_theme_png"
+		},
+		{
+			"url": "assets/attributeDetail/lv_attribute_theme.png",
+			"type": "image",
+			"name": "lv_attribute_theme_png"
+		},
+		{
+			"url": "assets/charge/chargeBg.jpg",
+			"type": "image",
+			"name": "chargeBg_jpg"
+		},
+		{
+			"url": "assets/charge/chargeBoard.png",
+			"type": "image",
+			"name": "chargeBoard_png"
+		},
+		{
+			"url": "assets/charge/chargeTheme.png",
+			"type": "image",
+			"name": "chargeTheme_png"
+		},
+		{
+			"url": "assets/friendFarm/FriendBg.jpg",
+			"type": "image",
+			"name": "FriendBg_jpg"
+		},
+		{
+			"url": "assets/friendFarm/HisDetailTxt.png",
+			"type": "image",
+			"name": "HisDetailTxt_png"
+		},
+		{
+			"url": "assets/friendFarm/HisHonorTxt.png",
+			"type": "image",
+			"name": "HisHonorTxt_png"
+		},
+		{
+			"url": "assets/friendFarm/addFriend.png",
+			"type": "image",
+			"name": "addFriend_png"
+		},
+		{
+			"url": "assets/friendFarm/commit.png",
+			"type": "image",
+			"name": "commit_png"
+		},
+		{
+			"url": "assets/friendFarm/friendBoard.png",
+			"type": "image",
+			"name": "friendBoard_png"
+		},
+		{
+			"url": "assets/friendFarm/friendDetailBoard.png",
+			"type": "image",
+			"name": "friendDetailBoard_png"
+		},
+		{
+			"url": "assets/friendFarm/friendHonorBoard.png",
+			"type": "image",
+			"name": "friendHonorBoard_png"
+		},
+		{
+			"url": "assets/friendFarm/icon_friendCount.png",
+			"type": "image",
+			"name": "icon_friendCount_png"
+		},
+		{
+			"url": "assets/friendFarm/icon_joinActivityCount.png",
+			"type": "image",
+			"name": "icon_joinActivityCount_png"
+		},
+		{
+			"url": "assets/friendFarm/icon_rankCount.png",
+			"type": "image",
+			"name": "icon_rankCount_png"
+		},
+		{
+			"url": "assets/friendFarm/icon_supportCount.png",
+			"type": "image",
+			"name": "icon_supportCount_png"
+		},
+		{
+			"url": "assets/friendFarm/leaveMsg.png",
+			"type": "image",
+			"name": "leaveMsg_png"
+		},
+		{
+			"url": "assets/friendFarm/leaveMsgTheme.png",
+			"type": "image",
+			"name": "leaveMsgTheme_png"
+		},
+		{
+			"url": "assets/friendFarm/msgBoard.png",
+			"type": "image",
+			"name": "msgBoard_png"
+		},
+		{
+			"url": "assets/gift/biftBoard.png",
+			"type": "image",
+			"name": "biftBoard_png"
+		},
+		{
+			"url": "assets/gift/gift1.png",
+			"type": "image",
+			"name": "gift1_png"
+		},
+		{
+			"url": "assets/gift/gift2.png",
+			"type": "image",
+			"name": "gift2_png"
+		},
+		{
+			"url": "assets/gift/giftBg.png",
+			"type": "image",
+			"name": "giftBg_png"
+		},
+		{
+			"url": "assets/gift/giftGetAble.png",
+			"type": "image",
+			"name": "giftGetAble_png"
+		},
+		{
+			"url": "assets/gift/giftTheme.png",
+			"type": "image",
+			"name": "giftTheme_png"
+		},
+		{
+			"url": "assets/gift/gift_inviteFriend.png",
+			"type": "image",
+			"name": "gift_inviteFriend_png"
+		},
+		{
+			"url": "assets/gift/gitTipBg.png",
+			"type": "image",
+			"name": "gitTipBg_png"
+		},
+		{
+			"url": "assets/honor/honor1.png",
+			"type": "image",
+			"name": "honor1_png"
+		},
+		{
+			"url": "assets/honor/honor2.png",
+			"type": "image",
+			"name": "honor2_png"
+		},
+		{
+			"url": "assets/honor/honor3.png",
+			"type": "image",
+			"name": "honor3_png"
+		},
+		{
+			"url": "assets/honor/honor4_cannotGet.png",
+			"type": "image",
+			"name": "honor4_cannotGet_png"
+		},
+		{
+			"url": "assets/honor/honorBg.jpg",
+			"type": "image",
+			"name": "honorBg_jpg"
+		},
+		{
+			"url": "assets/honor/honorCount.png",
+			"type": "image",
+			"name": "honorCount_png"
+		},
+		{
+			"url": "assets/honor/honorDetailBg.jpg",
+			"type": "image",
+			"name": "honorDetailBg_jpg"
+		},
+		{
+			"url": "assets/honor/honorLight.png",
+			"type": "image",
+			"name": "honorLight_png"
+		},
+		{
+			"url": "assets/honor/honorTheme.png",
+			"type": "image",
+			"name": "honorTheme_png"
+		},
+		{
+			"url": "assets/honor/honor_big.png",
+			"type": "image",
+			"name": "honor_big_png"
+		},
+		{
+			"url": "assets/honor/honor_board.png",
+			"type": "image",
+			"name": "honor_board_png"
+		},
+		{
+			"url": "assets/honor/honor_roundRect.png",
+			"type": "image",
+			"name": "honor_roundRect_png"
+		},
+		{
+			"url": "assets/honor/nohor_board.png",
+			"type": "image",
+			"name": "nohor_board_png"
+		},
+		{
+			"url": "assets/honor/setDefault.png",
+			"type": "image",
+			"name": "setDefault_png"
+		},
+		{
+			"url": "assets/honor/shareFriend.png",
+			"type": "image",
+			"name": "shareFriend_png"
+		},
+		{
+			"url": "assets/rank/addBtn_able.png",
+			"type": "image",
+			"name": "addBtn_able_png"
+		},
+		{
+			"url": "assets/rank/addBtn_disable.png",
+			"type": "image",
+			"name": "addBtn_disable_png"
+		},
+		{
+			"url": "assets/rank/addFriendBtn.png",
+			"type": "image",
+			"name": "addFriendBtn_png"
+		},
+		{
+			"url": "assets/rank/addFriendTheme.png",
+			"type": "image",
+			"name": "addFriendTheme_png"
+		},
+		{
+			"url": "assets/rank/agreeBtn.png",
+			"type": "image",
+			"name": "agreeBtn_png"
+		},
+		{
+			"url": "assets/rank/allrankTheme.jpg",
+			"type": "image",
+			"name": "allrankTheme_jpg"
+		},
+		{
+			"url": "assets/rank/coinGrow.png",
+			"type": "image",
+			"name": "coinGrow_png"
+		},
+		{
+			"url": "assets/rank/coinReduce.png",
+			"type": "image",
+			"name": "coinReduce_png"
+		},
+		{
+			"url": "assets/rank/coinSignRank.png",
+			"type": "image",
+			"name": "coinSignRank_png"
+		},
+		{
+			"url": "assets/rank/friendRankTheme.jpg",
+			"type": "image",
+			"name": "friendRankTheme_jpg"
+		},
+		{
+			"url": "assets/rank/horBar.png",
+			"type": "image",
+			"name": "horBar_png"
+		},
+		{
+			"url": "assets/rank/lastStolerHat.png",
+			"type": "image",
+			"name": "lastStolerHat_png"
+		},
+		{
+			"url": "assets/rank/leftPage.png",
+			"type": "image",
+			"name": "leftPage_png"
+		},
+		{
+			"url": "assets/rank/noticeIcon.png",
+			"type": "image",
+			"name": "noticeIcon_png"
+		},
+		{
+			"url": "assets/rank/onekeyAgree.png",
+			"type": "image",
+			"name": "onekeyAgree_png"
+		},
+		{
+			"url": "assets/rank/onekeyRefuse.png",
+			"type": "image",
+			"name": "onekeyRefuse_png"
+		},
+		{
+			"url": "assets/rank/rank1.png",
+			"type": "image",
+			"name": "rank1_png"
+		},
+		{
+			"url": "assets/rank/rank2.png",
+			"type": "image",
+			"name": "rank2_png"
+		},
+		{
+			"url": "assets/rank/rank3.png",
+			"type": "image",
+			"name": "rank3_png"
+		},
+		{
+			"url": "assets/rank/rankByAttribute.png",
+			"type": "image",
+			"name": "rankByAttribute_png"
+		},
+		{
+			"url": "assets/rank/rankByCoin.png",
+			"type": "image",
+			"name": "rankByCoin_png"
+		},
+		{
+			"url": "assets/rank/rankHeadBorder.png",
+			"type": "image",
+			"name": "rankHeadBorder_png"
+		},
+		{
+			"url": "assets/rank/rank_tab_noselect.png",
+			"type": "image",
+			"name": "rank_tab_noselect_png"
+		},
+		{
+			"url": "assets/rank/rank_tab_select.png",
+			"type": "image",
+			"name": "rank_tab_select_png"
+		},
+		{
+			"url": "assets/rank/rankbg.png",
+			"type": "image",
+			"name": "rankbg_png"
+		},
+		{
+			"url": "assets/rank/refuseBtn.png",
+			"type": "image",
+			"name": "refuseBtn_png"
+		},
+		{
+			"url": "assets/rank/requestFriend.png",
+			"type": "image",
+			"name": "requestFriend_png"
+		},
+		{
+			"url": "assets/rank/requestFriendTheme.png",
+			"type": "image",
+			"name": "requestFriendTheme_png"
+		},
+		{
+			"url": "assets/rank/rightPage.png",
+			"type": "image",
+			"name": "rightPage_png"
+		},
+		{
+			"url": "assets/rank/searchBtn.png",
+			"type": "image",
+			"name": "searchBtn_png"
+		},
+		{
+			"url": "assets/rank/splitBar.gif",
+			"type": "image",
+			"name": "splitBar_gif"
+		},
+		{
+			"url": "assets/rank/supportAfter.png",
+			"type": "image",
+			"name": "supportAfter_png"
+		},
+		{
+			"url": "assets/rank/supportBegin.png",
+			"type": "image",
+			"name": "supportBegin_png"
+		},
+		{
+			"url": "assets/rule/clock.png",
+			"type": "image",
+			"name": "clock_png"
+		},
+		{
+			"url": "assets/rule/rule1.png",
+			"type": "image",
+			"name": "rule1_png"
+		},
+		{
+			"url": "assets/rule/rule2.png",
+			"type": "image",
+			"name": "rule2_png"
+		},
+		{
+			"url": "assets/rule/rule3.png",
+			"type": "image",
+			"name": "rule3_png"
+		},
+		{
+			"url": "assets/rule/rule4.png",
+			"type": "image",
+			"name": "rule4_png"
+		},
+		{
+			"url": "assets/rule/rule5.png",
+			"type": "image",
+			"name": "rule5_png"
+		},
+		{
+			"url": "assets/rule/rule6.png",
+			"type": "image",
+			"name": "rule6_png"
+		},
+		{
+			"url": "assets/rule/rule7.png",
+			"type": "image",
+			"name": "rule7_png"
+		},
+		{
+			"url": "assets/rule/ruleContentBg.png",
+			"type": "image",
+			"name": "ruleContentBg_png"
+		},
+		{
+			"url": "assets/rule/ruleDesc.png",
+			"type": "image",
+			"name": "ruleDesc_png"
+		},
+		{
+			"url": "assets/rule/ruleTitleBg.png",
+			"type": "image",
+			"name": "ruleTitleBg_png"
+		},
+		{
+			"url": "assets/rule/ruleTxt.png",
+			"type": "image",
+			"name": "ruleTxt_png"
+		},
+		{
+			"url": "assets/rule/rule_bg.jpg",
+			"type": "image",
+			"name": "rule_bg_jpg"
+		},
+		{
+			"url": "assets/rule/rule_planent.png",
+			"type": "image",
+			"name": "rule_planent_png"
+		},
+		{
+			"url": "assets/rule/time1.png",
+			"type": "image",
+			"name": "time1_png"
+		},
+		{
+			"url": "assets/rule/time2.png",
+			"type": "image",
+			"name": "time2_png"
+		},
+		{
+			"url": "assets/rule/time3.png",
+			"type": "image",
+			"name": "time3_png"
+		},
+		{
+			"url": "assets/rule/time4.png",
+			"type": "image",
+			"name": "time4_png"
+		},
+		{
+			"url": "assets/rule/timeWhite.gif",
+			"type": "image",
+			"name": "timeWhite_gif"
+		},
+		{
+			"url": "assets/addGameFriend.png",
+			"type": "image",
+			"name": "addGameFriend_png"
+		},
+		{
+			"url": "assets/bg_black.png",
+			"type": "image",
+			"name": "bg_black_png"
+		},
+		{
+			"url": "assets/bg_farm.jpg",
+			"type": "image",
+			"name": "bg_farm_jpg"
+		},
+		{
+			"url": "assets/bg_main.png",
+			"type": "image",
+			"name": "bg_main_png"
+		},
+		{
+			"url": "assets/bg_start.jpg",
+			"type": "image",
+			"name": "bg_start_jpg"
+		},
+		{
+			"url": "assets/charge.png",
+			"type": "image",
+			"name": "charge_png"
+		},
+		{
+			"url": "assets/close.png",
+			"type": "image",
+			"name": "close_png"
+		},
+		{
+			"url": "assets/cloud1.png",
+			"type": "image",
+			"name": "cloud1_png"
+		},
+		{
+			"url": "assets/cloud2.png",
+			"type": "image",
+			"name": "cloud2_png"
+		},
+		{
+			"url": "assets/cloud3.png",
+			"type": "image",
+			"name": "cloud3_png"
+		},
+		{
+			"url": "assets/contribution .png",
+			"type": "image",
+			"name": "contribution _png"
+		},
+		{
+			"url": "assets/fertilizer_have.png",
+			"type": "image",
+			"name": "fertilizer_have_png"
+		},
+		{
+			"url": "assets/fertilizer_not_have.png",
+			"type": "image",
+			"name": "fertilizer_not_have_png"
+		},
+		{
+			"url": "assets/gift.png",
+			"type": "image",
+			"name": "gift_png"
+		},
+		{
+			"url": "assets/headbg.png",
+			"type": "image",
+			"name": "headbg_png"
+		},
+		{
+			"url": "assets/home.png",
+			"type": "image",
+			"name": "home_png"
+		},
+		{
+			"url": "assets/inviteWx.png",
+			"type": "image",
+			"name": "inviteWx_png"
+		},
+		{
+			"url": "assets/invite_able.png",
+			"type": "image",
+			"name": "invite_able_png"
+		},
+		{
+			"url": "assets/invite_disable.png",
+			"type": "image",
+			"name": "invite_disable_png"
+		},
+		{
+			"url": "assets/land.png",
+			"type": "image",
+			"name": "land_png"
+		},
+		{
+			"url": "assets/lastActivity.png",
+			"type": "image",
+			"name": "lastActivity_png"
+		},
+		{
+			"url": "assets/leaf.png",
+			"type": "image",
+			"name": "leaf_png"
+		},
+		{
+			"url": "assets/left.png",
+			"type": "image",
+			"name": "left_png"
+		},
+		{
+			"url": "assets/logo.png",
+			"type": "image",
+			"name": "logo_png"
+		},
+		{
+			"url": "assets/miao.png",
+			"type": "image",
+			"name": "miao_png"
+		},
+		{
+			"url": "assets/myFarm.png",
+			"type": "image",
+			"name": "myFarm_png"
+		},
+		{
+			"url": "assets/new_msg_circle.png",
+			"type": "image",
+			"name": "new_msg_circle_png"
+		},
+		{
+			"url": "assets/notice_bg.png",
+			"type": "image",
+			"name": "notice_bg_png"
+		},
+		{
+			"url": "assets/radio.png",
+			"type": "image",
+			"name": "radio_png"
+		},
+		{
+			"url": "assets/rank.png",
+			"type": "image",
+			"name": "rank_png"
+		},
+		{
+			"url": "assets/rule.png",
+			"type": "image",
+			"name": "rule_png"
+		},
+		{
+			"url": "assets/seedBg.png",
+			"type": "image",
+			"name": "seedBg_png"
+		},
+		{
+			"url": "assets/seed_able.png",
+			"type": "image",
+			"name": "seed_able_png"
+		},
+		{
+			"url": "assets/seed_disable.png",
+			"type": "image",
+			"name": "seed_disable_png"
+		},
+		{
+			"url": "assets/shop.png",
+			"type": "image",
+			"name": "shop_png"
+		},
+		{
+			"url": "assets/sign.png",
+			"type": "image",
+			"name": "sign_png"
+		},
+		{
+			"url": "assets/smallGame.png",
+			"type": "image",
+			"name": "smallGame_png"
+		},
+		{
+			"url": "assets/stole.png",
+			"type": "image",
+			"name": "stole_png"
+		},
+		{
+			"url": "assets/store.png",
+			"type": "image",
+			"name": "store_png"
+		},
+		{
+			"url": "assets/tool_bg.png",
+			"type": "image",
+			"name": "tool_bg_png"
+		},
+		{
+			"url": "assets/tree_grow.png",
+			"type": "image",
+			"name": "tree_grow_png"
+		},
+		{
+			"url": "assets/tree_ripe.png",
+			"type": "image",
+			"name": "tree_ripe_png"
+		},
+		{
+			"url": "assets/tree_young.png",
+			"type": "image",
+			"name": "tree_young_png"
+		},
+		{
+			"url": "assets/water.png",
+			"type": "image",
+			"name": "water_png"
+		},
+		{
+			"url": "assets/water0.png",
+			"type": "image",
+			"name": "water0_png"
+		},
+		{
+			"url": "assets/water1.png",
+			"type": "image",
+			"name": "water1_png"
+		},
+		{
+			"url": "assets/water2.png",
+			"type": "image",
+			"name": "water2_png"
+		},
+		{
+			"url": "assets/water3.png",
+			"type": "image",
+			"name": "water3_png"
+		},
+		{
+			"url": "assets/water4.png",
+			"type": "image",
+			"name": "water4_png"
+		},
+		{
+			"url": "assets/water5.png",
+			"type": "image",
+			"name": "water5_png"
+		},
+		{
+			"url": "assets/weed.png",
+			"type": "image",
+			"name": "weed_png"
+		},
+		{
+			"url": "assets/shop/add_to_shopcar.png",
+			"type": "image",
+			"name": "add_to_shopcar_png"
+		},
+		{
+			"url": "assets/shop/bg_seed.png",
+			"type": "image",
+			"name": "bg_seed_png"
+		},
+		{
+			"url": "assets/shop/bg_seedDetail.png",
+			"type": "image",
+			"name": "bg_seedDetail_png"
+		},
+		{
+			"url": "assets/shop/bg_shop.jpg",
+			"type": "image",
+			"name": "bg_shop_jpg"
+		},
+		{
+			"url": "assets/shop/btn_add.png",
+			"type": "image",
+			"name": "btn_add_png"
+		},
+		{
+			"url": "assets/shop/btn_add_dis.png",
+			"type": "image",
+			"name": "btn_add_dis_png"
+		},
+		{
+			"url": "assets/shop/btn_buyFruit.png",
+			"type": "image",
+			"name": "btn_buyFruit_png"
+		},
+		{
+			"url": "assets/shop/btn_clearShopcar_cancel.png",
+			"type": "image",
+			"name": "btn_clearShopcar_cancel_png"
+		},
+		{
+			"url": "assets/shop/btn_clearShopcar_sure.png",
+			"type": "image",
+			"name": "btn_clearShopcar_sure_png"
+		},
+		{
+			"url": "assets/shop/btn_shopcar_add.png",
+			"type": "image",
+			"name": "btn_shopcar_add_png"
+		},
+		{
+			"url": "assets/shop/btn_shopcar_add_dis.png",
+			"type": "image",
+			"name": "btn_shopcar_add_dis_png"
+		},
+		{
+			"url": "assets/shop/btn_shopcar_reduce.png",
+			"type": "image",
+			"name": "btn_shopcar_reduce_png"
+		},
+		{
+			"url": "assets/shop/choice.png",
+			"type": "image",
+			"name": "choice_png"
+		},
+		{
+			"url": "assets/shop/choice_not.png",
+			"type": "image",
+			"name": "choice_not_png"
+		},
+		{
+			"url": "assets/shop/choiced_goods_bg.png",
+			"type": "image",
+			"name": "choiced_goods_bg_png"
+		},
+		{
+			"url": "assets/shop/clearShopcar.png",
+			"type": "image",
+			"name": "clearShopcar_png"
+		},
+		{
+			"url": "assets/shop/clear_shopcar_msg_bg.png",
+			"type": "image",
+			"name": "clear_shopcar_msg_bg_png"
+		},
+		{
+			"url": "assets/shop/fruit1.jpg",
+			"type": "image",
+			"name": "fruit1_jpg"
+		},
+		{
+			"url": "assets/shop/fruit2.jpg",
+			"type": "image",
+			"name": "fruit2_jpg"
+		},
+		{
+			"url": "assets/shop/fruitDetailboard.png",
+			"type": "image",
+			"name": "fruitDetailboard_png"
+		},
+		{
+			"url": "assets/shop/insurance.png",
+			"type": "image",
+			"name": "insurance_png"
+		},
+		{
+			"url": "assets/shop/more_tool.png",
+			"type": "image",
+			"name": "more_tool_png"
+		},
+		{
+			"url": "assets/shop/reduce.png",
+			"type": "image",
+			"name": "reduce_png"
+		},
+		{
+			"url": "assets/shop/seed1.png",
+			"type": "image",
+			"name": "seed1_png"
+		},
+		{
+			"url": "assets/shop/seed2.png",
+			"type": "image",
+			"name": "seed2_png"
+		},
+		{
+			"url": "assets/shop/seed3.png",
+			"type": "image",
+			"name": "seed3_png"
+		},
+		{
+			"url": "assets/shop/shop_board.jpg",
+			"type": "image",
+			"name": "shop_board_jpg"
+		},
+		{
+			"url": "assets/shop/shopcar_have.png",
+			"type": "image",
+			"name": "shopcar_have_png"
+		},
+		{
+			"url": "assets/shop/shopcar_null.png",
+			"type": "image",
+			"name": "shopcar_null_png"
+		},
+		{
+			"url": "assets/sign/nosign1.png",
+			"type": "image",
+			"name": "nosign1_png"
+		},
+		{
+			"url": "assets/sign/nosign2.png",
+			"type": "image",
+			"name": "nosign2_png"
+		},
+		{
+			"url": "assets/sign/nosign3.png",
+			"type": "image",
+			"name": "nosign3_png"
+		},
+		{
+			"url": "assets/sign/nosign4.png",
+			"type": "image",
+			"name": "nosign4_png"
+		},
+		{
+			"url": "assets/sign/nosign5.png",
+			"type": "image",
+			"name": "nosign5_png"
+		},
+		{
+			"url": "assets/sign/nosign6.png",
+			"type": "image",
+			"name": "nosign6_png"
+		},
+		{
+			"url": "assets/sign/nosign7.png",
+			"type": "image",
+			"name": "nosign7_png"
+		},
+		{
+			"url": "assets/sign/signBg.png",
+			"type": "image",
+			"name": "signBg_png"
+		},
+		{
+			"url": "assets/sign/signBtn.png",
+			"type": "image",
+			"name": "signBtn_png"
+		},
+		{
+			"url": "assets/sign/signLogo.png",
+			"type": "image",
+			"name": "signLogo_png"
+		},
+		{
+			"url": "assets/sign/sign_grid.png",
+			"type": "image",
+			"name": "sign_grid_png"
+		},
+		{
+			"url": "assets/sign/signed.png",
+			"type": "image",
+			"name": "signed_png"
+		},
+		{
+			"url": "assets/sign/signed1.png",
+			"type": "image",
+			"name": "signed1_png"
+		},
+		{
+			"url": "assets/sign/signed2.png",
+			"type": "image",
+			"name": "signed2_png"
+		},
+		{
+			"url": "assets/sign/signed3.png",
+			"type": "image",
+			"name": "signed3_png"
+		},
+		{
+			"url": "assets/sign/signed4.png",
+			"type": "image",
+			"name": "signed4_png"
+		},
+		{
+			"url": "assets/sign/signed5.png",
+			"type": "image",
+			"name": "signed5_png"
+		},
+		{
+			"url": "assets/sign/signed6.png",
+			"type": "image",
+			"name": "signed6_png"
+		},
+		{
+			"url": "assets/sign/signed7.png",
+			"type": "image",
+			"name": "signed7_png"
+		},
+		{
+			"url": "assets/store/downtime_bg.png",
+			"type": "image",
+			"name": "downtime_bg_png"
+		},
+		{
+			"url": "assets/store/store_bg.png",
+			"type": "image",
+			"name": "store_bg_png"
+		},
+		{
+			"url": "assets/store/store_board.png",
+			"type": "image",
+			"name": "store_board_png"
+		},
+		{
+			"url": "assets/store/store_insurance.png",
+			"type": "image",
+			"name": "store_insurance_png"
+		},
+		{
+			"url": "assets/store/store_kettle.png",
+			"type": "image",
+			"name": "store_kettle_png"
+		},
+		{
+			"url": "assets/store/store_receiveGoolds.png",
+			"type": "image",
+			"name": "store_receiveGoolds_png"
+		},
+		{
+			"url": "assets/userInfo/buyCoin.png",
+			"type": "image",
+			"name": "buyCoin_png"
+		},
+		{
+			"url": "assets/userInfo/coinImg.png",
+			"type": "image",
+			"name": "coinImg_png"
+		},
+		{
+			"url": "assets/userInfo/dark_green.png",
+			"type": "image",
+			"name": "dark_green_png"
+		},
+		{
+			"url": "assets/userInfo/light_green.png",
+			"type": "image",
+			"name": "light_green_png"
+		},
+		{
+			"url": "assets/userInfo/lv.png",
+			"type": "image",
+			"name": "lv_png"
+		},
+		{
+			"url": "assets/userInfo/num0.png",
+			"type": "image",
+			"name": "num0_png"
+		},
+		{
+			"url": "assets/userInfo/num1.png",
+			"type": "image",
+			"name": "num1_png"
+		},
+		{
+			"url": "assets/userInfo/num2.png",
+			"type": "image",
+			"name": "num2_png"
+		},
+		{
+			"url": "assets/userInfo/num3.png",
+			"type": "image",
+			"name": "num3_png"
+		},
+		{
+			"url": "assets/userInfo/num4.png",
+			"type": "image",
+			"name": "num4_png"
+		},
+		{
+			"url": "assets/userInfo/num5.png",
+			"type": "image",
+			"name": "num5_png"
+		},
+		{
+			"url": "assets/userInfo/num6.png",
+			"type": "image",
+			"name": "num6_png"
+		},
+		{
+			"url": "assets/userInfo/num7.png",
+			"type": "image",
+			"name": "num7_png"
+		},
+		{
+			"url": "assets/userInfo/num8.png",
+			"type": "image",
+			"name": "num8_png"
+		},
+		{
+			"url": "assets/userInfo/num9.png",
+			"type": "image",
+			"name": "num9_png"
+		},
+		{
+			"url": "assets/userInfo/progressBg.png",
+			"type": "image",
+			"name": "progressBg_png"
+		},
+		{
+			"url": "assets/userInfo/progressLeft.png",
+			"type": "image",
+			"name": "progressLeft_png"
+		},
+		{
+			"url": "assets/userInfo/progressMid.png",
+			"type": "image",
+			"name": "progressMid_png"
+		},
+		{
+			"url": "assets/userInfo/question.png",
+			"type": "image",
+			"name": "question_png"
+		},
+		{
+			"url": "assets/userInfo/userBg.jpg",
+			"type": "image",
+			"name": "userBg_jpg"
+		},
+		{
+			"url": "assets/userInfo/user_adress.png",
+			"type": "image",
+			"name": "user_adress_png"
+		},
+		{
+			"url": "assets/userInfo/user_charge.png",
+			"type": "image",
+			"name": "user_charge_png"
+		},
+		{
+			"url": "assets/userInfo/user_honer.png",
+			"type": "image",
+			"name": "user_honer_png"
+		},
+		{
+			"url": "assets/userInfo/user_order.png",
+			"type": "image",
+			"name": "user_order_png"
+		},
+		{
+			"url": "assets/userInfo/user_radio.png",
+			"type": "image",
+			"name": "user_radio_png"
+		},
+		{
+			"url": "assets/userInfo/user_rank.png",
+			"type": "image",
+			"name": "user_rank_png"
+		},
+		{
+			"url": "assets/userInfo/user_set.png",
+			"type": "image",
+			"name": "user_set_png"
+		},
+		{
+			"url": "assets/userInfo/user_shop.png",
+			"type": "image",
+			"name": "user_shop_png"
+		},
+		{
+			"url": "assets/userInfo/user_store.png",
+			"type": "image",
+			"name": "user_store_png"
+		},
+		{
+			"url": "assets/attributeDetail/attriDetailBoard.png",
+			"type": "image",
+			"name": "attriDetailBoard_png"
+		},
+		{
+			"url": "assets/attributeDetail/detailItemBg.png",
+			"type": "image",
+			"name": "detailItemBg_png"
+		},
+		{
+			"url": "assets/attributeDetail/coinSignInAttribute.png",
+			"type": "image",
+			"name": "coinSignInAttribute_png"
+		},
+		{
+			"url": "assets/userInfo/progress.png",
+			"type": "image",
+			"name": "progress_png"
+		},
+		{
+			"url": "assets/line.png",
+			"type": "image",
+			"name": "line_png"
+		},
+		{
+			"url": "assets/charge/chargeChoiceBg.png",
+			"type": "image",
+			"name": "chargeChoiceBg_png"
+		},
+		{
+			"url": "assets/charge/chargeChoiceBg_s.png",
+			"type": "image",
+			"name": "chargeChoiceBg_s_png"
+		},
+		{
+			"url": "assets/btnbg.png",
+			"type": "image",
+			"name": "btnbg_png"
+		},
+		{
+			"url": "assets/lastHarvestRank/arrowDown.png",
+			"type": "image",
+			"name": "arrowDown_png"
+		},
+		{
+			"url": "assets/lastHarvestRank/arrowUp.png",
+			"type": "image",
+			"name": "arrowUp_png"
+		},
+		{
+			"url": "assets/lastHarvestRank/coinBoard.png",
+			"type": "image",
+			"name": "coinBoard_png"
+		},
+		{
+			"url": "assets/lastHarvestRank/coinDetailBg.png",
+			"type": "image",
+			"name": "coinDetailBg_png"
+		},
+		{
+			"url": "assets/lastHarvestRank/coinRankBg.png",
+			"type": "image",
+			"name": "coinRankBg_png"
+		},
+		{
+			"url": "assets/lastHarvestRank/coinRankTheme.png",
+			"type": "image",
+			"name": "coinRankTheme_png"
+		},
+		{
+			"url": "assets/lastHarvestRank/coinSign.png",
+			"type": "image",
+			"name": "coinSign_png"
+		},
+		{
+			"url": "assets/lastHarvestRank/myCoinRankBg.png",
+			"type": "image",
+			"name": "myCoinRankBg_png"
+		},
+		{
+			"url": "assets/shop/shop_fertilizer.png",
+			"type": "image",
+			"name": "shop_fertilizer_png"
+		},
+		{
+			"url": "assets/myOrder.png",
+			"type": "image",
+			"name": "myOrder2_png"
+		},
+		{
+			"url": "assets/ScrollBar/roundthumb.png",
+			"type": "image",
+			"name": "roundthumb_png"
+		},
+		{
+			"url": "assets/ScrollBar/track_sb.png",
+			"type": "image",
+			"name": "track_sb_png"
+		},
+		{
+			"url": "assets/Button/button_down.png",
+			"type": "image",
+			"name": "button_down_png"
+		},
+		{
+			"url": "assets/Button/button_up.png",
+			"type": "image",
+			"name": "button_up_png"
+		},
+		{
+			"url": "assets/shop/selectCircleNo.png",
+			"type": "image",
+			"name": "selectCircleNo_png"
+		},
+		{
+			"url": "assets/shop/selectCircle.png",
+			"type": "image",
+			"name": "selectCircle_png"
+		},
+		{
+			"url": "assets/rule/ruleImg.png",
+			"type": "image",
+			"name": "ruleImg_png"
+		},
+		{
+			"url": "assets/lastActivityTitle.png",
+			"type": "image",
+			"name": "lastActivityTitle_png"
+		},
+		{
+			"url": "assets/rank/rankLvBg.png",
+			"type": "image",
+			"name": "rankLvBg_png"
+		},
+		{
+			"url": "assets/rank/hand.png",
+			"type": "image",
+			"name": "hand_png"
+		},
+		{
+			"url": "assets/orderItemImg.png",
+			"type": "image",
+			"name": "orderItemImg_png"
+		},
+		{
+			"url": "assets/rank/searchBg.png",
+			"type": "image",
+			"name": "searchBg_png"
+		},
+		{
+			"url": "assets/setting/closed.png",
+			"type": "image",
+			"name": "closed_png"
+		},
+		{
+			"url": "assets/setting/opend.png",
+			"type": "image",
+			"name": "opend_png"
+		},
+		{
+			"url": "assets/setting/setBg.jpg",
+			"type": "image",
+			"name": "setBg_jpg"
+		},
+		{
+			"url": "assets/setting/settingChoosed.png",
+			"type": "image",
+			"name": "settingChoosed_png"
+		},
+		{
+			"url": "assets/setting/settingThm1.png",
+			"type": "image",
+			"name": "settingThm1_png"
+		},
+		{
+			"url": "assets/setting/settingThm2.png",
+			"type": "image",
+			"name": "settingThm2_png"
+		},
+		{
+			"url": "assets/radioBg.jpg",
+			"type": "image",
+			"name": "radioBg_jpg"
+		},
+		{
+			"url": "assets/loadmiao.png",
+			"type": "image",
+			"name": "loadmiao_png"
+		},
+		{
+			"url": "assets/defaultUserHead.png",
+			"type": "image",
+			"name": "defaultUserHead_png"
+		},
+		{
+			"url": "assets/inviteWaterDetailBg.png",
+			"type": "image",
+			"name": "inviteWaterDetailBg_png"
+		},
+		{
+			"url": "assets/radio/weatherBg.png",
+			"type": "image",
+			"name": "weatherBg_png"
+		},
+		{
+			"url": "assets/radio/chatMsgBg.png",
+			"type": "image",
+			"name": "chatMsgBg_png"
+		},
+		{
+			"url": "assets/radio/reportBg.png",
+			"type": "image",
+			"name": "reportBg_png"
+		},
+		{
+			"url": "assets/radio/sysMsgBg.png",
+			"type": "image",
+			"name": "sysMsgBg_png"
+		},
+		{
+			"url": "assets/radio/greyBtn.png",
+			"type": "image",
+			"name": "greyBtn_png"
+		},
+		{
+			"url": "assets/radio/radioTimeBg.png",
+			"type": "image",
+			"name": "radioTimeBg_png"
+		},
+		{
+			"url": "assets/radio/recordBg.png",
+			"type": "image",
+			"name": "recordBg_png"
+		},
+		{
+			"url": "assets/setting/decorate.png",
+			"type": "image",
+			"name": "decorate_png"
+		},
+		{
+			"url": "assets/chooseSeed1.png",
+			"type": "image",
+			"name": "chooseSeed1_png"
+		},
+		{
+			"url": "assets/chooseSeed2.png",
+			"type": "image",
+			"name": "chooseSeed2_png"
+		},
+		{
+			"url": "assets/chooseSeed3.png",
+			"type": "image",
+			"name": "chooseSeed3_png"
+		},
+		{
+			"url": "assets/rank/radioItem.png",
+			"type": "image",
+			"name": "radioItem_png"
+		},
+		{
+			"url": "assets/radio/leaveMsgThm.png",
+			"type": "image",
+			"name": "leaveMsgThm_png"
+		},
+		{
+			"url": "assets/radio/leaveMsgBg.png",
+			"type": "image",
+			"name": "leaveMsgBg_png"
+		},
+		{
+			"url": "assets/loading/loadingBottom.png",
+			"type": "image",
+			"name": "loadingBottom_png"
+		},
+		{
+			"url": "assets/loading/loadingBar.png",
+			"type": "image",
+			"name": "loadingBar_png"
+		},
+		{
+			"url": "assets/loading/loadingMovie.json",
+			"type": "json",
+			"name": "loadingMovie_json"
+		},
+		{
+			"url": "assets/loading/loadingMovie.png",
+			"type": "image",
+			"name": "loadingMovie_png"
+		},
+		{
+			"url": "assets/loading/loading1.png",
+			"type": "image",
+			"name": "loading1_png"
+		},
+		{
+			"url": "assets/loading/loading2.png",
+			"type": "image",
+			"name": "loading2_png"
+		},
+		{
+			"url": "assets/loading/loading3.png",
+			"type": "image",
+			"name": "loading3_png"
+		},
+		{
+			"url": "assets/loading/loading4.png",
+			"type": "image",
+			"name": "loading4_png"
+		},
+		{
+			"url": "assets/loading/loading5.png",
+			"type": "image",
+			"name": "loading5_png"
+		},
+		{
+			"url": "assets/bg_farm2.png",
+			"type": "image",
+			"name": "bg_farm2_png"
+		},
+		{
+			"url": "assets/defaultHead.png",
+			"type": "image",
+			"name": "defaultHead_png"
+		},
+		{
+			"url": "assets/chooseSeed4.png",
+			"type": "image",
+			"name": "chooseSeed4_png"
+		},
+		{
+			"url": "assets/store/store_close.png",
+			"type": "image",
+			"name": "store_close_png"
+		},
+		{
+			"url": "assets/tree_seed.png",
+			"type": "image",
+			"name": "tree_seed_png"
+		},
+		{
+			"url": "assets/store/seedEmpty.png",
+			"type": "image",
+			"name": "seedEmpty_png"
+		},
+		{
+			"url": "assets/radio/radioBg.png",
+			"type": "image",
+			"name": "radioBg_png"
+		},
+		{
+			"url": "assets/radio/radioBottom.png",
+			"type": "image",
+			"name": "radioBottom_png"
+		},
+		{
+			"url": "assets/radio/clearRadio.png",
+			"type": "image",
+			"name": "clearRadio_png"
+		},
+		{
+			"url": "assets/radio/noMsg.png",
+			"type": "image",
+			"name": "noMsg_png"
+		},
+		{
+			"url": "sound/bgm.mp3",
+			"type": "sound",
+			"name": "bgm_mp3"
+		},
+		{
+			"name": "bg_shopH ead_png",
+			"type": "image",
+			"url": "assets/shop/bg_shopH ead.png"
+		},
+		{
+			"name": "seedItemBg_png",
+			"type": "image",
+			"url": "assets/shop/seedItemBg.png"
+		},
+		{
+			"name": "toolItemBg_png",
+			"type": "image",
+			"url": "assets/shop/toolItemBg.png"
+		},
+		{
+			"name": "radioRed_png",
+			"type": "image",
+			"url": "assets/radio/radioRed.png"
+		},
+		{
+			"name": "chargeBtn_png",
+			"type": "image",
+			"url": "assets/charge/chargeBtn.png"
+		},
+		{
+			"name": "chargeChoiceBg2_png",
+			"type": "image",
+			"url": "assets/charge/chargeChoiceBg2.png"
+		},
+		{
+			"name": "userinfo_tree_png",
+			"type": "image",
+			"url": "assets/userInfo/userinfo_tree.png"
+		},
+		{
+			"name": "honorProgress_png",
+			"type": "image",
+			"url": "assets/honor/honorProgress.png"
+		},
+		{
+			"name": "weekFruitRankBg_png",
+			"type": "image",
+			"url": "assets/lastActivity/weekFruitRankBg.png"
+		},
+		{
+			"name": "paopao1_png",
+			"type": "image",
+			"url": "assets/lastActivity/paopao1.png"
+		},
+		{
+			"name": "paopao2_png",
+			"type": "image",
+			"url": "assets/lastActivity/paopao2.png"
+		},
+		{
+			"name": "weekFruitKingBg2_png",
+			"type": "image",
+			"url": "assets/lastActivity/weekFruitKingBg2.png"
+		},
+		{
+			"name": "weekFruitKingBg_jpg",
+			"type": "image",
+			"url": "assets/lastActivity/weekFruitKingBg.jpg"
+		},
+		{
+			"name": "fruitKingTxt_png",
+			"type": "image",
+			"url": "assets/lastActivity/fruitKingTxt.png"
+		},
+		{
+			"name": "weekkingNameBg_png",
+			"type": "image",
+			"url": "assets/lastActivity/weekkingNameBg.png"
+		},
+		{
+			"name": "settingThm0_png",
+			"type": "image",
+			"url": "assets/setting/settingThm0.png"
+		},
+		{
+			"name": "settingThm3_png",
+			"type": "image",
+			"url": "assets/setting/settingThm3.png"
+		},
+		{
+			"name": "addressTipBg_png",
+			"type": "image",
+			"url": "assets/address/addressTipBg.png"
+		},
+		{
+			"name": "addreddArrow_png",
+			"type": "image",
+			"url": "assets/address/addreddArrow.png"
+		}
+	]
+}
