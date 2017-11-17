@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="set" width="142" height="170" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image id="icon" source="decorate_png" y="0" width="120" height="120" horizontalCenter="0"/>
-	<e:Label id="nameTxt" text="皮肤名称" y="138" textColor="0x643a24" fontFamily="SimHei" horizontalCenter="0" size="24"/>
-	<e:Image id="selectedImg" source="settingChoosed_png" y="0" width="20" height="20" right="8"/>
-</e:Skin>

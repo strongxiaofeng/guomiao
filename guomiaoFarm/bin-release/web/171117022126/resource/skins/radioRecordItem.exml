@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="radioItem" width="490" height="60" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image source="chargeChoiceBg_png" y="0" scale9Grid="36,24,219,61" width="980" horizontalCenter="0" height="100" scaleX="0.5" scaleY="0.5"/>
-	<e:Label id="time" text="2017-09-09" x="17" textColor="0x626262" size="16" y="18"/>
-	<e:Label id="content" text="这是一条操作记录" x="115" textColor="0x613f23" size="22" y="14"/>
-</e:Skin>

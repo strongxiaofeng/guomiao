@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="tipGetCoin" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image source="bg_black_png" x="0" y="0" width="640" height="1024" alpha="0.5"/>
-	<e:Image width="500" horizontalCenter="0" height="187" verticalCenter="-50" source="friendDetailBoard_png"/>
-	<e:Label id="tipTxt" text="好友验证已发出" y="411" textColor="0x8c4211" fontFamily="SimHei" horizontalCenter="0" size="35"/>
-	<e:Label id="tipTxt2" text="请耐心等待好友同意哦" y="476" textColor="0x8C4211" fontFamily="SimHei" horizontalCenter="0" size="35"/>
-</e:Skin>
