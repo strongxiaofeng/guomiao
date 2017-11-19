@@ -53,6 +53,12 @@ var ShopCarDetailUI = (function (_super) {
         }
         this.ac.refresh();
         this.updateScroller();
+        //没有购物车内容
+        // if(this.ac.length == 0)
+        // {
+        // 	this.headGroup.visible = false;
+        // 	this.scroller.visible = false;
+        // }
         this.shopCountTxt.text = count + "";
         this.payCountTxt.text = cost + "";
         setTimeout(function () {
@@ -74,8 +80,9 @@ var ShopCarDetailUI = (function (_super) {
     };
     /**清空购物车 */
     ShopCarDetailUI.prototype.clickClearCar = function () {
-        GameModel.getInstance().clearShopCar();
-        this.clickCar();
+        UIManager.openUI(UIConst.shopCarDetailAlertUI, LayerManager.Layer_Tip);
+        // GameModel.getInstance().clearShopCar();
+        // this.clickCar();
     };
     /**去结算 */
     ShopCarDetailUI.prototype.clickPay = function () {

@@ -85,6 +85,7 @@
     "resource/skins/setSkinTypeItem.exml",
     "resource/skins/shop.exml",
     "resource/skins/shopCarDetail.exml",
+    "resource/skins/shopCarDetailAlert.exml",
     "resource/skins/shopCarDetailItem.exml",
     "resource/skins/shop_ToolAlert.exml",
     "resource/skins/shop_fruitItem.exml",

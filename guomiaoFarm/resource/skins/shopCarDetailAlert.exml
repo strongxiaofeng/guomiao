@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="shopCarDetailAlert" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="640" height="1024" x="0" y="0" alpha="0.3"/>
+	<e:Group width="640" height="1024" x="0" y="0" touchThrough="true">
+		<e:Image source="msgBoard_png" horizontalCenter="0" verticalCenter="-63" x="87" y="333" scaleX="0.5" scaleY="0.5"/>
+		<e:Label text="清空购物车？" y="390" horizontalCenter="0" x="230" scaleX="1" scaleY="1" textColor="0x8a4f00"/>
+		<e:Image id="cancelBtn" source="btn_clearShopcar_cancel_png" y="460" scaleX="0.5" scaleY="0.5" horizontalCenter="100"/>
+		<e:Image id="sureBtn" source="btn_clearShopcar_sure_png" y="460" scaleX="0.5" scaleY="0.5" horizontalCenter="-100"/>
+	</e:Group>
+	
+</e:Skin>

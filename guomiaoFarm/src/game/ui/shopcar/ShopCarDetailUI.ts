@@ -58,6 +58,13 @@ class ShopCarDetailUI extends BaseUI{
 		}
 		this.ac.refresh();
 		this.updateScroller();
+
+		//没有购物车内容
+		// if(this.ac.length == 0)
+		// {
+		// 	this.headGroup.visible = false;
+		// 	this.scroller.visible = false;
+		// }
 		this.shopCountTxt.text = count+"";
 		this.payCountTxt.text = cost+"";
 		setTimeout(()=> {
@@ -84,8 +91,9 @@ class ShopCarDetailUI extends BaseUI{
 	/**清空购物车 */
 	private clickClearCar()
 	{
-		GameModel.getInstance().clearShopCar();
-		this.clickCar();
+		UIManager.openUI(UIConst.shopCarDetailAlertUI, LayerManager.Layer_Tip);
+		// GameModel.getInstance().clearShopCar();
+		// this.clickCar();
 	}
 	/**去结算 */
 	private clickPay()

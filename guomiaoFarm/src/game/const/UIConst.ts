@@ -42,6 +42,7 @@ class UIConst {
 	public static InviteDetailUI = "InviteDetailUI";
 	public static ShopSeedAlertUI = "ShopSeedAlertUI";
 	public static ShopToolAlertUI = "ShopToolAlertUI";
+	public static shopCarDetailAlertUI = "shopCarDetailAlertUI";
 	public static LeaveMsgUI = "LeaveMsgUI";
 	
 }

@@ -89,6 +89,7 @@
 		"bin-debug/game/ui/shop/ShopToolAlertUI.js",
 		"bin-debug/game/ui/shop/ShopToolItem.js",
 		"bin-debug/game/ui/shop/ShopUI.js",
+		"bin-debug/game/ui/shopcar/shopCarDetailAlertUI.js",
 		"bin-debug/game/ui/shopcar/ShopCarDetailItem.js",
 		"bin-debug/game/ui/shopcar/ShopCarDetailUI.js",
 		"bin-debug/game/ui/sign/SignUI.js",
