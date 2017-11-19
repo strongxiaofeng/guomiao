@@ -11,7 +11,7 @@
 		<e:Group id="noRadioGroup" width="640" height="1024" x="0" y="0" touchThrough="true">
 			<e:Image source="noMsg_png" y="440" width="492" height="427" scaleX="0.5" scaleY="0.5" horizontalCenter="0"/>
 		</e:Group>
-		<e:Scroller id="radioScroller" width="640" height="682" x="0" y="244" scaleX="1" scaleY="1">
+		<e:Scroller id="radioScroller" width="640" height="700" x="0" y="244" scaleX="1" scaleY="1">
 			<e:List id="list" anchorOffsetY="0" height="685"/>
 		</e:Scroller>
 	</e:Group>

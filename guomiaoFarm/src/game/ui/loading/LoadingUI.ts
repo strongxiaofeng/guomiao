@@ -13,8 +13,8 @@ class LoadingUI extends BaseUI{
 		super.initSetting();
 		UIManager.openUI(UIConst.TipErrorUI, LayerManager.Layer_Sys);
 		UIManager.openUI(UIConst.TipGreenUI, LayerManager.Layer_Sys);
-		// GameController.getInstance().getUserInfo(window["params"]); 
-		GameController.getInstance().getUserInfo("token=26dd93fda42424624a5b2c8eab4f77ae"); 
+		GameController.getInstance().getUserInfo(window["params"]); 
+		// GameController.getInstance().getUserInfo("token=26dd93fda42424624a5b2c8eab4f77ae"); 
 		GameController.getInstance().getServerConfig();
 
 		this.load();
