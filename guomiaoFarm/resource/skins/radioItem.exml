@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="radioItem" width="640" height="300" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Group id="contentGroup" width="640" height="300" x="0" y="0">
+	<e:Group id="contentGroup" width="640" height="300" x="0" y="0" touchThrough="true">
 		<e:Image id="bg" horizontalCenter="0" y="0" source="weatherBg_png" width="551" height="291"/>
 		<e:Image source="radioTimeBg_png" x="215" y="53" scale9Grid="22,12,65,1" width="141"/>
 		<e:Label id="title" text="系统广播" y="51" textColor="0xffffff" size="30" x="83" fontFamily="SimHei"/>
@@ -24,5 +24,5 @@
 		</e:Button>
 		<e:Image id="newMsgIcon" x="352" y="233" width="10" height="10" source="radioRed_png"/>
 	</e:Group>
-	<e:Group id="emptyGroup" width="640" height="25" x="0" y="0"/>
+	<e:Group id="emptyGroup" width="640" height="25" x="0" y="0" touchThrough="true"/>
 </e:Skin>
