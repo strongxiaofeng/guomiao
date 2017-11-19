@@ -14,8 +14,8 @@
 	<e:Group id="bottomGroup" width="640" height="1024" x="0" y="0" touchEnabled="false" touchThrough="true">
 		<e:Image source="shop_board_jpg" width="640" height="95" scaleX="1" scaleY="1" bottom="0" horizontalCenter="0"/>
 		<e:Image id="shopcarImg" source="shopcar_have_png" x="12" y="939" width="80" height="80"/>
-		<e:Image id="shopCountBg" source="new_msg_circle_png" y="939" width="21" height="21" x="68"/>
-		<e:Label id="shopCountTxt" text="0" y="942" size="16" width="30" textAlign="center" x="64"/>
+		<e:Image id="shopCountBg" source="new_msg_circle_png" y="939" width="30" height="30" x="62"/>
+		<e:Label id="shopCountTxt" text="0" y="944" size="22" width="30" textAlign="center" x="62"/>
 		<e:Label id="payCountTxt" text="0" x="104" y="965" size="48"/>
 		<e:Label id="payCountTxt0" text="果喵币" x="140" y="982" size="22"/>
 		<e:Label id="payBtn" text="去结算" x="481" y="972" textColor="0xffeacf" fontFamily="SimHei" size="36"/>
