@@ -7,7 +7,7 @@
 	<e:Label id="nameTxt" text="那个啥" x="183" y="13" textColor="0x161313" size="22" fontFamily="SimHei"/>
 	<e:Image source="coinRankBg_png" x="179" y="38" width="215" height="38"/>
 	<e:Image source="coinSign_png" x="190" y="46" width="22" height="22"/>
-	<e:Label text="果喵币:" x="214" y="48" textColor="0xffa914" size="18" fontFamily="SimHei"/>
+	<e:Label text="喵币:" x="214" y="48" textColor="0xffa914" size="18" fontFamily="SimHei"/>
 	<e:Image id="upDownIcon" source="arrowUp_png" x="280" y="50" width="15" height="15"/>
 	<e:Label id="moneyTxt" text="666" x="301" y="48" size="18" fontFamily="SimHei" textColor="0x6cae10"/>
 	<e:Image id="detailBtn" source="coinDetailBg_png" x="416" y="17" width="56" height="60" visible="false"/>

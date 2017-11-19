@@ -39,6 +39,8 @@ var ShopUI = (function (_super) {
         this.ac_tool.removeAll();
         this.ac_fruit.removeAll();
         this.ac_seed.addItem(null);
+        this.ac_tool.addItem("empty");
+        this.ac_fruit.addItem(null);
         for (var i = 0; i < list.length; i++) {
             var data = GameModel.getInstance().getItemById(list[i].id);
             data.buy_gold = list[i].gold;
@@ -53,6 +55,10 @@ var ShopUI = (function (_super) {
         this.ac_seed.refresh();
         this.ac_tool.refresh();
         this.ac_fruit.refresh();
+        if (GameModel.getInstance().isShopFromStore) {
+            GameModel.getInstance().isShopFromStore = false;
+            this.clickChooseTool();
+        }
     };
     /**初始监听 */
     ShopUI.prototype.initListener = function () {

@@ -20,7 +20,7 @@
 	</e:Button>
 	<e:Image y="300" width="265" height="45" horizontalCenter="0" source="coinDetailTxt_png"/>
 	<e:Image source="attriDetailBoard_png" x="0" width="640" height="80" bottom="0"/>
-	<e:Label text="果喵币：7777枚" x="60" y="969" fontFamily="SimHei"/>
+	<e:Label text="喵币：7777枚" x="60" y="969" fontFamily="SimHei"/>
 	<e:Image id="detailTxtIcon" source="question_png" x="457" y="968" width="29" height="29"/>
 	<e:Label id="detailTxt" text="明细说明" x="494" y="973" size="20" fontFamily="SimHei"/>
 	<e:Scroller width="525" height="575" x="59" y="370">

@@ -1,4 +1,6 @@
 class ShopFruitItem extends AItemRenderer{
+	private contentGroup: eui.Group;
+	private emptyGroup: eui.Group;
 	private icon: eui.Image;
 	private addBtn: eui.Image;
 	private titleTxt: eui.Label;
@@ -20,13 +22,26 @@ class ShopFruitItem extends AItemRenderer{
 	}
 	protected dataChanged()
 	{
-		var data = <vo.Item_listItem>this.data;
-		this.titleTxt.text = data.name;
-		this.costTxt.text = data.buy_gold+"";
-		var gold = (data.buy_gold ? data.buy_gold : 0);
-		this.coseMoneyTxt.text = '(价值'+ gold/100 +'元)';
-		// this.icon.source = data.id+"通过id去配置中寻找对应图片";
-		var shopCarData = GameModel.getInstance().getShopCarData();
+		
+		if(!this.data)
+		{
+			this.contentGroup.visible = false;
+			this.emptyGroup.visible = true;
+			this.height = this.emptyGroup.height;
+		}
+		else{
+			this.contentGroup.visible = true;
+			this.emptyGroup.visible = false;
+			this.height = this.contentGroup.height;
+			
+			var data = <vo.Item_listItem>this.data;
+			this.titleTxt.text = data.name;
+			this.costTxt.text = data.buy_gold+"";
+			var gold = (data.buy_gold ? data.buy_gold : 0);
+			this.coseMoneyTxt.text = '(价值'+ gold/100 +'元)';
+			// this.icon.source = data.id+"通过id去配置中寻找对应图片";
+			var shopCarData = GameModel.getInstance().getShopCarData();
+		}
 	}
 
 	private addToShopCar()

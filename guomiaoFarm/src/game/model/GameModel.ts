@@ -28,6 +28,8 @@ class GameModel {
 	private _otherUser: vo.RankAllItem;
 	/**正在查看的种子详情的id */
 	public curSeedDetailId: number;
+	/**是从仓库跳转到小卖铺的 */
+	public isShopFromStore: boolean;
 
 	//设置项
 	public check_leaveMsg: boolean = true;

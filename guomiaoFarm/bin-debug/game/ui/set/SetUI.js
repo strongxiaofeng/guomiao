@@ -13,6 +13,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var SetUI = (function (_super) {
     __extends(SetUI, _super);
+    /**scroller 184 798 */
     function SetUI() {
         var _this = _super.call(this) || this;
         _this.skinName = "resource/skins/set.exml";

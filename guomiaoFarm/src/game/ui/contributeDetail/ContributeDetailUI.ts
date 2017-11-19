@@ -36,7 +36,7 @@ class ContributeDetailUI extends BaseUI{
 		this.registerEvent(this.descIcon, egret.TouchEvent.TOUCH_TAP, this.goContriDetailDesc, this);
 		this.registerEvent(this.detailTxt, egret.TouchEvent.TOUCH_TAP, this.goContriDetailDesc, this);
 	}
-	/**去果喵币明细 */
+	/**去喵币明细 */
 	private goCoinDetail()
 	{
 		UIManager.openUI(UIConst.CoinDetailUI);

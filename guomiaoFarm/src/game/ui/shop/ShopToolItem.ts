@@ -1,4 +1,6 @@
 class ShopToolItem extends AItemRenderer{
+	private contentGroup: eui.Group;
+	private emptyGroup: eui.Group;
 	private icon: eui.Image;
 	private addBtn: eui.Image;
 	private titleTxt: eui.Label;
@@ -23,16 +25,30 @@ class ShopToolItem extends AItemRenderer{
 	}
 	protected dataChanged()
 	{
-		var data = <vo.Item_listItem>this.data;
-		if(!data)
+		if(!this.data)
 		{
+			this.contentGroup.visible = true;
+			this.emptyGroup.visible = false;
+			this.height = this.contentGroup.height;
 			this.moreToolTip.visible = true;
 		}
+		else if(this.data == "empty")
+		{
+			this.contentGroup.visible = false;
+			this.emptyGroup.visible = true;
+			this.height = this.emptyGroup.height;
+		}
 		else{
+			this.contentGroup.visible = true;
+			this.emptyGroup.visible = false;
+			this.height = this.contentGroup.height;
+
+			var data = <vo.Item_listItem>this.data;
+
 			this.moreToolTip.visible = false;
 			this.titleTxt.text = data.name;
 			this.descTxt.text = data.desc;
-			this.costTxt.text = (data.buy_gold ? data.buy_gold : 0)+"果喵币";
+			this.costTxt.text = (data.buy_gold ? data.buy_gold : 0)+"喵币";
 			// this.icon.source = data.id+"通过id去配置中寻找对应图片";
 			var shopCarData = GameModel.getInstance().getShopCarData();
 			// this.updateShopCarData(shopCarData);

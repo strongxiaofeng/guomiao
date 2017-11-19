@@ -3,6 +3,7 @@ class RuleUI extends BaseUI{
 	private descGroup:  eui.Group;
 	private leftBtn: eui.Button;
 	private rightBtn: eui.Button;
+	private pageTxt:eui.Label;
 
 	public constructor() {
 		super();
@@ -26,6 +27,8 @@ class RuleUI extends BaseUI{
 		this.descGroup.visible = false;
 		this.leftBtn.enabled = false;
 		this.rightBtn.enabled = true;
+
+		this.pageTxt.text = "1/2";
 	}
 	private clickRight()
 	{
@@ -33,6 +36,8 @@ class RuleUI extends BaseUI{
 		this.descGroup.visible = true;
 		this.leftBtn.enabled = true;
 		this.rightBtn.enabled = false;
+		
+		this.pageTxt.text = "2/2";
 	}
 	/**关闭界面 */
 	public dispose()

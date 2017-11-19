@@ -68,7 +68,7 @@ class UserMenuUI extends BaseUI{
 		console.log("goigog");
 		UIManager.openUI(UIConst.ContributeDetailUI);
 	}
-	/**果喵币明细 */
+	/**喵币明细 */
 	private goCoinDetail()
 	{
 		UIManager.openUI(UIConst.CoinDetailUI);

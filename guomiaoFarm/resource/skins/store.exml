@@ -6,8 +6,8 @@
 	<e:Image source="store_board_png" y="357" width="462" height="45" horizontalCenter="0"/>
 	<e:Image source="store_board_png" width="462" height="45" horizontalCenter="0" y="580"/>
 	<e:Image source="store_board_png" y="807" width="462" height="45" horizontalCenter="0"/>
-	<e:Image id="defaultTool0" horizontalCenter="-116" bottom="655" source="btn_add_png"/>
-	<e:Image id="defaultTool1" source="btn_add_png" horizontalCenter="116" bottom="655"/>
+	<e:Image id="defaultTool0" horizontalCenter="-116" bottom="655" source="store_nofertilizer_png" scaleX="0.5" scaleY="0.5"/>
+	<e:Image id="defaultTool1" horizontalCenter="116" bottom="655" source="store_noinsurance_png" scaleX="0.5" scaleY="0.5"/>
 	<e:Image id="defaultSeed0" bottom="428" horizontalCenter="-116" source="seedEmpty_png" width="70" height="117"/>
 	<e:Image id="defaultSeed1" y="478" horizontalCenter="116" source="seedEmpty_png" width="70" height="117"/>
 	<e:Image source="downtime_bg_png" x="100" y="592" width="215" height="54"/>

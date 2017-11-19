@@ -33,12 +33,14 @@ var RuleUI = (function (_super) {
         this.descGroup.visible = false;
         this.leftBtn.enabled = false;
         this.rightBtn.enabled = true;
+        this.pageTxt.text = "1/2";
     };
     RuleUI.prototype.clickRight = function () {
         this.ruleGroup.visible = false;
         this.descGroup.visible = true;
         this.leftBtn.enabled = true;
         this.rightBtn.enabled = false;
+        this.pageTxt.text = "2/2";
     };
     /**关闭界面 */
     RuleUI.prototype.dispose = function () {

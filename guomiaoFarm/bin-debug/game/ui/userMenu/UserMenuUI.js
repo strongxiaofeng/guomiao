@@ -53,7 +53,7 @@ var UserMenuUI = (function (_super) {
         console.log("goigog");
         UIManager.openUI(UIConst.ContributeDetailUI);
     };
-    /**果喵币明细 */
+    /**喵币明细 */
     UserMenuUI.prototype.goCoinDetail = function () {
         UIManager.openUI(UIConst.CoinDetailUI);
     };

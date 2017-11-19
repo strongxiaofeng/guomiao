@@ -14,7 +14,7 @@ class GiftItem extends AItemRenderer{
 	{
 		var data = <vo.Gift_bagItem>this.data;
 		this.txt1.text = "邀请"+ data.invitation +"个好友";
-		this.txt2.text = "可获得"+ data.gold +"个果喵币";
+		this.txt2.text = "可获得"+ data.gold +"个喵币";
 		this.getAbleImg.visible = data.share ? false : true;
 	}
 	private clickItem()

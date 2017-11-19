@@ -62,9 +62,10 @@ var StoreUI = (function (_super) {
             this.defaultTool0.height = 117;
         }
         else {
-            this.defaultTool0.source = "btn_add_png";
-            this.defaultTool0.width = 92;
-            this.defaultTool0.height = 92;
+            this.defaultTool0.source = "store_nofertilizer_png";
+            this.registerEvent(this.defaultTool0, egret.TouchEvent.TOUCH_TAP, this.goShopTool, this);
+            // this.defaultTool0.width = 92;
+            // this.defaultTool0.height = 92;
         }
         //工具1
         if (toolArr[1]) {
@@ -73,9 +74,10 @@ var StoreUI = (function (_super) {
             this.defaultTool1.height = 117;
         }
         else {
-            this.defaultTool1.source = "btn_add_png";
-            this.defaultTool1.width = 92;
-            this.defaultTool1.height = 92;
+            this.defaultTool1.source = "store_noinsurance_png";
+            this.registerEvent(this.defaultTool1, egret.TouchEvent.TOUCH_TAP, this.goShopTool, this);
+            // this.defaultTool1.width = 92;
+            // this.defaultTool1.height = 92;
         }
         //第二排显示种子
         if (seedArr[0]) {
@@ -106,6 +108,13 @@ var StoreUI = (function (_super) {
         }
         //果实有多少斤
         this.fruitWeightTxt.text = weight + "斤";
+    };
+    /**到商店去购买工具 */
+    StoreUI.prototype.goShopTool = function () {
+        GameModel.getInstance().isShopFromStore = true;
+        UIManager.closeUI(UIConst.StoreUI);
+        UIManager.openUI(UIConst.ShopUI);
+        UIManager.openUI(UIConst.TopBarUI, LayerManager.Layer_Top);
     };
     /**循环计算种子过期时间 */
     StoreUI.prototype.computeTime = function () {

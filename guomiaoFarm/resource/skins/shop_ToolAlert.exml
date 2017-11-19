@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="shop_seedAlert" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image source="bg_black_png" x="0" y="0" width="640" height="1024" alpha="0.3"/>
-	<e:Image source="bg_seedDetail_png" y="255" scaleX="0.5" scaleY="0.5" horizontalCenter="0"/>
-	<e:Image source="fruitDetailboard_png" x="83" y="581" scaleX="0.5" scaleY="0.5"/>
-	<e:Image id="seedImg" source="seed1_png" x="127" y="431" width="112" height="164" scaleX="1" scaleY="1"/>
-	<e:Label id="nameTxt" text="化肥" x="360" y="430" textColor="0x5b2f22" size="26" fontFamily="SimHei"/>
-	<e:Label id="costTxt" text="3000" x="360" y="474" size="30" fontFamily="Arial" textColor="0xfd552b"/>
-	<e:Label text="果瞄币" x="430" y="478" textColor="0xFD552B" size="22" fontFamily="SimHei"/>
-	<e:Button id="addBtn" label="" x="474" y="528" width="46" height="46">
+	<e:Image source="bg_black_png" x="0" y="0" width="640" height="1024" alpha="0.6"/>
+	<e:Image y="255" scaleX="0.5" scaleY="0.5" horizontalCenter="0" source="buySeedBg_png"/>
+	<e:Image source="fruitDetailboard_png" x="130" y="517" scaleX="0.4" scaleY="0.4"/>
+	<e:Image id="seedImg" source="seed1_png" x="170" y="390" scaleX="0.6" scaleY="0.6"/>
+	<e:Label id="nameTxt" text="化肥" x="345" y="389" textColor="0x5b2f22" size="30" fontFamily="SimHei"/>
+	<e:Label id="costTxt" text="3000" x="345" y="446" size="30" fontFamily="Arial" textColor="0xfd552b"/>
+	<e:Label text="果瞄币" x="419" y="450" textColor="0xFD552B" size="22" fontFamily="SimHei"/>
+	<e:Button id="addBtn" label="" y="496" width="46" height="46" x="464">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="btn_add_png" source.down="btn_add_png" source.disabled="btn_add_dis_png"/>
@@ -15,15 +15,16 @@
 			</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Button id="reduceBtn" label="" x="360" y="528" width="46" height="46">
+	<e:Button id="reduceBtn" label="" x="345" y="496" width="46" height="46">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="btn_shopcar_reduce_png" source.down="btn_shopcar_reduce_png" source.disabled="btn_shopcar_reduce_png"/>
+			<e:Image width="100%" height="100%" source="reduce_png" source.down="reduce_png" source.disabled="reduce_png"/>
 			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 			</e:Skin>
 		</e:skinName>
+
 	</e:Button>
-	<e:Label id="numTxt" text="2" x="410" y="534" textColor="0x8C4215" size="35" fontFamily="SimHei" anchorOffsetX="0" width="60" lineSpacing="5" textAlign="center"/>
-	<e:Image id="sureBtn" y="639" scaleX="0.5" scaleY="0.5" horizontalCenter="-120" source="buySure_png"/>
-	<e:Image id="closeBtn" y="639" scaleX="0.5" scaleY="0.5" source="btn_clearShopcar_cancel_png" horizontalCenter="120"/>
+	<e:Label id="numTxt" text="2" x="395" y="502" textColor="0x8C4215" size="35" fontFamily="SimHei" anchorOffsetX="0" width="67" lineSpacing="5" textAlign="center"/>
+	<e:Image id="sureBtn" y="566" scaleX="0.5" scaleY="0.5" horizontalCenter="-100" source="buySure_png"/>
+	<e:Image id="closeBtn" y="566" scaleX="0.5" scaleY="0.5" horizontalCenter="100" source="cancelShopAlert_png"/>
 </e:Skin>

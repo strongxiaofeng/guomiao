@@ -10,6 +10,7 @@ class SetUI extends BaseUI{
 	private check_bgm: eui.Image;
 	private check_effectSound: eui.Image;
 
+	/**scroller 184 798 */
 	public constructor() {
 		super();
 		this.skinName = "resource/skins/set.exml";

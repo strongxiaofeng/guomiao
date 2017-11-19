@@ -2,59 +2,61 @@
 <e:Skin class="userInfo" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Image source="userBg_jpg" width="640" height="1024" horizontalCenter="0" verticalCenter="0"/>
 	<e:Group id="headGroup" width="640" height="1" x="0" y="0">
-		<e:Image id="headBg" source="headbg_png" width="128" height="128" horizontalCenter="0" y="80" x="256" scaleX="1" scaleY="1"/>
-		<e:Image id="headImg" x="273" y="96.5" width="95" height="95" scaleX="1" scaleY="1" source="defaultUserHead_png"/>
-		<e:Image source="leaf_png" x="270" y="74" width="122" height="55" scaleX="1" scaleY="1"/>
-		<e:Image id="honorImg" x="256" y="163" width="44" height="55" scaleX="1" scaleY="1" source="honor1_png"/>
-		<e:Label id="nameTxt" text="木蚂蚁" y="217" textColor="0x834e2f" scaleX="1" scaleY="1" size="22" fontFamily="SimHei" horizontalCenter="-39"/>
-		<e:Image source="lv_png" x="329" y="214" scaleX="1" scaleY="1" width="42" height="26"/>
-		<e:Image id="LevelTxtImg" source="num0_png" x="380" y="215" scaleX="1" scaleY="1" width="20" height="26"/>
-		<e:Label id="gameIdTxt" text="游戏ID： 123456" y="257" textColor="0x834E2F" scaleX="1" scaleY="1" size="18" fontFamily="SimHei" horizontalCenter="0"/>
+		<e:Image id="headBg" source="headbg_png" width="128" height="128" horizontalCenter="0" y="70" x="256" scaleX="1" scaleY="1"/>
+		<e:Image id="headImg" x="273" y="86.5" width="95" height="95" scaleX="1" scaleY="1" source="defaultUserHead_png"/>
+		<e:Image source="leaf_png" x="270" y="64" width="122" height="55" scaleX="1" scaleY="1"/>
+		<e:Image id="honorImg" x="256" y="153" width="44" height="55" scaleX="1" scaleY="1" source="honor1_png"/>
+		<e:Label id="nameTxt" text="木蚂蚁" y="222" textColor="0x834e2f" scaleX="1" scaleY="1" size="22" fontFamily="SimHei" right="326"/>
+		<e:Image source="lv_png" x="329" y="216" scaleX="1" scaleY="1" width="42" height="26"/>
+		<e:Image id="LevelTxtImg" source="num0_png" x="380" y="217" scaleX="1" scaleY="1" width="20" height="26"/>
+		<e:Label id="gameIdTxt" text="游戏ID： 123456" y="257" textColor="0x834E2F" scaleX="1" scaleY="1" size="20" fontFamily="SimHei" horizontalCenter="0"/>
 	</e:Group>
 	<e:Group id="contriGroup" width="1" height="1" x="0" y="20" touchChildren="true" touchEnabled="false" touchThrough="true">
-		<e:Image x="47" y="262" scaleX="0.5" scaleY="0.5" width="95" height="85" source="userinfo_tree_png"/>
-		<e:Label id="attributeTxt" text="累级贡献度" x="108" y="272" textColor="0x934716" size="20" fontFamily="SimHei" touchEnabled="true"/>
-		<e:Image id="attributeTxtBg" source="progressBg_png" x="52" y="302" width="255" height="40" scaleX="1" scaleY="1"/>
-		<e:Image id="contri_left" source="progressLeft_png" x="56" y="305" height="33" width="26" scaleX="1" scaleY="1" touchEnabled="false"/>
-		<e:Image id="contri_mid" source="progressMid_png" x="74" y="305" height="33" scaleX="1" scaleY="1" touchEnabled="false"/>
-		<e:Image id="contri_right" source="progressLeft_png" x="81" y="305" width="26" height="33" anchorOffsetX="26" scaleX="-1" scaleY="1" touchEnabled="false"/>
-		<e:Label id="contri_number" text="70/80" x="65" y="310" size="24" scaleX="1" scaleY="1" touchEnabled="false" width="231" textAlign="center"/>
+		<e:Image x="99" y="262" scaleX="0.5" scaleY="0.5" width="95" height="85" source="userinfo_tree_png"/>
+		<e:Label id="attributeTxt" text="累级贡献度" x="152" y="272" textColor="0x934716" size="20" fontFamily="SimHei" touchEnabled="true" textAlign="center"/>
+		<e:Image id="attributeTxtBg" source="progressBg_png" x="47" y="310" width="255" height="40" scaleX="1" scaleY="1"/>
+		<e:Image id="contri_left" source="progressLeft_png" x="51" y="313" height="33" width="26" scaleX="1" scaleY="1" touchEnabled="false"/>
+		<e:Image id="contri_mid" source="progressMid_png" x="68" y="313" height="33" scaleX="1" scaleY="1" touchEnabled="false"/>
+		<e:Image id="contri_right" source="progressLeft_png" x="75" y="313" width="26" height="33" anchorOffsetX="26" scaleX="-1" scaleY="1" touchEnabled="false"/>
+		<e:Label id="contri_number" text="70/80" x="65" y="318" size="24" scaleX="1" scaleY="1" touchEnabled="false" width="231" textAlign="center"/>
 	</e:Group>
 	<e:Group id="coinGroup" width="1" height="1" x="0" y="20">
-		<e:Image x="382" y="260" scaleX="0.5" scaleY="0.5" width="95" height="85" source="coinImg_png"/>
-		<e:Label id="coinTxt" text="果喵币" x="442" y="272" textColor="0x934716" size="20" fontFamily="SimHei"/>
-		<e:Image id="coinTxtBg" source="progressBg_png" y="302" width="255" height="40" scaleX="1" scaleY="1" x="340"/>
-		<e:Label id="coin_number" text="5000" x="368" y="310" size="24" scaleX="1" scaleY="1" touchEnabled="false" width="183" textAlign="center"/>
-		<e:Image id="btn_charge" source="buyCoin_png" x="550" y="298" width="48" height="48" scaleX="1" scaleY="1"/>
+		<e:Image x="405.66" y="260" scaleX="0.5" scaleY="0.5" width="95" height="85" source="coinImg_png"/>
+		<e:Label id="coinTxt" text="喵币" x="457" y="272" textColor="0x934716" size="20" fontFamily="SimHei"/>
+		<e:Image id="coinTxtBg" source="progressBg_png" y="310" width="255" height="40" scaleX="1" scaleY="1" x="340"/>
+		<e:Label id="coin_number" text="5000" x="368" y="318" size="24" scaleX="1" scaleY="1" touchEnabled="false" width="183" textAlign="center"/>
+		<e:Image id="btn_charge" source="buyCoin_png" x="550" y="306" width="48" height="48" scaleX="1" scaleY="1"/>
 	</e:Group>
 	<e:Group id="menuGroup" width="640" height="1024" x="0" y="0" touchThrough="true" touchEnabled="false" touchChildren="true">
-		<e:Image id="btn_shop" source="dark_green_png" x="52" y="388" width="170" height="170" scaleX="1" scaleY="1"/>
-		<e:Image id="btn_address" x="239" y="388" width="170" height="170" scaleX="1" scaleY="1" source="light_green_png"/>
-		<e:Image id="btn_order" source="dark_green_png" y="388" width="170" height="170" scaleX="1" scaleY="1" x="426"/>
-		<e:Image id="btn_store" source="light_green_png" x="52" y="575" width="170" height="170" scaleX="1" scaleY="1"/>
-		<e:Image id="btn_rank" source="dark_green_png" x="239" y="575" width="170" height="170" scaleX="1" scaleY="1"/>
-		<e:Image id="btn_coinCharge" source="light_green_png" x="426" y="575" width="170" height="170" scaleX="1" scaleY="1"/>
-		<e:Image id="btn_honor" source="dark_green_png" x="52" y="766" width="170" height="170" scaleX="1" scaleY="1"/>
-		<e:Image id="btn_radio" source="light_green_png" x="239" y="766" width="170" height="170" scaleX="1" scaleY="1"/>
-		<e:Image id="btn_set" source="dark_green_png" x="426" y="766" width="170" height="170" scaleX="1" scaleY="1"/>
-		<e:Image source="user_shop_png" x="100" y="418" width="75" height="69" touchEnabled="false"/>
+		<e:Image id="btn_shop" source="dark_green_png" y="388" width="170" height="170" scaleX="1" scaleY="1" horizontalCenter="-188"/>
+		<e:Image id="btn_address" y="388" width="170" height="170" scaleX="1" scaleY="1" source="light_green_png" horizontalCenter="0"/>
+		<e:Image id="btn_order" source="dark_green_png" y="388" width="170" height="170" scaleX="1" scaleY="1" horizontalCenter="188"/>
+		<e:Image id="btn_store" source="light_green_png" y="575" width="170" height="170" scaleX="1" scaleY="1" horizontalCenter="-188"/>
+		<e:Image id="btn_rank" source="dark_green_png" y="575" width="170" height="170" scaleX="1" scaleY="1" horizontalCenter="0"/>
+		<e:Image id="btn_coinCharge" source="light_green_png" y="575" width="170" height="170" scaleX="1" scaleY="1" horizontalCenter="188"/>
+		<e:Image id="btn_honor" source="dark_green_png" y="766" width="170" height="170" scaleX="1" scaleY="1" horizontalCenter="-188"/>
+		<e:Image id="btn_radio" source="light_green_png" y="766" width="170" height="170" scaleX="1" scaleY="1" horizontalCenter="0"/>
+		<e:Image id="btn_set" source="dark_green_png" y="766" width="170" height="170" scaleX="1" scaleY="1" horizontalCenter="188"/>
+		<e:Image source="user_shop_png" y="418" width="75" height="69" touchEnabled="false" horizontalCenter="-188"/>
 		<e:Image source="user_adress_png" y="418" width="75" height="69" touchEnabled="false" horizontalCenter="0"/>
-		<e:Image source="user_order_png" x="471" y="418" width="75" height="69" touchEnabled="false"/>
-		<e:Image source="user_store_png" x="100" y="606" width="75" height="69" touchEnabled="false"/>
+		<e:Image source="user_order_png" y="418" width="75" height="69" touchEnabled="false" horizontalCenter="188"/>
+		<e:Image source="user_store_png" y="606" width="75" height="69" touchEnabled="false" horizontalCenter="-188"/>
 		<e:Image source="user_rank_png" y="606" width="75" height="69" touchEnabled="false" horizontalCenter="0"/>
-		<e:Image source="user_charge_png" x="471" y="606" width="75" height="69" touchEnabled="false"/>
-		<e:Image source="user_honer_png" x="100" y="796" width="75" height="69" touchEnabled="false"/>
-		<e:Image source="user_radio_png" y="796" width="75" height="69" touchEnabled="false" horizontalCenter="0.5"/>
-		<e:Image source="user_set_png" x="471" y="796" width="75" height="69" touchEnabled="false"/>
-		<e:Label text="小卖铺" y="483" textColor="0xf6fcee" fontFamily="SimHei" size="24" touchEnabled="false" width="170" textAlign="center" horizontalCenter="-183"/>
-		<e:Label text="地址管理" y="483" fontFamily="SimHei" size="24" textColor="0xffffff" touchEnabled="false" horizontalCenter="0"/>
-		<e:Label text="我的订单" y="483" textColor="0xF6FCEE" fontFamily="SimHei" size="24" touchEnabled="false" width="170" textAlign="center" horizontalCenter="191"/>
-		<e:Label text="我的仓库" y="671" fontFamily="SimHei" size="24" textColor="0xffffff" touchEnabled="false" horizontalCenter="-183"/>
-		<e:Label text="排行榜" y="671" textColor="0xF6FCEE" fontFamily="SimHei" size="24" touchEnabled="false" horizontalCenter="0"/>
-		<e:Label text="果瞄币充值" y="671" fontFamily="SimHei" size="24" textColor="0xffffff" touchEnabled="false" horizontalCenter="191"/>
-		<e:Label text="勋章墙" y="862" fontFamily="SimHei" size="24" textColor="0xf6fcee" touchEnabled="false" horizontalCenter="-183"/>
-		<e:Label text="广播消息" y="862" fontFamily="SimHei" size="24" textColor="0xffffff" touchEnabled="false" horizontalCenter="0"/>
-		<e:Label text="游戏设置" y="862" textColor="0xF6FCEE" fontFamily="SimHei" size="24" touchEnabled="false" horizontalCenter="191"/>
-		<e:Image source="question_png" x="415" y="215" width="26" height="26"/>
+		<e:Image source="user_charge_png" y="606" width="75" height="69" touchEnabled="false" horizontalCenter="188"/>
+		<e:Image source="user_honer_png" y="796" width="75" height="69" touchEnabled="false" horizontalCenter="-188"/>
+		<e:Image source="user_radio_png" y="796" width="75" height="69" touchEnabled="false" horizontalCenter="0"/>
+		<e:Image source="user_set_png" y="796" width="75" height="69" touchEnabled="false" horizontalCenter="188"/>
+		<e:Label text="小卖铺" y="486" textColor="0xf6fcee" fontFamily="SimHei" size="24" touchEnabled="false" width="170" textAlign="center" horizontalCenter="-188"/>
+		<e:Label text="地址管理" y="486" fontFamily="SimHei" size="24" textColor="0xffffff" touchEnabled="false" horizontalCenter="0"/>
+		<e:Label text="我的订单" y="486" textColor="0xF6FCEE" fontFamily="SimHei" size="24" touchEnabled="false" width="170" textAlign="center" horizontalCenter="188"/>
+		<e:Label text="我的仓库" y="678" fontFamily="SimHei" size="24" textColor="0xffffff" touchEnabled="false" horizontalCenter="-188"/>
+		<e:Label text="排行榜" y="678" textColor="0xF6FCEE" fontFamily="SimHei" size="24" touchEnabled="false" horizontalCenter="0"/>
+		<e:Label text="果瞄币充值" y="678" fontFamily="SimHei" size="24" textColor="0xffffff" touchEnabled="false" horizontalCenter="188"/>
+		<e:Label text="勋章墙" y="868" fontFamily="SimHei" size="24" textColor="0xf6fcee" touchEnabled="false" horizontalCenter="-188"/>
+		<e:Label text="广播消息" y="868" fontFamily="SimHei" size="24" textColor="0xffffff" touchEnabled="false" horizontalCenter="0"/>
+		<e:Label text="游戏设置" y="868" textColor="0xF6FCEE" fontFamily="SimHei" size="24" touchEnabled="false" horizontalCenter="188"/>
+		<e:Image source="question_png" x="415" y="217" width="26" height="26"/>
+		
 	</e:Group>
+	<e:Group width="1" height="1" x="0" y="0" touchThrough="true"/>
 </e:Skin>
