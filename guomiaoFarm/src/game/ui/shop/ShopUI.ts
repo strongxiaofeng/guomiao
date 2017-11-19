@@ -1,4 +1,5 @@
 class ShopUI extends BaseUI{
+	private noCarImg: eui.Image;
 	private chooseSeed: eui.Image;
 	private chooseTool: eui.Image;
 	private chooseFruit: eui.Image;
@@ -22,7 +23,7 @@ class ShopUI extends BaseUI{
 	public initSetting()
 	{
 		super.initSetting();
-		UIManager.openUI(UIConst.ShopCarDetailUI, LayerManager.Layer_Tip);
+		// UIManager.openUI(UIConst.ShopCarDetailUI, LayerManager.Layer_Tip);
 		
 		this.ac_seed = new eui.ArrayCollection;
 		this.ac_tool = new eui.ArrayCollection;
@@ -41,6 +42,8 @@ class ShopUI extends BaseUI{
 		this.ac_seed.removeAll();
 		this.ac_tool.removeAll();
 		this.ac_fruit.removeAll();
+
+		this.ac_seed.addItem(null);
 		for(var i=0; i<list.length; i++)
 		{
 			var data = GameModel.getInstance().getItemById(list[i].id);
@@ -69,11 +72,11 @@ class ShopUI extends BaseUI{
 		let data =  GameModel.getInstance().getShopCarData();
 		for(var i=0; i<this.ac_seed.length; i++)
 		{
-			(<ShopSeedItem>this.seedList.getChildAt(i)).updateShopCarData(data);
+			// (<ShopSeedItem>this.seedList.getChildAt(i)).updateShopCarData(data);
 		}
 		for(i=0; i<this.ac_tool.length; i++)
 		{
-			(<ShopToolItem>this.toolList.getChildAt(i)).updateShopCarData(data);
+			// (<ShopToolItem>this.toolList.getChildAt(i)).updateShopCarData(data);
 		}
 	}
 	/**选择种子页 */
@@ -85,6 +88,8 @@ class ShopUI extends BaseUI{
 		this.seedGroup.visible = true;
 		this.toolGroup.visible = false;
 		this.fruitGroup.visible = false;
+
+		UIManager.closeUI(UIConst.ShopCarDetailUI);
 	}
 	/**选择工具页 */
 	private clickChooseTool()
@@ -95,6 +100,7 @@ class ShopUI extends BaseUI{
 		this.seedGroup.visible = false;
 		this.toolGroup.visible = true;
 		this.fruitGroup.visible = false;
+		UIManager.closeUI(UIConst.ShopCarDetailUI);
 	}
 	/**选择水果页 */
 	private clickChooseFruit()
@@ -105,6 +111,7 @@ class ShopUI extends BaseUI{
 		this.seedGroup.visible = false;
 		this.toolGroup.visible = false;
 		this.fruitGroup.visible = true;
+		UIManager.openUI(UIConst.ShopCarDetailUI, LayerManager.Layer_Tip);
 	}
 	/**关闭界面 */
 	public dispose()

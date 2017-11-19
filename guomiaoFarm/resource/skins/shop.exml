@@ -23,4 +23,5 @@
 	<e:Label text="种子" x="107.33" y="347" textColor="0xffd67e" size="22" fontFamily="SimHei" touchEnabled="false" anchorOffsetX="0" width="106" textAlign="center"/>
 	<e:Label text="工具" y="347" textColor="0xFFD67E" size="22" fontFamily="SimHei" horizontalCenter="0" touchEnabled="false" width="106" textAlign="center"/>
 	<e:Label text="实体店" x="427" y="347" textColor="0xFFD67E" size="22" fontFamily="SimHei" touchEnabled="false" width="106" textAlign="center"/>
+	<e:Image id="noCarImg" source="shop_board_null_png" x="0" width="640" height="95" bottom="0"/>
 </e:Skin>

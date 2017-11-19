@@ -33,6 +33,7 @@ var ShopCarDetailUI = (function (_super) {
         this.registerEvent(this.shopcarImg, egret.TouchEvent.TOUCH_TAP, this.clickCar, this);
         this.registerEvent(this.payBtn, egret.TouchEvent.TOUCH_TAP, this.clickPay, this);
         this.registerEvent(this.clearBtn, egret.TouchEvent.TOUCH_TAP, this.clickClearCar, this);
+        this.registerEvent(this.closeSelf, egret.TouchEvent.TOUCH_TAP, this.clickCar, this);
         this.addRegister(NotifyConst.Notify_ShopCar, this.updateShopCar, this);
     };
     /**刷新购物车 */
@@ -74,6 +75,7 @@ var ShopCarDetailUI = (function (_super) {
     /**清空购物车 */
     ShopCarDetailUI.prototype.clickClearCar = function () {
         GameModel.getInstance().clearShopCar();
+        this.clickCar();
     };
     /**去结算 */
     ShopCarDetailUI.prototype.clickPay = function () {

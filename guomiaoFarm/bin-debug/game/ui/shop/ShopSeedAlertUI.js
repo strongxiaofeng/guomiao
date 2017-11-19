@@ -21,14 +21,16 @@ var ShopSeedAlertUI = (function (_super) {
     /**初始界面 */
     ShopSeedAlertUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
+        this.numTxt.text = "1";
+        this.addBtn.enabled = false;
     };
     /**初始监听 */
     ShopSeedAlertUI.prototype.initListener = function () {
-        this.registerEvent(this.addBtn, egret.TouchEvent.TOUCH_TAP, this.add, this);
+        this.registerEvent(this.sureBtn, egret.TouchEvent.TOUCH_TAP, this.sure, this);
         this.registerEvent(this.closeBtn, egret.TouchEvent.TOUCH_TAP, this.dispose, this);
     };
-    ShopSeedAlertUI.prototype.add = function () {
-        GameModel.getInstance().addShopCarData(GameModel.getInstance().curSeedDetailId);
+    ShopSeedAlertUI.prototype.sure = function () {
+        // GameModel.getInstance().addShopCarData(GameModel.getInstance().curSeedDetailId);
         this.dispose();
     };
     /**关闭界面 */

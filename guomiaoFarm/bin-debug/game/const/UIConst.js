@@ -46,6 +46,7 @@ var UIConst = (function () {
     UIConst.OtherLandUI = "OtherLandUI";
     UIConst.InviteDetailUI = "InviteDetailUI";
     UIConst.ShopSeedAlertUI = "ShopSeedAlertUI";
+    UIConst.ShopToolAlertUI = "ShopToolAlertUI";
     UIConst.LeaveMsgUI = "LeaveMsgUI";
     return UIConst;
 }());

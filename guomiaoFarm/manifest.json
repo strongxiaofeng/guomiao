@@ -11,7 +11,7 @@
 	"game": [
 		"bin-debug/game/base/AItemRenderer.js",
 		"bin-debug/game/base/BaseUI.js",
-		"bin-debug/game/ui/otherUser/TipAddFriendUI.js",
+		"bin-debug/game/ui/pay/PayGoodsItem.js",
 		"bin-debug/AssetAdapter.js",
 		"bin-debug/game/base/BaseResponse.js",
 		"bin-debug/ThemeAdapter.js",
@@ -60,8 +60,8 @@
 		"bin-debug/game/ui/otherUser/OtherLandUI.js",
 		"bin-debug/game/ui/otherUser/OtherUserDetailUI.js",
 		"bin-debug/game/ui/otherUser/OtherUserHonorItem.js",
-		"bin-debug/game/vo/YesterdayHarvestRankInfo.js",
-		"bin-debug/game/ui/pay/PayGoodsItem.js",
+		"bin-debug/game/ui/otherUser/TipAddFriendUI.js",
+		"bin-debug/Main.js",
 		"bin-debug/game/ui/pay/PayUI.js",
 		"bin-debug/game/ui/radio/LeaveMsgItem.js",
 		"bin-debug/game/ui/radio/LeaveMsgUI.js",
@@ -86,6 +86,7 @@
 		"bin-debug/game/ui/shop/ShopFruitItem.js",
 		"bin-debug/game/ui/shop/ShopSeedAlertUI.js",
 		"bin-debug/game/ui/shop/ShopSeedItem.js",
+		"bin-debug/game/ui/shop/ShopToolAlertUI.js",
 		"bin-debug/game/ui/shop/ShopToolItem.js",
 		"bin-debug/game/ui/shop/ShopUI.js",
 		"bin-debug/game/ui/shopcar/ShopCarDetailItem.js",
@@ -111,6 +112,6 @@
 		"bin-debug/game/vo/StealFoodInfo.js",
 		"bin-debug/game/vo/StoreInfo.js",
 		"bin-debug/game/vo/UserInfo.js",
-		"bin-debug/Main.js"
+		"bin-debug/game/vo/YesterdayHarvestRankInfo.js"
 	]
 }

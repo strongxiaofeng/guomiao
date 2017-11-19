@@ -21,7 +21,7 @@ var ShopUI = (function (_super) {
     /**初始界面 */
     ShopUI.prototype.initSetting = function () {
         _super.prototype.initSetting.call(this);
-        UIManager.openUI(UIConst.ShopCarDetailUI, LayerManager.Layer_Tip);
+        // UIManager.openUI(UIConst.ShopCarDetailUI, LayerManager.Layer_Tip);
         this.ac_seed = new eui.ArrayCollection;
         this.ac_tool = new eui.ArrayCollection;
         this.ac_fruit = new eui.ArrayCollection;
@@ -38,6 +38,7 @@ var ShopUI = (function (_super) {
         this.ac_seed.removeAll();
         this.ac_tool.removeAll();
         this.ac_fruit.removeAll();
+        this.ac_seed.addItem(null);
         for (var i = 0; i < list.length; i++) {
             var data = GameModel.getInstance().getItemById(list[i].id);
             data.buy_gold = list[i].gold;
@@ -64,10 +65,10 @@ var ShopUI = (function (_super) {
     ShopUI.prototype.onShopCarChange = function () {
         var data = GameModel.getInstance().getShopCarData();
         for (var i = 0; i < this.ac_seed.length; i++) {
-            this.seedList.getChildAt(i).updateShopCarData(data);
+            // (<ShopSeedItem>this.seedList.getChildAt(i)).updateShopCarData(data);
         }
         for (i = 0; i < this.ac_tool.length; i++) {
-            this.toolList.getChildAt(i).updateShopCarData(data);
+            // (<ShopToolItem>this.toolList.getChildAt(i)).updateShopCarData(data);
         }
     };
     /**选择种子页 */
@@ -78,6 +79,7 @@ var ShopUI = (function (_super) {
         this.seedGroup.visible = true;
         this.toolGroup.visible = false;
         this.fruitGroup.visible = false;
+        UIManager.closeUI(UIConst.ShopCarDetailUI);
     };
     /**选择工具页 */
     ShopUI.prototype.clickChooseTool = function () {
@@ -87,6 +89,7 @@ var ShopUI = (function (_super) {
         this.seedGroup.visible = false;
         this.toolGroup.visible = true;
         this.fruitGroup.visible = false;
+        UIManager.closeUI(UIConst.ShopCarDetailUI);
     };
     /**选择水果页 */
     ShopUI.prototype.clickChooseFruit = function () {
@@ -96,6 +99,7 @@ var ShopUI = (function (_super) {
         this.seedGroup.visible = false;
         this.toolGroup.visible = false;
         this.fruitGroup.visible = true;
+        UIManager.openUI(UIConst.ShopCarDetailUI, LayerManager.Layer_Tip);
     };
     /**关闭界面 */
     ShopUI.prototype.dispose = function () {

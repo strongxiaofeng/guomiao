@@ -8,6 +8,7 @@ class ShopCarDetailUI extends BaseUI{
 	private clearBtn: eui.Image;
 	private scroller: eui.Scroller;
 	private choosedList: eui.List;
+	private closeSelf: eui.Group;
 
 	private ac: eui.ArrayCollection;
 
@@ -34,6 +35,7 @@ class ShopCarDetailUI extends BaseUI{
 		this.registerEvent(this.shopcarImg, egret.TouchEvent.TOUCH_TAP, this.clickCar, this);
 		this.registerEvent(this.payBtn, egret.TouchEvent.TOUCH_TAP, this.clickPay, this);
 		this.registerEvent(this.clearBtn, egret.TouchEvent.TOUCH_TAP, this.clickClearCar, this);
+		this.registerEvent(this.closeSelf, egret.TouchEvent.TOUCH_TAP, this.clickCar, this);
 
 		this.addRegister(NotifyConst.Notify_ShopCar, this.updateShopCar, this);
 	}
@@ -83,6 +85,7 @@ class ShopCarDetailUI extends BaseUI{
 	private clickClearCar()
 	{
 		GameModel.getInstance().clearShopCar();
+		this.clickCar();
 	}
 	/**去结算 */
 	private clickPay()

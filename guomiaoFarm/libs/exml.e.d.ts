@@ -134,9 +134,9 @@ declare class shopCarDetail extends eui.Skin{
 }
 declare class shopCarDetailItem extends eui.Skin{
 }
-declare class shop_fruitItem extends eui.Skin{
-}
 declare class shop_seedAlert extends eui.Skin{
+}
+declare class shop_fruitItem extends eui.Skin{
 }
 declare class shop_seedItem extends eui.Skin{
 }

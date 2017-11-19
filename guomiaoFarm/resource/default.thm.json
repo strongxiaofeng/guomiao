@@ -86,6 +86,7 @@
     "resource/skins/shop.exml",
     "resource/skins/shopCarDetail.exml",
     "resource/skins/shopCarDetailItem.exml",
+    "resource/skins/shop_ToolAlert.exml",
     "resource/skins/shop_fruitItem.exml",
     "resource/skins/shop_seedAlert.exml",
     "resource/skins/shop_seedItem.exml",
