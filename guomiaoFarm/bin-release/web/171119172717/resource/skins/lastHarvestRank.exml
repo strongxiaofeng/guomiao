@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="lastHarvst" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="bg_black_png" x="0" y="0" width="640" height="1024" alpha="0.6"/>
+	<e:Image source="coinRankTheme_png" y="156" horizontalCenter="0" scaleX="0.5" scaleY="0.5"/>
+	<e:Label id="infoTxt" text="上期种子：XX樱桃2000喵币" x="226" y="233" size="20"/>
+	<e:Image source="coinBoard_png" y="269" width="561" height="604" horizontalCenter="0"/>
+	<e:Image id="btn_close" source="close_png" y="197" width="59" height="59" x="524"/>
+	<e:Scroller width="496" height="536" y="302" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+		<e:List id="list"/>
+	</e:Scroller>
+</e:Skin>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="attributeDetailItem" width="525" height="100" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="detailItemBg_png" x="0" y="0" width="100%" height="90"/>
+	<e:Image x="21" y="22" width="47" height="37" source="coinSignInAttribute_png"/>
+	<e:Label id="payType" text="充值" x="85" y="18" size="18" textColor="0x91c21b" fontFamily="SimHei"/>
+	<e:Label id="dateTxt" text="2017-05-10" x="85" y="47" textColor="0x979797" size="20"/>
+	<e:Label id="payNumTxt" text="+2000" y="31" textColor="0x91c21b" right="29"/>
+</e:Skin>

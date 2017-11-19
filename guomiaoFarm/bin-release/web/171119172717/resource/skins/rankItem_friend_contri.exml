@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="rankItem_friend_contri" width="640" height="100" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="100%" x="0" fillColor="0xffffff" height="100"/>
+		<e:Image source="rankbg_png" x="27" y="23" width="50" height="50"/>
+		<e:Image source="rankHeadBorder_png" x="89" y="14" width="72" height="72"/>
+		<e:Label id="myRankNum" text="66" x="27" y="35" textColor="0x576669" size="26" fontFamily="SimHei" width="50" textAlign="center"/>
+		<e:Image id="myHeadIcon" source="water_png" x="92" y="17" width="66" height="66"/>
+		<e:Image id="hat" source="lastStolerHat_png" x="130" y="62" width="47" height="32"/>
+		<e:Label id="nameTxt" text="古德拜" x="180" y="17" textColor="0x576669" size="26" fontFamily="SimHei"/>
+		<e:Image x="182" y="56" width="24" height="24" source="contribution _png"/>
+		<e:Label id="myChangeTxt" text="100" x="219" y="54" size="26" fontFamily="SimHei" textColor="0xff0000"/>
+	<e:Image source="line_png" width="600" horizontalCenter="0" bottom="0"/>
+
+	<e:Image id="supportImg" source="supportAfter_png" x="544" y="25" width="57" height="55"/>
+	<e:Label id="supportCount" text="0" x="541" y="34" width="62" textAlign="center" touchEnabled="false"/>
+	<e:Image id="handAbleImg" source="stole_png" x="423" y="18" width="80" height="66"/>
+	<e:Image id="waterAbleImg" x="423" y="18" width="80" height="66" source="water_png"/>
+</e:Skin>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="shopCarDetail" width="640" height="1024" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="headGroup" width="640" height="55" x="0" bottom="969">
+		<e:Rect id="closeSelf" width="640" height="1024" x="0" y="-1024" scaleX="1" scaleY="1" fillColor="0x000000" alpha="0.5"/>
+		<e:Rect width="640" height="55" x="0" y="0" fillColor="0xEDEDED" scaleX="1" scaleY="1"/>
+		<e:Rect width="640" height="880" x="0" y="55" scaleX="1" scaleY="1" fillColor="0xffffff"/>
+        <e:Image source="choiced_goods_bg_png" x="33" y="13" height="26" width="6"/>
+        <e:Label text="已选商品" x="72" y="16" textColor="0x8e470f" fontFamily="SimHei" size="22"/>
+        <e:Image id="clearBtn" source="clearShopcar_png" x="554" y="16" width="62" height="20"/>
+	</e:Group>
+	<e:Scroller id="scroller" width="640" x="0" bottom="94" height="874" visible="false">
+		<e:List id="choosedList"/>
+	</e:Scroller>
+	<e:Group id="bottomGroup" width="640" height="1024" x="0" y="0" touchEnabled="false" touchThrough="true">
+		<e:Image source="shop_board_jpg" width="640" height="95" scaleX="1" scaleY="1" bottom="0" horizontalCenter="0"/>
+		<e:Image id="shopcarImg" source="shopcar_have_png" x="12" y="939" width="80" height="80"/>
+		<e:Image id="shopCountBg" source="new_msg_circle_png" y="939" width="30" height="30" x="62"/>
+		<e:Label id="shopCountTxt" text="0" y="944" size="22" width="30" textAlign="center" x="62"/>
+		<e:Label id="payCountTxt" text="0" x="104" y="965" size="48"/>
+		<e:Label id="payCountTxt0" text="喵币" x="140" y="982" size="22"/>
+		<e:Label id="payBtn" text="去结算" x="481" y="972" textColor="0xffeacf" fontFamily="SimHei" size="36"/>
+	</e:Group>
+</e:Skin>

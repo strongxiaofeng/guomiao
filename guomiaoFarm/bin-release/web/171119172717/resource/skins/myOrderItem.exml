@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="myOrderItem" width="640" height="230" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="rect" width="100%" height="220" x="0" y="0" fillColor="0xffffff"/>
+	<e:List id="oneOrderList" width="640" x="0" y="20"/>
+	<e:Group id="bottomGroup" width="640" height="90" x="0" y="130">
+		<e:Label id="timeTxt" text="2017-07-25" x="30" y="12" size="22" textColor="0x5f4021" scaleX="1" scaleY="1"/>
+		<e:Label id="totalCountTxt" text="共0件商品" y="12" size="22" textColor="0x5F4021" horizontalCenter="0" fontFamily="SimHei" x="280" scaleX="1" scaleY="1"/>
+		<e:Label id="totalCostTipTxt" text="共计:" y="12" size="22" textColor="0x5F4021" fontFamily="SimHei" scaleX="1" scaleY="1" right="109"/>
+		<e:Label id="totalCostTxt" text="￥999" y="11" size="24" fontFamily="Arial" x="545" scaleX="1" scaleY="1" textColor="0xff3c2b"/>
+		<e:Button id="payBtn" label="去支付" x="490" y="42" width="125" height="40" visible="false">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btnbg_png" source.down="btnbg_png" source.disabled="btnbg_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" size="19" fontFamily="SimHei"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="lookBtn" label="查看物流" x="490" y="42" width="125" height="40" visible="false">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btnbg_png" source.down="btnbg_png" source.disabled="btnbg_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" size="19" fontFamily="SimHei"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="sureBtn" label="确认收货" x="490" y="42" width="125" height="40">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btnbg_png" source.down="btnbg_png" source.disabled="btnbg_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" size="19" fontFamily="SimHei"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="deleteOrderBtn" label="删除订单" x="490" y="42" width="125" height="40" visible="false">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btnbg_png" source.down="btnbg_png" source.disabled="btnbg_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" size="19" fontFamily="SimHei"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+</e:Skin>
